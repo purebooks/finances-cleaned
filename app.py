@@ -65,26 +65,84 @@ def generate_request_id() -> str:
     """Generate unique request ID for tracking"""
     return f"req-{uuid.uuid4().hex[:8]}"
 
-def validate_input_data(data: Dict[str, Any]) -> Tuple[bool, str]:
-    """Validate input data structure"""
-    if not isinstance(data, dict):
-        return False, "Data must be a dictionary"
+def normalize_and_validate_data(raw_data) -> Tuple[bool, Dict[str, Any], str]:
+    """
+    Flexible data parser that handles multiple input formats.
     
-    required_fields = ['merchant']
-    if not all(field in data for field in required_fields):
-        return False, f"Missing required fields: {required_fields}"
+    Supported formats:
+    1. {"data": [{"merchant": "X", "amount": 50}, ...]}
+    2. {"merchant": ["X", "Y"], "amount": [50, 25]}  
+    3. {"transactions": [{"merchant": "X"}, ...]}
+    4. [{"merchant": "X", "amount": 50}, ...]
+    5. {"merchant": "X", "amount": 50}  # Single transaction
     
-    # Validate data types
-    for field, values in data.items():
-        if not isinstance(values, list):
-            return False, f"Field '{field}' must be a list"
+    Returns: (success, normalized_data, error_message)
+    """
     
-    # Validate consistent lengths
-    lengths = [len(values) for values in data.values()]
-    if len(set(lengths)) > 1:
-        return False, "All data fields must have the same length"
+    # Handle different input types
+    if isinstance(raw_data, list):
+        # Direct list of transactions
+        return _convert_records_to_columns(raw_data)
     
-    return True, ""
+    if not isinstance(raw_data, dict):
+        return False, {}, "Input must be a dictionary or list"
+    
+    # Check if already in column format (current expected format)
+    if _is_valid_column_format(raw_data):
+        return True, raw_data, ""
+    
+    # Handle wrapped formats
+    if 'data' in raw_data and isinstance(raw_data['data'], list):
+        return _convert_records_to_columns(raw_data['data'])
+    
+    if 'transactions' in raw_data and isinstance(raw_data['transactions'], list):
+        return _convert_records_to_columns(raw_data['transactions'])
+    
+    # Handle single transaction
+    if 'merchant' in raw_data and not isinstance(raw_data['merchant'], list):
+        return _convert_records_to_columns([raw_data])
+    
+    return False, {}, "Unrecognized data format. Supported: {data: [...]} or {merchant: [...]} or [...]"
+
+def _is_valid_column_format(data):
+    """Check if data is valid column format"""
+    if 'merchant' not in data:
+        return False
+    
+    if not isinstance(data['merchant'], list):
+        return False
+    
+    # All fields must be lists of same length
+    lengths = [len(v) for v in data.values() if isinstance(v, list)]
+    return len(set(lengths)) <= 1
+
+def _convert_records_to_columns(records):
+    """Convert list of transaction records to column format"""
+    if not records:
+        return False, {}, "No transactions provided"
+    
+    if not all(isinstance(record, dict) for record in records):
+        return False, {}, "All transaction items must be objects"
+    
+    if not all('merchant' in record for record in records):
+        return False, {}, "All transactions must have a 'merchant' field"
+    
+    # Convert to column format
+    result = {}
+    all_keys = set()
+    for record in records:
+        all_keys.update(record.keys())
+    
+    for key in all_keys:
+        result[key] = [record.get(key, '') for record in records]
+    
+    # Ensure required fields exist
+    if 'amount' not in result:
+        result['amount'] = [0.0] * len(records)
+    if 'description' not in result:
+        result['description'] = [''] * len(records)
+    
+    return True, result, ""
 
 @app.route('/health', methods=['GET'])
 def health_check():
@@ -142,12 +200,18 @@ def process_financial_data():
         
         request_data = request.get_json()
         
-        # Extract data and config
-        data = request_data.get('data', {})
+        # Extract config (optional)
         config = request_data.get('config', {})
         
-        # Validate input data
-        is_valid, error_msg = validate_input_data(data)
+        # Handle data extraction - could be under 'data' key or direct
+        if 'data' in request_data and isinstance(request_data['data'], (list, dict)):
+            raw_data = request_data['data']
+        else:
+            # Treat the entire request as the data
+            raw_data = {k: v for k, v in request_data.items() if k != 'config'}
+        
+        # Validate and normalize input data
+        is_valid, normalized_data, error_msg = normalize_and_validate_data(raw_data)
         if not is_valid:
             return jsonify({
                 'error': error_msg,
@@ -155,7 +219,7 @@ def process_financial_data():
             }), 400
         
         # Convert to DataFrame
-        df = pd.DataFrame(data)
+        df = pd.DataFrame(normalized_data)
         
         # Check file size limits
         if len(df) > 100000:  # 100k rows limit
