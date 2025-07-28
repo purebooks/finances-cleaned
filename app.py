@@ -45,7 +45,7 @@ APP_CONFIG = {
     'enable_ai': os.getenv('ENABLE_AI', 'true').lower() == 'true',
     'ai_confidence_threshold': float(os.getenv('AI_CONFIDENCE_THRESHOLD', '0.7')),
     'log_level': os.getenv('LOG_LEVEL', 'INFO'),
-    'anthropic_api_key': os.getenv('ANTHROPIC_API_KEY'),
+    'anthropic_api_key': os.getenv('CLAUDE_API_KEY') or os.getenv('ANTHROPIC_API_KEY'),
 }
 
 def create_llm_client() -> LLMClient:

@@ -20,7 +20,7 @@ DEFAULT_PROJECT=""
 # Parse arguments
 PROJECT_ID=${1:-$DEFAULT_PROJECT}
 REGION=${2:-$DEFAULT_REGION}
-ANTHROPIC_API_KEY=${3:-$ANTHROPIC_API_KEY}
+ANTHROPIC_API_KEY=${3:-${CLAUDE_API_KEY:-$ANTHROPIC_API_KEY}}
 
 echo -e "${BLUE}🚀 AI-Enhanced Financial Cleaner Deployment${NC}"
 echo "=================================================="
