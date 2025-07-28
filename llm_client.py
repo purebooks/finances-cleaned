@@ -82,7 +82,7 @@ Normalized vendor name:
         try:
             start_time = time.time()
             response = self.client.messages.create(
-                model="claude-3.5-sonnet-20240620",
+                model="claude-3-5-sonnet-20240620",
                 max_tokens=50,
                 temperature=0.1,  # Lower temperature for more consistent results
                 messages=[{"role": "user", "content": prompt}]
@@ -159,7 +159,7 @@ JSON response:
         try:
             start_time = time.time()
             response = self.client.messages.create(
-                model="claude-3.5-sonnet-20240620",
+                model="claude-3-5-sonnet-20240620",
                 max_tokens=150,
                 temperature=0.2,
                 messages=[{"role": "user", "content": prompt}]
@@ -240,7 +240,7 @@ JSON response:
         
         try:
             response = self.client.messages.create(
-                model="claude-3.5-sonnet-20240620",
+                model="claude-3-5-sonnet-20240620",
                 max_tokens=200,
                 temperature=0.3,
                 messages=[{"role": "user", "content": prompt}]
