@@ -458,8 +458,10 @@ def process_data():
         else:
             logger.info(f"[{request_id}] Output DataFrame head:\n{cleaned_df.head()}")
 
-        # Extract insights from the report
-        insights = report.get('insights', {})
+        # Extract insights from the report (normalized fields)
+        summary = report.get('summary_report', {})
+        processing_summary = summary.get('processing_summary', {})
+        cost_analysis = summary.get('cost_analysis', {})
         
         # Create vendor transformations summary
         vendor_transformations = []
