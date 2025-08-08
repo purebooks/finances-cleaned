@@ -352,8 +352,10 @@ def demo_endpoint():
 
         processing_time = time.time() - start_time
         
-        # Extract insights from the report
-        insights = report.get('insights', {})
+        # Extract insights from the report (use proper fields from summary_report)
+        summary = report.get('summary_report', {})
+        processing_summary = summary.get('processing_summary', {})
+        cost_analysis = summary.get('cost_analysis', {})
         
         return jsonify({
             'cleaned_data': safe_dataframe_to_json(cleaned_df),
@@ -565,10 +567,10 @@ def process_data():
         
         return jsonify({
             'cleaned_data': cleaned_records,
-            'summary_report': report.get('summary_report', {}),
+            'summary_report': summary,
             'insights': {
-                'ai_requests': insights.get('ai_requests', 0),
-                'ai_cost': insights.get('ai_cost', 0.0),
+                'ai_requests': processing_summary.get('llm_calls', 0),
+                'ai_cost': cost_analysis.get('total_cost', 0.0),
                 'processing_time': processing_time,
                 'rows_processed': len(cleaned_df),
                 'vendor_transformations': vendor_transformations
