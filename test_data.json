@@ -1,5 +1,0 @@
-{
-  "merchant": ["Starbucks", "Walmart", "Netflix", "Amazon"],
-  "amount": [4.50, 125.75, 15.99, 89.99],
-  "description": ["Coffee", "Groceries", "Streaming", "Electronics"]
-} 

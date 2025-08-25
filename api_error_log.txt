@@ -1,5 +1,0 @@
-2025-07-31 15:43:49,531 - __main__ - INFO - API starting on port 8080
- * Serving Flask app 'app_v5'
- * Debug mode: off
-Address already in use
-Port 8080 is in use by another program. Either identify and stop that program, or start the server with a different port.
