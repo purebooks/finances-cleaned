@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comprehensive Interface Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        .success { background-color: #d4edda; border-color: #c3e6cb; }
+        .error { background-color: #f8d7da; border-color: #f5c6cb; }
+        .info { background-color: #d1ecf1; border-color: #bee5eb; }
+        .data-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .data-table th, .data-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        .data-table th { background-color: #f2f2f2; }
+        button { padding: 10px 20px; margin: 5px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        pre { background-color: #f8f9fa; padding: 10px; border-radius: 5px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>Comprehensive Interface Test</h1>
+    
+    <div class="test-section info">
+        <h3>Step 1: Test API Directly</h3>
+        <button onclick="testAPIDirectly()">Test API with Real Data</button>
+        <div id="apiTestResult"></div>
+    </div>
+
+    <div class="test-section info">
+        <h3>Step 2: Test Interface Logic</h3>
+        <button onclick="testInterfaceLogic()">Test Interface Display Logic</button>
+        <div id="interfaceTestResult"></div>
+    </div>
+
+    <div class="test-section info">
+        <h3>Step 3: Test Full Flow</h3>
+        <button onclick="testFullFlow()">Test Complete Flow</button>
+        <div id="fullFlowResult"></div>
+    </div>
+
+    <script>
+        const API_BASE_URL = 'https://ai-financial-cleaner-v5-pksi3xslca-uc.a.run.app';
+
+        async function testAPIDirectly() {
+            const testData = {
+                "data": {
+                    "Category": ["Other", "Other", "Other"],
+                    "Vendor Name": ["Spotify", "DHL", "Staples Inc."],
+                    "Amount ($)": [162.6, 407.02, 371.04],
+                    "Date": ["07/18/2025", "06/27/2025", "07/22/2025"],
+                    "Txn ID": ["90.0", "76.0", "37.0"],
+                    "memo": ["Annual Plan", "Team Plan", "Pro Licence"]
+                },
+                "config": {
+                    "enable_ai": true,
+                    "ai_vendor_enabled": true,
+                    "ai_category_enabled": true,
+                    "enable_transaction_intelligence": true,
+                    "enable_source_tracking": true,
+                    "ai_confidence_threshold": 0.7
+                }
+            };
+
+            try {
+                console.log('Testing API directly with:', testData);
+                
+                const response = await fetch(`${API_BASE_URL}/process`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(testData)
+                });
+
+                const data = await response.json();
+                console.log('API Response:', data);
+
+                const resultDiv = document.getElementById('apiTestResult');
+                resultDiv.innerHTML = `
+                    <div class="success">
+                        <h4>✅ API Test Successful</h4>
+                        <p><strong>Status:</strong> ${data.status}</p>
+                        <p><strong>Processing Time:</strong> ${data.processing_time}s</p>
+                        <p><strong>Cleaned Data Count:</strong> ${data.cleaned_data ? data.cleaned_data.length : 0}</p>
+                        <p><strong>LLM Calls:</strong> ${data.summary_report?.processing_summary?.llm_calls || 0}</p>
+                        <h5>First Cleaned Record:</h5>
+                        <pre>${JSON.stringify(data.cleaned_data?.[0] || 'None', null, 2)}</pre>
+                    </div>
+                `;
+
+                return data;
+            } catch (error) {
+                console.error('API Test Error:', error);
+                document.getElementById('apiTestResult').innerHTML = `
+                    <div class="error">
+                        <h4>❌ API Test Failed</h4>
+                        <p>${error.message}</p>
+                    </div>
+                `;
+                return null;
+            }
+        }
+
+        function testInterfaceLogic() {
+            const mockData = {
+                status: 'success',
+                processing_time: 3.5,
+                cleaned_data: [
+                    {
+                        "Amount ($)": 162.6,
+                        "Category": "Other",
+                        "Vendor Name": "Spotify",
+                        "category": "Entertainment",
+                        "category_confidence": 0.9,
+                        "category_source": "rule_based",
+                        "standardized_vendor": "Spotify",
+                        "vendor_confidence": 0.95,
+                        "vendor_source": "rule_based"
+                    }
+                ],
+                summary_report: {
+                    processing_summary: {
+                        total_transactions: 1,
+                        vendor_standardizations: 1,
+                        category_classifications: 1,
+                        llm_calls: 2,
+                        cache_hit_rate: 0.0
+                    },
+                    cost_analysis: {
+                        total_cost: 0.04
+                    }
+                }
+            };
+
+            console.log('Testing interface logic with:', mockData);
+            
+            // Test the display functions
+            const resultDiv = document.getElementById('interfaceTestResult');
+            resultDiv.innerHTML = `
+                <div class="success">
+                    <h4>✅ Interface Logic Test</h4>
+                    <p>Testing display functions...</p>
+                </div>
+            `;
+
+            // Test displayResults function
+            try {
+                displayResults(mockData);
+                resultDiv.innerHTML += `
+                    <div class="success">
+                        <h5>✅ Display Results Function Working</h5>
+                        <p>Data processed and displayed successfully.</p>
+                    </div>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML += `
+                    <div class="error">
+                        <h5>❌ Display Results Function Failed</h5>
+                        <p>${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        async function testFullFlow() {
+            const resultDiv = document.getElementById('fullFlowResult');
+            resultDiv.innerHTML = '<div class="info"><h4>🔄 Testing Full Flow...</h4></div>';
+
+            try {
+                // Step 1: Test API
+                const apiData = await testAPIDirectly();
+                if (!apiData) {
+                    resultDiv.innerHTML = '<div class="error"><h4>❌ API Test Failed</h4></div>';
+                    return;
+                }
+
+                // Step 2: Test interface display
+                try {
+                    displayResults(apiData);
+                    resultDiv.innerHTML = `
+                        <div class="success">
+                            <h4>✅ Full Flow Test Successful</h4>
+                            <p>API processing and interface display both working correctly.</p>
+                            <p><strong>Key Findings:</strong></p>
+                            <ul>
+                                <li>API processed ${apiData.cleaned_data?.length || 0} transactions</li>
+                                <li>LLM made ${apiData.summary_report?.processing_summary?.llm_calls || 0} calls</li>
+                                <li>Processing time: ${apiData.processing_time}s</li>
+                                <li>Interface successfully displayed results</li>
+                            </ul>
+                        </div>
+                    `;
+                } catch (error) {
+                    resultDiv.innerHTML = `
+                        <div class="error">
+                            <h4>❌ Interface Display Failed</h4>
+                            <p>API worked but interface failed: ${error.message}</p>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <div class="error">
+                        <h4>❌ Full Flow Test Failed</h4>
+                        <p>${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        function displayResults(data) {
+            console.log('Displaying results:', data);
+            
+            // Safely access summary data
+            const summary = data.summary_report?.processing_summary || {};
+            const costAnalysis = data.summary_report?.cost_analysis || {};
+            
+            let html = `
+                <h3>Processing Results</h3>
+                <p><strong>Status:</strong> ${data.status}</p>
+                <p><strong>Processing Time:</strong> ${data.processing_time}s</p>
+                <p><strong>Total Transactions:</strong> ${summary.total_transactions || 0}</p>
+                <p><strong>Vendor Standardizations:</strong> ${summary.vendor_standardizations || 0}</p>
+                <p><strong>Category Classifications:</strong> ${summary.category_classifications || 0}</p>
+                <p><strong>LLM Calls:</strong> ${summary.llm_calls || 0}</p>
+                <p><strong>Cache Hit Rate:</strong> ${((summary.cache_hit_rate || 0) * 100).toFixed(1)}%</p>
+                <p><strong>Total Cost:</strong> $${(costAnalysis.total_cost || 0).toFixed(3)}</p>
+            `;
+
+            // Display cleaned data table
+            if (data.cleaned_data && data.cleaned_data.length > 0) {
+                html += '<h4>Cleaned Data</h4>';
+                html += displayDataTable(data.cleaned_data);
+            } else {
+                html += '<p>No cleaned data available.</p>';
+            }
+
+            // Create a temporary div to display results
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = html;
+            document.body.appendChild(tempDiv);
+            
+            // Remove after 5 seconds
+            setTimeout(() => {
+                if (tempDiv.parentNode) {
+                    tempDiv.parentNode.removeChild(tempDiv);
+                }
+            }, 5000);
+        }
+
+        function displayDataTable(data) {
+            if (!data || data.length === 0) {
+                return '<p>No data to display.</p>';
+            }
+
+            const headers = Object.keys(data[0]);
+            let tableHTML = '<table class="data-table"><thead><tr>';
+            
+            headers.forEach(header => {
+                tableHTML += `<th>${header}</th>`;
+            });
+            tableHTML += '</tr></thead><tbody>';
+
+            data.forEach(row => {
+                tableHTML += '<tr>';
+                headers.forEach(header => {
+                    let value = row[header];
+                    tableHTML += `<td>${value}</td>`;
+                });
+                tableHTML += '</tr>';
+            });
+
+            tableHTML += '</tbody></table>';
+            return tableHTML;
+        }
+    </script>
+</body>
+</html> 

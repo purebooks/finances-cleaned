@@ -1,0 +1,501 @@
+Amount,Category,Clean Vendor,Description/Memo,Transaction Date,category,standardized_vendor
+245.65,Office Supplies & Equipment,WALGREENS,Transaction 1 - Equipment purchase,2023-01-13,Office Supplies & Equipment,WALGREENS
+590.9,Meals & Entertainment,AUTO PAY Chipotle,Transaction 2 - Office supplies,2023-10-07,Meals & Entertainment,AUTO PAY Chipotle
+561.68,Software & Technology,Apple ONLINE,Transaction 3 - Equipment purchase,2023-11-05,Software & Technology,Apple ONLINE
+589.68,Travel & Transportation,Marriott*STORE 001,Transaction 4 - Business expense,2023-04-23,Travel & Transportation,Marriott*STORE 001
+340.91,Meals & Entertainment,Subway,Transaction 5 - Team lunch,2023-03-23,Meals & Entertainment,Subway
+359.62,Travel & Transportation,LYFT,Transaction 6 - Team lunch,2023-07-14,Travel & Transportation,LYFT
+125.7,Office Supplies & Equipment,Amazon LLC,Transaction 7 - Business expense,2023-08-24,Office Supplies & Equipment,Amazon LLC
+885.57,Travel & Transportation,PAYPAL *Airbnb,Transaction 8 - Office supplies,,Travel & Transportation,PAYPAL *Airbnb
+773.3,Meals & Entertainment,DOMINO'S,Transaction 9 - Office supplies,2023-01-24,Meals & Entertainment,DOMINO'S
+636.05,Travel & Transportation,Lyft*STORE 001,Transaction 10 - Team lunch,2023-05-23,Travel & Transportation,Lyft*STORE 001
+702.12,Utilities & Rent,SQ *Comcast,Transaction 11 - Business expense,2023-12-10,Utilities & Rent,SQ *Comcast
+0.0,Travel & Transportation,Budget INC,Transaction 12 - Team lunch,2023-03-29,Travel & Transportation,Budget INC
+684.93,Office Supplies & Equipment,Walgreens LLC,Transaction 13 - Business expense,2023-10-13,Office Supplies & Equipment,Walgreens LLC
+0.0,Software & Technology,Apple,Transaction 14 - Equipment purchase,2023-01-17,Software & Technology,Apple
+396.24,Utilities & Rent,SQ *AT&T,Transaction 15 - Client meeting,2023-12-02,Utilities & Rent,SQ *AT&T
+745.24,Office Supplies & Equipment,PAYPAL *Target,Transaction 16 - Equipment purchase,2023-03-13,Office Supplies & Equipment,PAYPAL *Target
+362.63,Travel & Transportation,Hertz*STORE 001,Transaction 17 - Office supplies,2023-10-26,Travel & Transportation,Hertz*STORE 001
+0.0,Travel & Transportation,TST* Southwest Airlines,Transaction 18 - Equipment purchase,2023-02-16,Travel & Transportation,TST* Southwest Airlines
+382.24,Banking & Finance,Wells Fargo.COM,Transaction 19 - Monthly subscription,2023-02-02,Banking & Finance,Wells Fargo.COM
+682.03,Software & Technology,Microsoft ONLINE,Transaction 20 - Team lunch,2023-01-06,Software & Technology,Microsoft ONLINE
+435.33,Office Supplies & Equipment,Whole Foods #123456,Transaction 21 - Equipment purchase,2023-02-27,Office Supplies & Equipment,Whole Foods #123456
+508.17,Meals & Entertainment,PAYPAL *Papa John's,Transaction 22 - Team lunch,2023-09-14,Meals & Entertainment,PAYPAL *Papa John's
+153.69,Office Supplies & Equipment,Walgreens ONLINE,Transaction 23 - Monthly subscription,2023-11-08,Office Supplies & Equipment,Walgreens ONLINE
+0.0,Travel & Transportation,AUTO PAY Hilton Hotels,Transaction 24 - Team lunch,,Travel & Transportation,AUTO PAY Hilton Hotels
+0.0,Software & Technology,Google,Transaction 25 - Business expense,,Software & Technology,Google
+660.09,[Category Missing],Subway ONLINE,Transaction 26 - Office supplies,2023-06-03,,Subway ONLINE
+964.4,[Category Missing],Microsoft ONLINE,Transaction 27 - Equipment purchase,2023-11-07,,Microsoft ONLINE
+399.59,[Category Missing],SQ *Pizza Hut,Transaction 28 - Team lunch,2024-01-01,,SQ *Pizza Hut
+121.88,[Category Missing],AUTO PAY Chase Bank,Transaction 29 - Team lunch,2023-09-22,,AUTO PAY Chase Bank
+588.85,[Category Missing],McDonald's.COM,Transaction 30 - Equipment purchase,2023-10-11,,McDonald's.COM
+0.0,[Category Missing],SQ *Netflix,Transaction 31 - Team lunch,2023-02-04,,SQ *Netflix
+133.18,[Category Missing],TST* Safeway,Transaction 32 - Monthly subscription,2023-04-20,,TST* Safeway
+807.69,[Category Missing],TST* Enterprise Rent-A-Car,Transaction 33 - Equipment purchase,2023-05-05,,TST* Enterprise Rent-A-Car
+467.56,[Category Missing],Wells Fargo #123456,Transaction 34 - Equipment purchase,2023-08-05,,Wells Fargo #123456
+403.22,[Category Missing],Whole Foods INC,Transaction 35 - Business expense,2023-02-20,,Whole Foods INC
+449.16,[Category Missing],SQ *Google,Transaction 36 - Team lunch,2023-04-08,,SQ *Google
+808.21,[Category Missing],SQ *American Express,Transaction 37 - Business expense,2023-02-08,,SQ *American Express
+969.03,[Category Missing],Netflix INC,Transaction 38 - Office supplies,2023-10-04,,Netflix INC
+214.53,[Category Missing],Walmart*STORE 001,Transaction 39 - Business expense,2023-09-06,,Walmart*STORE 001
+265.94,[Category Missing],Walmart*STORE 001,Transaction 40 - Client meeting,2023-01-02,,Walmart*STORE 001
+662.21,[Category Missing],Salesforce*STORE 001,Transaction 41 - Office supplies,2023-12-23,,Salesforce*STORE 001
+0.0,[Category Missing],SQ *Salesforce,Transaction 42 - Business expense,,,SQ *Salesforce
+919.47,[Category Missing],Netflix.COM,Transaction 43 - Business expense,2023-09-02,,Netflix.COM
+595.44,[Category Missing],SOUTHWEST AIRLINES,Transaction 44 - Office supplies,2023-04-06,,SOUTHWEST AIRLINES
+579.34,[Category Missing],WATER COMPANY,Transaction 45 - Client meeting,2023-10-19,,WATER COMPANY
+317.05,[Category Missing],Safeway.COM,Transaction 46 - Equipment purchase,2023-10-17,,Safeway.COM
+396.39,[Category Missing],Domino's #123456,Transaction 47 - Team lunch,2023-05-03,,Domino's #123456
+458.83,[Category Missing],American Express #123456,Transaction 48 - Business expense,2023-02-07,,American Express #123456
+265.94,[Category Missing],Spotify ONLINE,Transaction 49 - Business expense,2023-04-20,,Spotify ONLINE
+438.75,[Category Missing],Google #123456,Transaction 50 - Team lunch,2023-05-26,,Google #123456
+8.82,[Category Missing],CVSPharmacy,Transaction 51 - Team lunch,2023-12-01,,CVSPharmacy
+0.0,[Category Missing],SAFEWAY,Transaction 52 - Office supplies,2023-03-10,,SAFEWAY
+717.89,[Category Missing],PAYPAL *Adobe,Transaction 53 - Equipment purchase,2023-11-06,,PAYPAL *Adobe
+905.43,[Category Missing],Microsoft ONLINE,Transaction 54 - Business expense,2023-09-08,,Microsoft ONLINE
+4.54,[Category Missing],Walgreens*STORE 001,Transaction 55 - Equipment purchase,2023-05-22,,Walgreens*STORE 001
+705.96,[Category Missing],microsoft,Transaction 56 - Business expense,2023-08-15,,microsoft
+546.04,[Category Missing],AUTO PAY Spotify,Transaction 57 - Monthly subscription,2023-12-20,,AUTO PAY Spotify
+42.79,[Category Missing],airbnb,Transaction 58 - Business expense,2023-09-08,,airbnb
+667.27,[Category Missing],SQ *Comcast,Transaction 59 - Monthly subscription,2023-12-16,,SQ *Comcast
+864.74,[Category Missing],Bank of America.COM,Transaction 60 - Office supplies,2023-03-21,,Bank of America.COM
+782.6,[Category Missing],Bank of America,Transaction 61 - Equipment purchase,2023-04-02,,Bank of America
+160.04,[Category Missing],Chipotle,Transaction 62 - Client meeting,2023-05-08,,Chipotle
+200.37,[Category Missing],Amazon,Transaction 63 - Team lunch,2023-08-29,,Amazon
+0.0,[Category Missing],Dropbox,Transaction 64 - Team lunch,2023-04-27,,Dropbox
+641.84,[Category Missing],Spotify,Transaction 65 - Monthly subscription,2023-05-23,,Spotify
+179.39,[Category Missing],Verizon,Transaction 66 - Team lunch,2023-03-01,,Verizon
+346.34,[Category Missing],AMAZON,Transaction 67 - Client meeting,2023-11-02,,AMAZON
+899.61,[Category Missing],Budget ONLINE,Transaction 68 - Equipment purchase,2023-03-01,,Budget ONLINE
+687.17,[Category Missing],Wells Fargo,Transaction 69 - Equipment purchase,2023-09-24,,Wells Fargo
+70.9,[Category Missing],SQ *Safeway,Transaction 70 - Team lunch,2023-07-06,,SQ *Safeway
+720.03,[Category Missing],CVS Pharmacy #123456,Transaction 71 - Team lunch,2023-12-06,,CVS Pharmacy #123456
+697.51,[Category Missing],Safeway*STORE 001,Transaction 72 - Office supplies,2023-06-17,,Safeway*STORE 001
+615.9,[Category Missing],Bank of America INC,Transaction 73 - Monthly subscription,2023-07-14,,Bank of America INC
+430.46,[Category Missing],PAYPAL *Starbucks,Transaction 74 - Equipment purchase,2023-05-27,,PAYPAL *Starbucks
+675.95,[Category Missing],TST* AT&T,Transaction 75 - Equipment purchase,2023-08-15,,TST* AT&T
+515.94,[Category Missing],Walmart INC,Transaction 76 - Team lunch,2023-02-13,,Walmart INC
+225.42,[Category Missing],Uber,Transaction 77 - Business expense,2023-05-01,,Uber
+455.96,[Category Missing],TST* Google,Transaction 78 - Monthly subscription,2023-11-09,,TST* Google
+494.88,[Category Missing],Home Depot LLC,Transaction 79 - Equipment purchase,2023-12-23,,Home Depot LLC
+219.62,[Category Missing],Pizza Hut,Transaction 80 - Equipment purchase,2023-02-24,,Pizza Hut
+249.95,[Category Missing],TST* Hilton Hotels,Transaction 81 - Client meeting,2023-01-26,,TST* Hilton Hotels
+987.9,[Category Missing],Chevron,Transaction 82 - Client meeting,2023-08-26,,Chevron
+830.74,[Category Missing],CVS Pharmacy,Transaction 83 - Office supplies,2023-09-16,,CVS Pharmacy
+259.93,[Category Missing],Chipotle,Transaction 84 - Equipment purchase,2023-09-01,,Chipotle
+627.12,[Category Missing],Adobe,Transaction 85 - Business expense,2023-09-24,,Adobe
+336.51,[Category Missing],PAYPAL *Domino's,Transaction 86 - Business expense,2023-05-01,,PAYPAL *Domino's
+694.26,[Category Missing],chevron,Transaction 87 - Business expense,2023-04-29,,chevron
+466.46,[Category Missing],Bank of America*STORE 001,Transaction 88 - Client meeting,2023-06-19,,Bank of America*STORE 001
+856.88,[Category Missing],AUTO PAY Gas Company,Transaction 89 - Client meeting,2023-10-27,,AUTO PAY Gas Company
+753.72,[Category Missing],Delta Airlines,Transaction 90 - Client meeting,2023-06-30,,Delta Airlines
+897.91,[Category Missing],Marriott LLC,Transaction 91 - Team lunch,,,Marriott LLC
+336.79,[Category Missing],TST* Wells Fargo,Transaction 92 - Client meeting,2023-01-15,,TST* Wells Fargo
+980.74,[Category Missing],papa john's,Transaction 93 - Client meeting,2023-08-28,,papa john's
+84.86,[Category Missing],Hertz.COM,Transaction 94 - Client meeting,2023-12-06,,Hertz.COM
+328.03,[Category Missing],Costco,Transaction 95 - Team lunch,2023-05-14,,Costco
+752.26,[Category Missing],AUTO PAY Subway,Transaction 96 - Team lunch,2023-07-14,,AUTO PAY Subway
+53.03,[Category Missing],TST* Uber,Transaction 97 - Office supplies,2023-01-10,,TST* Uber
+754.48,[Category Missing],WHOLE FOODS,Transaction 98 - Office supplies,2023-11-30,,WHOLE FOODS
+127.09,[Category Missing],McDonald's.COM,Transaction 99 - Monthly subscription,2023-03-20,,McDonald's.COM
+0.0,[Category Missing],TST* Best Buy,Transaction 100 - Equipment purchase,2023-12-25,,TST* Best Buy
+0.0,[Category Missing],DOMINO'S,Transaction 101 - Monthly subscription,2023-03-25,,DOMINO'S
+0.0,[Category Missing],AUTO PAY Kroger,Transaction 102 - Equipment purchase,2023-07-12,,AUTO PAY Kroger
+850.44,[Category Missing],SQ *Walgreens,Transaction 103 - Business expense,2023-02-22,,SQ *Walgreens
+533.21,[Category Missing],EnterpriseRent-A-Car,Transaction 104 - Business expense,2023-01-22,,EnterpriseRent-A-Car
+849.73,[Category Missing],Southwest Airlines INC,Transaction 105 - Business expense,2023-06-24,,Southwest Airlines INC
+707.6,[Category Missing],Wells Fargo #123456,Transaction 106 - Equipment purchase,2023-11-22,,Wells Fargo #123456
+808.39,[Category Missing],Hilton Hotels INC,Transaction 107 - Client meeting,,,Hilton Hotels INC
+322.98,[Category Missing],American Express*STORE 001,Transaction 108 - Business expense,2023-10-31,,American Express*STORE 001
+750.73,[Category Missing],AUTO PAY Adobe,Transaction 109 - Equipment purchase,2023-08-19,,AUTO PAY Adobe
+0.0,[Category Missing],Gas Company #123456,Transaction 110 - Team lunch,2023-01-15,,Gas Company #123456
+701.48,[Category Missing],Microsoft #123456,Transaction 111 - Business expense,,,Microsoft #123456
+720.35,[Category Missing],SQ *Hilton Hotels,Transaction 112 - Office supplies,2023-02-13,,SQ *Hilton Hotels
+0.0,[Category Missing],TST* Pizza Hut,Transaction 113 - Office supplies,2023-11-27,,TST* Pizza Hut
+664.3,[Category Missing],Water Company LLC,Transaction 114 - Monthly subscription,2023-05-05,,Water Company LLC
+331.46,[Category Missing],Hilton Hotels #123456,Transaction 115 - Team lunch,2023-08-06,,Hilton Hotels #123456
+721.56,[Category Missing],PAYPAL *Dropbox,Transaction 116 - Equipment purchase,2023-04-29,,PAYPAL *Dropbox
+192.35,[Category Missing],Marriott,Transaction 117 - Team lunch,2023-12-20,,Marriott
+0.0,[Category Missing],Papa John's.COM,Transaction 118 - Team lunch,,,Papa John's.COM
+15.13,[Category Missing],Apple #123456,Transaction 119 - Team lunch,2023-04-02,,Apple #123456
+697.72,[Category Missing],Amazon,Transaction 120 - Client meeting,2023-10-11,,Amazon
+285.05,[Category Missing],Lyft,Transaction 121 - Team lunch,,,Lyft
+0.0,[Category Missing],Costco,Transaction 122 - Business expense,2023-05-10,,Costco
+152.58,[Category Missing],Enterprise Rent-A-Car INC,Transaction 123 - Team lunch,2023-12-18,,Enterprise Rent-A-Car INC
+764.68,[Category Missing],SQ *Uber,Transaction 124 - Monthly subscription,2023-03-02,,SQ *Uber
+451.06,[Category Missing],Apple,Transaction 125 - Monthly subscription,2023-09-25,,Apple
+61.17,[Category Missing],PAYPAL *Wells Fargo,Transaction 126 - Business expense,,,PAYPAL *Wells Fargo
+0.0,[Category Missing],SQ *Subway,Transaction 127 - Office supplies,2023-11-17,,SQ *Subway
+409.11,[Category Missing],AIRBNB,Transaction 128 - Client meeting,2023-03-22,,AIRBNB
+707.25,[Category Missing],Salesforce,Transaction 129 - Client meeting,2023-04-29,,Salesforce
+788.04,[Category Missing],Spotify INC,Transaction 130 - Equipment purchase,2023-04-30,,Spotify INC
+0.0,[Category Missing],Home Depot*STORE 001,Transaction 131 - Office supplies,2023-02-28,,Home Depot*STORE 001
+595.45,[Category Missing],Spotify,Transaction 132 - Team lunch,2023-03-26,,Spotify
+700.03,[Category Missing],CHASE BANK,Transaction 133 - Monthly subscription,2023-08-28,,CHASE BANK
+598.44,[Category Missing],TST* Marriott,Transaction 134 - Equipment purchase,2023-08-13,,TST* Marriott
+92.24,[Category Missing],AT&T.COM,Transaction 135 - Monthly subscription,2023-05-09,,AT&T.COM
+576.67,[Category Missing],Hertz,Transaction 136 - Office supplies,2023-12-11,,Hertz
+0.0,[Category Missing],Delta Airlines ONLINE,Transaction 137 - Client meeting,2023-11-30,,Delta Airlines ONLINE
+470.54,[Category Missing],Walgreens,Transaction 138 - Team lunch,2023-09-09,,Walgreens
+412.23,[Category Missing],SAFEWAY,Transaction 139 - Equipment purchase,2023-03-24,,SAFEWAY
+455.37,[Category Missing],Water Company,Transaction 140 - Team lunch,2023-10-09,,Water Company
+825.1,[Category Missing],Shell,Transaction 141 - Monthly subscription,2023-07-26,,Shell
+518.92,[Category Missing],American Express*STORE 001,Transaction 142 - Client meeting,2023-01-28,,American Express*STORE 001
+0.0,[Category Missing],TST* Walgreens,Transaction 143 - Client meeting,2023-01-27,,TST* Walgreens
+973.17,[Category Missing],TST* Pizza Hut,Transaction 144 - Office supplies,2023-03-04,,TST* Pizza Hut
+14.66,[Category Missing],domino's,Transaction 145 - Office supplies,2023-06-09,,domino's
+498.88,[Category Missing],TST* Shell,Transaction 146 - Monthly subscription,2023-02-03,,TST* Shell
+980.26,[Category Missing],PAYPAL *Domino's,Transaction 147 - Monthly subscription,2023-08-01,,PAYPAL *Domino's
+508.73,[Category Missing],Target*STORE 001,Transaction 148 - Business expense,,,Target*STORE 001
+934.31,[Category Missing],Adobe,Transaction 149 - Business expense,2023-08-01,,Adobe
+580.34,[Category Missing],Salesforce LLC,Transaction 150 - Office supplies,,,Salesforce LLC
+333.11,[Category Missing],Chase Bank ONLINE,Transaction 151 - Client meeting,2023-09-05,,Chase Bank ONLINE
+980.79,[Category Missing],AUTO PAY American Express,Transaction 152 - Client meeting,2023-06-14,,AUTO PAY American Express
+318.86,[Category Missing],Apple,Transaction 153 - Client meeting,2023-07-30,,Apple
+0.0,[Category Missing],Gas Company INC,Transaction 154 - Monthly subscription,2023-11-30,,Gas Company INC
+100.61,[Category Missing],Verizon,Transaction 155 - Business expense,2023-02-21,,Verizon
+75.75,[Category Missing],papa john's,Transaction 156 - Team lunch,2023-07-29,,papa john's
+650.19,[Category Missing],Verizon.COM,Transaction 157 - Equipment purchase,2023-12-21,,Verizon.COM
+872.51,[Category Missing],Marriott*STORE 001,Transaction 158 - Office supplies,2023-06-12,,Marriott*STORE 001
+747.02,[Category Missing],Walgreens INC,Transaction 159 - Business expense,2023-05-28,,Walgreens INC
+444.23,[Category Missing],Subway INC,Transaction 160 - Business expense,2023-12-27,,Subway INC
+359.1,[Category Missing],Amazon #123456,Transaction 161 - Office supplies,2023-01-29,,Amazon #123456
+170.81,[Category Missing],Hilton Hotels*STORE 001,Transaction 162 - Client meeting,2023-10-17,,Hilton Hotels*STORE 001
+0.0,[Category Missing],CVS Pharmacy INC,Transaction 163 - Equipment purchase,2023-05-04,,CVS Pharmacy INC
+899.01,[Category Missing],TST* Microsoft,Transaction 164 - Team lunch,2023-05-11,,TST* Microsoft
+442.29,[Category Missing],Kroger ONLINE,Transaction 165 - Monthly subscription,2023-03-22,,Kroger ONLINE
+457.38,[Category Missing],Dropbox INC,Transaction 166 - Client meeting,2023-08-06,,Dropbox INC
+572.35,[Category Missing],DELTA AIRLINES,Transaction 167 - Equipment purchase,2023-05-02,,DELTA AIRLINES
+275.21,[Category Missing],Salesforce,Transaction 168 - Equipment purchase,2023-12-04,,Salesforce
+833.01,[Category Missing],Chipotle,Transaction 169 - Office supplies,2023-11-07,,Chipotle
+636.98,[Category Missing],Budget,Transaction 170 - Equipment purchase,2023-06-30,,Budget
+628.62,[Category Missing],Subway LLC,Transaction 171 - Equipment purchase,2023-04-12,,Subway LLC
+579.99,[Category Missing],PAYPAL *Amazon,Transaction 172 - Business expense,2023-08-14,,PAYPAL *Amazon
+201.59,[Category Missing],Salesforce #123456,Transaction 173 - Team lunch,2023-01-08,,Salesforce #123456
+257.71,[Category Missing],Hilton Hotels ONLINE,Transaction 174 - Client meeting,2023-05-20,,Hilton Hotels ONLINE
+468.86,[Category Missing],Salesforce LLC,Transaction 175 - Office supplies,2023-06-23,,Salesforce LLC
+967.3,[Category Missing],Kroger LLC,Transaction 176 - Team lunch,2023-12-12,,Kroger LLC
+0.0,[Category Missing],Uber,Transaction 177 - Equipment purchase,2023-07-22,,Uber
+381.64,[Category Missing],Chipotle INC,Transaction 178 - Team lunch,,,Chipotle INC
+26.0,[Category Missing],Lyft INC,Transaction 179 - Monthly subscription,2023-04-30,,Lyft INC
+648.0,[Category Missing],AUTO PAY AT&T,Transaction 180 - Client meeting,2023-11-09,,AUTO PAY AT&T
+117.56,[Category Missing],PAYPAL *Pizza Hut,Transaction 181 - Team lunch,2023-11-29,,PAYPAL *Pizza Hut
+0.0,[Category Missing],UNITED AIRLINES,Transaction 182 - Team lunch,2023-02-19,,UNITED AIRLINES
+419.71,[Category Missing],Safeway LLC,Transaction 183 - Office supplies,2023-12-23,,Safeway LLC
+616.04,[Category Missing],Bank of America INC,Transaction 184 - Team lunch,2023-02-20,,Bank of America INC
+443.94,[Category Missing],Amazon LLC,Transaction 185 - Team lunch,2023-07-09,,Amazon LLC
+901.79,[Category Missing],Lyft INC,Transaction 186 - Business expense,2023-07-08,,Lyft INC
+949.06,[Category Missing],PAYPAL *Water Company,Transaction 187 - Business expense,2023-04-08,,PAYPAL *Water Company
+0.0,[Category Missing],SQ *Safeway,Transaction 188 - Office supplies,,,SQ *Safeway
+69.54,[Category Missing],Chevron,Transaction 189 - Office supplies,2023-10-17,,Chevron
+774.59,[Category Missing],SQ *Hertz,Transaction 190 - Monthly subscription,2023-04-30,,SQ *Hertz
+540.68,[Category Missing],PAYPAL *Starbucks,Transaction 191 - Business expense,2023-03-16,,PAYPAL *Starbucks
+15.85,[Category Missing],Safeway,Transaction 192 - Office supplies,2023-01-14,,Safeway
+0.0,[Category Missing],Hertz #123456,Transaction 193 - Monthly subscription,2023-09-01,,Hertz #123456
+448.83,[Category Missing],Shell LLC,Transaction 194 - Monthly subscription,2023-02-02,,Shell LLC
+945.47,[Category Missing],TST* Lyft,Transaction 195 - Equipment purchase,2023-09-15,,TST* Lyft
+61.76,[Category Missing],PAYPAL *Hilton Hotels,Transaction 196 - Client meeting,2023-08-23,,PAYPAL *Hilton Hotels
+712.69,[Category Missing],Wells Fargo INC,Transaction 197 - Business expense,2023-02-25,,Wells Fargo INC
+127.07,[Category Missing],AT&T.COM,Transaction 198 - Monthly subscription,2023-03-17,,AT&T.COM
+994.63,[Category Missing],Airbnb LLC,Transaction 199 - Client meeting,2023-06-16,,Airbnb LLC
+793.3,[Category Missing],Southwest Airlines.COM,Transaction 200 - Equipment purchase,2023-08-09,,Southwest Airlines.COM
+452.1,[Category Missing],Airbnb LLC,Transaction 201 - Team lunch,2023-04-21,,Airbnb LLC
+313.24,[Category Missing],American Express*STORE 001,Transaction 202 - Team lunch,2023-08-01,,American Express*STORE 001
+68.07,[Category Missing],electric company,Transaction 203 - Business expense,2023-12-18,,electric company
+556.81,[Category Missing],WELLS FARGO,Transaction 204 - Monthly subscription,2023-10-07,,WELLS FARGO
+411.4,[Category Missing],Airbnb #123456,Transaction 205 - Client meeting,2023-12-10,,Airbnb #123456
+0.0,[Category Missing],Papa John's,Transaction 206 - Office supplies,,,Papa John's
+847.43,[Category Missing],Target INC,Transaction 207 - Monthly subscription,2023-09-04,,Target INC
+226.93,[Category Missing],ELECTRIC COMPANY,Transaction 208 - Monthly subscription,,,ELECTRIC COMPANY
+27.23,[Category Missing],CVS Pharmacy.COM,Transaction 209 - Equipment purchase,2023-12-12,,CVS Pharmacy.COM
+703.0,[Category Missing],Adobe,Transaction 210 - Team lunch,2023-04-03,,Adobe
+566.75,[Category Missing],Comcast,Transaction 211 - Office supplies,2023-03-04,,Comcast
+746.37,[Category Missing],Chipotle INC,Transaction 212 - Client meeting,2023-01-16,,Chipotle INC
+312.33,[Category Missing],American Express #123456,Transaction 213 - Monthly subscription,2023-03-22,,American Express #123456
+158.25,[Category Missing],BUDGET,Transaction 214 - Equipment purchase,2023-01-27,,BUDGET
+486.18,[Category Missing],PAYPAL *Uber,Transaction 215 - Team lunch,2023-08-15,,PAYPAL *Uber
+345.83,[Category Missing],BestBuy,Transaction 216 - Equipment purchase,2023-09-20,,BestBuy
+46.37,[Category Missing],TST* Hertz,Transaction 217 - Monthly subscription,2023-09-27,,TST* Hertz
+945.38,[Category Missing],Netflix,Transaction 218 - Team lunch,2023-04-15,,Netflix
+497.89,[Category Missing],Salesforce #123456,Transaction 219 - Office supplies,2023-03-03,,Salesforce #123456
+500.76,[Category Missing],Gas Company ONLINE,Transaction 220 - Team lunch,2023-12-27,,Gas Company ONLINE
+19.72,[Category Missing],Spotify*STORE 001,Transaction 221 - Team lunch,2023-01-22,,Spotify*STORE 001
+709.79,[Category Missing],Enterprise Rent-A-Car*STORE 001,Transaction 222 - Business expense,2023-10-21,,Enterprise Rent-A-Car*STORE 001
+801.52,[Category Missing],Water Company,Transaction 223 - Equipment purchase,2023-06-16,,Water Company
+244.07,[Category Missing],ELECTRIC COMPANY,Transaction 224 - Monthly subscription,2023-08-12,,ELECTRIC COMPANY
+222.35,[Category Missing],Uber*STORE 001,Transaction 225 - Business expense,2023-06-08,,Uber*STORE 001
+510.44,[Category Missing],Southwest Airlines INC,Transaction 226 - Team lunch,2023-02-28,,Southwest Airlines INC
+0.0,[Category Missing],Comcast LLC,Transaction 227 - Office supplies,2023-11-27,,Comcast LLC
+177.97,[Category Missing],budget,Transaction 228 - Client meeting,2023-12-02,,budget
+449.46,[Category Missing],AmericanExpress,Transaction 229 - Monthly subscription,,,AmericanExpress
+864.38,[Category Missing],Whole Foods INC,Transaction 230 - Office supplies,2023-11-16,,Whole Foods INC
+631.75,[Category Missing],CHASE BANK,Transaction 231 - Monthly subscription,2023-08-29,,CHASE BANK
+311.1,[Category Missing],Netflix #123456,Transaction 232 - Business expense,2023-09-17,,Netflix #123456
+645.02,[Category Missing],Electric Company,Transaction 233 - Business expense,2023-05-27,,Electric Company
+463.25,[Category Missing],CVS Pharmacy.COM,Transaction 234 - Equipment purchase,2023-09-17,,CVS Pharmacy.COM
+322.21,[Category Missing],TST* Amazon,Transaction 235 - Office supplies,2023-10-20,,TST* Amazon
+982.4,[Category Missing],TST* Netflix,Transaction 236 - Office supplies,2023-02-22,,TST* Netflix
+991.0,[Category Missing],SQ *Amazon,Transaction 237 - Monthly subscription,2023-12-29,,SQ *Amazon
+388.03,[Category Missing],Walmart #123456,Transaction 238 - Equipment purchase,2023-07-10,,Walmart #123456
+66.85,[Category Missing],Budget,Transaction 239 - Client meeting,2023-11-20,,Budget
+873.41,[Category Missing],PAYPAL *Salesforce,Transaction 240 - Monthly subscription,,,PAYPAL *Salesforce
+967.73,[Category Missing],safeway,Transaction 241 - Client meeting,2023-06-29,,safeway
+310.27,[Category Missing],Chevron.COM,Transaction 242 - Team lunch,2023-12-29,,Chevron.COM
+94.36,[Category Missing],Chevron INC,Transaction 243 - Monthly subscription,2023-12-26,,Chevron INC
+181.08,[Category Missing],Electric Company,Transaction 244 - Client meeting,2023-07-05,,Electric Company
+78.09,[Category Missing],SQ *Home Depot,Transaction 245 - Business expense,2023-12-03,,SQ *Home Depot
+38.71,[Category Missing],SouthwestAirlines,Transaction 246 - Monthly subscription,2023-10-04,,SouthwestAirlines
+163.08,[Category Missing],Chevron.COM,Transaction 247 - Monthly subscription,2023-12-07,,Chevron.COM
+411.45,[Category Missing],Walmart LLC,Transaction 248 - Office supplies,2023-08-13,,Walmart LLC
+234.77,[Category Missing],Chase Bank.COM,Transaction 249 - Client meeting,2023-05-26,,Chase Bank.COM
+984.46,[Category Missing],Home Depot #123456,Transaction 250 - Team lunch,,,Home Depot #123456
+966.3,[Category Missing],Gas Company ONLINE,Transaction 251 - Monthly subscription,2023-09-28,,Gas Company ONLINE
+641.54,[Category Missing],Chevron,Transaction 252 - Monthly subscription,2023-05-09,,Chevron
+285.78,[Category Missing],Lyft LLC,Transaction 253 - Team lunch,2023-09-22,,Lyft LLC
+0.0,[Category Missing],AUTO PAY Chase Bank,Transaction 254 - Client meeting,2023-09-20,,AUTO PAY Chase Bank
+54.2,[Category Missing],AUTO PAY Comcast,Transaction 255 - Office supplies,2023-01-14,,AUTO PAY Comcast
+29.16,[Category Missing],GAS COMPANY,Transaction 256 - Equipment purchase,2023-07-11,,GAS COMPANY
+39.26,[Category Missing],Whole Foods #123456,Transaction 257 - Client meeting,2023-03-16,,Whole Foods #123456
+449.15,[Category Missing],Pizza Hut,Transaction 258 - Business expense,2023-03-13,,Pizza Hut
+940.29,[Category Missing],SQ *Microsoft,Transaction 259 - Client meeting,2023-03-18,,SQ *Microsoft
+0.0,[Category Missing],Shell,Transaction 260 - Equipment purchase,2023-05-28,,Shell
+836.85,[Category Missing],TST* CVS Pharmacy,Transaction 261 - Monthly subscription,2023-02-02,,TST* CVS Pharmacy
+0.0,[Category Missing],McDonald's INC,Transaction 262 - Business expense,,,McDonald's INC
+417.15,[Category Missing],CVS Pharmacy #123456,Transaction 263 - Business expense,,,CVS Pharmacy #123456
+544.54,[Category Missing],Hilton Hotels #123456,Transaction 264 - Monthly subscription,2023-02-04,,Hilton Hotels #123456
+44.49,[Category Missing],Airbnb,Transaction 265 - Team lunch,2023-07-19,,Airbnb
+788.73,[Category Missing],Microsoft LLC,Transaction 266 - Equipment purchase,2023-01-09,,Microsoft LLC
+735.45,[Category Missing],Safeway INC,Transaction 267 - Business expense,,,Safeway INC
+830.55,[Category Missing],Comcast ONLINE,Transaction 268 - Equipment purchase,2023-06-23,,Comcast ONLINE
+64.04,[Category Missing],Delta Airlines INC,Transaction 269 - Client meeting,2023-04-04,,Delta Airlines INC
+791.32,[Category Missing],PAYPAL *Amazon,Transaction 270 - Team lunch,2023-04-14,,PAYPAL *Amazon
+473.93,[Category Missing],Dropbox ONLINE,Transaction 271 - Office supplies,2023-07-23,,Dropbox ONLINE
+273.94,[Category Missing],Salesforce #123456,Transaction 272 - Client meeting,2023-01-25,,Salesforce #123456
+339.7,[Category Missing],Water Company LLC,Transaction 273 - Client meeting,2023-08-14,,Water Company LLC
+801.35,[Category Missing],AUTO PAY Electric Company,Transaction 274 - Business expense,2023-09-23,,AUTO PAY Electric Company
+0.0,[Category Missing],Wells Fargo.COM,Transaction 275 - Equipment purchase,2023-04-03,,Wells Fargo.COM
+0.0,[Category Missing],PAYPAL *Salesforce,Transaction 276 - Team lunch,,,PAYPAL *Salesforce
+998.15,[Category Missing],Chase Bank,Transaction 277 - Business expense,,,Chase Bank
+363.95,[Category Missing],Spotify INC,Transaction 278 - Equipment purchase,2023-11-23,,Spotify INC
+678.41,[Category Missing],Walmart,Transaction 279 - Office supplies,,,Walmart
+362.79,[Category Missing],SQ *Spotify,Transaction 280 - Business expense,2023-11-27,,SQ *Spotify
+948.87,[Category Missing],budget,Transaction 281 - Business expense,2023-12-14,,budget
+398.64,[Category Missing],enterprise rent-a-car,Transaction 282 - Office supplies,2023-09-29,,enterprise rent-a-car
+518.23,[Category Missing],Shell,Transaction 283 - Business expense,2023-04-06,,Shell
+215.36,[Category Missing],Microsoft,Transaction 284 - Equipment purchase,2023-05-14,,Microsoft
+852.97,[Category Missing],SQ *United Airlines,Transaction 285 - Equipment purchase,2023-04-03,,SQ *United Airlines
+668.17,[Category Missing],CHASE BANK,Transaction 286 - Monthly subscription,2023-12-16,,CHASE BANK
+712.1,[Category Missing],PAYPAL *Marriott,Transaction 287 - Equipment purchase,2023-03-06,,PAYPAL *Marriott
+225.02,[Category Missing],Costco,Transaction 288 - Office supplies,2023-07-05,,Costco
+361.54,[Category Missing],Google,Transaction 289 - Client meeting,2023-09-10,,Google
+66.68,[Category Missing],airbnb,Transaction 290 - Equipment purchase,2023-11-10,,airbnb
+769.4,[Category Missing],TST* Papa John's,Transaction 291 - Business expense,2023-09-27,,TST* Papa John's
+450.52,[Category Missing],Chevron #123456,Transaction 292 - Team lunch,2023-11-25,,Chevron #123456
+182.78,[Category Missing],AUTO PAY Chevron,Transaction 293 - Client meeting,,,AUTO PAY Chevron
+518.58,[Category Missing],AUTO PAY Southwest Airlines,Transaction 294 - Office supplies,2023-01-29,,AUTO PAY Southwest Airlines
+346.68,[Category Missing],AUTO PAY AT&T,Transaction 295 - Team lunch,2023-12-30,,AUTO PAY AT&T
+275.18,[Category Missing],PAYPAL *Uber,Transaction 296 - Monthly subscription,2023-04-11,,PAYPAL *Uber
+592.22,[Category Missing],MARRIOTT,Transaction 297 - Office supplies,2023-09-15,,MARRIOTT
+842.69,[Category Missing],Safeway.COM,Transaction 298 - Business expense,2023-11-06,,Safeway.COM
+265.39,[Category Missing],Uber,Transaction 299 - Monthly subscription,,,Uber
+498.54,[Category Missing],Bank of America.COM,Transaction 300 - Team lunch,2023-11-24,,Bank of America.COM
+804.88,[Category Missing],PAYPAL *Whole Foods,Transaction 301 - Team lunch,2023-09-05,,PAYPAL *Whole Foods
+158.92,[Category Missing],AMERICAN EXPRESS,Transaction 302 - Client meeting,2023-12-19,,AMERICAN EXPRESS
+313.27,[Category Missing],Best Buy #123456,Transaction 303 - Equipment purchase,2023-07-11,,Best Buy #123456
+0.0,[Category Missing],Comcast*STORE 001,Transaction 304 - Client meeting,2023-03-08,,Comcast*STORE 001
+0.0,[Category Missing],PAYPAL *Shell,Transaction 305 - Monthly subscription,2023-08-19,,PAYPAL *Shell
+933.82,[Category Missing],SQ *Bank of America,Transaction 306 - Office supplies,2023-03-23,,SQ *Bank of America
+467.35,[Category Missing],subway,Transaction 307 - Client meeting,2023-09-13,,subway
+457.77,[Category Missing],MCDONALD'S,Transaction 308 - Monthly subscription,2023-07-21,,MCDONALD'S
+495.4,[Category Missing],Comcast,Transaction 309 - Equipment purchase,2023-01-26,,Comcast
+0.0,[Category Missing],TST* Kroger,Transaction 310 - Team lunch,2023-05-27,,TST* Kroger
+0.0,[Category Missing],Papa John's #123456,Transaction 311 - Office supplies,2023-07-26,,Papa John's #123456
+386.96,[Category Missing],Electric Company ONLINE,Transaction 312 - Monthly subscription,2023-05-28,,Electric Company ONLINE
+119.69,[Category Missing],Adobe,Transaction 313 - Client meeting,,,Adobe
+939.01,[Category Missing],ElectricCompany,Transaction 314 - Office supplies,2023-06-23,,ElectricCompany
+41.21,[Category Missing],Budget ONLINE,Transaction 315 - Team lunch,2023-07-25,,Budget ONLINE
+606.65,[Category Missing],Delta Airlines ONLINE,Transaction 316 - Team lunch,2023-08-22,,Delta Airlines ONLINE
+990.63,[Category Missing],CVS Pharmacy #123456,Transaction 317 - Team lunch,2023-03-25,,CVS Pharmacy #123456
+532.81,[Category Missing],Hertz #123456,Transaction 318 - Team lunch,2023-09-17,,Hertz #123456
+0.0,[Category Missing],Delta Airlines,Transaction 319 - Monthly subscription,2023-01-09,,Delta Airlines
+597.31,[Category Missing],Dropbox,Transaction 320 - Equipment purchase,2023-12-19,,Dropbox
+583.94,[Category Missing],Hertz.COM,Transaction 321 - Equipment purchase,2023-04-27,,Hertz.COM
+821.84,[Category Missing],CVSPharmacy,Transaction 322 - Monthly subscription,2023-07-14,,CVSPharmacy
+441.6,[Category Missing],PIZZA HUT,Transaction 323 - Client meeting,2023-04-08,,PIZZA HUT
+775.2,[Category Missing],SQ *Pizza Hut,Transaction 324 - Equipment purchase,2023-07-30,,SQ *Pizza Hut
+519.16,[Category Missing],Papa John's,Transaction 325 - Equipment purchase,2023-12-28,,Papa John's
+956.73,[Category Missing],Delta Airlines ONLINE,Transaction 326 - Monthly subscription,2023-07-12,,Delta Airlines ONLINE
+0.0,[Category Missing],Verizon ONLINE,Transaction 327 - Team lunch,2023-07-01,,Verizon ONLINE
+771.4,[Category Missing],PAYPAL *Airbnb,Transaction 328 - Equipment purchase,2023-04-26,,PAYPAL *Airbnb
+349.45,[Category Missing],TST* Domino's,Transaction 329 - Equipment purchase,2023-06-12,,TST* Domino's
+676.95,[Category Missing],PAYPAL *Adobe,Transaction 330 - Client meeting,,,PAYPAL *Adobe
+43.02,[Category Missing],Comcast,Transaction 331 - Business expense,2023-03-16,,Comcast
+747.59,[Category Missing],AUTO PAY Comcast,Transaction 332 - Monthly subscription,2023-08-15,,AUTO PAY Comcast
+138.14,[Category Missing],AUTO PAY Adobe,Transaction 333 - Monthly subscription,2023-10-15,,AUTO PAY Adobe
+226.45,[Category Missing],SQ *Google,Transaction 334 - Business expense,2023-01-26,,SQ *Google
+0.0,[Category Missing],Bank of America #123456,Transaction 335 - Office supplies,2023-08-30,,Bank of America #123456
+650.89,[Category Missing],Bank of America INC,Transaction 336 - Team lunch,2023-09-01,,Bank of America INC
+0.0,[Category Missing],PAYPAL *AT&T,Transaction 337 - Office supplies,2023-11-27,,PAYPAL *AT&T
+418.47,[Category Missing],Marriott LLC,Transaction 338 - Business expense,2023-01-20,,Marriott LLC
+936.67,[Category Missing],WaterCompany,Transaction 339 - Team lunch,2023-11-09,,WaterCompany
+603.18,[Category Missing],Amazon,Transaction 340 - Team lunch,,,Amazon
+524.79,[Category Missing],TST* Salesforce,Transaction 341 - Office supplies,2023-11-25,,TST* Salesforce
+809.01,[Category Missing],TST* Southwest Airlines,Transaction 342 - Equipment purchase,2023-05-20,,TST* Southwest Airlines
+15.07,[Category Missing],American Express INC,Transaction 343 - Team lunch,2023-12-05,,American Express INC
+611.34,[Category Missing],Enterprise Rent-A-Car INC,Transaction 344 - Client meeting,2023-09-04,,Enterprise Rent-A-Car INC
+0.0,[Category Missing],Wells Fargo ONLINE,Transaction 345 - Client meeting,2023-06-17,,Wells Fargo ONLINE
+261.52,[Category Missing],AUTO PAY AT&T,Transaction 346 - Team lunch,2023-05-08,,AUTO PAY AT&T
+12.42,[Category Missing],PAYPAL *Verizon,Transaction 347 - Equipment purchase,,,PAYPAL *Verizon
+465.93,[Category Missing],Google,Transaction 348 - Monthly subscription,2023-12-08,,Google
+639.07,[Category Missing],Domino's,Transaction 349 - Team lunch,2023-06-09,,Domino's
+478.7,[Category Missing],SQ *CVS Pharmacy,Transaction 350 - Monthly subscription,2023-04-23,,SQ *CVS Pharmacy
+912.88,[Category Missing],Electric Company*STORE 001,Transaction 351 - Equipment purchase,2023-12-26,,Electric Company*STORE 001
+0.0,[Category Missing],BestBuy,Transaction 352 - Monthly subscription,,,BestBuy
+113.1,[Category Missing],Domino's #123456,Transaction 353 - Monthly subscription,,,Domino's #123456
+165.37,[Category Missing],Home Depot.COM,Transaction 354 - Client meeting,2023-02-10,,Home Depot.COM
+489.34,[Category Missing],Shell INC,Transaction 355 - Client meeting,,,Shell INC
+416.01,[Category Missing],TST* Netflix,Transaction 356 - Monthly subscription,2023-03-09,,TST* Netflix
+396.55,[Category Missing],American Express INC,Transaction 357 - Equipment purchase,2023-06-07,,American Express INC
+424.27,[Category Missing],Best Buy.COM,Transaction 358 - Monthly subscription,2023-02-07,,Best Buy.COM
+32.7,[Category Missing],AUTO PAY Netflix,Transaction 359 - Office supplies,2023-02-05,,AUTO PAY Netflix
+375.09,[Category Missing],Whole Foods LLC,Transaction 360 - Client meeting,2023-11-27,,Whole Foods LLC
+133.86,[Category Missing],Gas Company*STORE 001,Transaction 361 - Business expense,2023-02-11,,Gas Company*STORE 001
+128.22,[Category Missing],Costco ONLINE,Transaction 362 - Business expense,2023-07-21,,Costco ONLINE
+673.83,[Category Missing],Subway,Transaction 363 - Monthly subscription,2023-06-02,,Subway
+0.0,[Category Missing],Gas Company,Transaction 364 - Equipment purchase,2023-04-28,,Gas Company
+615.31,[Category Missing],SUBWAY,Transaction 365 - Business expense,2023-01-17,,SUBWAY
+594.35,[Category Missing],SQ *Google,Transaction 366 - Equipment purchase,2023-02-04,,SQ *Google
+740.8,[Category Missing],Dominos,Transaction 367 - Office supplies,2023-01-25,,Dominos
+504.39,[Category Missing],SQ *Marriott,Transaction 368 - Equipment purchase,2023-01-29,,SQ *Marriott
+772.77,[Category Missing],Enterprise Rent-A-Car #123456,Transaction 369 - Office supplies,,,Enterprise Rent-A-Car #123456
+221.82,[Category Missing],AUTO PAY Dropbox,Transaction 370 - Business expense,2023-03-15,,AUTO PAY Dropbox
+0.0,[Category Missing],Airbnb.COM,Transaction 371 - Equipment purchase,2023-03-31,,Airbnb.COM
+696.61,[Category Missing],Safeway*STORE 001,Transaction 372 - Team lunch,2023-09-26,,Safeway*STORE 001
+241.73,[Category Missing],gas company,Transaction 373 - Equipment purchase,2023-10-03,,gas company
+562.82,[Category Missing],Target,Transaction 374 - Monthly subscription,2023-08-26,,Target
+255.74,[Category Missing],hilton hotels,Transaction 375 - Business expense,2023-07-18,,hilton hotels
+536.1,[Category Missing],Chase Bank,Transaction 376 - Business expense,2023-07-09,,Chase Bank
+603.32,[Category Missing],Adobe*STORE 001,Transaction 377 - Office supplies,,,Adobe*STORE 001
+217.8,[Category Missing],Subway.COM,Transaction 378 - Team lunch,2023-12-10,,Subway.COM
+937.22,[Category Missing],AUTO PAY Dropbox,Transaction 379 - Business expense,2023-01-08,,AUTO PAY Dropbox
+695.93,[Category Missing],Chipotle,Transaction 380 - Client meeting,2023-09-03,,Chipotle
+381.28,[Category Missing],Google ONLINE,Transaction 381 - Team lunch,2023-06-14,,Google ONLINE
+882.93,[Category Missing],PAYPAL *Dropbox,Transaction 382 - Equipment purchase,2023-07-04,,PAYPAL *Dropbox
+371.33,[Category Missing],DeltaAirlines,Transaction 383 - Monthly subscription,2023-06-13,,DeltaAirlines
+261.51,[Category Missing],Apple LLC,Transaction 384 - Monthly subscription,2023-03-16,,Apple LLC
+197.0,[Category Missing],Papa John's*STORE 001,Transaction 385 - Monthly subscription,2023-01-06,,Papa John's*STORE 001
+258.07,[Category Missing],TST* Google,Transaction 386 - Equipment purchase,2023-10-09,,TST* Google
+169.07,[Category Missing],Whole Foods LLC,Transaction 387 - Office supplies,2023-09-09,,Whole Foods LLC
+184.86,[Category Missing],Chevron LLC,Transaction 388 - Equipment purchase,2023-10-07,,Chevron LLC
+945.24,[Category Missing],Netflix ONLINE,Transaction 389 - Business expense,2023-01-18,,Netflix ONLINE
+0.0,[Category Missing],bank of america,Transaction 390 - Monthly subscription,2023-11-19,,bank of america
+638.09,[Category Missing],American Express #123456,Transaction 391 - Client meeting,,,American Express #123456
+532.68,[Category Missing],TST* Safeway,Transaction 392 - Business expense,2023-01-09,,TST* Safeway
+977.5,[Category Missing],Hilton Hotels LLC,Transaction 393 - Equipment purchase,2023-05-21,,Hilton Hotels LLC
+918.13,[Category Missing],Kroger*STORE 001,Transaction 394 - Office supplies,2023-04-02,,Kroger*STORE 001
+815.4,[Category Missing],Home Depot.COM,Transaction 395 - Client meeting,2023-09-27,,Home Depot.COM
+565.44,[Category Missing],Uber #123456,Transaction 396 - Office supplies,2023-07-27,,Uber #123456
+94.41,[Category Missing],Dropbox INC,Transaction 397 - Monthly subscription,2023-02-11,,Dropbox INC
+703.14,[Category Missing],Delta Airlines,Transaction 398 - Client meeting,2023-11-23,,Delta Airlines
+977.35,[Category Missing],WholeFoods,Transaction 399 - Monthly subscription,,,WholeFoods
+476.02,[Category Missing],SQ *Amazon,Transaction 400 - Equipment purchase,,,SQ *Amazon
+658.45,[Category Missing],AUTO PAY Adobe,Transaction 401 - Team lunch,,,AUTO PAY Adobe
+752.5,[Category Missing],SQ *McDonald's,Transaction 402 - Client meeting,2023-10-28,,SQ *McDonald's
+241.23,[Category Missing],PAYPAL *Spotify,Transaction 403 - Client meeting,,,PAYPAL *Spotify
+384.46,[Category Missing],AUTO PAY Kroger,Transaction 404 - Equipment purchase,2023-10-04,,AUTO PAY Kroger
+54.64,[Category Missing],PAPA JOHN'S,Transaction 405 - Business expense,2023-09-14,,PAPA JOHN'S
+397.31,[Category Missing],Verizon.COM,Transaction 406 - Business expense,,,Verizon.COM
+228.91,[Category Missing],PAYPAL *Walgreens,Transaction 407 - Client meeting,2023-08-19,,PAYPAL *Walgreens
+0.0,[Category Missing],wells fargo,Transaction 408 - Team lunch,,,wells fargo
+268.7,[Category Missing],Google LLC,Transaction 409 - Equipment purchase,2023-02-07,,Google LLC
+0.0,[Category Missing],Target LLC,Transaction 410 - Client meeting,2023-07-19,,Target LLC
+0.0,[Category Missing],ElectricCompany,Transaction 411 - Monthly subscription,2023-05-19,,ElectricCompany
+27.24,[Category Missing],Airbnb ONLINE,Transaction 412 - Business expense,2023-07-28,,Airbnb ONLINE
+13.33,[Category Missing],Budget.COM,Transaction 413 - Business expense,2023-06-16,,Budget.COM
+0.0,[Category Missing],AUTO PAY Papa John's,Transaction 414 - Office supplies,2023-10-14,,AUTO PAY Papa John's
+0.0,[Category Missing],PAYPAL *Chevron,Transaction 415 - Team lunch,2023-06-04,,PAYPAL *Chevron
+361.76,[Category Missing],PAYPAL *Bank of America,Transaction 416 - Equipment purchase,2023-09-05,,PAYPAL *Bank of America
+0.0,[Category Missing],TST* Walgreens,Transaction 417 - Business expense,,,TST* Walgreens
+804.27,[Category Missing],Water Company #123456,Transaction 418 - Team lunch,2023-11-14,,Water Company #123456
+136.99,[Category Missing],Wells Fargo,Transaction 419 - Equipment purchase,,,Wells Fargo
+964.61,[Category Missing],TST* Home Depot,Transaction 420 - Team lunch,2023-10-06,,TST* Home Depot
+967.8,[Category Missing],Chipotle LLC,Transaction 421 - Team lunch,2023-11-21,,Chipotle LLC
+114.77,[Category Missing],PAYPAL *Gas Company,Transaction 422 - Monthly subscription,2023-07-21,,PAYPAL *Gas Company
+27.89,[Category Missing],marriott,Transaction 423 - Equipment purchase,2023-12-16,,marriott
+819.15,[Category Missing],TST* Best Buy,Transaction 424 - Client meeting,2023-05-30,,TST* Best Buy
+242.78,[Category Missing],TST* Kroger,Transaction 425 - Equipment purchase,2023-03-13,,TST* Kroger
+449.62,[Category Missing],WellsFargo,Transaction 426 - Monthly subscription,2023-07-13,,WellsFargo
+544.1,[Category Missing],Water Company ONLINE,Transaction 427 - Team lunch,2023-09-17,,Water Company ONLINE
+638.54,[Category Missing],AUTO PAY Pizza Hut,Transaction 428 - Office supplies,,,AUTO PAY Pizza Hut
+647.35,[Category Missing],Safeway INC,Transaction 429 - Equipment purchase,2023-01-07,,Safeway INC
+0.0,[Category Missing],Whole Foods*STORE 001,Transaction 430 - Monthly subscription,2023-06-19,,Whole Foods*STORE 001
+687.98,[Category Missing],Chipotle ONLINE,Transaction 431 - Team lunch,,,Chipotle ONLINE
+690.75,[Category Missing],TST* Water Company,Transaction 432 - Client meeting,,,TST* Water Company
+116.95,[Category Missing],PAYPAL *Lyft,Transaction 433 - Office supplies,2023-08-01,,PAYPAL *Lyft
+784.49,[Category Missing],PAYPAL *Comcast,Transaction 434 - Team lunch,2023-06-25,,PAYPAL *Comcast
+319.59,[Category Missing],DELTA AIRLINES,Transaction 435 - Equipment purchase,2023-08-13,,DELTA AIRLINES
+677.46,[Category Missing],Shell,Transaction 436 - Office supplies,2023-06-25,,Shell
+331.66,[Category Missing],hilton hotels,Transaction 437 - Client meeting,2023-10-10,,hilton hotels
+187.2,[Category Missing],Apple,Transaction 438 - Client meeting,2023-07-27,,Apple
+450.13,[Category Missing],McDonald's LLC,Transaction 439 - Business expense,2023-11-11,,McDonald's LLC
+752.57,[Category Missing],SQ *Domino's,Transaction 440 - Business expense,2023-04-16,,SQ *Domino's
+366.43,[Category Missing],ENTERPRISE RENT-A-CAR,Transaction 441 - Team lunch,2023-02-10,,ENTERPRISE RENT-A-CAR
+965.95,[Category Missing],Safeway,Transaction 442 - Client meeting,2023-09-08,,Safeway
+348.58,[Category Missing],CVS Pharmacy*STORE 001,Transaction 443 - Monthly subscription,2023-10-28,,CVS Pharmacy*STORE 001
+918.76,[Category Missing],Costco,Transaction 444 - Equipment purchase,2023-12-11,,Costco
+306.07,[Category Missing],Chevron #123456,Transaction 445 - Office supplies,2023-03-02,,Chevron #123456
+138.73,[Category Missing],Southwest Airlines*STORE 001,Transaction 446 - Office supplies,,,Southwest Airlines*STORE 001
+555.36,[Category Missing],United Airlines INC,Transaction 447 - Office supplies,2023-03-10,,United Airlines INC
+54.56,[Category Missing],Costco #123456,Transaction 448 - Business expense,,,Costco #123456
+963.87,[Category Missing],united airlines,Transaction 449 - Client meeting,2023-04-10,,united airlines
+710.43,[Category Missing],Bank of America INC,Transaction 450 - Office supplies,2023-09-09,,Bank of America INC
+292.8,[Category Missing],Uber.COM,Transaction 451 - Monthly subscription,2023-01-16,,Uber.COM
+742.78,[Category Missing],salesforce,Transaction 452 - Monthly subscription,,,salesforce
+268.62,[Category Missing],SOUTHWEST AIRLINES,Transaction 453 - Team lunch,2023-10-21,,SOUTHWEST AIRLINES
+546.81,[Category Missing],Marriott,Transaction 454 - Business expense,2023-01-22,,Marriott
+298.41,[Category Missing],Chipotle,Transaction 455 - Client meeting,2023-12-01,,Chipotle
+865.43,[Category Missing],Microsoft #123456,Transaction 456 - Office supplies,2023-02-14,,Microsoft #123456
+861.19,[Category Missing],BestBuy,Transaction 457 - Client meeting,2023-10-29,,BestBuy
+813.72,[Category Missing],Walmart.COM,Transaction 458 - Monthly subscription,2023-03-13,,Walmart.COM
+539.23,[Category Missing],Comcast ONLINE,Transaction 459 - Equipment purchase,,,Comcast ONLINE
+952.44,[Category Missing],PAYPAL *Salesforce,Transaction 460 - Equipment purchase,2023-10-21,,PAYPAL *Salesforce
+992.49,[Category Missing],lyft,Transaction 461 - Office supplies,2023-07-30,,lyft
+147.1,[Category Missing],Pizza Hut,Transaction 462 - Office supplies,2023-03-09,,Pizza Hut
+489.97,[Category Missing],Subway,Transaction 463 - Team lunch,2023-12-13,,Subway
+76.44,[Category Missing],Walgreens*STORE 001,Transaction 464 - Business expense,2023-07-12,,Walgreens*STORE 001
+455.24,[Category Missing],Water Company ONLINE,Transaction 465 - Monthly subscription,2023-05-23,,Water Company ONLINE
+635.21,[Category Missing],Starbucks,Transaction 466 - Business expense,2023-02-17,,Starbucks
+825.02,[Category Missing],Marriott*STORE 001,Transaction 467 - Team lunch,2023-04-22,,Marriott*STORE 001
+131.46,[Category Missing],Salesforce #123456,Transaction 468 - Team lunch,,,Salesforce #123456
+100.48,[Category Missing],Kroger,Transaction 469 - Client meeting,2023-01-25,,Kroger
+457.06,[Category Missing],MCDONALD'S,Transaction 470 - Client meeting,2023-03-22,,MCDONALD'S
+159.82,[Category Missing],Home Depot LLC,Transaction 471 - Team lunch,2023-03-09,,Home Depot LLC
+83.34,[Category Missing],Uber INC,Transaction 472 - Equipment purchase,2023-07-04,,Uber INC
+726.26,[Category Missing],Walmart,Transaction 473 - Client meeting,2023-07-22,,Walmart
+2.09,[Category Missing],WHOLE FOODS,Transaction 474 - Office supplies,2023-12-27,,WHOLE FOODS
+10.28,[Category Missing],SQ *Hertz,Transaction 475 - Business expense,2023-09-23,,SQ *Hertz
+71.76,[Category Missing],Wells Fargo LLC,Transaction 476 - Equipment purchase,2023-03-09,,Wells Fargo LLC
+881.11,[Category Missing],LYFT,Transaction 477 - Office supplies,2023-06-10,,LYFT
+530.98,[Category Missing],Whole Foods INC,Transaction 478 - Office supplies,2023-03-15,,Whole Foods INC
+919.97,[Category Missing],Chase Bank #123456,Transaction 479 - Client meeting,2023-04-20,,Chase Bank #123456
+752.69,[Category Missing],BEST BUY,Transaction 480 - Client meeting,2023-02-21,,BEST BUY
+248.54,[Category Missing],Comcast*STORE 001,Transaction 481 - Office supplies,2023-11-06,,Comcast*STORE 001
+285.64,[Category Missing],Airbnb.COM,Transaction 482 - Business expense,,,Airbnb.COM
+518.23,[Category Missing],AUTO PAY Safeway,Transaction 483 - Equipment purchase,2023-06-04,,AUTO PAY Safeway
+784.02,[Category Missing],PAYPAL *Water Company,Transaction 484 - Office supplies,2023-11-27,,PAYPAL *Water Company
+500.08,[Category Missing],United Airlines*STORE 001,Transaction 485 - Monthly subscription,2023-02-27,,United Airlines*STORE 001
+387.45,[Category Missing],Starbucks #123456,Transaction 486 - Client meeting,2023-12-06,,Starbucks #123456
+762.96,[Category Missing],Electric Company ONLINE,Transaction 487 - Business expense,2023-12-16,,Electric Company ONLINE
+262.92,[Category Missing],McDonald's.COM,Transaction 488 - Client meeting,2023-02-04,,McDonald's.COM
+767.34,[Category Missing],PAYPAL *Southwest Airlines,Transaction 489 - Client meeting,2023-11-18,,PAYPAL *Southwest Airlines
+616.43,[Category Missing],Uber INC,Transaction 490 - Team lunch,2023-10-02,,Uber INC
+536.85,[Category Missing],Uber ONLINE,Transaction 491 - Equipment purchase,2023-04-15,,Uber ONLINE
+310.86,[Category Missing],Subway,Transaction 492 - Office supplies,2023-11-29,,Subway
+116.87,[Category Missing],SQ *Netflix,Transaction 493 - Business expense,2023-02-14,,SQ *Netflix
+120.32,[Category Missing],Dropbox INC,Transaction 494 - Equipment purchase,2023-03-12,,Dropbox INC
+523.48,[Category Missing],starbucks,Transaction 495 - Equipment purchase,2023-09-12,,starbucks
+750.03,[Category Missing],microsoft,Transaction 496 - Equipment purchase,2023-10-07,,microsoft
+807.3,[Category Missing],Shell,Transaction 497 - Business expense,2023-01-16,,Shell
+496.65,[Category Missing],Microsoft LLC,Transaction 498 - Business expense,2023-10-23,,Microsoft LLC
+368.32,[Category Missing],United Airlines,Transaction 499 - Business expense,2023-10-18,,United Airlines
+741.04,[Category Missing],Enterprise Rent-A-Car INC,Transaction 500 - Business expense,2023-03-01,,Enterprise Rent-A-Car INC

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔍 Ultimate Debug Interface</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1000px; margin: 0 auto; padding: 20px; }
+        .section { border: 1px solid #ddd; margin: 10px 0; padding: 15px; border-radius: 8px; }
+        .success { background: #d4edda; border-color: #c3e6cb; }
+        .error { background: #f8d7da; border-color: #f5c6cb; }
+        .warning { background: #fff3cd; border-color: #ffeaa7; }
+        .debug { background: #f8f9fa; font-family: monospace; white-space: pre-wrap; font-size: 12px; }
+        button { padding: 10px 15px; margin: 5px; border: none; border-radius: 5px; cursor: pointer; }
+        .primary { background: #007bff; color: white; }
+        .secondary { background: #6c757d; color: white; }
+        textarea { width: 100%; height: 200px; font-family: monospace; }
+        input[type="file"] { margin: 10px 0; }
+        .hex-dump { font-family: monospace; font-size: 11px; color: #666; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Ultimate Debug Interface</h1>
+    
+    <!-- Test 1: Manual CSV Input -->
+    <div class="section">
+        <h3>🧪 Test 1: Manual CSV Input (No File Upload)</h3>
+        <p>Paste CSV data directly to bypass FileReader:</p>
+        <textarea id="manualCSV" placeholder="Paste your CSV here...">date,merchant,amount,description
+2024-01-15,Starbucks,-4.85,Coffee
+2024-01-16,Netflix,-12.99,Subscription</textarea>
+        <br>
+        <button class="primary" onclick="testManualCSV()">🧪 Test Manual CSV</button>
+        <div id="manualResult" class="debug"></div>
+    </div>
+
+    <!-- Test 2: File Upload with Raw Analysis -->
+    <div class="section">
+        <h3>📁 Test 2: File Upload with Deep Analysis</h3>
+        <input type="file" id="fileInput" accept=".csv" onchange="analyzeFile()">
+        <div id="fileAnalysis" class="debug"></div>
+    </div>
+
+    <!-- Test 3: Simple API Test -->
+    <div class="section">
+        <h3>🌐 Test 3: Direct API Test</h3>
+        <button class="primary" onclick="testAPI()">🧪 Test API Connection</button>
+        <div id="apiResult" class="debug"></div>
+    </div>
+
+    <!-- Test 4: Known Good Data -->
+    <div class="section">
+        <h3>✅ Test 4: Process Known Good Data</h3>
+        <button class="primary" onclick="processKnownGood()">🧪 Process Sample Data</button>
+        <div id="knownResult" class="debug"></div>
+    </div>
+
+    <script>
+        const API_BASE_URL = 'http://localhost:8080';
+        
+        function log(elementId, message) {
+            const element = document.getElementById(elementId);
+            element.textContent += new Date().toLocaleTimeString() + ': ' + message + '\n';
+        }
+        
+        function clearLog(elementId) {
+            document.getElementById(elementId).textContent = '';
+        }
+
+        // Test 1: Manual CSV Input
+        function testManualCSV() {
+            clearLog('manualResult');
+            const csvText = document.getElementById('manualCSV').value;
+            
+            log('manualResult', `Starting manual CSV test...`);
+            log('manualResult', `Raw text length: ${csvText.length}`);
+            log('manualResult', `First 100 chars: "${csvText.substring(0, 100)}"`);
+            
+            // Show character codes for first line
+            const firstLine = csvText.split('\n')[0];
+            const charCodes = Array.from(firstLine).map(char => `${char}(${char.charCodeAt(0)})`).join(' ');
+            log('manualResult', `First line char codes: ${charCodes}`);
+            
+            try {
+                const data = parseCSVManual(csvText);
+                log('manualResult', `✅ SUCCESS! Parsed ${data.length} rows`);
+                log('manualResult', `First row: ${JSON.stringify(data[0], null, 2)}`);
+                
+                // Test processing
+                processData(data, 'budget analysis', 'manualResult');
+                
+            } catch (error) {
+                log('manualResult', `❌ ERROR: ${error.message}`);
+                log('manualResult', `Stack: ${error.stack}`);
+            }
+        }
+        
+        function parseCSVManual(text) {
+            log('manualResult', `Parsing CSV manually...`);
+            
+            // Clean the text
+            const cleanText = text.trim();
+            log('manualResult', `After trim: "${cleanText.substring(0, 50)}..."`);
+            
+            // Split by different line endings
+            let lines;
+            if (cleanText.includes('\r\n')) {
+                lines = cleanText.split('\r\n');
+                log('manualResult', `Split by \\r\\n: ${lines.length} lines`);
+            } else if (cleanText.includes('\n')) {
+                lines = cleanText.split('\n');
+                log('manualResult', `Split by \\n: ${lines.length} lines`);
+            } else if (cleanText.includes('\r')) {
+                lines = cleanText.split('\r');
+                log('manualResult', `Split by \\r: ${lines.length} lines`);
+            } else {
+                lines = [cleanText];
+                log('manualResult', `No line breaks found, treating as single line`);
+            }
+            
+            // Filter empty lines
+            lines = lines.filter(line => line.trim().length > 0);
+            log('manualResult', `After filtering empty lines: ${lines.length} lines`);
+            
+            if (lines.length < 2) {
+                throw new Error(`Need at least 2 lines (header + data), got ${lines.length}: ${JSON.stringify(lines)}`);
+            }
+            
+            // Parse header
+            const headers = lines[0].split(',').map(h => h.trim());
+            log('manualResult', `Headers: ${JSON.stringify(headers)}`);
+            
+            // Parse data
+            const data = [];
+            for (let i = 1; i < lines.length; i++) {
+                const values = lines[i].split(',').map(v => v.trim());
+                const row = {};
+                headers.forEach((header, idx) => {
+                    row[header] = values[idx] || '';
+                });
+                
+                // Convert amount to number
+                if (row.amount && !isNaN(parseFloat(row.amount))) {
+                    row.amount = parseFloat(row.amount);
+                }
+                
+                data.push(row);
+            }
+            
+            return data;
+        }
+
+        // Test 2: File Upload Analysis
+        function analyzeFile() {
+            clearLog('fileAnalysis');
+            const file = document.getElementById('fileInput').files[0];
+            
+            if (!file) {
+                log('fileAnalysis', 'No file selected');
+                return;
+            }
+            
+            log('fileAnalysis', `File selected: ${file.name}`);
+            log('fileAnalysis', `File size: ${file.size} bytes`);
+            log('fileAnalysis', `File type: ${file.type}`);
+            log('fileAnalysis', `Last modified: ${file.lastModified}`);
+            
+            // Read as ArrayBuffer first to see raw bytes
+            const readerBuffer = new FileReader();
+            readerBuffer.onload = function(e) {
+                const buffer = e.target.result;
+                const bytes = new Uint8Array(buffer);
+                const hexDump = Array.from(bytes.slice(0, 100)).map(b => b.toString(16).padStart(2, '0')).join(' ');
+                log('fileAnalysis', `Raw bytes (first 100): ${hexDump}`);
+                
+                // Now read as text
+                const readerText = new FileReader();
+                readerText.onload = function(e) {
+                    const text = e.target.result;
+                    log('fileAnalysis', `Text length: ${text.length}`);
+                    log('fileAnalysis', `First 200 chars: "${text.substring(0, 200)}"`);
+                    
+                    // Character analysis
+                    const charCodes = Array.from(text.substring(0, 50)).map(char => char.charCodeAt(0));
+                    log('fileAnalysis', `First 50 char codes: ${charCodes.join(', ')}`);
+                    
+                    // Line ending analysis
+                    const hasRN = text.includes('\r\n');
+                    const hasN = text.includes('\n');
+                    const hasR = text.includes('\r');
+                    log('fileAnalysis', `Line endings - \\r\\n: ${hasRN}, \\n: ${hasN}, \\r: ${hasR}`);
+                    
+                    // Try parsing
+                    try {
+                        const data = parseCSVManual(text);
+                        log('fileAnalysis', `✅ File parsed successfully: ${data.length} rows`);
+                        if (data.length > 0) {
+                            log('fileAnalysis', `Sample row: ${JSON.stringify(data[0], null, 2)}`);
+                        }
+                    } catch (error) {
+                        log('fileAnalysis', `❌ Parse error: ${error.message}`);
+                    }
+                };
+                readerText.readAsText(file);
+            };
+            readerBuffer.readAsArrayBuffer(file);
+        }
+
+        // Test 3: API Test
+        async function testAPI() {
+            clearLog('apiResult');
+            log('apiResult', 'Testing API connection...');
+            
+            try {
+                const response = await fetch(`${API_BASE_URL}/health`);
+                const data = await response.json();
+                log('apiResult', `✅ API Health: ${JSON.stringify(data, null, 2)}`);
+            } catch (error) {
+                log('apiResult', `❌ API Error: ${error.message}`);
+            }
+        }
+
+        // Test 4: Known Good Data
+        async function processKnownGood() {
+            clearLog('knownResult');
+            const goodData = [
+                {"date": "2024-01-15", "merchant": "Starbucks", "amount": -4.85, "description": "Coffee"},
+                {"date": "2024-01-16", "merchant": "Netflix", "amount": -12.99, "description": "Subscription"}
+            ];
+            
+            await processData(goodData, 'budget analysis', 'knownResult');
+        }
+
+        async function processData(data, intent, logElement) {
+            log(logElement, `Processing ${data.length} rows with intent: "${intent}"`);
+            
+            try {
+                const payload = {
+                    data: data,
+                    user_intent: intent
+                };
+                
+                log(logElement, `Sending payload: ${JSON.stringify(payload, null, 2)}`);
+                
+                const response = await fetch(`${API_BASE_URL}/process`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+                const result = await response.json();
+                log(logElement, `✅ Processing successful!`);
+                log(logElement, `Result summary: ${JSON.stringify({
+                    status: result.status,
+                    input_rows: data.length,
+                    output_rows: result.cleaned_data?.length || 0,
+                    processing_time: result.processing_time,
+                    user_intent: result.user_intent
+                }, null, 2)}`);
+                
+                if (result.intent_summary) {
+                    log(logElement, `Intent insights: ${JSON.stringify(result.intent_summary, null, 2)}`);
+                }
+                
+            } catch (error) {
+                log(logElement, `❌ Processing failed: ${error.message}`);
+                log(logElement, `Error stack: ${error.stack}`);
+            }
+        }
+    </script>
+</body>
+</html>

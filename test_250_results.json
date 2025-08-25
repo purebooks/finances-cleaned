@@ -1,0 +1,4687 @@
+{
+  "summary": {
+    "total": 250,
+    "vendor_accuracy": 2.0,
+    "category_accuracy": 18.0,
+    "date_accuracy": 100.0,
+    "amount_accuracy": 100.0,
+    "overall_accuracy": 28.0,
+    "processing_time": 46.50452995300293
+  },
+  "mismatches": [
+    {
+      "row": 0,
+      "vendor": {
+        "expected": "Walgreens",
+        "actual": "Walmart"
+      },
+      "category": {
+        "expected": "Professional Services",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 265.94
+      }
+    },
+    {
+      "row": 1,
+      "vendor": {
+        "expected": "Chipotle",
+        "actual": "Microsoft"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 682.03
+      }
+    },
+    {
+      "row": 2,
+      "vendor": {
+        "expected": "Apple",
+        "actual": "Salesforce"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 201.59
+      }
+    },
+    {
+      "row": 3,
+      "vendor": {
+        "expected": "Marriott",
+        "actual": "Uber"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 53.03
+      }
+    },
+    {
+      "row": 4,
+      "vendor": {
+        "expected": "Subway",
+        "actual": "Walgreens"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 245.65
+      }
+    },
+    {
+      "row": 5,
+      "vendor": {
+        "expected": "Lyft",
+        "actual": "Safeway"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 15.85
+      }
+    },
+    {
+      "row": 6,
+      "vendor": {
+        "expected": "Amazon",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 7,
+      "vendor": {
+        "expected": "Airbnb",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 336.79
+      }
+    },
+    {
+      "row": 8,
+      "vendor": {
+        "expected": "Domino's",
+        "actual": "Chipotle"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 746.37
+      }
+    },
+    {
+      "row": 9,
+      "vendor": {
+        "expected": "Lyft",
+        "actual": "Apple"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 10,
+      "vendor": {
+        "expected": "Comcast",
+        "actual": "Spotify"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 19.72
+      }
+    },
+    {
+      "row": 11,
+      "vendor": {
+        "expected": "Budget",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 533.21
+      }
+    },
+    {
+      "row": 12,
+      "vendor": {
+        "expected": "Walgreens",
+        "actual": "Domino's"
+      },
+      "category": {
+        "expected": "Professional Services",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 773.3
+      }
+    },
+    {
+      "row": 13,
+      "vendor": {
+        "expected": "Apple",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 249.95
+      }
+    },
+    {
+      "row": 14,
+      "vendor": {
+        "expected": "AT&T",
+        "actual": "Walgreens"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 15,
+      "vendor": {
+        "expected": "Target",
+        "actual": "Budget"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 158.25
+      }
+    },
+    {
+      "row": 16,
+      "vendor": {
+        "expected": "Hertz",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 518.92
+      }
+    },
+    {
+      "row": 17,
+      "vendor": {
+        "expected": "Southwest Airlines",
+        "actual": "Amazon"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 359.1
+      }
+    },
+    {
+      "row": 18,
+      "vendor": {
+        "expected": "Wells Fargo",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 382.24
+      }
+    },
+    {
+      "row": 19,
+      "vendor": {
+        "expected": "Microsoft",
+        "actual": "Shell"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 448.83
+      }
+    },
+    {
+      "row": 20,
+      "vendor": {
+        "expected": "Whole Foods",
+        "actual": "Shell"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 498.88
+      }
+    },
+    {
+      "row": 21,
+      "vendor": {
+        "expected": "Papa John's",
+        "actual": "Netflix"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 22,
+      "vendor": {
+        "expected": "Walgreens",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Professional Services",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 458.83
+      }
+    },
+    {
+      "row": 23,
+      "vendor": {
+        "expected": "Hilton Hotels",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 808.21
+      }
+    },
+    {
+      "row": 24,
+      "vendor": {
+        "expected": "Google",
+        "actual": "Walmart"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 515.94
+      }
+    },
+    {
+      "row": 25,
+      "vendor": {
+        "expected": "Subway",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 720.35
+      }
+    },
+    {
+      "row": 26,
+      "vendor": {
+        "expected": "Microsoft",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 27,
+      "vendor": {
+        "expected": "Pizza Hut",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 28,
+      "vendor": {
+        "expected": "Chase Bank",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 403.22
+      }
+    },
+    {
+      "row": 29,
+      "vendor": {
+        "expected": "McDonald's",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 616.04
+      }
+    },
+    {
+      "row": 30,
+      "vendor": {
+        "expected": "Netflix",
+        "actual": "Verizon"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 100.61
+      }
+    },
+    {
+      "row": 31,
+      "vendor": {
+        "expected": "Safeway",
+        "actual": "Walgreens"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 850.44
+      }
+    },
+    {
+      "row": 32,
+      "vendor": {
+        "expected": "Enterprise Rent-A-Car",
+        "actual": "Netflix"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 982.4
+      }
+    },
+    {
+      "row": 33,
+      "vendor": {
+        "expected": "Wells Fargo",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 219.62
+      }
+    },
+    {
+      "row": 34,
+      "vendor": {
+        "expected": "Whole Foods",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 712.69
+      }
+    },
+    {
+      "row": 35,
+      "vendor": {
+        "expected": "Google",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 435.33
+      }
+    },
+    {
+      "row": 36,
+      "vendor": {
+        "expected": "American Express",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 37,
+      "vendor": {
+        "expected": "Netflix",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 510.44
+      }
+    },
+    {
+      "row": 38,
+      "vendor": {
+        "expected": "Walmart",
+        "actual": "Verizon"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 179.39
+      }
+    },
+    {
+      "row": 39,
+      "vendor": {
+        "expected": "Walmart",
+        "actual": "Budget"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 899.61
+      }
+    },
+    {
+      "row": 40,
+      "vendor": {
+        "expected": "Salesforce",
+        "actual": "Uber"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 764.68
+      }
+    },
+    {
+      "row": 42,
+      "vendor": {
+        "expected": "Netflix",
+        "actual": "Comcast"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 566.75
+      }
+    },
+    {
+      "row": 43,
+      "vendor": {
+        "expected": "Southwest Airlines",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 973.17
+      }
+    },
+    {
+      "row": 44,
+      "vendor": {
+        "expected": "Water Company",
+        "actual": "Safeway"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 45,
+      "vendor": {
+        "expected": "Safeway",
+        "actual": "Target"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 745.24
+      }
+    },
+    {
+      "row": 46,
+      "vendor": {
+        "expected": "Domino's",
+        "actual": "Starbucks"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 540.68
+      }
+    },
+    {
+      "row": 47,
+      "vendor": {
+        "expected": "American Express",
+        "actual": "AT&T"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 127.07
+      }
+    },
+    {
+      "row": 48,
+      "vendor": {
+        "expected": "Spotify",
+        "actual": "Mcdonald's"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 127.09
+      }
+    },
+    {
+      "row": 49,
+      "vendor": {
+        "expected": "Google",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 864.74
+      }
+    },
+    {
+      "row": 50,
+      "vendor": {
+        "expected": "CVS Pharmacy",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Professional Services",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 312.33
+      }
+    },
+    {
+      "row": 51,
+      "vendor": {
+        "expected": "Safeway",
+        "actual": "Airbnb"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 409.11
+      }
+    },
+    {
+      "row": 52,
+      "vendor": {
+        "expected": "Adobe",
+        "actual": "Kroger"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Other"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 442.29
+      }
+    },
+    {
+      "row": 53,
+      "vendor": {
+        "expected": "Microsoft",
+        "actual": "Subway"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 340.91
+      }
+    },
+    {
+      "row": 54,
+      "vendor": {
+        "expected": "Walgreens",
+        "actual": "Safeway"
+      },
+      "category": {
+        "expected": "Professional Services",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 412.23
+      }
+    },
+    {
+      "row": 55,
+      "vendor": {
+        "expected": "Microsoft",
+        "actual": "Domino's"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 56,
+      "vendor": {
+        "expected": "Spotify",
+        "actual": "Spotify"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 595.45
+      }
+    },
+    {
+      "row": 57,
+      "vendor": {
+        "expected": "Airbnb",
+        "actual": "Budget"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 58,
+      "vendor": {
+        "expected": "Comcast",
+        "actual": "Apple"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 15.13
+      }
+    },
+    {
+      "row": 59,
+      "vendor": {
+        "expected": "Bank of America",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 782.6
+      }
+    },
+    {
+      "row": 60,
+      "vendor": {
+        "expected": "Bank of America",
+        "actual": "Adobe"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 703.0
+      }
+    },
+    {
+      "row": 61,
+      "vendor": {
+        "expected": "Chipotle",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 595.44
+      }
+    },
+    {
+      "row": 62,
+      "vendor": {
+        "expected": "Amazon",
+        "actual": "Google"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 449.16
+      }
+    },
+    {
+      "row": 63,
+      "vendor": {
+        "expected": "Dropbox",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 949.06
+      }
+    },
+    {
+      "row": 64,
+      "vendor": {
+        "expected": "Spotify",
+        "actual": "Subway"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 628.62
+      }
+    },
+    {
+      "row": 65,
+      "vendor": {
+        "expected": "Verizon",
+        "actual": "Netflix"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 945.38
+      }
+    },
+    {
+      "row": 66,
+      "vendor": {
+        "expected": "Amazon",
+        "actual": "Safeway"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 133.18
+      }
+    },
+    {
+      "row": 67,
+      "vendor": {
+        "expected": "Budget",
+        "actual": "Spotify"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 265.94
+      }
+    },
+    {
+      "row": 68,
+      "vendor": {
+        "expected": "Wells Fargo",
+        "actual": "Airbnb"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 452.1
+      }
+    },
+    {
+      "row": 69,
+      "vendor": {
+        "expected": "Safeway",
+        "actual": "Marriott"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 589.68
+      }
+    },
+    {
+      "row": 70,
+      "vendor": {
+        "expected": "CVS Pharmacy",
+        "actual": "Dropbox"
+      },
+      "category": {
+        "expected": "Professional Services",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 71,
+      "vendor": {
+        "expected": "Safeway",
+        "actual": "Chevron"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 694.26
+      }
+    },
+    {
+      "row": 72,
+      "vendor": {
+        "expected": "Bank of America",
+        "actual": "Salesforce"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 707.25
+      }
+    },
+    {
+      "row": 73,
+      "vendor": {
+        "expected": "Starbucks",
+        "actual": "Dropbox"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 721.56
+      }
+    },
+    {
+      "row": 74,
+      "vendor": {
+        "expected": "AT&T",
+        "actual": "Lyft"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 26.0
+      }
+    },
+    {
+      "row": 75,
+      "vendor": {
+        "expected": "Walmart",
+        "actual": "Hertz"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 774.59
+      }
+    },
+    {
+      "row": 76,
+      "vendor": {
+        "expected": "Uber",
+        "actual": "Spotify"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 788.04
+      }
+    },
+    {
+      "row": 77,
+      "vendor": {
+        "expected": "Google",
+        "actual": "Uber"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 225.42
+      }
+    },
+    {
+      "row": 78,
+      "vendor": {
+        "expected": "Home Depot",
+        "actual": "Domino's"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 336.51
+      }
+    },
+    {
+      "row": 79,
+      "vendor": {
+        "expected": "Pizza Hut",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 572.35
+      }
+    },
+    {
+      "row": 80,
+      "vendor": {
+        "expected": "Hilton Hotels",
+        "actual": "Domino's"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 396.39
+      }
+    },
+    {
+      "row": 81,
+      "vendor": {
+        "expected": "Chevron",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 82,
+      "vendor": {
+        "expected": "CVS Pharmacy",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Professional Services",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 664.3
+      }
+    },
+    {
+      "row": 83,
+      "vendor": {
+        "expected": "Chipotle",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 807.69
+      }
+    },
+    {
+      "row": 84,
+      "vendor": {
+        "expected": "Adobe",
+        "actual": "Chipotle"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 160.04
+      }
+    },
+    {
+      "row": 85,
+      "vendor": {
+        "expected": "Domino's",
+        "actual": "AT&T"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 92.24
+      }
+    },
+    {
+      "row": 86,
+      "vendor": {
+        "expected": "Chevron",
+        "actual": "Costco"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 87,
+      "vendor": {
+        "expected": "Bank of America",
+        "actual": "Microsoft"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 899.01
+      }
+    },
+    {
+      "row": 88,
+      "vendor": {
+        "expected": "Gas Company",
+        "actual": "Costco"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 328.03
+      }
+    },
+    {
+      "row": 89,
+      "vendor": {
+        "expected": "Delta Airlines",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 257.71
+      }
+    },
+    {
+      "row": 90,
+      "vendor": {
+        "expected": "Marriott",
+        "actual": "Walgreens"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 4.54
+      }
+    },
+    {
+      "row": 91,
+      "vendor": {
+        "expected": "Wells Fargo",
+        "actual": "Lyft"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 636.05
+      }
+    },
+    {
+      "row": 92,
+      "vendor": {
+        "expected": "Papa John's",
+        "actual": "Spotify"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 641.84
+      }
+    },
+    {
+      "row": 93,
+      "vendor": {
+        "expected": "Hertz",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 234.77
+      }
+    },
+    {
+      "row": 94,
+      "vendor": {
+        "expected": "Costco",
+        "actual": "Google"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 438.75
+      }
+    },
+    {
+      "row": 95,
+      "vendor": {
+        "expected": "Subway",
+        "actual": "Starbucks"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 430.46
+      }
+    },
+    {
+      "row": 96,
+      "vendor": {
+        "expected": "Uber",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 645.02
+      }
+    },
+    {
+      "row": 97,
+      "vendor": {
+        "expected": "Whole Foods",
+        "actual": "Walgreens"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 747.02
+      }
+    },
+    {
+      "row": 98,
+      "vendor": {
+        "expected": "McDonald's",
+        "actual": "Subway"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 660.09
+      }
+    },
+    {
+      "row": 99,
+      "vendor": {
+        "expected": "Best Buy",
+        "actual": "Uber"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 222.35
+      }
+    },
+    {
+      "row": 101,
+      "vendor": {
+        "expected": "Kroger",
+        "actual": "Marriott"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 872.51
+      }
+    },
+    {
+      "row": 102,
+      "vendor": {
+        "expected": "Walgreens",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Professional Services",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 980.79
+      }
+    },
+    {
+      "row": 103,
+      "vendor": {
+        "expected": "Enterprise Rent-A-Car",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 801.52
+      }
+    },
+    {
+      "row": 104,
+      "vendor": {
+        "expected": "Southwest Airlines",
+        "actual": "Airbnb"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 994.63
+      }
+    },
+    {
+      "row": 105,
+      "vendor": {
+        "expected": "Wells Fargo",
+        "actual": "Safeway"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 697.51
+      }
+    },
+    {
+      "row": 106,
+      "vendor": {
+        "expected": "Hilton Hotels",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 466.46
+      }
+    },
+    {
+      "row": 107,
+      "vendor": {
+        "expected": "American Express",
+        "actual": "Salesforce"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 468.86
+      }
+    },
+    {
+      "row": 108,
+      "vendor": {
+        "expected": "Adobe",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 849.73
+      }
+    },
+    {
+      "row": 109,
+      "vendor": {
+        "expected": "Gas Company",
+        "actual": "Safeway"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 967.73
+      }
+    },
+    {
+      "row": 110,
+      "vendor": {
+        "expected": "Microsoft",
+        "actual": "Budget"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 636.98
+      }
+    },
+    {
+      "row": 111,
+      "vendor": {
+        "expected": "Hilton Hotels",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 753.72
+      }
+    },
+    {
+      "row": 112,
+      "vendor": {
+        "expected": "Pizza Hut",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 181.08
+      }
+    },
+    {
+      "row": 113,
+      "vendor": {
+        "expected": "Water Company",
+        "actual": "Safeway"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 70.9
+      }
+    },
+    {
+      "row": 114,
+      "vendor": {
+        "expected": "Hilton Hotels",
+        "actual": "Lyft"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 901.79
+      }
+    },
+    {
+      "row": 115,
+      "vendor": {
+        "expected": "Dropbox",
+        "actual": "Amazon"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 443.94
+      }
+    },
+    {
+      "row": 116,
+      "vendor": {
+        "expected": "Marriott",
+        "actual": "Walmart"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 388.03
+      }
+    },
+    {
+      "row": 117,
+      "vendor": {
+        "expected": "Papa John's",
+        "actual": "Kroger"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 118,
+      "vendor": {
+        "expected": "Apple",
+        "actual": "Lyft"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 359.62
+      }
+    },
+    {
+      "row": 119,
+      "vendor": {
+        "expected": "Amazon",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 615.9
+      }
+    },
+    {
+      "row": 120,
+      "vendor": {
+        "expected": "Lyft",
+        "actual": "Subway"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 752.26
+      }
+    },
+    {
+      "row": 121,
+      "vendor": {
+        "expected": "Costco",
+        "actual": "Uber"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 122,
+      "vendor": {
+        "expected": "Enterprise Rent-A-Car",
+        "actual": "Shell"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 825.1
+      }
+    },
+    {
+      "row": 123,
+      "vendor": {
+        "expected": "Uber",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 75.75
+      }
+    },
+    {
+      "row": 125,
+      "vendor": {
+        "expected": "Wells Fargo",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 313.24
+      }
+    },
+    {
+      "row": 126,
+      "vendor": {
+        "expected": "Subway",
+        "actual": "Adobe"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 934.31
+      }
+    },
+    {
+      "row": 127,
+      "vendor": {
+        "expected": "Airbnb",
+        "actual": "Domino's"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 980.26
+      }
+    },
+    {
+      "row": 128,
+      "vendor": {
+        "expected": "Salesforce",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 467.56
+      }
+    },
+    {
+      "row": 129,
+      "vendor": {
+        "expected": "Spotify",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 331.46
+      }
+    },
+    {
+      "row": 130,
+      "vendor": {
+        "expected": "Home Depot",
+        "actual": "Dropbox"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 457.38
+      }
+    },
+    {
+      "row": 131,
+      "vendor": {
+        "expected": "Spotify",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 793.3
+      }
+    },
+    {
+      "row": 132,
+      "vendor": {
+        "expected": "Chase Bank",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 244.07
+      }
+    },
+    {
+      "row": 133,
+      "vendor": {
+        "expected": "Marriott",
+        "actual": "Walmart"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 411.45
+      }
+    },
+    {
+      "row": 134,
+      "vendor": {
+        "expected": "AT&T",
+        "actual": "Marriott"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 598.44
+      }
+    },
+    {
+      "row": 135,
+      "vendor": {
+        "expected": "Hertz",
+        "actual": "Amazon"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 579.99
+      }
+    },
+    {
+      "row": 136,
+      "vendor": {
+        "expected": "Delta Airlines",
+        "actual": "Uber"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 486.18
+      }
+    },
+    {
+      "row": 137,
+      "vendor": {
+        "expected": "Walgreens",
+        "actual": "AT&T"
+      },
+      "category": {
+        "expected": "Professional Services",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 675.95
+      }
+    },
+    {
+      "row": 138,
+      "vendor": {
+        "expected": "Safeway",
+        "actual": "Microsoft"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 705.96
+      }
+    },
+    {
+      "row": 139,
+      "vendor": {
+        "expected": "Water Company",
+        "actual": "Adobe"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 750.73
+      }
+    },
+    {
+      "row": 140,
+      "vendor": {
+        "expected": "Shell",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 61.76
+      }
+    },
+    {
+      "row": 141,
+      "vendor": {
+        "expected": "American Express",
+        "actual": "Amazon"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 125.7
+      }
+    },
+    {
+      "row": 142,
+      "vendor": {
+        "expected": "Walgreens",
+        "actual": "Chevron"
+      },
+      "category": {
+        "expected": "Professional Services",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 987.9
+      }
+    },
+    {
+      "row": 143,
+      "vendor": {
+        "expected": "Pizza Hut",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 700.03
+      }
+    },
+    {
+      "row": 144,
+      "vendor": {
+        "expected": "Domino's",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 980.74
+      }
+    },
+    {
+      "row": 145,
+      "vendor": {
+        "expected": "Shell",
+        "actual": "Amazon"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 200.37
+      }
+    },
+    {
+      "row": 146,
+      "vendor": {
+        "expected": "Domino's",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 631.75
+      }
+    },
+    {
+      "row": 147,
+      "vendor": {
+        "expected": "Target",
+        "actual": "Hertz"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 148,
+      "vendor": {
+        "expected": "Adobe",
+        "actual": "Chipotle"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 259.93
+      }
+    },
+    {
+      "row": 149,
+      "vendor": {
+        "expected": "Salesforce",
+        "actual": "Netflix"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 919.47
+      }
+    },
+    {
+      "row": 150,
+      "vendor": {
+        "expected": "Chase Bank",
+        "actual": "Target"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 847.43
+      }
+    },
+    {
+      "row": 151,
+      "vendor": {
+        "expected": "American Express",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 333.11
+      }
+    },
+    {
+      "row": 152,
+      "vendor": {
+        "expected": "Apple",
+        "actual": "Walmart"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 214.53
+      }
+    },
+    {
+      "row": 153,
+      "vendor": {
+        "expected": "Gas Company",
+        "actual": "Airbnb"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 42.79
+      }
+    },
+    {
+      "row": 154,
+      "vendor": {
+        "expected": "Verizon",
+        "actual": "Microsoft"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 905.43
+      }
+    },
+    {
+      "row": 155,
+      "vendor": {
+        "expected": "Papa John's",
+        "actual": "Walgreens"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 470.54
+      }
+    },
+    {
+      "row": 156,
+      "vendor": {
+        "expected": "Verizon",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 508.17
+      }
+    },
+    {
+      "row": 157,
+      "vendor": {
+        "expected": "Marriott",
+        "actual": "Lyft"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 945.47
+      }
+    },
+    {
+      "row": 158,
+      "vendor": {
+        "expected": "Walgreens",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Professional Services",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 830.74
+      }
+    },
+    {
+      "row": 159,
+      "vendor": {
+        "expected": "Subway",
+        "actual": "Netflix"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 311.1
+      }
+    },
+    {
+      "row": 160,
+      "vendor": {
+        "expected": "Amazon",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Professional Services"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 463.25
+      }
+    },
+    {
+      "row": 161,
+      "vendor": {
+        "expected": "Hilton Hotels",
+        "actual": "Bestbuy"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 345.83
+      }
+    },
+    {
+      "row": 162,
+      "vendor": {
+        "expected": "CVS Pharmacy",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Professional Services",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 121.88
+      }
+    },
+    {
+      "row": 163,
+      "vendor": {
+        "expected": "Microsoft",
+        "actual": "Adobe"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 627.12
+      }
+    },
+    {
+      "row": 164,
+      "vendor": {
+        "expected": "Kroger",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 687.17
+      }
+    },
+    {
+      "row": 165,
+      "vendor": {
+        "expected": "Dropbox",
+        "actual": "Apple"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 451.06
+      }
+    },
+    {
+      "row": 166,
+      "vendor": {
+        "expected": "Delta Airlines",
+        "actual": "Hertz"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 46.37
+      }
+    },
+    {
+      "row": 167,
+      "vendor": {
+        "expected": "Salesforce",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 38.71
+      }
+    },
+    {
+      "row": 168,
+      "vendor": {
+        "expected": "Chipotle",
+        "actual": "Netflix"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 969.03
+      }
+    },
+    {
+      "row": 169,
+      "vendor": {
+        "expected": "Budget",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 556.81
+      }
+    },
+    {
+      "row": 170,
+      "vendor": {
+        "expected": "Subway",
+        "actual": "Chipotle"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 590.9
+      }
+    },
+    {
+      "row": 171,
+      "vendor": {
+        "expected": "Amazon",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 455.37
+      }
+    },
+    {
+      "row": 172,
+      "vendor": {
+        "expected": "Salesforce",
+        "actual": "Mcdonald's"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 588.85
+      }
+    },
+    {
+      "row": 173,
+      "vendor": {
+        "expected": "Hilton Hotels",
+        "actual": "Amazon"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 697.72
+      }
+    },
+    {
+      "row": 174,
+      "vendor": {
+        "expected": "Salesforce",
+        "actual": "Walgreens"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 684.93
+      }
+    },
+    {
+      "row": 175,
+      "vendor": {
+        "expected": "Kroger",
+        "actual": "Chevron"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 69.54
+      }
+    },
+    {
+      "row": 176,
+      "vendor": {
+        "expected": "Uber",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 170.81
+      }
+    },
+    {
+      "row": 177,
+      "vendor": {
+        "expected": "Chipotle",
+        "actual": "Safeway"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 317.05
+      }
+    },
+    {
+      "row": 178,
+      "vendor": {
+        "expected": "Lyft",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 579.34
+      }
+    },
+    {
+      "row": 179,
+      "vendor": {
+        "expected": "AT&T",
+        "actual": "Amazon"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 322.21
+      }
+    },
+    {
+      "row": 180,
+      "vendor": {
+        "expected": "Pizza Hut",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 709.79
+      }
+    },
+    {
+      "row": 181,
+      "vendor": {
+        "expected": "United Airlines",
+        "actual": "Hertz"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 362.63
+      }
+    },
+    {
+      "row": 182,
+      "vendor": {
+        "expected": "Safeway",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 856.88
+      }
+    },
+    {
+      "row": 183,
+      "vendor": {
+        "expected": "Bank of America",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 322.98
+      }
+    },
+    {
+      "row": 185,
+      "vendor": {
+        "expected": "Lyft",
+        "actual": "Apple"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 561.68
+      }
+    },
+    {
+      "row": 186,
+      "vendor": {
+        "expected": "Water Company",
+        "actual": "Adobe"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 717.89
+      }
+    },
+    {
+      "row": 187,
+      "vendor": {
+        "expected": "Safeway",
+        "actual": "Chipotle"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 833.01
+      }
+    },
+    {
+      "row": 188,
+      "vendor": {
+        "expected": "Chevron",
+        "actual": "Microsoft"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 964.4
+      }
+    },
+    {
+      "row": 189,
+      "vendor": {
+        "expected": "Hertz",
+        "actual": "Walgreens"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 153.69
+      }
+    },
+    {
+      "row": 190,
+      "vendor": {
+        "expected": "Starbucks",
+        "actual": "Google"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 455.96
+      }
+    },
+    {
+      "row": 191,
+      "vendor": {
+        "expected": "Safeway",
+        "actual": "AT&T"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 648.0
+      }
+    },
+    {
+      "row": 192,
+      "vendor": {
+        "expected": "Hertz",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 864.38
+      }
+    },
+    {
+      "row": 193,
+      "vendor": {
+        "expected": "Shell",
+        "actual": "Subway"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 194,
+      "vendor": {
+        "expected": "Lyft",
+        "actual": "Budget"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 66.85
+      }
+    },
+    {
+      "row": 195,
+      "vendor": {
+        "expected": "Hilton Hotels",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 707.6
+      }
+    },
+    {
+      "row": 196,
+      "vendor": {
+        "expected": "Wells Fargo",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 197,
+      "vendor": {
+        "expected": "AT&T",
+        "actual": "Comcast"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 198,
+      "vendor": {
+        "expected": "Airbnb",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 117.56
+      }
+    },
+    {
+      "row": 199,
+      "vendor": {
+        "expected": "Southwest Airlines",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 200,
+      "vendor": {
+        "expected": "Airbnb",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 201,
+      "vendor": {
+        "expected": "American Express",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 754.48
+      }
+    },
+    {
+      "row": 202,
+      "vendor": {
+        "expected": "Electric Company",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 8.82
+      }
+    },
+    {
+      "row": 203,
+      "vendor": {
+        "expected": "Wells Fargo",
+        "actual": "Budget"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 177.97
+      }
+    },
+    {
+      "row": 204,
+      "vendor": {
+        "expected": "Airbnb",
+        "actual": "AT&T"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 396.24
+      }
+    },
+    {
+      "row": 205,
+      "vendor": {
+        "expected": "Papa John's",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 78.09
+      }
+    },
+    {
+      "row": 206,
+      "vendor": {
+        "expected": "Target",
+        "actual": "Salesforce"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 275.21
+      }
+    },
+    {
+      "row": 207,
+      "vendor": {
+        "expected": "Electric Company",
+        "actual": "Hertz"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 84.86
+      }
+    },
+    {
+      "row": 208,
+      "vendor": {
+        "expected": "CVS Pharmacy",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Professional Services",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 720.03
+      }
+    },
+    {
+      "row": 209,
+      "vendor": {
+        "expected": "Adobe",
+        "actual": "Chevron"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 163.08
+      }
+    },
+    {
+      "row": 210,
+      "vendor": {
+        "expected": "Comcast",
+        "actual": "Airbnb"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 411.4
+      }
+    },
+    {
+      "row": 211,
+      "vendor": {
+        "expected": "Chipotle",
+        "actual": "Comcast"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 702.12
+      }
+    },
+    {
+      "row": 212,
+      "vendor": {
+        "expected": "American Express",
+        "actual": "Hertz"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 576.67
+      }
+    },
+    {
+      "row": 213,
+      "vendor": {
+        "expected": "Budget",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Professional Services"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 27.23
+      }
+    },
+    {
+      "row": 214,
+      "vendor": {
+        "expected": "Uber",
+        "actual": "Kroger"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 967.3
+      }
+    },
+    {
+      "row": 215,
+      "vendor": {
+        "expected": "Best Buy",
+        "actual": "Comcast"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 667.27
+      }
+    },
+    {
+      "row": 216,
+      "vendor": {
+        "expected": "Hertz",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 68.07
+      }
+    },
+    {
+      "row": 217,
+      "vendor": {
+        "expected": "Netflix",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 152.58
+      }
+    },
+    {
+      "row": 218,
+      "vendor": {
+        "expected": "Salesforce",
+        "actual": "Marriott"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 192.35
+      }
+    },
+    {
+      "row": 219,
+      "vendor": {
+        "expected": "Gas Company",
+        "actual": "Spotify"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 546.04
+      }
+    },
+    {
+      "row": 220,
+      "vendor": {
+        "expected": "Spotify",
+        "actual": "Verizon"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 650.19
+      }
+    },
+    {
+      "row": 221,
+      "vendor": {
+        "expected": "Enterprise Rent-A-Car",
+        "actual": "Safeway"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 419.71
+      }
+    },
+    {
+      "row": 222,
+      "vendor": {
+        "expected": "Water Company",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 494.88
+      }
+    },
+    {
+      "row": 223,
+      "vendor": {
+        "expected": "Electric Company",
+        "actual": "Salesforce"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 662.21
+      }
+    },
+    {
+      "row": 224,
+      "vendor": {
+        "expected": "Uber",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 225,
+      "vendor": {
+        "expected": "Southwest Airlines",
+        "actual": "Chevron"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 94.36
+      }
+    },
+    {
+      "row": 226,
+      "vendor": {
+        "expected": "Comcast",
+        "actual": "Subway"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 444.23
+      }
+    },
+    {
+      "row": 227,
+      "vendor": {
+        "expected": "Budget",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 500.76
+      }
+    },
+    {
+      "row": 228,
+      "vendor": {
+        "expected": "American Express",
+        "actual": "Chevron"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 310.27
+      }
+    },
+    {
+      "row": 229,
+      "vendor": {
+        "expected": "Whole Foods",
+        "actual": "Amazon"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 991.0
+      }
+    },
+    {
+      "row": 230,
+      "vendor": {
+        "expected": "Chase Bank",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 399.59
+      }
+    },
+    {
+      "row": 231,
+      "vendor": {
+        "expected": "Netflix",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 232,
+      "vendor": {
+        "expected": "Electric Company",
+        "actual": "Google"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 233,
+      "vendor": {
+        "expected": "CVS Pharmacy",
+        "actual": "Salesforce"
+      },
+      "category": {
+        "expected": "Professional Services",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 234,
+      "vendor": {
+        "expected": "Amazon",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 235,
+      "vendor": {
+        "expected": "Netflix",
+        "actual": "Safeway"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 236,
+      "vendor": {
+        "expected": "Amazon",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 0.0
+      }
+    },
+    {
+      "row": 237,
+      "vendor": {
+        "expected": "Walmart",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 61.17
+      }
+    },
+    {
+      "row": 238,
+      "vendor": {
+        "expected": "Budget",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Utilities & Rent"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 226.93
+      }
+    },
+    {
+      "row": 239,
+      "vendor": {
+        "expected": "Salesforce",
+        "actual": "Lyft"
+      },
+      "category": {
+        "expected": "Software & Technology",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 285.05
+      }
+    },
+    {
+      "row": 240,
+      "vendor": {
+        "expected": "Safeway",
+        "actual": "Chipotle"
+      },
+      "category": {
+        "expected": "Meals & Entertainment",
+        "actual": "Meals & Entertainment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 381.64
+      }
+    },
+    {
+      "row": 241,
+      "vendor": {
+        "expected": "Chevron",
+        "actual": "Americanexpress"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Banking & Finance"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 449.46
+      }
+    },
+    {
+      "row": 242,
+      "vendor": {
+        "expected": "Chevron",
+        "actual": "Target"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 508.73
+      }
+    },
+    {
+      "row": 243,
+      "vendor": {
+        "expected": "Electric Company",
+        "actual": "Salesforce"
+      },
+      "category": {
+        "expected": "Utilities & Rent",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 580.34
+      }
+    },
+    {
+      "row": 244,
+      "vendor": {
+        "expected": "Home Depot",
+        "actual": "Microsoft"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 701.48
+      }
+    },
+    {
+      "row": 245,
+      "vendor": {
+        "expected": "Southwest Airlines",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 808.39
+      }
+    },
+    {
+      "row": 246,
+      "vendor": {
+        "expected": "Chevron",
+        "actual": "Salesforce"
+      },
+      "category": {
+        "expected": "Travel & Transportation",
+        "actual": "Software & Technology"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 873.41
+      }
+    },
+    {
+      "row": 247,
+      "vendor": {
+        "expected": "Walmart",
+        "actual": "Airbnb"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 885.57
+      }
+    },
+    {
+      "row": 248,
+      "vendor": {
+        "expected": "Chase Bank",
+        "actual": "Marriott"
+      },
+      "category": {
+        "expected": "Banking & Finance",
+        "actual": "Travel & Transportation"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 897.91
+      }
+    },
+    {
+      "row": 249,
+      "vendor": {
+        "expected": "Home Depot",
+        "actual": "[Vendor Missing]"
+      },
+      "category": {
+        "expected": "Office Supplies & Equipment",
+        "actual": "Office Supplies & Equipment"
+      },
+      "date": {
+        "expected": "",
+        "actual": ""
+      },
+      "amount": {
+        "expected": null,
+        "actual": 984.46
+      }
+    }
+  ]
+}

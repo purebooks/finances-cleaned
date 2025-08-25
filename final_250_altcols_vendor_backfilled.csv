@@ -1,0 +1,251 @@
+Transaction Date,Amount,Clean Vendor,Category,Description/Memo,source_row_id
+,-947.0,Chipotle,Software & Technology,Transaction 25 - Business expense,24
+,-912.92,Apple,Professional Services,Transaction 163 - Equipment purchase,162
+,-887.37,Airbnb,Travel & Transportation,Transaction 182 - Team lunch,181
+,-729.4,Budget,Travel & Transportation,Transaction 12 - Team lunch,11
+,-266.1,AT&T,Travel & Transportation,Transaction 193 - Monthly subscription,192
+,-114.97,Target,Office Supplies & Equipment,Transaction 122 - Business expense,121
+,0.0,Hertz,Software & Technology,Transaction 14 - Equipment purchase,13
+,0.0,[Vendor Missing],Travel & Transportation,Transaction 24 - Team lunch,23
+,0.0,Salesforce,Software & Technology,Transaction 42 - Business expense,41
+,0.0,Safeway,Meals & Entertainment,Transaction 52 - Office supplies,51
+,0.0,Mcdonald's,Software & Technology,Transaction 64 - Team lunch,63
+,0.0,Netflix,Office Supplies & Equipment,Transaction 100 - Equipment purchase,99
+,0.0,Domino's,Meals & Entertainment,Transaction 101 - Monthly subscription,100
+,0.0,Google,Meals & Entertainment,Transaction 102 - Equipment purchase,101
+,0.0,Netflix,Meals & Entertainment,Transaction 113 - Office supplies,112
+,0.0,Salesforce,Office Supplies & Equipment,Transaction 131 - Office supplies,130
+,0.0,Salesforce,Travel & Transportation,Transaction 137 - Client meeting,136
+,0.0,Domino's,Professional Services,Transaction 143 - Client meeting,142
+,0.0,[Vendor Missing],Utilities & Rent,Transaction 154 - Monthly subscription,153
+,0.0,Adobe,Travel & Transportation,Transaction 177 - Equipment purchase,176
+,0.0,Airbnb,Meals & Entertainment,Transaction 188 - Office supplies,187
+,0.0,[Vendor Missing],Meals & Entertainment,Transaction 206 - Office supplies,205
+,4.54,Verizon,Office Supplies & Equipment,Transaction 55 - Equipment purchase,54
+,8.82,[Vendor Missing],Office Supplies & Equipment,Transaction 51 - Team lunch,50
+,14.66,Safeway,Meals & Entertainment,Transaction 145 - Office supplies,144
+,15.13,Safeway,Software & Technology,Transaction 119 - Team lunch,118
+,15.85,Starbucks,Meals & Entertainment,Transaction 192 - Office supplies,191
+,19.72,AT&T,Software & Technology,Transaction 221 - Team lunch,220
+,26.0,Lyft,Travel & Transportation,Transaction 179 - Monthly subscription,178
+,27.23,Adobe,Professional Services,Transaction 209 - Equipment purchase,208
+,38.71,Domino's,Travel & Transportation,Transaction 246 - Monthly subscription,245
+,42.79,Airbnb,Travel & Transportation,Transaction 58 - Business expense,57
+,46.37,Hertz,Travel & Transportation,Transaction 217 - Monthly subscription,216
+,53.03,Uber,Travel & Transportation,Transaction 97 - Office supplies,96
+,61.17,Costco,Banking & Finance,Transaction 126 - Business expense,125
+,61.76,Walgreens,Travel & Transportation,Transaction 196 - Client meeting,195
+,66.85,Budget,Travel & Transportation,Transaction 239 - Client meeting,238
+,68.07,[Vendor Missing],Utilities & Rent,Transaction 203 - Business expense,202
+,69.54,Chevron,Travel & Transportation,Transaction 189 - Office supplies,188
+,70.9,Apple,Meals & Entertainment,Transaction 70 - Team lunch,69
+,75.75,Airbnb,Meals & Entertainment,Transaction 156 - Team lunch,155
+,78.09,Salesforce,Office Supplies & Equipment,Transaction 245 - Business expense,244
+,84.86,Spotify,Travel & Transportation,Transaction 94 - Client meeting,93
+,92.24,AT&T,Utilities & Rent,Transaction 135 - Monthly subscription,134
+,94.36,AT&T,Travel & Transportation,Transaction 243 - Monthly subscription,242
+,100.61,Walgreens,Utilities & Rent,Transaction 155 - Business expense,154
+,117.56,Safeway,Meals & Entertainment,Transaction 181 - Team lunch,180
+,121.88,Shell,Banking & Finance,Transaction 29 - Team lunch,28
+,125.7,Walgreens,Office Supplies & Equipment,Transaction 7 - Business expense,6
+,127.07,AT&T,Utilities & Rent,Transaction 198 - Monthly subscription,197
+,127.09,Domino's,Meals & Entertainment,Transaction 99 - Monthly subscription,98
+,133.18,Salesforce,Meals & Entertainment,Transaction 32 - Monthly subscription,31
+,152.58,[Vendor Missing],Travel & Transportation,Transaction 123 - Team lunch,122
+,153.69,Marriott,Office Supplies & Equipment,Transaction 23 - Monthly subscription,22
+,158.25,Amazon,Travel & Transportation,Transaction 214 - Equipment purchase,213
+,160.04,Chipotle,Meals & Entertainment,Transaction 62 - Client meeting,61
+,163.08,Kroger,Travel & Transportation,Transaction 247 - Monthly subscription,246
+,170.81,Chipotle,Travel & Transportation,Transaction 162 - Client meeting,161
+,177.97,Budget,Travel & Transportation,Transaction 228 - Client meeting,227
+,179.39,Lyft,Utilities & Rent,Transaction 66 - Team lunch,65
+,181.08,Safeway,Utilities & Rent,Transaction 244 - Client meeting,243
+,192.35,Chevron,Travel & Transportation,Transaction 117 - Team lunch,116
+,200.37,Hertz,Office Supplies & Equipment,Transaction 63 - Team lunch,62
+,201.59,Starbucks,Software & Technology,Transaction 173 - Team lunch,172
+,214.53,Hertz,Office Supplies & Equipment,Transaction 39 - Business expense,38
+,219.62,Shell,Meals & Entertainment,Transaction 80 - Equipment purchase,79
+,222.35,Airbnb,Travel & Transportation,Transaction 225 - Business expense,224
+,225.42,Uber,Travel & Transportation,Transaction 77 - Business expense,76
+,226.93,[Vendor Missing],Utilities & Rent,Transaction 208 - Monthly subscription,207
+,234.77,[Vendor Missing],Banking & Finance,Transaction 249 - Client meeting,248
+,237.03,Comcast,Utilities & Rent,Transaction 227 - Office supplies,226
+,244.07,Adobe,Utilities & Rent,Transaction 224 - Monthly subscription,223
+,245.65,Comcast,Office Supplies & Equipment,Transaction 1 - Equipment purchase,0
+,249.95,Chipotle,Travel & Transportation,Transaction 81 - Client meeting,80
+,257.71,Budget,Travel & Transportation,Transaction 174 - Client meeting,173
+,259.93,Hertz,Meals & Entertainment,Transaction 84 - Equipment purchase,83
+,265.38,Salesforce,Meals & Entertainment,Transaction 127 - Office supplies,126
+,265.94,Walmart,Office Supplies & Equipment,Transaction 40 - Client meeting,39
+,265.94,Spotify,Software & Technology,Transaction 49 - Business expense,48
+,275.21,Salesforce,Software & Technology,Transaction 168 - Equipment purchase,167
+,283.72,[Vendor Missing],Meals & Entertainment,Transaction 118 - Team lunch,117
+,285.05,Amazon,Travel & Transportation,Transaction 121 - Team lunch,120
+,310.27,Chevron,Travel & Transportation,Transaction 242 - Team lunch,241
+,311.1,Netflix,Software & Technology,Transaction 232 - Business expense,231
+,312.33,[Vendor Missing],Banking & Finance,Transaction 213 - Monthly subscription,212
+,313.24,Chevron,Banking & Finance,Transaction 202 - Team lunch,201
+,317.05,Safeway,Office Supplies & Equipment,Transaction 46 - Equipment purchase,45
+,318.86,Apple,Software & Technology,Transaction 153 - Client meeting,152
+,322.21,Amazon,Office Supplies & Equipment,Transaction 235 - Office supplies,234
+,322.98,[Vendor Missing],Banking & Finance,Transaction 108 - Business expense,107
+,328.03,Costco,Office Supplies & Equipment,Transaction 95 - Team lunch,94
+,331.46,[Vendor Missing],Travel & Transportation,Transaction 115 - Team lunch,114
+,333.11,[Vendor Missing],Banking & Finance,Transaction 151 - Client meeting,150
+,336.51,Domino's,Meals & Entertainment,Transaction 86 - Business expense,85
+,336.79,[Vendor Missing],Banking & Finance,Transaction 92 - Client meeting,91
+,340.91,Subway,Meals & Entertainment,Transaction 5 - Team lunch,4
+,345.83,Bestbuy,Office Supplies & Equipment,Transaction 216 - Equipment purchase,215
+,346.34,Amazon,Office Supplies & Equipment,Transaction 67 - Client meeting,66
+,359.1,Amazon,Office Supplies & Equipment,Transaction 161 - Office supplies,160
+,359.62,Lyft,Travel & Transportation,Transaction 6 - Team lunch,5
+,362.63,Hertz,Travel & Transportation,Transaction 17 - Office supplies,16
+,381.64,Chipotle,Meals & Entertainment,Transaction 178 - Team lunch,177
+,382.24,[Vendor Missing],Banking & Finance,Transaction 19 - Monthly subscription,18
+,388.03,Walmart,Office Supplies & Equipment,Transaction 238 - Equipment purchase,237
+,396.24,AT&T,Utilities & Rent,Transaction 15 - Client meeting,14
+,396.39,Domino's,Meals & Entertainment,Transaction 47 - Team lunch,46
+,399.59,[Vendor Missing],Meals & Entertainment,Transaction 28 - Team lunch,27
+,403.22,[Vendor Missing],Meals & Entertainment,Transaction 35 - Business expense,34
+,409.11,Airbnb,Travel & Transportation,Transaction 128 - Client meeting,127
+,411.4,Airbnb,Travel & Transportation,Transaction 205 - Client meeting,204
+,411.45,Walmart,Office Supplies & Equipment,Transaction 248 - Office supplies,247
+,412.23,Safeway,Meals & Entertainment,Transaction 139 - Equipment purchase,138
+,419.71,Safeway,Meals & Entertainment,Transaction 183 - Office supplies,182
+,430.46,Starbucks,Meals & Entertainment,Transaction 74 - Equipment purchase,73
+,435.33,[Vendor Missing],Meals & Entertainment,Transaction 21 - Equipment purchase,20
+,438.75,Google,Software & Technology,Transaction 50 - Team lunch,49
+,442.29,Kroger,Meals & Entertainment,Transaction 165 - Monthly subscription,164
+,443.94,Amazon,Office Supplies & Equipment,Transaction 185 - Team lunch,184
+,444.23,Subway,Meals & Entertainment,Transaction 160 - Business expense,159
+,448.83,Shell,Travel & Transportation,Transaction 194 - Monthly subscription,193
+,449.16,Google,Software & Technology,Transaction 36 - Team lunch,35
+,449.46,Americanexpress,Banking & Finance,Transaction 229 - Monthly subscription,228
+,451.06,Apple,Software & Technology,Transaction 125 - Monthly subscription,124
+,452.1,Airbnb,Travel & Transportation,Transaction 201 - Team lunch,200
+,455.37,[Vendor Missing],Utilities & Rent,Transaction 140 - Team lunch,139
+,455.96,Google,Software & Technology,Transaction 78 - Monthly subscription,77
+,457.38,Dropbox,Software & Technology,Transaction 166 - Client meeting,165
+,458.83,[Vendor Missing],Banking & Finance,Transaction 48 - Business expense,47
+,463.25,[Vendor Missing],Professional Services,Transaction 234 - Equipment purchase,233
+,466.46,[Vendor Missing],Banking & Finance,Transaction 88 - Client meeting,87
+,467.56,[Vendor Missing],Banking & Finance,Transaction 34 - Equipment purchase,33
+,468.86,Salesforce,Software & Technology,Transaction 175 - Office supplies,174
+,470.54,Walgreens,Office Supplies & Equipment,Transaction 138 - Team lunch,137
+,486.18,Uber,Travel & Transportation,Transaction 215 - Team lunch,214
+,494.88,[Vendor Missing],Office Supplies & Equipment,Transaction 79 - Equipment purchase,78
+,497.89,Salesforce,Software & Technology,Transaction 219 - Office supplies,218
+,498.88,Shell,Travel & Transportation,Transaction 146 - Monthly subscription,145
+,500.76,[Vendor Missing],Utilities & Rent,Transaction 220 - Team lunch,219
+,508.17,[Vendor Missing],Meals & Entertainment,Transaction 22 - Team lunch,21
+,508.73,Target,Office Supplies & Equipment,Transaction 148 - Business expense,147
+,510.44,[Vendor Missing],Travel & Transportation,Transaction 226 - Team lunch,225
+,515.94,Walmart,Office Supplies & Equipment,Transaction 76 - Team lunch,75
+,518.92,[Vendor Missing],Banking & Finance,Transaction 142 - Client meeting,141
+,533.21,[Vendor Missing],Travel & Transportation,Transaction 104 - Business expense,103
+,540.68,Starbucks,Meals & Entertainment,Transaction 191 - Business expense,190
+,546.04,Spotify,Software & Technology,Transaction 57 - Monthly subscription,56
+,556.81,[Vendor Missing],Banking & Finance,Transaction 204 - Monthly subscription,203
+,561.68,Apple,Software & Technology,Transaction 3 - Equipment purchase,2
+,566.75,Comcast,Utilities & Rent,Transaction 211 - Office supplies,210
+,572.35,[Vendor Missing],Travel & Transportation,Transaction 167 - Equipment purchase,166
+,576.67,Hertz,Travel & Transportation,Transaction 136 - Office supplies,135
+,579.34,[Vendor Missing],Utilities & Rent,Transaction 45 - Client meeting,44
+,579.99,Amazon,Office Supplies & Equipment,Transaction 172 - Business expense,171
+,580.34,Salesforce,Software & Technology,Transaction 150 - Office supplies,149
+,588.85,Mcdonald's,Meals & Entertainment,Transaction 30 - Equipment purchase,29
+,589.68,Marriott,Travel & Transportation,Transaction 4 - Business expense,3
+,590.9,Chipotle,Meals & Entertainment,Transaction 2 - Office supplies,1
+,595.44,[Vendor Missing],Travel & Transportation,Transaction 44 - Office supplies,43
+,595.45,Spotify,Software & Technology,Transaction 132 - Team lunch,131
+,598.44,Marriott,Travel & Transportation,Transaction 134 - Equipment purchase,133
+,615.9,[Vendor Missing],Banking & Finance,Transaction 73 - Monthly subscription,72
+,616.04,[Vendor Missing],Banking & Finance,Transaction 184 - Team lunch,183
+,627.12,Adobe,Software & Technology,Transaction 85 - Business expense,84
+,628.62,Subway,Meals & Entertainment,Transaction 171 - Equipment purchase,170
+,631.75,[Vendor Missing],Banking & Finance,Transaction 231 - Monthly subscription,230
+,636.05,Lyft,Travel & Transportation,Transaction 10 - Team lunch,9
+,636.98,Budget,Travel & Transportation,Transaction 170 - Equipment purchase,169
+,641.84,Spotify,Software & Technology,Transaction 65 - Monthly subscription,64
+,645.02,[Vendor Missing],Utilities & Rent,Transaction 233 - Business expense,232
+,648.0,AT&T,Utilities & Rent,Transaction 180 - Client meeting,179
+,650.19,Verizon,Utilities & Rent,Transaction 157 - Equipment purchase,156
+,660.09,Subway,Meals & Entertainment,Transaction 26 - Office supplies,25
+,662.21,Salesforce,Software & Technology,Transaction 41 - Office supplies,40
+,664.3,[Vendor Missing],Utilities & Rent,Transaction 114 - Monthly subscription,113
+,667.27,Comcast,Utilities & Rent,Transaction 59 - Monthly subscription,58
+,675.95,AT&T,Utilities & Rent,Transaction 75 - Equipment purchase,74
+,682.03,Microsoft,Software & Technology,Transaction 20 - Team lunch,19
+,684.93,Walgreens,Office Supplies & Equipment,Transaction 13 - Business expense,12
+,687.17,[Vendor Missing],Banking & Finance,Transaction 69 - Equipment purchase,68
+,694.26,Chevron,Travel & Transportation,Transaction 87 - Business expense,86
+,697.51,Safeway,Meals & Entertainment,Transaction 72 - Office supplies,71
+,697.72,Amazon,Office Supplies & Equipment,Transaction 120 - Client meeting,119
+,700.03,[Vendor Missing],Banking & Finance,Transaction 133 - Monthly subscription,132
+,701.48,Microsoft,Software & Technology,Transaction 111 - Business expense,110
+,702.12,Comcast,Utilities & Rent,Transaction 11 - Business expense,10
+,703.0,Adobe,Software & Technology,Transaction 210 - Team lunch,209
+,705.96,Microsoft,Software & Technology,Transaction 56 - Business expense,55
+,707.25,Salesforce,Software & Technology,Transaction 129 - Client meeting,128
+,707.6,[Vendor Missing],Banking & Finance,Transaction 106 - Equipment purchase,105
+,709.79,[Vendor Missing],Travel & Transportation,Transaction 222 - Business expense,221
+,712.69,[Vendor Missing],Banking & Finance,Transaction 197 - Business expense,196
+,717.89,Adobe,Software & Technology,Transaction 53 - Equipment purchase,52
+,720.03,[Vendor Missing],Office Supplies & Equipment,Transaction 71 - Team lunch,70
+,720.35,[Vendor Missing],Travel & Transportation,Transaction 112 - Office supplies,111
+,721.56,Dropbox,Software & Technology,Transaction 116 - Equipment purchase,115
+,745.24,Target,Office Supplies & Equipment,Transaction 16 - Equipment purchase,15
+,746.37,Chipotle,Meals & Entertainment,Transaction 212 - Client meeting,211
+,747.02,Walgreens,Professional Services,Transaction 159 - Business expense,158
+,750.73,Adobe,Software & Technology,Transaction 109 - Equipment purchase,108
+,752.26,Subway,Meals & Entertainment,Transaction 96 - Team lunch,95
+,753.72,[Vendor Missing],Travel & Transportation,Transaction 90 - Client meeting,89
+,754.48,[Vendor Missing],Meals & Entertainment,Transaction 98 - Office supplies,97
+,764.68,Uber,Travel & Transportation,Transaction 124 - Monthly subscription,123
+,773.3,Domino's,Meals & Entertainment,Transaction 9 - Office supplies,8
+,774.59,Hertz,Travel & Transportation,Transaction 190 - Monthly subscription,189
+,782.6,[Vendor Missing],Banking & Finance,Transaction 61 - Equipment purchase,60
+,788.04,Spotify,Software & Technology,Transaction 130 - Equipment purchase,129
+,793.3,[Vendor Missing],Travel & Transportation,Transaction 200 - Equipment purchase,199
+,801.52,[Vendor Missing],Utilities & Rent,Transaction 223 - Equipment purchase,222
+,807.69,[Vendor Missing],Travel & Transportation,Transaction 33 - Equipment purchase,32
+,808.21,[Vendor Missing],Banking & Finance,Transaction 37 - Business expense,36
+,808.39,[Vendor Missing],Travel & Transportation,Transaction 107 - Client meeting,106
+,825.1,Shell,Travel & Transportation,Transaction 141 - Monthly subscription,140
+,830.74,[Vendor Missing],Office Supplies & Equipment,Transaction 83 - Office supplies,82
+,833.01,Chipotle,Meals & Entertainment,Transaction 169 - Office supplies,168
+,847.43,Target,Office Supplies & Equipment,Transaction 207 - Monthly subscription,206
+,849.73,[Vendor Missing],Travel & Transportation,Transaction 105 - Business expense,104
+,850.44,Walgreens,Office Supplies & Equipment,Transaction 103 - Business expense,102
+,851.1,[Vendor Missing],Utilities & Rent,Transaction 110 - Team lunch,109
+,856.88,[Vendor Missing],Utilities & Rent,Transaction 89 - Client meeting,88
+,859.78,Netflix,Software & Technology,Transaction 31 - Team lunch,30
+,861.24,[Vendor Missing],Travel & Transportation,Transaction 18 - Equipment purchase,17
+,864.38,[Vendor Missing],Meals & Entertainment,Transaction 230 - Office supplies,229
+,864.74,[Vendor Missing],Banking & Finance,Transaction 60 - Office supplies,59
+,872.51,Marriott,Travel & Transportation,Transaction 158 - Office supplies,157
+,873.41,Salesforce,Software & Technology,Transaction 240 - Monthly subscription,239
+,885.57,Airbnb,Travel & Transportation,Transaction 8 - Office supplies,7
+,897.91,Marriott,Travel & Transportation,Transaction 91 - Team lunch,90
+,899.01,Microsoft,Software & Technology,Transaction 164 - Team lunch,163
+,899.61,Budget,Travel & Transportation,Transaction 68 - Equipment purchase,67
+,901.79,Lyft,Travel & Transportation,Transaction 186 - Business expense,185
+,905.43,Microsoft,Software & Technology,Transaction 54 - Business expense,53
+,919.47,Netflix,Software & Technology,Transaction 43 - Business expense,42
+,934.31,Adobe,Software & Technology,Transaction 149 - Business expense,148
+,945.38,Netflix,Software & Technology,Transaction 218 - Team lunch,217
+,945.47,Lyft,Travel & Transportation,Transaction 195 - Equipment purchase,194
+,949.06,[Vendor Missing],Utilities & Rent,Transaction 187 - Business expense,186
+,964.4,Microsoft,Software & Technology,Transaction 27 - Equipment purchase,26
+,967.3,Kroger,Meals & Entertainment,Transaction 176 - Team lunch,175
+,967.73,Safeway,Meals & Entertainment,Transaction 241 - Client meeting,240
+,969.03,Netflix,Software & Technology,Transaction 38 - Office supplies,37
+,973.17,[Vendor Missing],Meals & Entertainment,Transaction 144 - Office supplies,143
+,980.26,Domino's,Meals & Entertainment,Transaction 147 - Monthly subscription,146
+,980.74,[Vendor Missing],Meals & Entertainment,Transaction 93 - Client meeting,92
+,980.79,[Vendor Missing],Banking & Finance,Transaction 152 - Client meeting,151
+,982.4,Netflix,Software & Technology,Transaction 236 - Office supplies,235
+,984.46,[Vendor Missing],Office Supplies & Equipment,Transaction 250 - Team lunch,249
+,987.9,Chevron,Travel & Transportation,Transaction 82 - Client meeting,81
+,991.0,Amazon,Office Supplies & Equipment,Transaction 237 - Monthly subscription,236
+,994.63,Airbnb,Travel & Transportation,Transaction 199 - Client meeting,198

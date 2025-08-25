@@ -1,0 +1,15 @@
+{
+  "data": {
+    "merchant": ["Starbucks", "Walmart", "Shell Gas", "Netflix", "Uber Eats", "Amazon", "Target", "McDonald's"],
+    "amount": [4.50, 125.75, 45.20, 15.99, 28.50, 89.99, 67.30, 12.45],
+    "description": ["Coffee", "Groceries", "Gas", "Streaming", "Food delivery", "Electronics", "Household", "Fast food"]
+  },
+  "config": {
+    "enable_ai": true,
+    "ai_vendor_enabled": true,
+    "ai_category_enabled": true,
+    "enable_transaction_intelligence": true,
+    "enable_source_tracking": true,
+    "ai_confidence_threshold": 0.7
+  }
+} 

@@ -136,29 +136,36 @@ class AIEnhancedProductionCleaner:
         return self._standard_processing_chunk(self.df)
 
     def _standard_processing_chunk(self, df: pd.DataFrame) -> Tuple[pd.DataFrame, Dict[str, Any]]:
-        """Process a single chunk with AI integration"""
+        """Process a single chunk with AI integration - robust handling of missing columns"""
         with self.timer("Standard processing"):
-            # Data cleaning
+            # Always do basic data cleaning (works with any structure)
             df = self._advanced_data_cleaning(df)
             
-            # Amount and date cleaning
-            df = self._advanced_amount_cleaning(df)
+            # Analyze what columns we have and what we can process
+            available_columns = self._analyze_available_columns(df)
+            logger.info(f"Available columns for processing: {available_columns}")
             
-            # Duplicate detection and removal
-            df = self._detect_and_remove_duplicates(df)
+            # Process amount columns if available
+            if available_columns['amount']:
+                df = self._advanced_amount_cleaning(df)
             
-            # AI-powered vendor standardization
-            if self.config['enable_ai'] and self.config['ai_vendor_enabled']:
+            # Process duplicates if we have merchant and amount
+            if available_columns['merchant'] and available_columns['amount']:
+                df = self._detect_and_remove_duplicates(df)
+            
+            # AI-powered vendor standardization (if merchant column exists)
+            if self.config['enable_ai'] and self.config['ai_vendor_enabled'] and available_columns['merchant']:
                 df = self._ai_enhanced_vendor_standardization(df)
             
-            # AI-powered categorization
-            if self.config['enable_ai'] and self.config['ai_category_enabled']:
+            # AI-powered categorization (if both merchant and amount exist)
+            if self.config['enable_ai'] and self.config['ai_category_enabled'] and available_columns['merchant'] and available_columns['amount']:
                 df = self._ai_enhanced_categorization(df)
             
-            # Outlier detection
-            df = self._detect_outliers(df)
+            # Outlier detection (if amount column exists)
+            if available_columns['amount']:
+                df = self._detect_outliers(df)
             
-            # Data filling and enhancement
+            # Intelligent data filling (works with any structure)
             df = self._intelligent_data_filling(df)
             df = self._enhance_descriptions(df)
             
@@ -172,10 +179,47 @@ class AIEnhancedProductionCleaner:
             return df, insights
 
     def _ai_enhanced_vendor_standardization(self, df: pd.DataFrame) -> pd.DataFrame:
-        """AI-enhanced vendor standardization"""
-        if 'merchant' not in df.columns:
-            logger.warning("No merchant column found for AI vendor standardization")
+        """AI-enhanced vendor standardization - robust handling of missing columns"""
+        # Find merchant column
+        merchant_col = self._find_merchant_column(df)
+        if merchant_col is None:
+            logger.warning("No merchant column found for AI vendor standardization - skipping")
             return df
+        
+        # Find description and memo columns (optional)
+        description_col = self._find_description_column(df)
+        memo_col = self._find_memo_column(df)
+        
+        logger.info(f"Processing vendor standardization with columns: merchant={merchant_col}, description={description_col}, memo={memo_col}")
+        
+        # Use the found columns for processing
+        for idx, row in df.iterrows():
+            merchant = str(row.get(merchant_col, ''))
+            description = str(row.get(description_col, '')) if description_col else ''
+            memo = str(row.get(memo_col, '')) if memo_col else ''
+            
+            # Skip empty merchants
+            if not merchant or merchant.strip() == '':
+                continue
+            
+            # Check if we should use AI for this vendor
+            use_ai = True
+            if self.config['use_ai_for_unmatched_only']:
+                # Only use AI if vendor wasn't matched by rules
+                # This would require checking if the vendor was already standardized
+                pass
+            
+            if use_ai:
+                try:
+                    ai_vendor = self.llm_client.resolve_vendor(merchant, description, memo)
+                    if ai_vendor and ai_vendor.strip():
+                        df.at[idx, merchant_col] = ai_vendor
+                        self.stats['ai_requests'] += 1
+                        self.stats['ai_cost'] += 0.01
+                except Exception as e:
+                    logger.warning(f"AI vendor resolution failed for {merchant}: {e}")
+        
+        return df
         
         for idx, row in df.iterrows():
             merchant = str(row.get('merchant', ''))
@@ -201,15 +245,22 @@ class AIEnhancedProductionCleaner:
         return df
 
     def _ai_enhanced_categorization(self, df: pd.DataFrame) -> pd.DataFrame:
-        """AI-enhanced categorization"""
-        if 'merchant' not in df.columns or 'amount' not in df.columns:
+        """AI-enhanced categorization - works in-place with existing columns"""
+        # Find required columns
+        merchant_col = self._find_merchant_column(df)
+        amount_col = self._find_amount_column(df)
+        
+        if merchant_col is None or amount_col is None:
             logger.warning("Missing merchant or amount column for AI categorization")
             return df
         
+        # Find or create a category column
+        category_col = self._find_category_column(df)
+        
         for idx, row in df.iterrows():
-            merchant = str(row.get('merchant', ''))
+            merchant = str(row.get(merchant_col, ''))
             description = str(row.get('description', ''))
-            amount = float(row.get('amount', 0))
+            amount = float(row.get(amount_col, 0))
             memo = str(row.get('memo', ''))
             
             try:
@@ -217,7 +268,7 @@ class AIEnhancedProductionCleaner:
                 
                 # Only use AI result if confidence is high enough
                 if ai_result['confidence'] >= self.config['ai_confidence_threshold']:
-                    df.at[idx, 'category'] = ai_result['category']
+                    df.at[idx, category_col] = ai_result['category']
                     self.stats['ai_requests'] += 1
                     self.stats['ai_cost'] += 0.01
                     
@@ -239,15 +290,16 @@ class AIEnhancedProductionCleaner:
         return df
 
     def _advanced_amount_cleaning(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Advanced amount cleaning"""
-        if 'amount' not in df.columns:
+        """Advanced amount cleaning - works with any amount column"""
+        amount_col = self._find_amount_column(df)
+        if amount_col is None:
             return df
         
         # Convert to numeric, handling currency symbols
-        df['amount'] = pd.to_numeric(df['amount'].astype(str).str.replace('$', '').str.replace(',', ''), errors='coerce')
+        df[amount_col] = pd.to_numeric(df[amount_col].astype(str).str.replace('$', '').str.replace(',', ''), errors='coerce')
         
         # Fill missing amounts with 0
-        df['amount'] = df['amount'].fillna(0)
+        df[amount_col] = df[amount_col].fillna(0)
         
         return df
 
@@ -261,7 +313,10 @@ class AIEnhancedProductionCleaner:
         df = df.drop_duplicates()
         
         # Near-duplicates using similarity
-        if 'merchant' in df.columns and 'amount' in df.columns:
+        merchant_col = self._find_merchant_column(df)
+        amount_col = self._find_amount_column(df)
+        
+        if merchant_col and amount_col:
             duplicates_removed = []
             for i in range(len(df)):
                 for j in range(i + 1, len(df)):
@@ -269,11 +324,11 @@ class AIEnhancedProductionCleaner:
                         continue
                     
                     merchant_similarity = self._calculate_similarity(
-                        str(df.iloc[i].get('merchant', '')),
-                        str(df.iloc[j].get('merchant', ''))
+                        str(df.iloc[i].get(merchant_col, '')),
+                        str(df.iloc[j].get(merchant_col, ''))
                     )
                     
-                    amount_diff = abs(df.iloc[i]['amount'] - df.iloc[j]['amount'])
+                    amount_diff = abs(df.iloc[i][amount_col] - df.iloc[j][amount_col])
                     
                     if (merchant_similarity > self.config['duplicate_threshold'] and 
                         amount_diff < 0.01):
@@ -469,4 +524,132 @@ class AIEnhancedProductionCleaner:
             'processing_time': 0.0,
             'rows_processed': len(self.df)
         }
-        self.llm_client.reset_metrics() 
+        self.llm_client.reset_metrics()
+
+    def _find_merchant_column(self, df: pd.DataFrame) -> Optional[str]:
+        """Find the best column to use as merchant"""
+        merchant_keywords = ['merchant', 'vendor', 'store', 'business', 'company', 'payee', 'recipient', 'from', 'to']
+        
+        for col in df.columns:
+            col_lower = col.lower()
+            if any(keyword in col_lower for keyword in merchant_keywords):
+                return col
+        
+        # If no obvious merchant column, try to find any text column
+        for col in df.columns:
+            if col.lower() not in ['amount', 'price', 'cost', 'date', 'time', 'id', 'transaction_id']:
+                # Check if it contains mostly text values
+                text_count = sum(1 for val in df[col] if isinstance(val, str) and len(str(val)) > 3)
+                if text_count > len(df[col]) * 0.7:  # 70% text values
+                    return col
+        
+        return None
+
+    def _find_amount_column(self, df: pd.DataFrame) -> Optional[str]:
+        """Find the best column to use as amount"""
+        amount_keywords = ['amount', 'price', 'cost', 'value', 'total', 'sum']
+        
+        for col in df.columns:
+            col_lower = col.lower()
+            if any(keyword in col_lower for keyword in amount_keywords):
+                return col
+        
+        # Try to find numeric columns
+        for col in df.columns:
+            if col.lower() not in ['merchant', 'vendor', 'store', 'description', 'date', 'time', 'id']:
+                # Check if it contains mostly numeric values
+                numeric_count = 0
+                for val in df[col]:
+                    try:
+                        float(str(val).replace('$', '').replace(',', ''))
+                        numeric_count += 1
+                    except (ValueError, TypeError):
+                        pass
+                
+                if numeric_count > len(df[col]) * 0.5:  # 50% numeric values
+                    return col
+        
+        return None
+
+    def _find_category_column(self, df: pd.DataFrame) -> str:
+        """Find or create a category column"""
+        category_keywords = ['category', 'type', 'classification', 'group']
+        
+        for col in df.columns:
+            col_lower = col.lower()
+            if any(keyword in col_lower for keyword in category_keywords):
+                return col
+        
+        # If no category column exists, create one
+        return 'category'
+
+    def _analyze_available_columns(self, df: pd.DataFrame) -> Dict[str, bool]:
+        """Analyze what columns are available for processing"""
+        analysis = {
+            'merchant': False,
+            'amount': False,
+            'description': False,
+            'category': False,
+            'date': False,
+            'memo': False
+        }
+        
+        # Check for merchant column
+        merchant_col = self._find_merchant_column(df)
+        analysis['merchant'] = merchant_col is not None
+        
+        # Check for amount column
+        amount_col = self._find_amount_column(df)
+        analysis['amount'] = amount_col is not None
+        
+        # Check for description column
+        description_keywords = ['description', 'desc', 'note', 'memo', 'details']
+        for col in df.columns:
+            col_lower = col.lower()
+            if any(keyword in col_lower for keyword in description_keywords):
+                analysis['description'] = True
+                break
+        
+        # Check for category column
+        category_col = self._find_category_column(df)
+        analysis['category'] = category_col in df.columns
+        
+        # Check for date column
+        date_keywords = ['date', 'time', 'timestamp']
+        for col in df.columns:
+            col_lower = col.lower()
+            if any(keyword in col_lower for keyword in date_keywords):
+                analysis['date'] = True
+                break
+        
+        # Check for memo column
+        memo_keywords = ['memo', 'note', 'comment']
+        for col in df.columns:
+            col_lower = col.lower()
+            if any(keyword in col_lower for keyword in memo_keywords):
+                analysis['memo'] = True
+                break
+        
+        return analysis
+
+    def _find_description_column(self, df: pd.DataFrame) -> Optional[str]:
+        """Find the best column to use as description"""
+        description_keywords = ['description', 'desc', 'note', 'details', 'comment']
+        
+        for col in df.columns:
+            col_lower = col.lower()
+            if any(keyword in col_lower for keyword in description_keywords):
+                return col
+        
+        return None
+
+    def _find_memo_column(self, df: pd.DataFrame) -> Optional[str]:
+        """Find the best column to use as memo"""
+        memo_keywords = ['memo', 'note', 'comment', 'details']
+        
+        for col in df.columns:
+            col_lower = col.lower()
+            if any(keyword in col_lower for keyword in memo_keywords):
+                return col
+        
+        return None 

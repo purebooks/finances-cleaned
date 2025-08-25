@@ -1,5 +1,6 @@
 import logging
 from typing import Optional, Dict, Any, List
+from category_rules import ALLOWED_CATEGORIES as RULE_CATEGORIES
 import anthropic
 import os
 import json
@@ -67,9 +68,14 @@ class LLMClient:
 
         prompt = f"""
 You are a financial data standardizer specializing in business vendor normalization.
-Given the raw vendor details below, return the most likely normalized vendor name.
+Given the raw vendor details below, return the most likely normalized vendor NAME.
 
-IMPORTANT: Return ONLY the normalized vendor name, nothing else.
+CRITICAL RULES:
+- Never answer with generic product or plan words (e.g., Subscription, Team Plan, Annual Plan, Software, Pro License, Plan, License, Licence).
+- Prefer the company/brand (e.g., DigitalOcean, Amazon Web Services, Airtable, Stripe, PayPal, LinkedIn, Spotify).
+- If unclear or generic, respond exactly with: Unknown Vendor
+
+Return ONLY the normalized vendor name, nothing else.
 Examples of good responses: 'Meta', 'Amazon', 'Google Workspace', 'DigitalOcean', 'Stripe'
 
 Merchant: {merchant}
@@ -89,6 +95,14 @@ Normalized vendor name:
             )
             
             result = response.content[0].text.strip()
+            # Post-filter: coerce generic terms to Unknown Vendor
+            low = (result or '').strip().lower()
+            generic_terms = {
+                'subscription','team plan','annual plan','software','pro licence',
+                'pro license','plan','license','licence','description','memo'
+            }
+            if (not low) or (low in generic_terms):
+                result = "Unknown Vendor"
             processing_time = time.time() - start_time
             
             # Update metrics
@@ -123,35 +137,26 @@ Normalized vendor name:
             logger.debug(f"Category cache hit for: {merchant}")
             return cached_result
 
-        # Enhanced category list for business intelligence
-        categories = [
-            'Marketing & Advertising',
-            'Software & Technology', 
-            'Office Supplies & Equipment',
-            'Travel & Transportation',
-            'Meals & Entertainment',
-            'Professional Services',
-            'Insurance & Legal',
-            'Utilities & Rent',
-            'Employee Benefits',
-            'Banking & Finance',
-            'Other'
-        ]
+        # Build allowed categories from shared rules
+        categories = sorted(list(RULE_CATEGORIES))
 
+        allowed_str = "\n".join(f"- {c}" for c in categories)
         prompt = f"""
-You are a business expense classifier for financial data analysis.
-Given the transaction info below, return the most likely expense category.
+You are a business expense classifier.
+Choose exactly ONE category from the allowed list below. Do not invent new labels.
 
-Available categories: {categories}
+Allowed categories (choose exactly one):
+{allowed_str}
 
 Merchant: {merchant}
 Description: {description}
 Amount: ${amount:,.2f}
 Memo: {memo}
 
-Consider the amount, merchant type, and context to make the best classification.
-Respond in JSON format like this:
-{{ "category": "Software & Technology", "confidence": 0.88 }}
+Rules:
+- Respond ONLY in JSON like: {{"category": "<one of allowed>", "confidence": 0.0-1.0}}
+- If uncertain, pick the best fit from the allowed list (do not return synonyms).
+- Do not include any explanation or extra text.
 
 JSON response:
 """
@@ -179,9 +184,13 @@ JSON response:
                 else:
                     parsed = json.loads(content)
                     
+                raw_category = str(parsed.get("category", "")).strip()
+                confidence_val = float(parsed.get("confidence", 0.0))
+                coerced = self._coerce_category_to_allowed(raw_category)
+                # If model gave an off-list label, coerce to allowed or Other
                 result = {
-                    "category": parsed.get("category", "Other"),
-                    "confidence": float(parsed.get("confidence", 0.0))
+                    "category": coerced,
+                    "confidence": max(0.0, min(1.0, confidence_val))
                 }
                 
             except json.JSONDecodeError:
@@ -313,11 +322,13 @@ JSON response:
         return min(0.3, total_cache_entries / max(self.request_count, 1))
 
     def _mock_llm_response(self, mode: str, content: str) -> str:
-        """Mock fallback for local dev/testing"""
+        """Enhanced mock fallback for comprehensive testing"""
         if mode == "vendor":
             content_lower = content.lower()
+            
+            # Technology companies
             if "google" in content_lower:
-                return "Google Workspace"
+                return "Google"
             elif "meta" in content_lower or "facebook" in content_lower:
                 return "Meta"
             elif "amazon" in content_lower:
@@ -326,19 +337,216 @@ JSON response:
                 return "DigitalOcean"
             elif "stripe" in content_lower:
                 return "Stripe"
+            elif "netflix" in content_lower:
+                return "Netflix"
+            elif "spotify" in content_lower:
+                return "Spotify"
+            elif "apple" in content_lower:
+                return "Apple"
+            elif "microsoft" in content_lower:
+                return "Microsoft"
+            elif "adobe" in content_lower:
+                return "Adobe"
+            elif "salesforce" in content_lower:
+                return "Salesforce"
+            elif "dropbox" in content_lower:
+                return "Dropbox"
+            
+            # Food & Coffee
+            elif "starbucks" in content_lower:
+                return "Starbucks"
+            elif "mcdonald" in content_lower:
+                return "McDonald's"
+            elif "chipotle" in content_lower:
+                return "Chipotle"
+            elif "subway" in content_lower:
+                return "Subway"
+            elif "pizza hut" in content_lower:
+                return "Pizza Hut"
+            elif "domino" in content_lower:
+                return "Domino's"
+            elif "papa john" in content_lower:
+                return "Papa John's"
+            
+            # Transportation
+            elif "uber" in content_lower:
+                return "Uber"
+            elif "lyft" in content_lower:
+                return "Lyft"
+            elif "shell" in content_lower:
+                return "Shell"
+            elif "chevron" in content_lower:
+                return "Chevron"
+            elif "delta" in content_lower:
+                return "Delta Airlines"
+            elif "united" in content_lower:
+                return "United Airlines"
+            elif "southwest" in content_lower:
+                return "Southwest Airlines"
+            elif "enterprise" in content_lower:
+                return "Enterprise Rent-A-Car"
+            elif "hertz" in content_lower:
+                return "Hertz"
+            elif "budget" in content_lower:
+                return "Budget"
+            
+            # Retail
+            elif "target" in content_lower:
+                return "Target"
+            elif "walmart" in content_lower:
+                return "Walmart"
+            elif "costco" in content_lower:
+                return "Costco"
+            elif "home depot" in content_lower:
+                return "Home Depot"
+            elif "best buy" in content_lower:
+                return "Best Buy"
+            elif "whole foods" in content_lower:
+                return "Whole Foods"
+            elif "safeway" in content_lower:
+                return "Safeway"
+            elif "kroger" in content_lower:
+                return "Kroger"
+            
+            # Healthcare & Pharmacy
+            elif "cvs" in content_lower:
+                return "CVS Pharmacy"
+            elif "walgreens" in content_lower:
+                return "Walgreens"
+            
+            # Banking & Finance
+            elif "bank of america" in content_lower:
+                return "Bank of America"
+            elif "wells fargo" in content_lower:
+                return "Wells Fargo"
+            elif "chase" in content_lower:
+                return "Chase Bank"
+            elif "american express" in content_lower:
+                return "American Express"
+            
+            # Utilities & Telecom
+            elif "at&t" in content_lower or "att" in content_lower:
+                return "AT&T"
+            elif "verizon" in content_lower:
+                return "Verizon"
+            elif "comcast" in content_lower:
+                return "Comcast"
+            
+            # Hotels & Travel
+            elif "hilton" in content_lower:
+                return "Hilton Hotels"
+            elif "marriott" in content_lower:
+                return "Marriott"
+            elif "airbnb" in content_lower:
+                return "Airbnb"
+            
             else:
-                return "Unknown Vendor"
+                # Extract clean name from messy formats
+                clean_name = content.replace("PAYPAL*", "").replace("SQ *", "").replace("AUTO PAY", "").replace("*STORE", "").replace("#", "").replace("*", "").strip()
+                return clean_name if clean_name else "Unknown Vendor"
+                
         elif mode == "category":
             content_lower = content.lower()
-            if "meta" in content_lower or "facebook" in content_lower:
-                return "Marketing & Advertising"
-            elif "notion" in content_lower or "zoom" in content_lower or "slack" in content_lower:
+            
+            # Technology & Software
+            if any(tech in content_lower for tech in ["google", "microsoft", "apple", "adobe", "salesforce", "dropbox", "netflix", "spotify"]):
                 return "Software & Technology"
-            elif "amazon" in content_lower:
+            
+            # Food & Entertainment  
+            elif any(food in content_lower for food in ["starbucks", "mcdonald", "chipotle", "subway", "pizza", "domino", "papa john", "whole foods", "safeway", "kroger"]):
+                return "Meals & Entertainment"
+            
+            # Transportation
+            elif any(transport in content_lower for transport in ["uber", "lyft", "shell", "chevron", "delta", "united", "southwest", "enterprise", "hertz", "budget"]):
+                return "Travel & Transportation"
+            
+            # Retail & Office Supplies
+            elif any(retail in content_lower for retail in ["amazon", "target", "walmart", "costco", "home depot", "best buy"]):
                 return "Office Supplies & Equipment"
+            
+            # Healthcare & Professional Services
+            elif any(health in content_lower for health in ["cvs", "walgreens"]):
+                return "Professional Services"
+            
+            # Banking & Finance
+            elif any(bank in content_lower for bank in ["bank", "chase", "wells fargo", "american express"]):
+                return "Banking & Finance"
+            
+            # Utilities
+            elif any(utility in content_lower for utility in ["at&t", "verizon", "comcast", "electric", "gas", "water"]):
+                return "Utilities & Rent"
+            
+            # Hotels & Travel
+            elif any(travel in content_lower for travel in ["hilton", "marriott", "airbnb"]):
+                return "Travel & Transportation"
+            
+            # Marketing & Advertising
+            elif any(marketing in content_lower for marketing in ["meta", "facebook"]):
+                return "Marketing & Advertising"
+            
             else:
                 return "Other"
         return "Unknown"
+
+    def _coerce_category_to_allowed(self, raw_category: str) -> str:
+        """Map arbitrary model output to one of the allowed categories."""
+        if not raw_category:
+            return "Other"
+        normalized = raw_category.strip().lower()
+
+        # Direct case-insensitive match to allowed set
+        for allowed in RULE_CATEGORIES:
+            if normalized == allowed.lower():
+                return allowed
+
+        # Simple synonym funnel
+        synonym_map = {
+            "software": "Software & Technology",
+            "saas": "Software & Technology",
+            "technology": "Software & Technology",
+            "it": "Software & Technology",
+            "ads": "Marketing & Advertising",
+            "advertising": "Marketing & Advertising",
+            "marketing": "Marketing & Advertising",
+            "food": "Meals & Entertainment",
+            "dining": "Meals & Entertainment",
+            "entertainment": "Meals & Entertainment",
+            "travel": "Travel & Transportation",
+            "transport": "Travel & Transportation",
+            "transportation": "Travel & Transportation",
+            "airfare": "Travel & Transportation",
+            "hotel": "Travel & Transportation",
+            "parking": "Travel & Transportation",
+            "fuel": "Travel & Transportation",
+            "gas": "Travel & Transportation",
+            "office": "Office Supplies & Equipment",
+            "supplies": "Office Supplies & Equipment",
+            "equipment": "Office Supplies & Equipment",
+            "hardware": "Office Supplies & Equipment",
+            "furniture": "Office Supplies & Equipment",
+            "legal": "Insurance & Legal",
+            "insurance": "Insurance & Legal",
+            "bank": "Banking & Finance",
+            "finance": "Banking & Finance",
+            "fees": "Banking & Finance",
+            "interest": "Banking & Finance",
+            "utilities": "Utilities & Rent",
+            "internet": "Utilities & Rent",
+            "phone": "Utilities & Rent",
+            "telecom": "Utilities & Rent",
+            "rent": "Utilities & Rent",
+            "benefits": "Employee Benefits",
+            "payroll": "Employee Benefits",
+            "consulting": "Professional Services",
+            "services": "Professional Services",
+        }
+
+        mapped = synonym_map.get(normalized)
+        if mapped and mapped in RULE_CATEGORIES:
+            return mapped
+
+        # Last resort
+        return "Other"
 
     def reset_metrics(self):
         """Reset usage metrics"""

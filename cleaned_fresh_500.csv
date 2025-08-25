@@ -1,0 +1,501 @@
+Amount,Category,Clean Vendor,Description/Memo,Transaction Date,category,standardized_vendor
+797.46,Software & Technology,Microsoft,Annual platform fee,2023-10-07,Software & Technology,Microsoft
+396.0,Software & Technology,Dropbox,Equipment purchase,2023-10-07,Software & Technology,Dropbox
+884.41,Travel & Transportation,Budget,Client meeting,2023-04-21,Travel & Transportation,Budget
+73.45,Software & Technology,Salesforce,Annual platform fee,2023-10-02,Software & Technology,Salesforce
+2348.3,Travel & Transportation,Enterprise Rent-a-car,Equipment purchase,2023-02-05,Travel & Transportation,Enterprise Rent-a-car
+229.29,Other,Quantacore,Office supplies,2023-07-06,Other,Quantacore
+614.83,Meals & Entertainment,Pizza Hut,Hardware services,2023-05-06,Meals & Entertainment,Pizza Hut
+2647.21,Meals & Entertainment,Starbucks,Annual platform fee,2023-01-17,Meals & Entertainment,Starbucks
+855.09,Travel & Transportation,Delta Airlines,Team lunch,2023-07-22,Travel & Transportation,Delta Airlines
+928.41,Travel & Transportation,Southwest Airlines,Equipment purchase,2023-07-24,Travel & Transportation,Southwest Airlines
+2163.09,Other,Nimblyx,Client meeting,2023-12-15,Other,Nimblyx
+-482.45,Travel & Transportation,Airbnb,Business expense,2023-02-28,Travel & Transportation,Airbnb
+1007.52,Other,Square,Client meeting,2023-09-14,Other,Square
+40.76,Other,Arcadiaworks,Monthly subscription,2023-10-04,Other,Arcadiaworks
+2675.48,Banking & Finance,Chase Bank,Client meeting,2023-05-04,Banking & Finance,Chase Bank
+470.05,Banking & Finance,Chase Bank,Team lunch,2023-09-01,Banking & Finance,Chase Bank
+854.29,Travel & Transportation,Airbnb,Hardware services,2023-11-29,Travel & Transportation,Airbnb
+600.46,Other,Neopeak,Monthly subscription,2023-01-04,Other,Neopeak
+70.66,Software & Technology,Adobe,Hardware services,2023-03-09,Software & Technology,Adobe
+729.82,Banking & Finance,Wells Fargo,Client meeting,2023-08-28,Banking & Finance,Wells Fargo
+46.0,Office Supplies & Equipment,Costco,Hardware services,2023-04-04,Office Supplies & Equipment,Costco
+382.82,Software & Technology,Apple,Client meeting,2023-10-04,Software & Technology,Apple
+2377.26,Other,Square,Annual platform fee,2023-07-14,Other,Square
+1270.91,Banking & Finance,Bank Of America,Business expense,2023-03-21,Banking & Finance,Bank Of America
+854.8,Office Supplies & Equipment,Amazon,Team lunch,2023-09-02,Office Supplies & Equipment,Amazon
+826.13,Banking & Finance,American Express,Monthly subscription,2023-10-19,Banking & Finance,American Express
+145.82,Meals & Entertainment,Safeway,Business expense,2023-06-10,Meals & Entertainment,Safeway
+-1413.4,Meals & Entertainment,Pizza Hut,Client meeting,2023-11-15,Meals & Entertainment,Pizza Hut
+14.47,Travel & Transportation,Delta Airlines,Business expense,2023-03-22,Travel & Transportation,Delta Airlines
+409.13,Meals & Entertainment,Domino's,Client meeting,2023-10-03,Meals & Entertainment,Domino's
+862.75,Other,Square,Hardware services,2023-05-16,Other,Square
+8.5,Office Supplies & Equipment,Amazon,Team lunch,2023-11-23,Office Supplies & Equipment,Amazon
+11.33,Utilities & Rent,Comcast,Monthly subscription,2023-03-18,Utilities & Rent,Comcast
+9.42,Other,Tridelic,Equipment purchase,2023-01-21,Other,Tridelic
+280.57,Meals & Entertainment,Pizza Hut,Team lunch,2023-05-02,Meals & Entertainment,Pizza Hut
+267.92,Other,Square,Team lunch,2023-08-05,Other,Square
+41.4,Other,Quantacore,Equipment purchase,2023-06-29,Other,Quantacore
+1167.17,Meals & Entertainment,Pizza Hut,Office supplies,2023-07-24,Meals & Entertainment,Pizza Hut
+8.82,Other,Quantacore,Client meeting,2023-06-10,Other,Quantacore
+10.05,Travel & Transportation,Hilton Hotels,Office supplies,2023-12-18,Travel & Transportation,Hilton Hotels
+823.05,Meals & Entertainment,Pizza Hut,Business expense,2023-06-03,Meals & Entertainment,Pizza Hut
+44.41,Office Supplies & Equipment,Target,Business expense,2023-12-13,Office Supplies & Equipment,Target
+353.34,Software & Technology,Google,Team lunch,2023-09-19,Software & Technology,Google
+113.26,Travel & Transportation,Enterprise Rent-a-car,Equipment purchase,2023-01-05,Travel & Transportation,Enterprise Rent-a-car
+652.9,Other,Nimblyx,Equipment purchase,2023-08-01,Other,Nimblyx
+1385.17,Office Supplies & Equipment,Staples,Team lunch,2023-08-06,Office Supplies & Equipment,Staples
+2171.7,Other,Solaranine,Office supplies,2023-08-26,Other,Solaranine
+425.76,Other,Neopeak,Hardware services,2023-08-17,Other,Neopeak
+686.94,Travel & Transportation,Southwest Airlines,Equipment purchase,2024-01-01,Travel & Transportation,Southwest Airlines
+43.9,Office Supplies & Equipment,Target,Annual platform fee,2023-04-20,Office Supplies & Equipment,Target
+275.48,Utilities & Rent,AT&T,Annual platform fee,2023-12-23,Utilities & Rent,AT&T
+2390.48,Office Supplies & Equipment,Home Depot,Equipment purchase,2023-10-07,Office Supplies & Equipment,Home Depot
+785.29,Travel & Transportation,Budget,Team lunch,2023-03-26,Travel & Transportation,Budget
+639.51,Other,Square,Team lunch,2023-03-11,Other,Square
+139.11,Office Supplies & Equipment,Staples,Client meeting,2023-04-08,Office Supplies & Equipment,Staples
+-1421.48,Utilities & Rent,AT&T,Equipment purchase,2023-01-16,Utilities & Rent,AT&T
+13.24,Other,Tridelic,Office supplies,2023-12-25,Other,Tridelic
+1369.74,Travel & Transportation,Airbnb,Monthly subscription,2023-02-25,Travel & Transportation,Airbnb
+278.18,Other,Tridelic,Client meeting,2023-10-31,Other,Tridelic
+14.14,Office Supplies & Equipment,Walmart,Annual platform fee,2023-01-22,Office Supplies & Equipment,Walmart
+2391.24,Software & Technology,Apple,Hardware services,2023-10-08,Software & Technology,Apple
+69.59,Professional Services,CVS Pharmacy,Annual platform fee,2023-09-05,Professional Services,CVS Pharmacy
+12.13,Other,Tridelic,Annual platform fee,2023-08-26,Other,Tridelic
+140.53,Banking & Finance,Chase Bank,Monthly subscription,2023-02-11,Banking & Finance,Chase Bank
+469.05,Travel & Transportation,Lyft,Hardware services,2023-11-27,Travel & Transportation,Lyft
+70.56,Other,Square,Office supplies,2023-10-11,Other,Square
+63.35,Utilities & Rent,Comcast,Client meeting,2023-09-04,Utilities & Rent,Comcast
+929.76,Travel & Transportation,Uber,Client meeting,2023-02-11,Travel & Transportation,Uber
+914.7,Other,Arcadiaworks,Business expense,2023-01-28,Other,Arcadiaworks
+14.44,Software & Technology,Zoom,Hardware services,2023-08-29,Software & Technology,Zoom
+245.04,Office Supplies & Equipment,Amazon,Team lunch,2023-12-18,Office Supplies & Equipment,Amazon
+13.22,Travel & Transportation,Hilton Hotels,Equipment purchase,2023-11-02,Travel & Transportation,Hilton Hotels
+2515.07,Other,Kitewave,Monthly subscription,2023-10-19,Other,Kitewave
+70.49,Software & Technology,Salesforce,Client meeting,2023-03-30,Software & Technology,Salesforce
+57.82,Meals & Entertainment,Safeway,Client meeting,2023-05-25,Meals & Entertainment,Safeway
+813.18,Travel & Transportation,Hertz,Equipment purchase,2023-02-28,Travel & Transportation,Hertz
+1177.85,Travel & Transportation,Budget,Hardware services,2023-10-19,Travel & Transportation,Budget
+440.55,Office Supplies & Equipment,Walmart,Annual platform fee,2023-11-03,Office Supplies & Equipment,Walmart
+1314.61,Travel & Transportation,Airbnb,Hardware services,2023-01-21,Travel & Transportation,Airbnb
+815.5,Professional Services,Walgreens,Annual platform fee,2023-08-29,Professional Services,Walgreens
+904.2,Meals & Entertainment,Pizza Hut,Monthly subscription,2023-07-25,Meals & Entertainment,Pizza Hut
+272.54,Office Supplies & Equipment,Target,Hardware services,2023-01-01,Office Supplies & Equipment,Target
+373.15,Travel & Transportation,Lyft,Team lunch,2023-04-15,Travel & Transportation,Lyft
+11.41,Other,Neopeak,Business expense,2023-05-03,Other,Neopeak
+407.85,Utilities & Rent,Comcast,Business expense,2023-03-20,Utilities & Rent,Comcast
+331.97,Travel & Transportation,Budget,Team lunch,2023-07-16,Travel & Transportation,Budget
+145.81,Other,Arcadiaworks,Business expense,2023-02-01,Other,Arcadiaworks
+23.37,Other,Tridelic,Annual platform fee,2023-06-20,Other,Tridelic
+46.48,Office Supplies & Equipment,Target,Office supplies,2023-07-30,Office Supplies & Equipment,Target
+2561.73,Office Supplies & Equipment,Staples,Office supplies,2023-01-19,Office Supplies & Equipment,Staples
+272.99,Other,Square,Business expense,2023-02-08,Other,Square
+2578.15,Meals & Entertainment,Whole Foods,Monthly subscription,2023-06-12,Meals & Entertainment,Whole Foods
+48.87,Travel & Transportation,Southwest Airlines,Hardware services,2023-02-20,Travel & Transportation,Southwest Airlines
+64.39,Office Supplies & Equipment,Walmart,Annual platform fee,2023-05-06,Office Supplies & Equipment,Walmart
+254.47,Travel & Transportation,Uber,Equipment purchase,2023-10-26,Travel & Transportation,Uber
+1236.97,Travel & Transportation,Hertz,Client meeting,2023-10-07,Travel & Transportation,Hertz
+837.55,Office Supplies & Equipment,Home Depot,Hardware services,2023-04-12,Office Supplies & Equipment,Home Depot
+849.81,Office Supplies & Equipment,Staples,Business expense,2023-12-04,Office Supplies & Equipment,Staples
+2747.05,Office Supplies & Equipment,Amazon,Office supplies,2023-04-28,Office Supplies & Equipment,Amazon
+978.08,Travel & Transportation,Lyft,Monthly subscription,2023-03-12,Travel & Transportation,Lyft
+14.59,Professional Services,Walgreens,Equipment purchase,2023-08-01,Professional Services,Walgreens
+489.33,Utilities & Rent,AT&T,Business expense,2023-05-12,Utilities & Rent,AT&T
+11.59,Office Supplies & Equipment,Costco,Office supplies,2023-12-13,Office Supplies & Equipment,Costco
+800.91,Meals & Entertainment,Whole Foods,Client meeting,2023-07-15,Meals & Entertainment,Whole Foods
+541.51,Banking & Finance,Wells Fargo,Annual platform fee,2023-08-26,Banking & Finance,Wells Fargo
+318.2,Software & Technology,Adobe,Annual platform fee,2023-10-03,Software & Technology,Adobe
+424.77,Meals & Entertainment,Pizza Hut,Client meeting,2023-03-21,Meals & Entertainment,Pizza Hut
+10.56,Other,Tridelic,Office supplies,2023-08-16,Other,Tridelic
+111.99,Office Supplies & Equipment,Best Buy,Client meeting,2023-03-04,Office Supplies & Equipment,Best Buy
+10.85,Meals & Entertainment,Domino's,Equipment purchase,2023-03-06,Meals & Entertainment,Domino's
+43.16,Utilities & Rent,Comcast,Business expense,2023-11-02,Utilities & Rent,Comcast
+1127.94,Other,Nimblyx,Monthly subscription,2023-01-14,Other,Nimblyx
+8.87,Travel & Transportation,Southwest Airlines,Hardware services,2023-02-28,Travel & Transportation,Southwest Airlines
+509.95,Office Supplies & Equipment,Best Buy,Business expense,2023-12-04,Office Supplies & Equipment,Best Buy
+259.36,Software & Technology,Microsoft,Client meeting,2023-08-16,Software & Technology,Microsoft
+599.47,Software & Technology,Netflix,Business expense,2023-11-02,Software & Technology,Netflix
+14.36,Travel & Transportation,Airbnb,Annual platform fee,2023-10-10,Travel & Transportation,Airbnb
+239.46,Travel & Transportation,United Airlines,Business expense,2023-07-08,Travel & Transportation,United Airlines
+14.28,Software & Technology,Netflix,Team lunch,2023-02-19,Software & Technology,Netflix
+660.78,Travel & Transportation,Marriott,Monthly subscription,2023-12-07,Travel & Transportation,Marriott
+24.87,Other,Tridelic,Office supplies,2023-02-25,Other,Tridelic
+2494.81,Travel & Transportation,Budget,Monthly subscription,2023-11-15,Travel & Transportation,Budget
+71.34,Meals & Entertainment,Pizza Hut,Monthly subscription,2023-06-23,Meals & Entertainment,Pizza Hut
+25.47,Software & Technology,Netflix,Equipment purchase,2023-02-16,Software & Technology,Netflix
+857.73,Banking & Finance,Bank Of America,Monthly subscription,2023-11-02,Banking & Finance,Bank Of America
+371.17,Meals & Entertainment,Chipotle,Client meeting,2023-04-21,Meals & Entertainment,Chipotle
+-457.16,Software & Technology,Slack,Monthly subscription,2023-07-22,Software & Technology,Slack
+1158.32,Office Supplies & Equipment,Walmart,Annual platform fee,2023-01-04,Office Supplies & Equipment,Walmart
+12.59,Office Supplies & Equipment,Staples,Hardware services,2023-08-12,Office Supplies & Equipment,Staples
+943.5,Other,Cobaltbridge,Office supplies,2023-07-27,Other,Cobaltbridge
+113.06,Meals & Entertainment,Chipotle,Annual platform fee,2023-05-05,Meals & Entertainment,Chipotle
+43.22,Meals & Entertainment,Whole Foods,Equipment purchase,2023-09-19,Meals & Entertainment,Whole Foods
+815.67,Other,Cobaltbridge,Equipment purchase,2023-03-16,Other,Cobaltbridge
+26.97,Software & Technology,Netflix,Hardware services,2023-08-26,Software & Technology,Netflix
+143.1,Travel & Transportation,Hilton Hotels,Client meeting,2023-03-19,Travel & Transportation,Hilton Hotels
+129.28,Meals & Entertainment,Starbucks,Monthly subscription,2023-08-20,Meals & Entertainment,Starbucks
+420.24,Travel & Transportation,Enterprise Rent-a-car,Equipment purchase,2023-01-22,Travel & Transportation,Enterprise Rent-a-car
+316.84,Banking & Finance,Wells Fargo,Team lunch,2023-06-25,Banking & Finance,Wells Fargo
+530.41,Professional Services,Walgreens,Annual platform fee,2023-05-25,Professional Services,Walgreens
+12.33,Other,Tridelic,Business expense,2023-07-17,Other,Tridelic
+22.56,Meals & Entertainment,Pizza Hut,Business expense,2023-03-14,Meals & Entertainment,Pizza Hut
+68.44,Other,Kitewave,Client meeting,2023-06-18,Other,Kitewave
+26.96,Professional Services,CVS Pharmacy,Equipment purchase,2023-09-06,Professional Services,CVS Pharmacy
+479.1,Other,Nimblyx,Team lunch,2023-01-20,Other,Nimblyx
+1401.0,Software & Technology,Netflix,Office supplies,2023-01-23,Software & Technology,Netflix
+1343.2,Travel & Transportation,Southwest Airlines,Business expense,2023-10-01,Travel & Transportation,Southwest Airlines
+388.69,Other,Neopeak,Annual platform fee,2023-09-15,Other,Neopeak
+10.41,Other,Orionedge Systems,Client meeting,2023-10-11,Other,Orionedge Systems
+14.73,Software & Technology,Spotify,Monthly subscription,2023-08-19,Software & Technology,Spotify
+118.34,Meals & Entertainment,Whole Foods,Team lunch,2023-02-20,Meals & Entertainment,Whole Foods
+2184.51,Travel & Transportation,Enterprise Rent-a-car,Monthly subscription,2023-08-18,Travel & Transportation,Enterprise Rent-a-car
+935.0,Other,Zetaflux Labs,Business expense,2023-05-28,Other,Zetaflux Labs
+312.45,Travel & Transportation,Southwest Airlines,Monthly subscription,2023-09-13,Travel & Transportation,Southwest Airlines
+564.81,Travel & Transportation,Hilton Hotels,Office supplies,2023-04-06,Travel & Transportation,Hilton Hotels
+442.4,Utilities & Rent,Verizon,Annual platform fee,2023-08-29,Utilities & Rent,Verizon
+12.39,Other,Arcadiaworks,Office supplies,2023-11-18,Other,Arcadiaworks
+26.1,Office Supplies & Equipment,Home Depot,Team lunch,2023-12-23,Office Supplies & Equipment,Home Depot
+-9.37,Other,Quantacore,Office supplies,2023-04-13,Other,Quantacore
+333.01,Other,Solaranine,Office supplies,2023-08-04,Other,Solaranine
+14.16,Other,Zetaflux Labs,Annual platform fee,2023-07-24,Other,Zetaflux Labs
+1257.23,Travel & Transportation,Uber,Annual platform fee,2023-08-06,Travel & Transportation,Uber
+12.32,Travel & Transportation,Uber,Annual platform fee,2023-08-17,Travel & Transportation,Uber
+679.21,Professional Services,Walgreens,Annual platform fee,2023-01-30,Professional Services,Walgreens
+8.87,Software & Technology,Spotify,Office supplies,2023-11-27,Software & Technology,Spotify
+124.05,Travel & Transportation,Hilton Hotels,Office supplies,2023-10-21,Travel & Transportation,Hilton Hotels
+361.53,Meals & Entertainment,Domino's,Business expense,2023-02-03,Meals & Entertainment,Domino's
+40.35,Travel & Transportation,Delta Airlines,Hardware services,2023-08-20,Travel & Transportation,Delta Airlines
+440.84,Other,Cobaltbridge,Office supplies,2023-03-22,Other,Cobaltbridge
+-49.46,Software & Technology,Slack,Office supplies,2023-10-11,Software & Technology,Slack
+964.88,Utilities & Rent,Comcast,Client meeting,2023-07-29,Utilities & Rent,Comcast
+749.12,Office Supplies & Equipment,Target,Team lunch,2023-10-10,Office Supplies & Equipment,Target
+10.98,Other,Nimblyx,Team lunch,2023-06-05,Other,Nimblyx
+74.23,Travel & Transportation,United Airlines,Business expense,2023-11-22,Travel & Transportation,United Airlines
+669.18,Office Supplies & Equipment,Walmart,Office supplies,2023-12-04,Office Supplies & Equipment,Walmart
+680.58,Other,Tridelic,Hardware services,2023-11-13,Other,Tridelic
+1365.26,Other,Square,Monthly subscription,2023-08-21,Other,Square
+142.99,Meals & Entertainment,Safeway,Team lunch,2023-06-26,Meals & Entertainment,Safeway
+318.9,Other,Solaranine,Monthly subscription,2023-03-14,Other,Solaranine
+2745.7,Office Supplies & Equipment,Staples,Equipment purchase,2023-10-23,Office Supplies & Equipment,Staples
+67.2,Other,Neopeak,Hardware services,2023-07-21,Other,Neopeak
+370.14,Other,Orionedge Systems,Business expense,2023-12-11,Other,Orionedge Systems
+868.97,Software & Technology,Salesforce,Monthly subscription,2023-01-24,Software & Technology,Salesforce
+428.85,Travel & Transportation,Lyft,Client meeting,2023-11-16,Travel & Transportation,Lyft
+131.24,Software & Technology,Salesforce,Annual platform fee,2023-03-15,Software & Technology,Salesforce
+361.71,Software & Technology,Adobe,Office supplies,2023-09-21,Software & Technology,Adobe
+69.14,Other,Cobaltbridge,Hardware services,2023-09-18,Other,Cobaltbridge
+657.96,Office Supplies & Equipment,Walmart,Hardware services,2023-06-07,Office Supplies & Equipment,Walmart
+542.6,Meals & Entertainment,Domino's,Annual platform fee,2023-09-03,Meals & Entertainment,Domino's
+339.52,Travel & Transportation,Southwest Airlines,Annual platform fee,2023-12-20,Travel & Transportation,Southwest Airlines
+967.2,Meals & Entertainment,Chipotle,Office supplies,2023-09-23,Meals & Entertainment,Chipotle
+23.46,Other,Neopeak,Business expense,2023-07-10,Other,Neopeak
+51.53,Travel & Transportation,Lyft,Hardware services,2023-05-28,Travel & Transportation,Lyft
+843.89,Office Supplies & Equipment,Home Depot,Annual platform fee,2023-12-13,Office Supplies & Equipment,Home Depot
+-1117.43,Other,Kitewave,Office supplies,2024-01-01,Other,Kitewave
+460.95,Other,Arcadiaworks,Equipment purchase,2023-11-12,Other,Arcadiaworks
+8.79,Meals & Entertainment,Pizza Hut,Team lunch,2023-08-30,Meals & Entertainment,Pizza Hut
+375.86,Utilities & Rent,Comcast,Business expense,2023-05-28,Utilities & Rent,Comcast
+23.16,Software & Technology,Dropbox,Hardware services,2023-01-19,Software & Technology,Dropbox
+120.66,Travel & Transportation,Enterprise Rent-a-car,Hardware services,2023-10-06,Travel & Transportation,Enterprise Rent-a-car
+49.72,Other,Nimblyx,Team lunch,2023-08-23,Other,Nimblyx
+1134.94,Office Supplies & Equipment,Costco,Annual platform fee,2023-11-24,Office Supplies & Equipment,Costco
+340.59,Software & Technology,Dropbox,Equipment purchase,2023-05-14,Software & Technology,Dropbox
+925.23,Travel & Transportation,Budget,Monthly subscription,2023-07-04,Travel & Transportation,Budget
+490.59,Banking & Finance,Bank Of America,Business expense,2023-06-09,Banking & Finance,Bank Of America
+386.35,Travel & Transportation,United Airlines,Hardware services,2023-08-01,Travel & Transportation,United Airlines
+657.05,Other,Orionedge Systems,Office supplies,2023-08-17,Other,Orionedge Systems
+46.49,Travel & Transportation,Hilton Hotels,Hardware services,2023-06-17,Travel & Transportation,Hilton Hotels
+428.21,Travel & Transportation,Delta Airlines,Annual platform fee,2023-03-09,Travel & Transportation,Delta Airlines
+71.75,Office Supplies & Equipment,Amazon,Client meeting,2023-01-02,Office Supplies & Equipment,Amazon
+11.29,Office Supplies & Equipment,Home Depot,Business expense,2023-08-30,Office Supplies & Equipment,Home Depot
+848.93,Software & Technology,Zoom,Annual platform fee,2023-07-15,Software & Technology,Zoom
+11.74,Meals & Entertainment,Pizza Hut,Equipment purchase,2023-09-28,Meals & Entertainment,Pizza Hut
+917.5,Other,Zetaflux Labs,Hardware services,2023-04-28,Other,Zetaflux Labs
+10.92,Travel & Transportation,Budget,Equipment purchase,2023-01-09,Travel & Transportation,Budget
+2118.28,Travel & Transportation,Airbnb,Equipment purchase,2023-07-25,Travel & Transportation,Airbnb
+608.26,Office Supplies & Equipment,Amazon,Business expense,2023-06-14,Office Supplies & Equipment,Amazon
+785.2,Other,Square,Annual platform fee,2023-01-25,Other,Square
+64.76,Other,Cobaltbridge,Equipment purchase,2023-08-31,Other,Cobaltbridge
+423.93,Software & Technology,Netflix,Annual platform fee,2023-09-29,Software & Technology,Netflix
+2355.24,Travel & Transportation,Delta Airlines,Business expense,2023-04-08,Travel & Transportation,Delta Airlines
+49.66,Travel & Transportation,Airbnb,Equipment purchase,2023-12-10,Travel & Transportation,Airbnb
+51.47,Office Supplies & Equipment,Costco,Equipment purchase,2023-03-02,Office Supplies & Equipment,Costco
+1168.65,Travel & Transportation,Delta Airlines,Business expense,2023-11-29,Travel & Transportation,Delta Airlines
+1430.49,Banking & Finance,American Express,Office supplies,2023-06-13,Banking & Finance,American Express
+9.27,Software & Technology,Adobe,Business expense,2023-10-24,Software & Technology,Adobe
+365.08,Office Supplies & Equipment,Costco,Hardware services,2023-06-22,Office Supplies & Equipment,Costco
+116.2,Other,Neopeak,Monthly subscription,2023-09-08,Other,Neopeak
+1064.89,Software & Technology,Apple,Client meeting,2023-11-19,Software & Technology,Apple
+615.32,Software & Technology,Google,Monthly subscription,2023-09-05,Software & Technology,Google
+-497.69,Utilities & Rent,Comcast,Team lunch,2023-12-24,Utilities & Rent,Comcast
+2343.01,Software & Technology,Salesforce,Annual platform fee,2023-10-02,Software & Technology,Salesforce
+855.16,Travel & Transportation,Southwest Airlines,Annual platform fee,2023-01-17,Travel & Transportation,Southwest Airlines
+816.17,Utilities & Rent,Comcast,Client meeting,2023-11-08,Utilities & Rent,Comcast
+334.92,Other,Zetaflux Labs,Monthly subscription,2023-12-17,Other,Zetaflux Labs
+1370.26,Office Supplies & Equipment,Target,Team lunch,2023-09-02,Office Supplies & Equipment,Target
+413.35,Travel & Transportation,Hilton Hotels,Office supplies,2023-03-13,Travel & Transportation,Hilton Hotels
+1292.7,Professional Services,CVS Pharmacy,Business expense,2023-06-17,Professional Services,CVS Pharmacy
+240.63,Other,Neopeak,Client meeting,2023-12-05,Other,Neopeak
+12.09,Other,Arcadiaworks,Annual platform fee,2023-11-21,Other,Arcadiaworks
+1163.66,Software & Technology,Salesforce,Hardware services,2023-04-06,Software & Technology,Salesforce
+382.18,Banking & Finance,American Express,Monthly subscription,2023-06-16,Banking & Finance,American Express
+488.25,Office Supplies & Equipment,Staples,Team lunch,2023-10-20,Office Supplies & Equipment,Staples
+11.69,Software & Technology,Spotify,Client meeting,2023-06-03,Software & Technology,Spotify
+536.93,Travel & Transportation,Southwest Airlines,Annual platform fee,2023-06-05,Travel & Transportation,Southwest Airlines
+341.79,Meals & Entertainment,Chipotle,Team lunch,2023-11-30,Meals & Entertainment,Chipotle
+27.06,Travel & Transportation,Airbnb,Equipment purchase,2023-05-30,Travel & Transportation,Airbnb
+14.67,Travel & Transportation,Budget,Monthly subscription,2023-10-07,Travel & Transportation,Budget
+2591.73,Other,Neopeak,Team lunch,2023-07-29,Other,Neopeak
+1203.87,Travel & Transportation,Southwest Airlines,Annual platform fee,2023-11-03,Travel & Transportation,Southwest Airlines
+136.8,Meals & Entertainment,Safeway,Client meeting,2023-11-01,Meals & Entertainment,Safeway
+1186.85,Other,Cobaltbridge,Client meeting,2023-02-24,Other,Cobaltbridge
+925.87,Banking & Finance,American Express,Team lunch,2023-07-20,Banking & Finance,American Express
+14.28,Software & Technology,Microsoft,Office supplies,2023-06-28,Software & Technology,Microsoft
+12.75,Travel & Transportation,Delta Airlines,Business expense,2023-06-13,Travel & Transportation,Delta Airlines
+812.32,Other,Square,Team lunch,2023-05-05,Other,Square
+49.56,Office Supplies & Equipment,Costco,Annual platform fee,2023-04-06,Office Supplies & Equipment,Costco
+237.46,Meals & Entertainment,Chipotle,Client meeting,2023-04-16,Meals & Entertainment,Chipotle
+70.69,Utilities & Rent,AT&T,Annual platform fee,2023-11-24,Utilities & Rent,AT&T
+532.85,Travel & Transportation,Marriott,Client meeting,2023-06-02,Travel & Transportation,Marriott
+808.01,Office Supplies & Equipment,Target,Annual platform fee,2023-11-02,Office Supplies & Equipment,Target
+841.53,Banking & Finance,Chase Bank,Business expense,2023-03-27,Banking & Finance,Chase Bank
+-2346.39,Office Supplies & Equipment,Target,Annual platform fee,2023-03-11,Office Supplies & Equipment,Target
+350.52,Other,Solaranine,Client meeting,2023-09-08,Other,Solaranine
+25.75,Travel & Transportation,United Airlines,Client meeting,2023-09-11,Travel & Transportation,United Airlines
+130.63,Travel & Transportation,Budget,Equipment purchase,2023-08-14,Travel & Transportation,Budget
+42.74,Other,Quantacore,Office supplies,2023-08-19,Other,Quantacore
+1366.96,Other,Quantacore,Annual platform fee,2023-10-29,Other,Quantacore
+1084.76,Software & Technology,Zoom,Team lunch,2023-05-24,Software & Technology,Zoom
+498.73,Travel & Transportation,Enterprise Rent-a-car,Annual platform fee,2023-02-18,Travel & Transportation,Enterprise Rent-a-car
+40.67,Other,Arcadiaworks,Hardware services,2023-05-07,Other,Arcadiaworks
+13.51,Meals & Entertainment,Starbucks,Business expense,2023-02-17,Meals & Entertainment,Starbucks
+502.7,Office Supplies & Equipment,Best Buy,Office supplies,2023-02-17,Office Supplies & Equipment,Best Buy
+2238.21,Other,Solaranine,Team lunch,2023-05-26,Other,Solaranine
+1080.65,Banking & Finance,Chase Bank,Client meeting,2023-08-24,Banking & Finance,Chase Bank
+52.27,Other,Nimblyx,Team lunch,2023-11-29,Other,Nimblyx
+835.52,Other,Square,Equipment purchase,2023-07-22,Other,Square
+11.56,Software & Technology,Dropbox,Monthly subscription,2023-12-15,Software & Technology,Dropbox
+259.95,Office Supplies & Equipment,Costco,Client meeting,2023-04-28,Office Supplies & Equipment,Costco
+22.91,Software & Technology,Salesforce,Client meeting,2023-03-10,Software & Technology,Salesforce
+827.49,Software & Technology,Google,Hardware services,2023-07-30,Software & Technology,Google
+631.67,Other,Quantacore,Team lunch,2023-08-08,Other,Quantacore
+934.66,Meals & Entertainment,Domino's,Business expense,2023-12-20,Meals & Entertainment,Domino's
+70.2,Travel & Transportation,Airbnb,Annual platform fee,2023-05-03,Travel & Transportation,Airbnb
+145.79,Banking & Finance,Chase Bank,Office supplies,2023-10-19,Banking & Finance,Chase Bank
+1089.87,Travel & Transportation,Uber,Equipment purchase,2023-08-01,Travel & Transportation,Uber
+69.84,Office Supplies & Equipment,Amazon,Annual platform fee,2023-08-01,Office Supplies & Equipment,Amazon
+58.76,Utilities & Rent,AT&T,Office supplies,2023-03-21,Utilities & Rent,AT&T
+648.24,Meals & Entertainment,Starbucks,Equipment purchase,2023-05-03,Meals & Entertainment,Starbucks
+70.6,Professional Services,CVS Pharmacy,Monthly subscription,2023-03-31,Professional Services,CVS Pharmacy
+1370.94,Software & Technology,Google,Business expense,2023-07-10,Software & Technology,Google
+67.73,Software & Technology,Slack,Hardware services,2023-10-23,Software & Technology,Slack
+72.76,Office Supplies & Equipment,Best Buy,Equipment purchase,2023-12-12,Office Supplies & Equipment,Best Buy
+124.47,Software & Technology,Google,Annual platform fee,2023-01-19,Software & Technology,Google
+73.83,Travel & Transportation,Southwest Airlines,Monthly subscription,2023-03-03,Travel & Transportation,Southwest Airlines
+14.46,Utilities & Rent,Verizon,Client meeting,2023-09-06,Utilities & Rent,Verizon
+938.76,Software & Technology,Google,Equipment purchase,2023-10-30,Software & Technology,Google
+210.56,Utilities & Rent,AT&T,Office supplies,2023-11-22,Utilities & Rent,AT&T
+59.26,Meals & Entertainment,Pizza Hut,Hardware services,2023-05-02,Meals & Entertainment,Pizza Hut
+2464.52,Other,Nimblyx,Client meeting,2023-07-10,Other,Nimblyx
+257.62,Banking & Finance,American Express,Office supplies,2023-05-30,Banking & Finance,American Express
+127.17,Other,Kitewave,Client meeting,2023-04-14,Other,Kitewave
+13.13,Software & Technology,Spotify,Business expense,2023-04-17,Software & Technology,Spotify
+-958.91,Software & Technology,Slack,Client meeting,2023-06-17,Software & Technology,Slack
+73.71,Office Supplies & Equipment,Home Depot,Equipment purchase,2023-07-27,Office Supplies & Equipment,Home Depot
+10.98,Software & Technology,Salesforce,Annual platform fee,2023-03-08,Software & Technology,Salesforce
+2137.62,Meals & Entertainment,Starbucks,Team lunch,2023-04-12,Meals & Entertainment,Starbucks
+2614.96,Office Supplies & Equipment,Costco,Team lunch,2023-07-15,Office Supplies & Equipment,Costco
+10.33,Travel & Transportation,Uber,Hardware services,2023-11-28,Travel & Transportation,Uber
+23.17,Utilities & Rent,Comcast,Monthly subscription,2023-09-27,Utilities & Rent,Comcast
+144.97,Other,Cobaltbridge,Team lunch,2023-07-18,Other,Cobaltbridge
+416.71,Travel & Transportation,Airbnb,Client meeting,2023-04-30,Travel & Transportation,Airbnb
+652.32,Travel & Transportation,Southwest Airlines,Team lunch,2023-07-01,Travel & Transportation,Southwest Airlines
+507.27,Office Supplies & Equipment,Target,Team lunch,2023-10-18,Office Supplies & Equipment,Target
+364.16,Travel & Transportation,Lyft,Monthly subscription,2023-01-20,Travel & Transportation,Lyft
+1111.43,Travel & Transportation,United Airlines,Monthly subscription,2023-06-15,Travel & Transportation,United Airlines
+2350.69,Software & Technology,Netflix,Client meeting,2023-12-27,Software & Technology,Netflix
+267.16,Office Supplies & Equipment,Target,Team lunch,2023-11-29,Office Supplies & Equipment,Target
+1196.31,Utilities & Rent,Comcast,Business expense,2023-03-31,Utilities & Rent,Comcast
+2813.3,Travel & Transportation,Enterprise Rent-a-car,Office supplies,2023-01-17,Travel & Transportation,Enterprise Rent-a-car
+22.55,Other,Tridelic,Team lunch,2023-06-27,Other,Tridelic
+1010.46,Software & Technology,Dropbox,Equipment purchase,2023-05-16,Software & Technology,Dropbox
+9.65,Office Supplies & Equipment,Home Depot,Hardware services,2023-03-27,Office Supplies & Equipment,Home Depot
+1386.52,Other,Cobaltbridge,Team lunch,2023-12-18,Other,Cobaltbridge
+12.37,Software & Technology,Adobe,Client meeting,2023-03-24,Software & Technology,Adobe
+278.26,Meals & Entertainment,Chipotle,Monthly subscription,2023-08-11,Meals & Entertainment,Chipotle
+464.33,Travel & Transportation,Delta Airlines,Business expense,2023-05-16,Travel & Transportation,Delta Airlines
+322.25,Office Supplies & Equipment,Amazon,Business expense,2023-08-07,Office Supplies & Equipment,Amazon
+24.73,Other,Tridelic,Business expense,2023-08-31,Other,Tridelic
+13.54,Other,Neopeak,Office supplies,2023-07-09,Other,Neopeak
+513.19,Software & Technology,Adobe,Client meeting,2023-12-08,Software & Technology,Adobe
+46.23,Utilities & Rent,AT&T,Hardware services,2023-09-25,Utilities & Rent,AT&T
+444.63,Travel & Transportation,Southwest Airlines,Team lunch,2023-10-20,Travel & Transportation,Southwest Airlines
+-1134.77,Professional Services,Walgreens,Equipment purchase,2023-02-10,Professional Services,Walgreens
+12.55,Other,Nimblyx,Hardware services,2023-06-16,Other,Nimblyx
+472.12,Other,Zetaflux Labs,Client meeting,2023-03-18,Other,Zetaflux Labs
+2476.19,Other,Tridelic,Annual platform fee,2023-07-30,Other,Tridelic
+219.4,Travel & Transportation,Hilton Hotels,Monthly subscription,2023-12-22,Travel & Transportation,Hilton Hotels
+-75.26,Office Supplies & Equipment,Costco,Business expense,2023-05-06,Office Supplies & Equipment,Costco
+889.98,Other,Quantacore,Client meeting,2023-05-18,Other,Quantacore
+387.62,Travel & Transportation,Delta Airlines,Team lunch,2023-01-29,Travel & Transportation,Delta Airlines
+-484.87,Banking & Finance,American Express,Monthly subscription,2023-04-09,Banking & Finance,American Express
+64.59,Banking & Finance,Bank Of America,Monthly subscription,2023-07-23,Banking & Finance,Bank Of America
+600.0,Banking & Finance,Chase Bank,Business expense,2023-05-13,Banking & Finance,Chase Bank
+50.37,Office Supplies & Equipment,Amazon,Business expense,2023-12-13,Office Supplies & Equipment,Amazon
+672.18,Banking & Finance,American Express,Business expense,2023-04-25,Banking & Finance,American Express
+332.86,Meals & Entertainment,Domino's,Annual platform fee,2023-12-13,Meals & Entertainment,Domino's
+2699.44,Software & Technology,Google,Business expense,2023-11-01,Software & Technology,Google
+70.09,Software & Technology,Salesforce,Equipment purchase,2023-05-14,Software & Technology,Salesforce
+1366.26,Travel & Transportation,Southwest Airlines,Monthly subscription,2023-06-13,Travel & Transportation,Southwest Airlines
+779.21,Travel & Transportation,Enterprise Rent-a-car,Office supplies,2023-10-20,Travel & Transportation,Enterprise Rent-a-car
+403.48,Travel & Transportation,United Airlines,Team lunch,2023-09-17,Travel & Transportation,United Airlines
+839.87,Other,Solaranine,Client meeting,2023-04-04,Other,Solaranine
+1395.07,Travel & Transportation,United Airlines,Hardware services,2023-10-27,Travel & Transportation,United Airlines
+514.89,Other,Neopeak,Annual platform fee,2023-09-14,Other,Neopeak
+125.49,Meals & Entertainment,Safeway,Office supplies,2023-08-23,Meals & Entertainment,Safeway
+854.04,Other,Nimblyx,Hardware services,2023-01-30,Other,Nimblyx
+24.57,Software & Technology,Spotify,Hardware services,2023-07-26,Software & Technology,Spotify
+11.16,Software & Technology,Adobe,Monthly subscription,2023-09-29,Software & Technology,Adobe
+59.76,Meals & Entertainment,Starbucks,Team lunch,2023-10-29,Meals & Entertainment,Starbucks
+447.92,Software & Technology,Adobe,Office supplies,2023-12-18,Software & Technology,Adobe
+9.18,Other,Neopeak,Monthly subscription,2023-03-09,Other,Neopeak
+9.62,Software & Technology,Spotify,Monthly subscription,2023-10-01,Software & Technology,Spotify
+8.64,Office Supplies & Equipment,Amazon,Client meeting,2023-08-16,Office Supplies & Equipment,Amazon
+65.65,Banking & Finance,Wells Fargo,Team lunch,2023-09-24,Banking & Finance,Wells Fargo
+59.46,Software & Technology,Salesforce,Equipment purchase,2023-04-12,Software & Technology,Salesforce
+-230.57,Other,Solaranine,Hardware services,2023-09-12,Other,Solaranine
+2504.5,Software & Technology,Google,Client meeting,2023-02-16,Software & Technology,Google
+412.34,Software & Technology,Salesforce,Client meeting,2023-08-26,Software & Technology,Salesforce
+703.37,Other,Zetaflux Labs,Monthly subscription,2023-02-18,Other,Zetaflux Labs
+549.83,Other,Nimblyx,Team lunch,2023-10-07,Other,Nimblyx
+1000.68,Meals & Entertainment,Whole Foods,Client meeting,2023-11-29,Meals & Entertainment,Whole Foods
+12.66,Office Supplies & Equipment,Amazon,Team lunch,2023-10-19,Office Supplies & Equipment,Amazon
+2617.05,Office Supplies & Equipment,Home Depot,Client meeting,2023-09-05,Office Supplies & Equipment,Home Depot
+10.6,Other,Square,Equipment purchase,2023-10-23,Other,Square
+519.15,Other,Cobaltbridge,Office supplies,2023-05-08,Other,Cobaltbridge
+486.53,Meals & Entertainment,Domino's,Hardware services,2023-01-06,Meals & Entertainment,Domino's
+147.19,Other,Square,Annual platform fee,2023-04-25,Other,Square
+315.17,Travel & Transportation,Southwest Airlines,Hardware services,2023-06-11,Travel & Transportation,Southwest Airlines
+2149.31,Software & Technology,Microsoft,Equipment purchase,2023-11-13,Software & Technology,Microsoft
+10.94,Banking & Finance,Bank Of America,Hardware services,2023-06-19,Banking & Finance,Bank Of America
+9.51,Office Supplies & Equipment,Best Buy,Office supplies,2023-05-30,Office Supplies & Equipment,Best Buy
+2609.39,Software & Technology,Adobe,Equipment purchase,2023-02-24,Software & Technology,Adobe
+-13.99,Meals & Entertainment,Whole Foods,Client meeting,2023-11-21,Meals & Entertainment,Whole Foods
+387.61,Other,Neopeak,Annual platform fee,2023-09-29,Other,Neopeak
+25.12,Other,Neopeak,Annual platform fee,2023-03-07,Other,Neopeak
+239.66,Travel & Transportation,Airbnb,Business expense,2023-12-21,Travel & Transportation,Airbnb
+21.17,Office Supplies & Equipment,Costco,Office supplies,2023-09-20,Office Supplies & Equipment,Costco
+710.65,Utilities & Rent,Comcast,Office supplies,2023-12-30,Utilities & Rent,Comcast
+792.22,Office Supplies & Equipment,Home Depot,Annual platform fee,2023-01-10,Office Supplies & Equipment,Home Depot
+42.32,Other,Square,Team lunch,2023-05-27,Other,Square
+13.44,Other,Arcadiaworks,Annual platform fee,2023-10-15,Other,Arcadiaworks
+239.5,Travel & Transportation,Enterprise Rent-a-car,Monthly subscription,2023-12-17,Travel & Transportation,Enterprise Rent-a-car
+790.99,Travel & Transportation,Hertz,Equipment purchase,2023-10-29,Travel & Transportation,Hertz
+11.77,Other,Orionedge Systems,Annual platform fee,2023-09-21,Other,Orionedge Systems
+9.48,Travel & Transportation,Budget,Team lunch,2023-03-21,Travel & Transportation,Budget
+700.78,Other,Tridelic,Client meeting,2023-09-10,Other,Tridelic
+378.93,Other,Cobaltbridge,Annual platform fee,2023-08-01,Other,Cobaltbridge
+123.61,Travel & Transportation,United Airlines,Hardware services,2023-11-13,Travel & Transportation,United Airlines
+770.66,Other,Square,Annual platform fee,2023-01-21,Other,Square
+57.66,Other,Quantacore,Hardware services,2023-07-11,Other,Quantacore
+11.69,Travel & Transportation,Enterprise Rent-a-car,Monthly subscription,2023-10-03,Travel & Transportation,Enterprise Rent-a-car
+2586.27,Travel & Transportation,Delta Airlines,Annual platform fee,2023-04-16,Travel & Transportation,Delta Airlines
+859.72,Software & Technology,Apple,Business expense,2023-01-28,Software & Technology,Apple
+237.4,Travel & Transportation,Hilton Hotels,Monthly subscription,2023-10-08,Travel & Transportation,Hilton Hotels
+513.48,Software & Technology,Slack,Office supplies,2023-01-24,Software & Technology,Slack
+12.14,Other,Quantacore,Monthly subscription,2023-07-15,Other,Quantacore
+1381.05,Utilities & Rent,AT&T,Business expense,2023-11-21,Utilities & Rent,AT&T
+484.27,Meals & Entertainment,Domino's,Annual platform fee,2023-01-22,Meals & Entertainment,Domino's
+863.02,Software & Technology,Dropbox,Team lunch,2023-11-27,Software & Technology,Dropbox
+24.97,Travel & Transportation,United Airlines,Hardware services,2023-01-28,Travel & Transportation,United Airlines
+927.32,Software & Technology,Apple,Equipment purchase,2023-07-02,Software & Technology,Apple
+341.1,Meals & Entertainment,Chipotle,Team lunch,2023-12-22,Meals & Entertainment,Chipotle
+20.22,Office Supplies & Equipment,Best Buy,Business expense,2023-04-24,Office Supplies & Equipment,Best Buy
+355.61,Other,Nimblyx,Client meeting,2023-06-06,Other,Nimblyx
+26.54,Travel & Transportation,Airbnb,Client meeting,2023-11-17,Travel & Transportation,Airbnb
+574.08,Other,Solaranine,Business expense,2023-01-19,Other,Solaranine
+124.84,Utilities & Rent,AT&T,Team lunch,2023-10-29,Utilities & Rent,AT&T
+686.86,Banking & Finance,American Express,Team lunch,2023-11-11,Banking & Finance,American Express
+2793.79,Travel & Transportation,Uber,Monthly subscription,2023-05-09,Travel & Transportation,Uber
+10.5,Banking & Finance,Chase Bank,Hardware services,2023-07-04,Banking & Finance,Chase Bank
+1032.67,Other,Zetaflux Labs,Team lunch,2023-05-21,Other,Zetaflux Labs
+2139.71,Office Supplies & Equipment,Staples,Annual platform fee,2023-04-25,Office Supplies & Equipment,Staples
+503.43,Office Supplies & Equipment,Home Depot,Equipment purchase,2023-08-14,Office Supplies & Equipment,Home Depot
+629.42,Meals & Entertainment,Domino's,Office supplies,2023-04-28,Meals & Entertainment,Domino's
+530.85,Banking & Finance,Wells Fargo,Monthly subscription,2023-01-12,Banking & Finance,Wells Fargo
+528.3,Travel & Transportation,Marriott,Annual platform fee,2023-04-03,Travel & Transportation,Marriott
+949.36,Travel & Transportation,Hilton Hotels,Hardware services,2023-02-13,Travel & Transportation,Hilton Hotels
+527.56,Banking & Finance,Wells Fargo,Business expense,2023-04-04,Banking & Finance,Wells Fargo
+11.94,Office Supplies & Equipment,Costco,Equipment purchase,2023-02-25,Office Supplies & Equipment,Costco
+519.34,Banking & Finance,American Express,Monthly subscription,2023-11-11,Banking & Finance,American Express
+662.59,Other,Solaranine,Annual platform fee,2023-01-01,Other,Solaranine
+1243.3,Software & Technology,Adobe,Client meeting,2023-06-29,Software & Technology,Adobe
+69.23,Travel & Transportation,Hertz,Monthly subscription,2023-05-12,Travel & Transportation,Hertz
+257.04,Software & Technology,Google,Office supplies,2023-06-11,Software & Technology,Google
+567.08,Professional Services,CVS Pharmacy,Equipment purchase,2023-12-15,Professional Services,CVS Pharmacy
+433.21,Utilities & Rent,Comcast,Annual platform fee,2023-10-23,Utilities & Rent,Comcast
+1027.46,Meals & Entertainment,Pizza Hut,Office supplies,2023-09-18,Meals & Entertainment,Pizza Hut
+22.96,Other,Tridelic,Hardware services,2023-02-16,Other,Tridelic
+508.96,Other,Square,Business expense,2023-07-25,Other,Square
+306.83,Travel & Transportation,Airbnb,Equipment purchase,2023-09-23,Travel & Transportation,Airbnb
+-532.31,Travel & Transportation,Airbnb,Team lunch,2023-05-03,Travel & Transportation,Airbnb
+238.68,Travel & Transportation,Budget,Client meeting,2023-01-08,Travel & Transportation,Budget
+2285.73,Utilities & Rent,Comcast,Annual platform fee,2023-04-10,Utilities & Rent,Comcast
+408.46,Travel & Transportation,Hertz,Business expense,2023-09-20,Travel & Transportation,Hertz
+1189.87,Office Supplies & Equipment,Staples,Monthly subscription,2023-12-15,Office Supplies & Equipment,Staples
+47.91,Travel & Transportation,Hertz,Office supplies,2023-06-11,Travel & Transportation,Hertz
+12.6,Software & Technology,Google,Team lunch,2023-06-25,Software & Technology,Google
+385.2,Office Supplies & Equipment,Home Depot,Equipment purchase,2023-04-05,Office Supplies & Equipment,Home Depot
+1102.51,Travel & Transportation,Southwest Airlines,Monthly subscription,2023-12-13,Travel & Transportation,Southwest Airlines
+133.67,Other,Solaranine,Hardware services,2023-10-22,Other,Solaranine
+20.57,Banking & Finance,American Express,Monthly subscription,2023-09-02,Banking & Finance,American Express
+411.03,Meals & Entertainment,Whole Foods,Monthly subscription,2023-08-24,Meals & Entertainment,Whole Foods
+655.04,Travel & Transportation,Delta Airlines,Business expense,2023-05-15,Travel & Transportation,Delta Airlines
+44.4,Meals & Entertainment,Chipotle,Business expense,2023-07-06,Meals & Entertainment,Chipotle
+2155.9,Travel & Transportation,Hilton Hotels,Annual platform fee,2023-05-01,Travel & Transportation,Hilton Hotels
+23.19,Other,Orionedge Systems,Office supplies,2023-11-19,Other,Orionedge Systems
+813.98,Other,Arcadiaworks,Client meeting,2023-05-11,Other,Arcadiaworks
+-1159.14,Office Supplies & Equipment,Costco,Equipment purchase,2023-04-03,Office Supplies & Equipment,Costco
+122.23,Meals & Entertainment,Domino's,Annual platform fee,2023-08-17,Meals & Entertainment,Domino's
+814.04,Banking & Finance,Bank Of America,Annual platform fee,2023-11-20,Banking & Finance,Bank Of America
+698.59,Other,Square,Business expense,2023-11-27,Other,Square
+350.34,Other,Cobaltbridge,Equipment purchase,2023-01-12,Other,Cobaltbridge
+-364.85,Software & Technology,Dropbox,Client meeting,2023-07-23,Software & Technology,Dropbox
+231.6,Meals & Entertainment,Chipotle,Team lunch,2023-05-26,Meals & Entertainment,Chipotle
+143.1,Software & Technology,Spotify,Hardware services,2023-04-10,Software & Technology,Spotify
+942.33,Utilities & Rent,AT&T,Business expense,2023-09-26,Utilities & Rent,AT&T
+338.89,Other,Neopeak,Monthly subscription,2023-03-21,Other,Neopeak
+10.55,Software & Technology,Zoom,Monthly subscription,2023-02-09,Software & Technology,Zoom
+418.83,Other,Arcadiaworks,Annual platform fee,2023-10-15,Other,Arcadiaworks
+58.76,Meals & Entertainment,Domino's,Business expense,2023-09-22,Meals & Entertainment,Domino's
+2132.82,Utilities & Rent,AT&T,Hardware services,2023-02-26,Utilities & Rent,AT&T
+20.54,Meals & Entertainment,Chipotle,Business expense,2023-04-06,Meals & Entertainment,Chipotle
+9.97,Professional Services,Walgreens,Office supplies,2023-06-09,Professional Services,Walgreens
+20.59,Software & Technology,Adobe,Hardware services,2023-02-06,Software & Technology,Adobe
+14.84,Travel & Transportation,Hertz,Equipment purchase,2023-07-17,Travel & Transportation,Hertz
+457.01,Software & Technology,Adobe,Office supplies,2023-07-19,Software & Technology,Adobe
+12.03,Software & Technology,Adobe,Monthly subscription,2023-12-04,Software & Technology,Adobe
+110.23,Other,Orionedge Systems,Annual platform fee,2023-10-27,Other,Orionedge Systems
+898.71,Other,Zetaflux Labs,Equipment purchase,2023-07-10,Other,Zetaflux Labs
+1296.92,Software & Technology,Dropbox,Client meeting,2023-11-27,Software & Technology,Dropbox
+802.63,Travel & Transportation,United Airlines,Monthly subscription,2023-08-13,Travel & Transportation,United Airlines
+381.91,Office Supplies & Equipment,Home Depot,Equipment purchase,2023-10-05,Office Supplies & Equipment,Home Depot
+74.67,Utilities & Rent,AT&T,Client meeting,2023-10-11,Utilities & Rent,AT&T
+305.75,Professional Services,Walgreens,Monthly subscription,2023-07-14,Professional Services,Walgreens
+849.68,Office Supplies & Equipment,Best Buy,Hardware services,2023-04-08,Office Supplies & Equipment,Best Buy
+705.45,Other,Nimblyx,Monthly subscription,2023-12-04,Other,Nimblyx
+40.02,Other,Nimblyx,Business expense,2023-07-18,Other,Nimblyx
+743.32,Travel & Transportation,United Airlines,Monthly subscription,2023-02-10,Travel & Transportation,United Airlines
+10.96,Meals & Entertainment,Safeway,Business expense,2023-01-21,Meals & Entertainment,Safeway
+420.35,Travel & Transportation,Delta Airlines,Team lunch,2023-12-03,Travel & Transportation,Delta Airlines
+736.01,Utilities & Rent,Comcast,Team lunch,2023-02-23,Utilities & Rent,Comcast
+144.58,Banking & Finance,American Express,Annual platform fee,2023-06-16,Banking & Finance,American Express
+46.36,Other,Kitewave,Office supplies,2023-09-10,Other,Kitewave
+69.18,Other,Neopeak,Business expense,2023-06-04,Other,Neopeak
+436.8,Other,Orionedge Systems,Client meeting,2023-10-20,Other,Orionedge Systems
+546.56,Office Supplies & Equipment,Home Depot,Annual platform fee,2023-06-03,Office Supplies & Equipment,Home Depot
+1243.45,Travel & Transportation,Delta Airlines,Client meeting,2023-12-20,Travel & Transportation,Delta Airlines
+1083.47,Office Supplies & Equipment,Walmart,Annual platform fee,2023-06-28,Office Supplies & Equipment,Walmart
+807.26,Software & Technology,Quantacore,Monthly subscription,2023-06-06,Software & Technology,Quantacore
+20.55,Travel & Transportation,Hilton Hotels,Client meeting,2023-07-21,Travel & Transportation,Hilton Hotels

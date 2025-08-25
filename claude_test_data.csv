@@ -1,0 +1,7 @@
+Merchant,Amount,Date,Notes
+TST* Kroger,75.50,2024-01-01,Grocery store purchase
+ACME Consulting LLC,2500.00,2024-01-02,High value transaction
+Random Business 123,150.75,2024-01-03,Unknown vendor
+Google,15.99,2024-01-04,Software subscription
+PAYPAL *Airbnb,324.83,2024-01-05,Travel booking
+Safeway LLC,89.20,2024-01-06,Office supplies

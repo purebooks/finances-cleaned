@@ -1,0 +1,341 @@
+{
+  "cleaned_data": [
+    {
+      "Amount": 245.65,
+      "Date": "2023-01-13",
+      "Merchant": "Walgreens",
+      "Notes": "Transaction 1 - Equipment purchase"
+    },
+    {
+      "Amount": 590.9,
+      "Date": "2023-10-07",
+      "Merchant": "Auto Pay Chipotle",
+      "Notes": "Transaction 2 - Office supplies"
+    },
+    {
+      "Amount": 561.68,
+      "Date": "2023-11-05",
+      "Merchant": "Apple Online",
+      "Notes": "Transaction 3 - Equipment purchase"
+    },
+    {
+      "Amount": 589.68,
+      "Date": "2023-04-23",
+      "Merchant": "Marriott*store 001",
+      "Notes": "Transaction 4 - Business expense"
+    },
+    {
+      "Amount": 340.91,
+      "Date": "2023-03-23",
+      "Merchant": "Subway",
+      "Notes": "Transaction 5 - Team lunch"
+    },
+    {
+      "Amount": 359.62,
+      "Date": "2023-07-14",
+      "Merchant": "Lyft",
+      "Notes": "Transaction 6 - Team lunch"
+    },
+    {
+      "Amount": 125.7,
+      "Date": "2023-08-24",
+      "Merchant": "Amazon LLC",
+      "Notes": "Transaction 7 - Business expense"
+    },
+    {
+      "Amount": 885.57,
+      "Date": "",
+      "Merchant": "Paypal *airbnb",
+      "Notes": "Transaction 8 - Office supplies"
+    },
+    {
+      "Amount": 773.3,
+      "Date": "2023-01-24",
+      "Merchant": "Domino's",
+      "Notes": "Transaction 9 - Office supplies"
+    },
+    {
+      "Amount": 636.05,
+      "Date": "2023-05-23",
+      "Merchant": "Lyft*store 001",
+      "Notes": "Transaction 10 - Team lunch"
+    },
+    {
+      "Amount": 702.12,
+      "Date": "2023-12-10",
+      "Merchant": "Sq *comcast",
+      "Notes": "Transaction 11 - Business expense"
+    },
+    {
+      "Amount": -729.4,
+      "Date": "2023-03-29",
+      "Merchant": "Budget INC",
+      "Notes": "Transaction 12 - Team lunch"
+    },
+    {
+      "Amount": 684.93,
+      "Date": "2023-10-13",
+      "Merchant": "Walgreens LLC",
+      "Notes": "Transaction 13 - Business expense"
+    },
+    {
+      "Amount": 0.0,
+      "Date": "2023-01-17",
+      "Merchant": "Apple",
+      "Notes": "Transaction 14 - Equipment purchase"
+    },
+    {
+      "Amount": 396.24,
+      "Date": "2023-12-02",
+      "Merchant": "Sq *at&t",
+      "Notes": "Transaction 15 - Client meeting"
+    },
+    {
+      "Amount": 745.24,
+      "Date": "2023-03-13",
+      "Merchant": "Paypal *target",
+      "Notes": "Transaction 16 - Equipment purchase"
+    },
+    {
+      "Amount": 362.63,
+      "Date": "2023-10-26",
+      "Merchant": "Hertz*store 001",
+      "Notes": "Transaction 17 - Office supplies"
+    },
+    {
+      "Amount": 861.24,
+      "Date": "2023-02-16",
+      "Merchant": "Tst* Southwest Airlines",
+      "Notes": "Transaction 18 - Equipment purchase"
+    },
+    {
+      "Amount": 382.24,
+      "Date": "2023-02-02",
+      "Merchant": "Wells Fargo.com",
+      "Notes": "Transaction 19 - Monthly subscription"
+    },
+    {
+      "Amount": 682.03,
+      "Date": "2023-01-06",
+      "Merchant": "Microsoft Online",
+      "Notes": "Transaction 20 - Team lunch"
+    },
+    {
+      "Amount": 435.33,
+      "Date": "2023-02-27",
+      "Merchant": "Whole Foods #123456",
+      "Notes": "Transaction 21 - Equipment purchase"
+    },
+    {
+      "Amount": 508.17,
+      "Date": "2023-09-14",
+      "Merchant": "Paypal *papa John's",
+      "Notes": "Transaction 22 - Team lunch"
+    },
+    {
+      "Amount": 153.69,
+      "Date": "2023-11-08",
+      "Merchant": "Walgreens Online",
+      "Notes": "Transaction 23 - Monthly subscription"
+    },
+    {
+      "Amount": 0.0,
+      "Date": "",
+      "Merchant": "Auto Pay Hilton Hotels",
+      "Notes": "Transaction 24 - Team lunch"
+    },
+    {
+      "Amount": -947.0,
+      "Date": "",
+      "Merchant": "Google",
+      "Notes": "Transaction 25 - Business expense"
+    },
+    {
+      "Amount": 660.09,
+      "Date": "2023-06-03",
+      "Merchant": "Subway Online",
+      "Notes": "Transaction 26 - Office supplies"
+    },
+    {
+      "Amount": 964.4,
+      "Date": "2023-11-07",
+      "Merchant": "Microsoft Online",
+      "Notes": "Transaction 27 - Equipment purchase"
+    },
+    {
+      "Amount": 399.59,
+      "Date": "2024-01-01",
+      "Merchant": "Sq *pizza Hut",
+      "Notes": "Transaction 28 - Team lunch"
+    },
+    {
+      "Amount": 121.88,
+      "Date": "2023-09-22",
+      "Merchant": "Auto Pay Chase Bank",
+      "Notes": "Transaction 29 - Team lunch"
+    },
+    {
+      "Amount": 588.85,
+      "Date": "2023-10-11",
+      "Merchant": "Mcdonald's.com",
+      "Notes": "Transaction 30 - Equipment purchase"
+    },
+    {
+      "Amount": 859.78,
+      "Date": "2023-02-04",
+      "Merchant": "Sq *netflix",
+      "Notes": "Transaction 31 - Team lunch"
+    },
+    {
+      "Amount": 133.18,
+      "Date": "2023-04-20",
+      "Merchant": "Tst* Safeway",
+      "Notes": "Transaction 32 - Monthly subscription"
+    },
+    {
+      "Amount": 807.69,
+      "Date": "2023-05-05",
+      "Merchant": "Tst* Enterprise Rent-a-car",
+      "Notes": "Transaction 33 - Equipment purchase"
+    },
+    {
+      "Amount": 467.56,
+      "Date": "2023-08-05",
+      "Merchant": "Wells Fargo #123456",
+      "Notes": "Transaction 34 - Equipment purchase"
+    },
+    {
+      "Amount": 403.22,
+      "Date": "2023-02-20",
+      "Merchant": "Whole Foods INC",
+      "Notes": "Transaction 35 - Business expense"
+    },
+    {
+      "Amount": 449.16,
+      "Date": "2023-04-08",
+      "Merchant": "Sq *google",
+      "Notes": "Transaction 36 - Team lunch"
+    },
+    {
+      "Amount": 808.21,
+      "Date": "2023-02-08",
+      "Merchant": "Sq *american Express",
+      "Notes": "Transaction 37 - Business expense"
+    },
+    {
+      "Amount": 969.03,
+      "Date": "2023-10-04",
+      "Merchant": "Netflix INC",
+      "Notes": "Transaction 38 - Office supplies"
+    },
+    {
+      "Amount": 214.53,
+      "Date": "2023-09-06",
+      "Merchant": "Walmart*store 001",
+      "Notes": "Transaction 39 - Business expense"
+    },
+    {
+      "Amount": 265.94,
+      "Date": "2023-01-02",
+      "Merchant": "Walmart*store 001",
+      "Notes": "Transaction 40 - Client meeting"
+    },
+    {
+      "Amount": 662.21,
+      "Date": "2023-12-23",
+      "Merchant": "Salesforce*store 001",
+      "Notes": "Transaction 41 - Office supplies"
+    },
+    {
+      "Amount": 0.0,
+      "Date": "",
+      "Merchant": "Sq *salesforce",
+      "Notes": "Transaction 42 - Business expense"
+    },
+    {
+      "Amount": 919.47,
+      "Date": "2023-09-02",
+      "Merchant": "Netflix.com",
+      "Notes": "Transaction 43 - Business expense"
+    },
+    {
+      "Amount": 595.44,
+      "Date": "2023-04-06",
+      "Merchant": "Southwest Airlines",
+      "Notes": "Transaction 44 - Office supplies"
+    },
+    {
+      "Amount": 579.34,
+      "Date": "2023-10-19",
+      "Merchant": "Water Company",
+      "Notes": "Transaction 45 - Client meeting"
+    },
+    {
+      "Amount": 317.05,
+      "Date": "2023-10-17",
+      "Merchant": "Safeway.com",
+      "Notes": "Transaction 46 - Equipment purchase"
+    },
+    {
+      "Amount": 396.39,
+      "Date": "2023-05-03",
+      "Merchant": "Domino's #123456",
+      "Notes": "Transaction 47 - Team lunch"
+    },
+    {
+      "Amount": 458.83,
+      "Date": "2023-02-07",
+      "Merchant": "American Express #123456",
+      "Notes": "Transaction 48 - Business expense"
+    },
+    {
+      "Amount": 265.94,
+      "Date": "2023-04-20",
+      "Merchant": "Spotify Online",
+      "Notes": "Transaction 49 - Business expense"
+    },
+    {
+      "Amount": 438.75,
+      "Date": "2023-05-26",
+      "Merchant": "Google #123456",
+      "Notes": "Transaction 50 - Team lunch"
+    }
+  ],
+  "insights": {
+    "ai_cost": 0.0,
+    "ai_requests": 0,
+    "processing_time": 0.028614282608032227,
+    "rows_processed": 50
+  },
+  "processing_time": 0.028614282608032227,
+  "request_id": "req-7bad34c0",
+  "summary_report": {
+    "llm": {},
+    "math_checks": {
+      "mismatches": 0,
+      "totals_recomputed": 0
+    },
+    "performance_metrics": {
+      "total_time_seconds": 0.026831865310668945
+    },
+    "processing_summary": {
+      "duplicates_removed": 0,
+      "fields_filled": {},
+      "values_normalized": {
+        "Amount": 0,
+        "Date": 40,
+        "Merchant": 37,
+        "Notes": 0
+      }
+    },
+    "schema_analysis": {
+      "confidence": 0.8,
+      "detected_type": "expense_ledger",
+      "signals": {
+        "expense_ledger": 0.8,
+        "gl_journal": 0.0,
+        "sales_ledger": 0.0
+      }
+    }
+  }
+}

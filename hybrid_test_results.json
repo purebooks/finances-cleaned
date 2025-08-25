@@ -1,0 +1,77 @@
+{
+  "cleaned_data": [
+    {
+      "Amount": 5.75,
+      "Date": "2023-01-01",
+      "Merchant": "Starbucks",
+      "Notes": "Coffee"
+    },
+    {
+      "Amount": 15.99,
+      "Date": "2023-01-02",
+      "Merchant": "Netflix",
+      "Notes": "Streaming"
+    },
+    {
+      "Amount": 29.99,
+      "Date": "2023-01-03",
+      "Merchant": "Amazon",
+      "Notes": "Books"
+    },
+    {
+      "Amount": 12.5,
+      "Date": "2023-01-04",
+      "Merchant": "Obscure Local Bakery Xyz",
+      "Notes": "Pastries"
+    },
+    {
+      "Amount": 500.0,
+      "Date": "2023-01-05",
+      "Merchant": "Mystery Tech Consulting LLC",
+      "Notes": "IT Services"
+    },
+    {
+      "Amount": 8.99,
+      "Date": "2023-01-06",
+      "Merchant": "Random Food Truck #47",
+      "Notes": "Lunch"
+    }
+  ],
+  "insights": {
+    "ai_cost": 0.0,
+    "ai_requests": 0,
+    "processing_time": 0.009512901306152344,
+    "rows_processed": 6
+  },
+  "processing_time": 0.009512901306152344,
+  "request_id": "req-b1083f6c",
+  "summary_report": {
+    "llm": {},
+    "math_checks": {
+      "mismatches": 0,
+      "totals_recomputed": 0
+    },
+    "performance_metrics": {
+      "total_time_seconds": 0.008414983749389648
+    },
+    "processing_summary": {
+      "duplicates_removed": 0,
+      "fields_filled": {},
+      "values_normalized": {
+        "Amount": 0,
+        "Date": 0,
+        "Merchant": 1,
+        "Notes": 0
+      }
+    },
+    "schema_analysis": {
+      "confidence": 0.8,
+      "detected_type": "expense_ledger",
+      "signals": {
+        "expense_ledger": 0.8,
+        "gl_journal": 0.0,
+        "sales_ledger": 0.0
+      }
+    }
+  }
+}

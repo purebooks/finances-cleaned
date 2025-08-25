@@ -1,0 +1,23 @@
+{
+  "rule_only": {
+    "rows": 50,
+    "cats_any": 50,
+    "cats_non_other": 36,
+    "vendors_non_missing": 35
+  },
+  "llm": {
+    "rows": 50,
+    "cats_any": 50,
+    "cats_non_other": 50,
+    "vendors_non_missing": 35
+  },
+  "lift": {
+    "categories_any_lift": 0,
+    "categories_non_other_lift": 14,
+    "vendors_non_missing_lift": 0
+  },
+  "cost_baseline": 0.0,
+  "cost_llm": 0.51,
+  "ai_requests_baseline": 0,
+  "ai_requests_llm": 57
+}

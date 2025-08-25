@@ -1,0 +1,39 @@
+{
+  "total_input_rows": 10000,
+  "total_returned_rows": 9996,
+  "processing_seconds": 1718.13,
+  "blank_categories": 0,
+  "blank_rate": 0.0,
+  "other_categories": 0,
+  "other_rate": 0.0,
+  "top_categories": [
+    [
+      "Travel & Transportation",
+      2193
+    ],
+    [
+      "Office Supplies & Equipment",
+      1858
+    ],
+    [
+      "Software & Technology",
+      1749
+    ],
+    [
+      "Utilities & Rent",
+      986
+    ],
+    [
+      "Professional Services",
+      983
+    ],
+    [
+      "Insurance & Legal",
+      617
+    ],
+    [
+      "Marketing & Advertising",
+      479
+    ]
+  ]
+}

@@ -1,0 +1,557 @@
+{
+  "cleaned_data": [
+    {
+      "Amount": 265.94,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Walmart",
+      "Description/Memo": "Transaction 40 - Client meeting",
+      "Transaction Date": "2023-01-02",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 39,
+      "standardized_vendor": "Walmart"
+    },
+    {
+      "Amount": 682.03,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Microsoft",
+      "Description/Memo": "Transaction 20 - Team lunch",
+      "Transaction Date": "2023-01-06",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 19,
+      "standardized_vendor": "Microsoft"
+    },
+    {
+      "Amount": 245.65,
+      "Category": "Other",
+      "Clean Vendor": "Walgreens",
+      "Description/Memo": "Transaction 1 - Equipment purchase",
+      "Transaction Date": "2023-01-13",
+      "category": "Other",
+      "source_row_id": 0,
+      "standardized_vendor": "Walgreens"
+    },
+    {
+      "Amount": 0.0,
+      "Category": "Other",
+      "Clean Vendor": "Apple",
+      "Description/Memo": "Transaction 14 - Equipment purchase",
+      "Transaction Date": "2023-01-17",
+      "category": "Other",
+      "source_row_id": 13,
+      "standardized_vendor": "Apple"
+    },
+    {
+      "Amount": 773.3,
+      "Category": "Other",
+      "Clean Vendor": "Domino's",
+      "Description/Memo": "Transaction 9 - Office supplies",
+      "Transaction Date": "2023-01-24",
+      "category": "Other",
+      "source_row_id": 8,
+      "standardized_vendor": "Domino's"
+    },
+    {
+      "Amount": 382.24,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "[Vendor Missing]",
+      "Description/Memo": "Transaction 19 - Monthly subscription",
+      "Transaction Date": "2023-02-02",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 18,
+      "standardized_vendor": "[Vendor Missing]"
+    },
+    {
+      "Amount": 859.78,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Netflix",
+      "Description/Memo": "Transaction 31 - Team lunch",
+      "Transaction Date": "2023-02-04",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 30,
+      "standardized_vendor": "Netflix"
+    },
+    {
+      "Amount": 458.83,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "[Vendor Missing]",
+      "Description/Memo": "Transaction 48 - Business expense",
+      "Transaction Date": "2023-02-07",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 47,
+      "standardized_vendor": "[Vendor Missing]"
+    },
+    {
+      "Amount": 808.21,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "[Vendor Missing]",
+      "Description/Memo": "Transaction 37 - Business expense",
+      "Transaction Date": "2023-02-08",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 36,
+      "standardized_vendor": "[Vendor Missing]"
+    },
+    {
+      "Amount": 861.24,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "[Vendor Missing]",
+      "Description/Memo": "Transaction 18 - Equipment purchase",
+      "Transaction Date": "2023-02-16",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 17,
+      "standardized_vendor": "[Vendor Missing]"
+    },
+    {
+      "Amount": 403.22,
+      "Category": "Other",
+      "Clean Vendor": "[Vendor Missing]",
+      "Description/Memo": "Transaction 35 - Business expense",
+      "Transaction Date": "2023-02-20",
+      "category": "Other",
+      "source_row_id": 34,
+      "standardized_vendor": "[Vendor Missing]"
+    },
+    {
+      "Amount": 435.33,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "[Vendor Missing]",
+      "Description/Memo": "Transaction 21 - Equipment purchase",
+      "Transaction Date": "2023-02-27",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 20,
+      "standardized_vendor": "[Vendor Missing]"
+    },
+    {
+      "Amount": 745.24,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Target",
+      "Description/Memo": "Transaction 16 - Equipment purchase",
+      "Transaction Date": "2023-03-13",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 15,
+      "standardized_vendor": "Target"
+    },
+    {
+      "Amount": 340.91,
+      "Category": "Other",
+      "Clean Vendor": "Subway",
+      "Description/Memo": "Transaction 5 - Team lunch",
+      "Transaction Date": "2023-03-23",
+      "category": "Other",
+      "source_row_id": 4,
+      "standardized_vendor": "Subway"
+    },
+    {
+      "Amount": -729.4,
+      "Category": "Other",
+      "Clean Vendor": "Budget",
+      "Description/Memo": "Transaction 12 - Team lunch",
+      "Transaction Date": "2023-03-29",
+      "category": "Other",
+      "source_row_id": 11,
+      "standardized_vendor": "Budget"
+    },
+    {
+      "Amount": 595.44,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "[Vendor Missing]",
+      "Description/Memo": "Transaction 44 - Office supplies",
+      "Transaction Date": "2023-04-06",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 43,
+      "standardized_vendor": "[Vendor Missing]"
+    },
+    {
+      "Amount": 449.16,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Google",
+      "Description/Memo": "Transaction 36 - Team lunch",
+      "Transaction Date": "2023-04-08",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 35,
+      "standardized_vendor": "Google"
+    },
+    {
+      "Amount": 133.18,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Safeway",
+      "Description/Memo": "Transaction 32 - Monthly subscription",
+      "Transaction Date": "2023-04-20",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 31,
+      "standardized_vendor": "Safeway"
+    },
+    {
+      "Amount": 265.94,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Spotify",
+      "Description/Memo": "Transaction 49 - Business expense",
+      "Transaction Date": "2023-04-20",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 48,
+      "standardized_vendor": "Spotify"
+    },
+    {
+      "Amount": 589.68,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Marriott",
+      "Description/Memo": "Transaction 4 - Business expense",
+      "Transaction Date": "2023-04-23",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 3,
+      "standardized_vendor": "Marriott"
+    },
+    {
+      "Amount": 396.39,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Domino's",
+      "Description/Memo": "Transaction 47 - Team lunch",
+      "Transaction Date": "2023-05-03",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 46,
+      "standardized_vendor": "Domino's"
+    },
+    {
+      "Amount": 807.69,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "[Vendor Missing]",
+      "Description/Memo": "Transaction 33 - Equipment purchase",
+      "Transaction Date": "2023-05-05",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 32,
+      "standardized_vendor": "[Vendor Missing]"
+    },
+    {
+      "Amount": 636.05,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Lyft",
+      "Description/Memo": "Transaction 10 - Team lunch",
+      "Transaction Date": "2023-05-23",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 9,
+      "standardized_vendor": "Lyft"
+    },
+    {
+      "Amount": 438.75,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Google",
+      "Description/Memo": "Transaction 50 - Team lunch",
+      "Transaction Date": "2023-05-26",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 49,
+      "standardized_vendor": "Google"
+    },
+    {
+      "Amount": 660.09,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Subway",
+      "Description/Memo": "Transaction 26 - Office supplies",
+      "Transaction Date": "2023-06-03",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 25,
+      "standardized_vendor": "Subway"
+    },
+    {
+      "Amount": 359.62,
+      "Category": "Other",
+      "Clean Vendor": "Lyft",
+      "Description/Memo": "Transaction 6 - Team lunch",
+      "Transaction Date": "2023-07-14",
+      "category": "Other",
+      "source_row_id": 5,
+      "standardized_vendor": "Lyft"
+    },
+    {
+      "Amount": 467.56,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "[Vendor Missing]",
+      "Description/Memo": "Transaction 34 - Equipment purchase",
+      "Transaction Date": "2023-08-05",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 33,
+      "standardized_vendor": "[Vendor Missing]"
+    },
+    {
+      "Amount": 125.7,
+      "Category": "Other",
+      "Clean Vendor": "Amazon",
+      "Description/Memo": "Transaction 7 - Business expense",
+      "Transaction Date": "2023-08-24",
+      "category": "Other",
+      "source_row_id": 6,
+      "standardized_vendor": "Amazon"
+    },
+    {
+      "Amount": 919.47,
+      "Category": "Other",
+      "Clean Vendor": "Netflix",
+      "Description/Memo": "Transaction 43 - Business expense",
+      "Transaction Date": "2023-09-02",
+      "category": "Other",
+      "source_row_id": 42,
+      "standardized_vendor": "Netflix"
+    },
+    {
+      "Amount": 214.53,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Walmart",
+      "Description/Memo": "Transaction 39 - Business expense",
+      "Transaction Date": "2023-09-06",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 38,
+      "standardized_vendor": "Walmart"
+    },
+    {
+      "Amount": 508.17,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "[Vendor Missing]",
+      "Description/Memo": "Transaction 22 - Team lunch",
+      "Transaction Date": "2023-09-14",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 21,
+      "standardized_vendor": "[Vendor Missing]"
+    },
+    {
+      "Amount": 121.88,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "[Vendor Missing]",
+      "Description/Memo": "Transaction 29 - Team lunch",
+      "Transaction Date": "2023-09-22",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 28,
+      "standardized_vendor": "[Vendor Missing]"
+    },
+    {
+      "Amount": 969.03,
+      "Category": "Other",
+      "Clean Vendor": "Netflix",
+      "Description/Memo": "Transaction 38 - Office supplies",
+      "Transaction Date": "2023-10-04",
+      "category": "Other",
+      "source_row_id": 37,
+      "standardized_vendor": "Netflix"
+    },
+    {
+      "Amount": 590.9,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "[Vendor Missing]",
+      "Description/Memo": "Transaction 2 - Office supplies",
+      "Transaction Date": "2023-10-07",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 1,
+      "standardized_vendor": "[Vendor Missing]"
+    },
+    {
+      "Amount": 588.85,
+      "Category": "Other",
+      "Clean Vendor": "Mcdonald's",
+      "Description/Memo": "Transaction 30 - Equipment purchase",
+      "Transaction Date": "2023-10-11",
+      "category": "Other",
+      "source_row_id": 29,
+      "standardized_vendor": "Mcdonald's"
+    },
+    {
+      "Amount": 684.93,
+      "Category": "Other",
+      "Clean Vendor": "Walgreens",
+      "Description/Memo": "Transaction 13 - Business expense",
+      "Transaction Date": "2023-10-13",
+      "category": "Other",
+      "source_row_id": 12,
+      "standardized_vendor": "Walgreens"
+    },
+    {
+      "Amount": 317.05,
+      "Category": "Other",
+      "Clean Vendor": "Safeway",
+      "Description/Memo": "Transaction 46 - Equipment purchase",
+      "Transaction Date": "2023-10-17",
+      "category": "Other",
+      "source_row_id": 45,
+      "standardized_vendor": "Safeway"
+    },
+    {
+      "Amount": 579.34,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "[Vendor Missing]",
+      "Description/Memo": "Transaction 45 - Client meeting",
+      "Transaction Date": "2023-10-19",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 44,
+      "standardized_vendor": "[Vendor Missing]"
+    },
+    {
+      "Amount": 362.63,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Hertz",
+      "Description/Memo": "Transaction 17 - Office supplies",
+      "Transaction Date": "2023-10-26",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 16,
+      "standardized_vendor": "Hertz"
+    },
+    {
+      "Amount": 561.68,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Apple",
+      "Description/Memo": "Transaction 3 - Equipment purchase",
+      "Transaction Date": "2023-11-05",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 2,
+      "standardized_vendor": "Apple"
+    },
+    {
+      "Amount": 964.4,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Microsoft",
+      "Description/Memo": "Transaction 27 - Equipment purchase",
+      "Transaction Date": "2023-11-07",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 26,
+      "standardized_vendor": "Microsoft"
+    },
+    {
+      "Amount": 153.69,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Walgreens",
+      "Description/Memo": "Transaction 23 - Monthly subscription",
+      "Transaction Date": "2023-11-08",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 22,
+      "standardized_vendor": "Walgreens"
+    },
+    {
+      "Amount": 396.24,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "AT&T",
+      "Description/Memo": "Transaction 15 - Client meeting",
+      "Transaction Date": "2023-12-02",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 14,
+      "standardized_vendor": "AT&T"
+    },
+    {
+      "Amount": 702.12,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Comcast",
+      "Description/Memo": "Transaction 11 - Business expense",
+      "Transaction Date": "2023-12-10",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 10,
+      "standardized_vendor": "Comcast"
+    },
+    {
+      "Amount": 662.21,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Salesforce",
+      "Description/Memo": "Transaction 41 - Office supplies",
+      "Transaction Date": "2023-12-23",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 40,
+      "standardized_vendor": "Salesforce"
+    },
+    {
+      "Amount": 399.59,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "[Vendor Missing]",
+      "Description/Memo": "Transaction 28 - Team lunch",
+      "Transaction Date": "2024-01-01",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 27,
+      "standardized_vendor": "[Vendor Missing]"
+    },
+    {
+      "Amount": -947.0,
+      "Category": "Other",
+      "Clean Vendor": "Google",
+      "Description/Memo": "Transaction 25 - Business expense",
+      "Transaction Date": "",
+      "category": "Other",
+      "source_row_id": 24,
+      "standardized_vendor": "Google"
+    },
+    {
+      "Amount": 0.0,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "[Vendor Missing]",
+      "Description/Memo": "Transaction 24 - Team lunch",
+      "Transaction Date": "",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 23,
+      "standardized_vendor": "[Vendor Missing]"
+    },
+    {
+      "Amount": 0.0,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Salesforce",
+      "Description/Memo": "Transaction 42 - Business expense",
+      "Transaction Date": "",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 41,
+      "standardized_vendor": "Salesforce"
+    },
+    {
+      "Amount": 885.57,
+      "Category": "Office Supplies & Equipment",
+      "Clean Vendor": "Airbnb",
+      "Description/Memo": "Transaction 8 - Office supplies",
+      "Transaction Date": "",
+      "category": "Office Supplies & Equipment",
+      "source_row_id": 7,
+      "standardized_vendor": "Airbnb"
+    }
+  ],
+  "insights": {
+    "ai_cost": 0.0,
+    "ai_requests": 0,
+    "processing_time": 0.017910003662109375,
+    "rows_processed": 50,
+    "vendor_transformations": []
+  },
+  "processing_time": 0.017910003662109375,
+  "request_id": "req-67f453d6",
+  "summary_report": {
+    "cache_performance": {
+      "cache_size": 0,
+      "category_hit_rate": 0,
+      "total_category_requests": 0,
+      "total_vendor_requests": 0,
+      "vendor_hit_rate": 0
+    },
+    "cost_analysis": {
+      "category_classification_cost": 0.0,
+      "total_cost": 0.0,
+      "transaction_intelligence_cost": 0.0,
+      "vendor_standardization_cost": 0.0
+    },
+    "performance_metrics": {
+      "category_classification_time": 0.0,
+      "total_time": 0.0,
+      "transaction_intelligence_time": 0.0,
+      "vendor_standardization_time": 0.0
+    },
+    "processing_summary": {
+      "cache_hit_rate": 0,
+      "category_classifications": 0,
+      "llm_calls": 0,
+      "total_transactions": 50,
+      "transaction_intelligence": 0,
+      "vendor_standardizations": 0
+    },
+    "quality_metrics": {
+      "average_category_confidence": 0,
+      "average_vendor_confidence": 0,
+      "category_classifications": 0,
+      "vendor_standardizations": 0
+    },
+    "schema_analysis": {
+      "confidence": 0.8,
+      "detected_type": "expense_ledger",
+      "signals": {
+        "expense_ledger": 0.8,
+        "gl_journal": 0.0,
+        "sales_ledger": 0.0
+      }
+    }
+  }
+}

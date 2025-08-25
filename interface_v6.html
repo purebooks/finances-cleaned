@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Financial Data Cleaner v6</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .main-content {
+            padding: 40px;
+        }
+
+        .upload-section {
+            background: #f8fafc;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .upload-section:hover {
+            border-color: #4f46e5;
+            background: #f1f5f9;
+        }
+
+        .upload-section.dragover {
+            border-color: #4f46e5;
+            background: #ddd6fe;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .upload-button {
+            background: #4f46e5;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .upload-button:hover {
+            background: #4338ca;
+        }
+
+        .file-info {
+            background: #ecfdf5;
+            border: 1px solid #10b981;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            display: none;
+        }
+
+        .config-section {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .config-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .config-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .config-item label {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .config-item select,
+        .config-item input {
+            padding: 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1em;
+        }
+
+        .process-button {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .process-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .process-button:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .results-section {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .status-message {
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .status-loading {
+            background: #fef3c7;
+            color: #92400e;
+            border: 1px solid #fbbf24;
+        }
+
+        .status-success {
+            background: #ecfdf5;
+            color: #065f46;
+            border: 1px solid #10b981;
+        }
+
+        .status-error {
+            background: #fef2f2;
+            color: #991b1b;
+            border: 1px solid #ef4444;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #4f46e5;
+        }
+
+        .stat-label {
+            color: #6b7280;
+            margin-top: 5px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .data-table th {
+            background: #f9fafb;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .source-badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        .source-rule {
+            background: #dbeafe;
+            color: #1d4ed8;
+        }
+
+        .source-llm {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .source-cache {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #4f46e5;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 AI Financial Data Cleaner</h1>
+            <p>Advanced LLM-powered transaction processing and categorization</p>
+        </div>
+
+        <div class="main-content">
+            <!-- Upload Section -->
+            <div class="upload-section" id="uploadSection">
+                <h2>📄 Upload Your Data</h2>
+                <p style="margin: 20px 0; color: #6b7280;">
+                    Upload CSV or JSON files with transaction data. Supports any column names.
+                </p>
+                <input type="file" id="fileInput" class="file-input" accept=".csv,.json">
+                <button onclick="triggerFileUpload()" class="upload-button">
+                    Choose File
+                </button>
+                <p style="margin-top: 15px; color: #6b7280; font-size: 0.9em;">
+                    Or drag and drop your file here
+                </p>
+            </div>
+
+            <!-- File Info -->
+            <div id="fileInfo" class="file-info"></div>
+
+            <!-- Configuration Section -->
+            <div class="config-section">
+                <h3>⚙️ Processing Configuration</h3>
+                <div class="config-grid">
+                    <div class="config-item">
+                        <label>AI Processing</label>
+                        <select id="enableAI">
+                            <option value="true">Enabled</option>
+                            <option value="false">Disabled</option>
+                        </select>
+                    </div>
+                    <div class="config-item">
+                        <label>Vendor Standardization</label>
+                        <select id="vendorStandardization">
+                            <option value="true">Enabled</option>
+                            <option value="false">Disabled</option>
+                        </select>
+                    </div>
+                    <div class="config-item">
+                        <label>Category Classification</label>
+                        <select id="categoryClassification">
+                            <option value="true">Enabled</option>
+                            <option value="false">Disabled</option>
+                        </select>
+                    </div>
+                    <div class="config-item">
+                        <label>Transaction Intelligence</label>
+                        <select id="transactionIntelligence">
+                            <option value="true">Enabled</option>
+                            <option value="false">Disabled</option>
+                        </select>
+                    </div>
+                    <div class="config-item">
+                        <label>Source Tracking</label>
+                        <select id="sourceTracking">
+                            <option value="true">Enabled</option>
+                            <option value="false">Disabled</option>
+                        </select>
+                    </div>
+                    <div class="config-item">
+                        <label>Confidence Threshold</label>
+                        <input type="number" id="confidenceThreshold" value="0.7" min="0" max="1" step="0.1">
+                    </div>
+                    <div class="config-item">
+                        <label>🚀 Parallel Processing</label>
+                        <select id="parallelProcessing">
+                            <option value="true">Enabled (Faster)</option>
+                            <option value="false">Sequential</option>
+                        </select>
+                    </div>
+                    <div class="config-item">
+                        <label>⚡ Max Workers</label>
+                        <select id="maxWorkers">
+                            <option value="2">2 Workers</option>
+                            <option value="3">3 Workers</option>
+                            <option value="4" selected>4 Workers (Recommended)</option>
+                            <option value="6">6 Workers</option>
+                            <option value="8">8 Workers</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+                         <!-- Process Buttons -->
+             <button id="processButton" class="process-button" onclick="processData()" disabled>
+                 🚀 Process Data with AI (Full Dataset)
+             </button>
+             
+             <button id="quickTestButton" class="process-button" onclick="processQuickTest()" disabled style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); margin-top: 10px;">
+                 ⚡ Quick Test (First 5 Records)
+             </button>
+
+            <!-- Results Section -->
+            <div id="resultsSection" class="results-section">
+                <div id="statusMessage" class="status-message"></div>
+                
+                <!-- Results Grid -->
+                <div id="resultsGrid" class="results-grid" style="display: none;">
+                    <div class="stat-card">
+                        <div id="totalTransactions" class="stat-value">0</div>
+                        <div class="stat-label">Total Transactions</div>
+                    </div>
+                    <div class="stat-card">
+                        <div id="llmCalls" class="stat-value">0</div>
+                        <div class="stat-label">LLM Calls</div>
+                    </div>
+                    <div class="stat-card">
+                        <div id="processingTime" class="stat-value">0s</div>
+                        <div class="stat-label">Processing Time</div>
+                    </div>
+                    <div class="stat-card">
+                        <div id="totalCost" class="stat-value">$0.000</div>
+                        <div class="stat-label">Total Cost</div>
+                    </div>
+                </div>
+
+                <!-- Data Table -->
+                <div id="dataTableContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const API_BASE_URL = 'https://ai-financial-cleaner-v5-pksi3xslca-uc.a.run.app';
+        let uploadedData = null;
+
+        // File upload handling
+        function triggerFileUpload() {
+            document.getElementById('fileInput').click();
+        }
+
+        document.getElementById('fileInput').addEventListener('change', handleFileUpload);
+
+        // Drag and drop handling
+        const uploadSection = document.getElementById('uploadSection');
+        
+        uploadSection.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadSection.classList.add('dragover');
+        });
+
+        uploadSection.addEventListener('dragleave', () => {
+            uploadSection.classList.remove('dragover');
+        });
+
+        uploadSection.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadSection.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFile(files[0]);
+            }
+        });
+
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                handleFile(file);
+            }
+        }
+
+        function handleFile(file) {
+            console.log('Processing file:', file.name);
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const fileExtension = file.name.split('.').pop().toLowerCase();
+                    
+                    if (fileExtension === 'json') {
+                        uploadedData = JSON.parse(e.target.result);
+                    } else if (fileExtension === 'csv') {
+                        uploadedData = parseCSV(e.target.result);
+                    } else {
+                        throw new Error('Unsupported file format. Please upload CSV or JSON.');
+                    }
+
+                    // Display file info
+                    const fileInfo = document.getElementById('fileInfo');
+                    const recordCount = Array.isArray(uploadedData) ? 
+                        uploadedData.length : 
+                        (uploadedData && typeof uploadedData === 'object' ? 
+                            Math.max(...Object.values(uploadedData).map(arr => Array.isArray(arr) ? arr.length : 1)) : 0);
+
+                    fileInfo.innerHTML = `
+                        <h4>✅ File Loaded Successfully</h4>
+                        <p><strong>File:</strong> ${file.name}</p>
+                        <p><strong>Size:</strong> ${(file.size / 1024).toFixed(2)} KB</p>
+                        <p><strong>Type:</strong> ${fileExtension.toUpperCase()}</p>
+                        <p><strong>Records:</strong> ${recordCount}</p>
+                        <p><strong>Columns:</strong> ${typeof uploadedData === 'object' ? Object.keys(uploadedData).join(', ') : 'N/A'}</p>
+                    `;
+                    fileInfo.style.display = 'block';
+
+                                         // Enable process buttons
+                     document.getElementById('processButton').disabled = false;
+                     document.getElementById('quickTestButton').disabled = false;
+
+                    console.log('File processed successfully:', uploadedData);
+                } catch (error) {
+                    showError('File processing error: ' + error.message);
+                    console.error('File processing error:', error);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function parseCSV(csvText) {
+            const lines = csvText.trim().split('\n');
+            if (lines.length < 2) {
+                throw new Error('CSV file must have at least a header and one data row');
+            }
+
+            const headers = lines[0].split(',').map(h => h.trim().replace(/"/g, ''));
+            const data = {};
+            
+            // Initialize columns
+            headers.forEach(header => {
+                data[header] = [];
+            });
+            
+            // Parse data rows
+            for (let i = 1; i < lines.length; i++) {
+                if (lines[i].trim()) {
+                    const values = lines[i].split(',').map(v => v.trim().replace(/"/g, ''));
+                    headers.forEach((header, index) => {
+                        let value = values[index] || '';
+                        
+                        // Try to convert numeric values
+                        if (header.toLowerCase().includes('amount') || 
+                            header.toLowerCase().includes('price') || 
+                            header.toLowerCase().includes('cost')) {
+                            const numericValue = parseFloat(value.replace(/[$,]/g, ''));
+                            if (!isNaN(numericValue)) {
+                                value = numericValue;
+                            }
+                        }
+                        
+                        data[header].push(value);
+                    });
+                }
+            }
+            
+            return data;
+        }
+
+                 async function processQuickTest() {
+             if (!uploadedData) {
+                 showError('Please upload a file first.');
+                 return;
+             }
+             
+             // Create a subset of data with first 5 records
+             const quickData = {};
+             Object.keys(uploadedData).forEach(key => {
+                 if (Array.isArray(uploadedData[key])) {
+                     quickData[key] = uploadedData[key].slice(0, 5);
+                 } else {
+                     quickData[key] = uploadedData[key];
+                 }
+             });
+             
+             await processDataInternal(quickData, 'quick');
+         }
+
+         async function processData() {
+             if (!uploadedData) {
+                 showError('Please upload a file first.');
+                 return;
+             }
+             
+             await processDataInternal(uploadedData, 'full');
+         }
+
+         async function processDataInternal(dataToProcess, mode) {
+
+                         // Show loading state with progress
+             const loadingMessage = mode === 'quick' ? 
+                 'Quick test processing 5 records... Should take 15-30 seconds.' :
+                 'Processing full dataset with advanced AI... This may take 2-3 minutes for real LLM processing.';
+             showLoading(loadingMessage);
+             
+             // Add progress counter
+             let progressCounter = 0;
+             const progressInterval = setInterval(() => {
+                 progressCounter += 5;
+                 const updateMessage = mode === 'quick' ? 
+                     `Quick test processing... ${progressCounter}s elapsed. Should take 15-30 seconds.` :
+                     `Processing full dataset... ${progressCounter}s elapsed. May take 2-3 minutes for ${Object.keys(dataToProcess)[0] ? dataToProcess[Object.keys(dataToProcess)[0]].length : 0} records.`;
+                 showLoading(updateMessage);
+             }, 5000);
+            
+                         // Disable buttons
+             const processButton = document.getElementById('processButton');
+             const quickButton = document.getElementById('quickTestButton');
+             processButton.disabled = true;
+             quickButton.disabled = true;
+             
+             const activeButton = mode === 'quick' ? quickButton : processButton;
+             activeButton.innerHTML = '<span class="loading-spinner"></span>Processing...';
+
+            try {
+                                                 // Prepare configuration
+                const config = {
+                    enable_ai: document.getElementById('enableAI').value === 'true',
+                    ai_vendor_enabled: document.getElementById('vendorStandardization').value === 'true',
+                    ai_category_enabled: document.getElementById('categoryClassification').value === 'true',
+                    enable_transaction_intelligence: document.getElementById('transactionIntelligence').value === 'true',
+                    enable_source_tracking: document.getElementById('sourceTracking').value === 'true',
+                    ai_confidence_threshold: parseFloat(document.getElementById('confidenceThreshold').value),
+                    enable_parallel_processing: document.getElementById('parallelProcessing').value === 'true',
+                    max_workers: parseInt(document.getElementById('maxWorkers').value),
+                    force_llm_for_testing: true  // Force some LLM calls for debugging
+                };
+
+                                 // Prepare request
+                 const requestData = {
+                     data: dataToProcess,
+                     config: config
+                 };
+
+                                 console.log('Sending request to API:', requestData);
+                 console.log('Data structure check:', {
+                     dataType: typeof requestData.data,
+                     dataKeys: Object.keys(requestData.data || {}),
+                     firstFewVendors: requestData.data?.['Vendor Name']?.slice(0, 5) || 'No vendors found',
+                     configKeys: Object.keys(requestData.config || {})
+                 });
+
+                                 // Make API call with timeout
+                 const controller = new AbortController();
+                 const timeoutId = setTimeout(() => controller.abort(), 120000); // 2 minute timeout
+
+                 const response = await fetch(`${API_BASE_URL}/process`, {
+                     method: 'POST',
+                     headers: {
+                         'Content-Type': 'application/json',
+                     },
+                     body: JSON.stringify(requestData),
+                     signal: controller.signal
+                 });
+
+                 clearTimeout(timeoutId);
+
+                if (!response.ok) {
+                    throw new Error(`API Error: ${response.status} ${response.statusText}`);
+                }
+
+                const data = await response.json();
+                console.log('API response:', data);
+
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+
+                // Display results
+                displayResults(data);
+
+            } catch (error) {
+                console.error('Processing error:', error);
+                showError('Processing failed: ' + error.message);
+                         } finally {
+                 // Clear progress interval
+                 clearInterval(progressInterval);
+                 
+                 // Re-enable buttons
+                 processButton.disabled = false;
+                 quickButton.disabled = false;
+                 processButton.innerHTML = '🚀 Process Data with AI (Full Dataset)';
+                 quickButton.innerHTML = '⚡ Quick Test (First 5 Records)';
+             }
+        }
+
+        function displayResults(data) {
+            // Show success message
+            showSuccess(`Processing complete! Processed ${data.cleaned_data?.length || 0} transactions in ${data.processing_time?.toFixed(2) || 0}s`);
+
+            // Update statistics
+            const summary = data.summary_report?.processing_summary || {};
+            const costAnalysis = data.summary_report?.cost_analysis || {};
+
+            document.getElementById('totalTransactions').textContent = summary.total_transactions || 0;
+            document.getElementById('llmCalls').textContent = summary.llm_calls || 0;
+            document.getElementById('processingTime').textContent = `${data.processing_time?.toFixed(2) || 0}s`;
+            document.getElementById('totalCost').textContent = `$${(costAnalysis.total_cost || 0).toFixed(3)}`;
+
+            // Show results grid
+            document.getElementById('resultsGrid').style.display = 'grid';
+
+            // Display data table
+            if (data.cleaned_data && data.cleaned_data.length > 0) {
+                displayDataTable(data.cleaned_data);
+            }
+        }
+
+        function displayDataTable(data) {
+            const container = document.getElementById('dataTableContainer');
+            
+            if (!data || data.length === 0) {
+                container.innerHTML = '<p>No data to display.</p>';
+                return;
+            }
+
+            const headers = Object.keys(data[0]);
+            let tableHTML = '<table class="data-table"><thead><tr>';
+            
+            headers.forEach(header => {
+                tableHTML += `<th>${header}</th>`;
+            });
+            tableHTML += '</tr></thead><tbody>';
+
+            data.forEach(row => {
+                tableHTML += '<tr>';
+                headers.forEach(header => {
+                    let value = row[header];
+                    
+                    // Add source badges
+                    if (header.includes('source') && value) {
+                        const badgeClass = value === 'rule_based' ? 'source-rule' : 
+                                         value === 'cache' ? 'source-cache' : 'source-llm';
+                        value = `${value}<span class="source-badge ${badgeClass}">${value}</span>`;
+                    }
+                    
+                    tableHTML += `<td>${value}</td>`;
+                });
+                tableHTML += '</tr>';
+            });
+
+            tableHTML += '</tbody></table>';
+            container.innerHTML = tableHTML;
+        }
+
+        function showLoading(message) {
+            const statusEl = document.getElementById('statusMessage');
+            statusEl.className = 'status-message status-loading';
+            statusEl.innerHTML = `<span class="loading-spinner"></span>${message}`;
+            document.getElementById('resultsSection').style.display = 'block';
+            document.getElementById('resultsGrid').style.display = 'none';
+        }
+
+        function showSuccess(message) {
+            const statusEl = document.getElementById('statusMessage');
+            statusEl.className = 'status-message status-success';
+            statusEl.innerHTML = `✅ ${message}`;
+        }
+
+        function showError(message) {
+            const statusEl = document.getElementById('statusMessage');
+            statusEl.className = 'status-message status-error';
+            statusEl.innerHTML = `❌ ${message}`;
+            document.getElementById('resultsSection').style.display = 'block';
+            document.getElementById('resultsGrid').style.display = 'none';
+        }
+    </script>
+</body>
+</html> 

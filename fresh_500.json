@@ -1,0 +1,3004 @@
+{
+  "data": [
+    {
+      "Date": "2023-10-07",
+      "Merchant": "Microsoft #123456",
+      "Amount": 797.46,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "07 Oct 2023",
+      "Merchant": "TST* Dropbox",
+      "Amount": 396.0,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "21-04-2023",
+      "Merchant": "Budget #123456",
+      "Amount": 884.41,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023-10-02",
+      "Merchant": "Salesforce",
+      "Amount": 73.45,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023-02-05",
+      "Merchant": "Enterprise Rent-A-Car",
+      "Amount": 2348.3,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "07/06/2023",
+      "Merchant": "QuantaCore LLC",
+      "Amount": 229.29,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "05/06/2023",
+      "Merchant": "TST* Pizza Hut",
+      "Amount": 614.83,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "17-01-2023",
+      "Merchant": "Starbucks ONLINE",
+      "Amount": 2647.21,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "22 Jul 2023",
+      "Merchant": "Delta Airlines",
+      "Amount": 855.09,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "24-07-2023",
+      "Merchant": "Southwest Airlines",
+      "Amount": 928.41,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "15 Dec 2023",
+      "Merchant": "NimblyX *STORE 001",
+      "Amount": 2163.09,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023/02/28",
+      "Merchant": "Airbnb",
+      "Amount": -482.45,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "09/14/2023",
+      "Merchant": "SQ *CobaltBridge *STORE 001",
+      "Amount": 1007.52,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023/10/04",
+      "Merchant": "ArcadiaWorks",
+      "Amount": 40.76,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023/05/04",
+      "Merchant": "SQ *Chase Bank",
+      "Amount": 2675.48,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023/09/01",
+      "Merchant": "Chase Bank",
+      "Amount": 470.05,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "29-11-2023",
+      "Merchant": "Airbnb #123456",
+      "Amount": 854.29,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023-01-04",
+      "Merchant": "PAYPAL *NeoPeak *STORE 001",
+      "Amount": 600.46,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023/03/09",
+      "Merchant": "Adobe #123456",
+      "Amount": 70.66,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023-08-28",
+      "Merchant": "Wells Fargo *STORE 001",
+      "Amount": 729.82,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "04-04-2023",
+      "Merchant": "Costco #123456",
+      "Amount": 46.0,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023-10-04",
+      "Merchant": "Apple",
+      "Amount": 382.82,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023-07-14",
+      "Merchant": "SQ *OrionEdge Systems",
+      "Amount": 2377.26,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "03/21/2023",
+      "Merchant": "TST* Bank of America",
+      "Amount": 1270.91,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "2023/09/02",
+      "Merchant": "Amazon",
+      "Amount": 854.8,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "10/19/2023",
+      "Merchant": "PAYPAL *American Express *STORE 001",
+      "Amount": 826.13,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "06/10/2023",
+      "Merchant": "Safeway",
+      "Amount": 145.82,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "2023/11/15",
+      "Merchant": "Pizza Hut",
+      "Amount": -1413.4,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "22 Mar 2023",
+      "Merchant": "Delta Airlines ONLINE",
+      "Amount": 14.47,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "10-03-2023",
+      "Merchant": "Domino's",
+      "Amount": 409.13,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023/05/16",
+      "Merchant": "SQ *SolaraNine",
+      "Amount": 862.75,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "23-11-2023",
+      "Merchant": "SQ *Amazon",
+      "Amount": 8.5,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "2023/03/18",
+      "Merchant": "Comcast",
+      "Amount": 11.33,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "21-01-2023",
+      "Merchant": "Tridelic",
+      "Amount": 9.42,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "05/02/2023",
+      "Merchant": "TST* Pizza Hut",
+      "Amount": 280.57,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "08-05-2023",
+      "Merchant": "SQ *ZetaFlux Labs",
+      "Amount": 267.92,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "29-06-2023",
+      "Merchant": "QuantaCore LLC.COM",
+      "Amount": 41.4,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023/07/24",
+      "Merchant": "SQ *Pizza Hut *STORE 001",
+      "Amount": 1167.17,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "10 Jun 2023",
+      "Merchant": "QuantaCore LLC ONLINE",
+      "Amount": 8.82,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "12/18/2023",
+      "Merchant": "PAYPAL *Hilton",
+      "Amount": 10.05,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "2023/06/03",
+      "Merchant": "Pizza Hut",
+      "Amount": 823.05,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "12/13/2023",
+      "Merchant": "Target #123456",
+      "Amount": 44.41,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "19 Sep 2023",
+      "Merchant": "Google ONLINE",
+      "Amount": 353.34,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "01-05-2023",
+      "Merchant": "Enterprise Rent-A-Car",
+      "Amount": 113.26,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023/08/01",
+      "Merchant": "PAYPAL *NimblyX",
+      "Amount": 652.9,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "08/06/2023",
+      "Merchant": "Staples *STORE 001",
+      "Amount": 1385.17,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "2023/08/26",
+      "Merchant": "SolaraNine",
+      "Amount": 2171.7,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "08/17/2023",
+      "Merchant": "NeoPeak",
+      "Amount": 425.76,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "01-01-2024",
+      "Merchant": "Southwest Airlines.COM",
+      "Amount": 686.94,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023-04-20",
+      "Merchant": "Target #123456",
+      "Amount": 43.9,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023-12-23",
+      "Merchant": "AT&T.COM",
+      "Amount": 275.48,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023/10/07",
+      "Merchant": "SQ *Home Depot",
+      "Amount": 2390.48,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "26 Mar 2023",
+      "Merchant": "Budget ONLINE",
+      "Amount": 785.29,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "11 Mar 2023",
+      "Merchant": "SQ *SolaraNine",
+      "Amount": 639.51,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "04-08-2023",
+      "Merchant": "Staples",
+      "Amount": 139.11,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "01/16/2023",
+      "Merchant": "SQ *AT&T *STORE 001",
+      "Amount": -1421.48,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "25-12-2023",
+      "Merchant": "PAYPAL *Tridelic",
+      "Amount": 13.24,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "2023/02/25",
+      "Merchant": "Airbnb",
+      "Amount": 1369.74,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "10/31/2023",
+      "Merchant": "Tridelic",
+      "Amount": 278.18,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "22-01-2023",
+      "Merchant": "Walmart",
+      "Amount": 14.14,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "10-08-2023",
+      "Merchant": "Apple",
+      "Amount": 2391.24,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "05 Sep 2023",
+      "Merchant": "TST* CVS Pharmacy",
+      "Amount": 69.59,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023/08/26",
+      "Merchant": "PAYPAL *Tridelic",
+      "Amount": 12.13,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "02-11-2023",
+      "Merchant": "Chase Bank #123456",
+      "Amount": 140.53,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "27 Nov 2023",
+      "Merchant": "TST* Lyft",
+      "Amount": 469.05,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023/10/11",
+      "Merchant": "SQ *QuantaCore LLC",
+      "Amount": 70.56,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "09-04-2023",
+      "Merchant": "Comcast",
+      "Amount": 63.35,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "02-11-2023",
+      "Merchant": "TST* Uber",
+      "Amount": 929.76,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023/01/28",
+      "Merchant": "PAYPAL *ArcadiaWorks",
+      "Amount": 914.7,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "29 Aug 2023",
+      "Merchant": "Zoom",
+      "Amount": 14.44,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023-12-18",
+      "Merchant": "SQ *Amazon *STORE 001",
+      "Amount": 245.04,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "2023/11/02",
+      "Merchant": "Hilton #123456",
+      "Amount": 13.22,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023/10/19",
+      "Merchant": "KiteWave",
+      "Amount": 2515.07,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023/03/30",
+      "Merchant": "Salesforce #123456",
+      "Amount": 70.49,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "25 May 2023",
+      "Merchant": "Safeway",
+      "Amount": 57.82,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023/02/28",
+      "Merchant": "Hertz",
+      "Amount": 813.18,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "19-10-2023",
+      "Merchant": "Budget #123456",
+      "Amount": 1177.85,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023-11-03",
+      "Merchant": "Walmart",
+      "Amount": 440.55,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "01/21/2023",
+      "Merchant": "PAYPAL *Airbnb *STORE 001",
+      "Amount": 1314.61,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "29-08-2023",
+      "Merchant": "Walgreens.COM",
+      "Amount": 815.5,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023/07/25",
+      "Merchant": "PAYPAL *Pizza Hut",
+      "Amount": 904.2,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023/01/01",
+      "Merchant": "PAYPAL *Target",
+      "Amount": 272.54,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "15-04-2023",
+      "Merchant": "Lyft",
+      "Amount": 373.15,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "05/03/2023",
+      "Merchant": "NeoPeak",
+      "Amount": 11.41,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "20 Mar 2023",
+      "Merchant": "Comcast *STORE 001",
+      "Amount": 407.85,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "07/16/2023",
+      "Merchant": "Budget",
+      "Amount": 331.97,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "02-01-2023",
+      "Merchant": "ArcadiaWorks",
+      "Amount": 145.81,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "2023/06/20",
+      "Merchant": "Tridelic",
+      "Amount": 23.37,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023-07-30",
+      "Merchant": "Target",
+      "Amount": 46.48,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "01/19/2023",
+      "Merchant": "Staples",
+      "Amount": 2561.73,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "08 Feb 2023",
+      "Merchant": "SQ *NeoPeak #123456",
+      "Amount": 272.99,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "12 Jun 2023",
+      "Merchant": "Whole Foods",
+      "Amount": 2578.15,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023-02-20",
+      "Merchant": "Southwest Airlines",
+      "Amount": 48.87,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023/05/06",
+      "Merchant": "Walmart *STORE 001",
+      "Amount": 64.39,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "10/26/2023",
+      "Merchant": "PAYPAL *Uber",
+      "Amount": 254.47,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "10/07/2023",
+      "Merchant": "Hertz",
+      "Amount": 1236.97,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "12 Apr 2023",
+      "Merchant": "Home Depot.COM",
+      "Amount": 837.55,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "04 Dec 2023",
+      "Merchant": "Staples",
+      "Amount": 849.81,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "2023/04/28",
+      "Merchant": "Amazon",
+      "Amount": 2747.05,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "2023-03-12",
+      "Merchant": "Lyft",
+      "Amount": 978.08,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "08/01/2023",
+      "Merchant": "SQ *Walgreens",
+      "Amount": 14.59,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "12 May 2023",
+      "Merchant": "AT&T",
+      "Amount": 489.33,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "13 Dec 2023",
+      "Merchant": "Costco",
+      "Amount": 11.59,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "15-07-2023",
+      "Merchant": "TST* Whole Foods ONLINE",
+      "Amount": 800.91,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "26-08-2023",
+      "Merchant": "TST* Wells Fargo",
+      "Amount": 541.51,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "10/03/2023",
+      "Merchant": "Adobe",
+      "Amount": 318.2,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "21 Mar 2023",
+      "Merchant": "Pizza Hut",
+      "Amount": 424.77,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "08/16/2023",
+      "Merchant": "Tridelic",
+      "Amount": 10.56,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "04 Mar 2023",
+      "Merchant": "Best Buy",
+      "Amount": 111.99,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023/03/06",
+      "Merchant": "Domino's",
+      "Amount": 10.85,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023-11-02",
+      "Merchant": "PAYPAL *Comcast",
+      "Amount": 43.16,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "01/14/2023",
+      "Merchant": "NimblyX",
+      "Amount": 1127.94,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023-02-28",
+      "Merchant": "Southwest Airlines ONLINE",
+      "Amount": 8.87,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023/12/04",
+      "Merchant": "Best Buy #123456",
+      "Amount": 509.95,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "2023-08-16",
+      "Merchant": "SQ *Microsoft",
+      "Amount": 259.36,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023/11/02",
+      "Merchant": "SQ *Netflix",
+      "Amount": 599.47,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "10/10/2023",
+      "Merchant": "Airbnb",
+      "Amount": 14.36,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "07-08-2023",
+      "Merchant": "United Airlines",
+      "Amount": 239.46,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "19-02-2023",
+      "Merchant": "Netflix",
+      "Amount": 14.28,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "07 Dec 2023",
+      "Merchant": "Marriott",
+      "Amount": 660.78,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "25-02-2023",
+      "Merchant": "Tridelic #123456",
+      "Amount": 24.87,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "2023/11/15",
+      "Merchant": "Budget",
+      "Amount": 2494.81,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "23-06-2023",
+      "Merchant": "Pizza Hut #123456",
+      "Amount": 71.34,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023/02/16",
+      "Merchant": "Netflix",
+      "Amount": 25.47,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023-11-02",
+      "Merchant": "Bank of America",
+      "Amount": 857.73,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023/04/21",
+      "Merchant": "PAYPAL *Chipotle.COM",
+      "Amount": 371.17,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023/07/22",
+      "Merchant": "TST* Slack",
+      "Amount": -457.16,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "04 Jan 2023",
+      "Merchant": "Walmart",
+      "Amount": 1158.32,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023-08-12",
+      "Merchant": "Staples ONLINE",
+      "Amount": 12.59,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023-07-27",
+      "Merchant": "CobaltBridge",
+      "Amount": 943.5,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "05 May 2023",
+      "Merchant": "Chipotle",
+      "Amount": 113.06,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023-09-19",
+      "Merchant": "Whole Foods",
+      "Amount": 43.22,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "16-03-2023",
+      "Merchant": "CobaltBridge",
+      "Amount": 815.67,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023/08/26",
+      "Merchant": "Netflix",
+      "Amount": 26.97,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "19 Mar 2023",
+      "Merchant": "Hilton",
+      "Amount": 143.1,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023-08-20",
+      "Merchant": "Starbucks *STORE 001",
+      "Amount": 129.28,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "22 Jan 2023",
+      "Merchant": "PAYPAL *Enterprise Rent-A-Car",
+      "Amount": 420.24,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023-06-25",
+      "Merchant": "Wells Fargo",
+      "Amount": 316.84,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "25 May 2023",
+      "Merchant": "Walgreens",
+      "Amount": 530.41,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "17-07-2023",
+      "Merchant": "TST* Tridelic",
+      "Amount": 12.33,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "14-03-2023",
+      "Merchant": "Pizza Hut",
+      "Amount": 22.56,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "06/18/2023",
+      "Merchant": "TST* KiteWave",
+      "Amount": 68.44,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "09/06/2023",
+      "Merchant": "CVS Pharmacy ONLINE",
+      "Amount": 26.96,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "20-01-2023",
+      "Merchant": "PAYPAL *NimblyX",
+      "Amount": 479.1,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "23 Jan 2023",
+      "Merchant": "TST* Netflix",
+      "Amount": 1401.0,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "10/01/2023",
+      "Merchant": "Southwest Airlines",
+      "Amount": 1343.2,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "2023/09/15",
+      "Merchant": "NeoPeak.COM",
+      "Amount": 388.69,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023-10-11",
+      "Merchant": "OrionEdge Systems ONLINE",
+      "Amount": 10.41,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "19-08-2023",
+      "Merchant": "TST* Spotify.COM",
+      "Amount": 14.73,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "20-02-2023",
+      "Merchant": "Whole Foods *STORE 001",
+      "Amount": 118.34,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "2023/08/18",
+      "Merchant": "Enterprise Rent-A-Car",
+      "Amount": 2184.51,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "05/28/2023",
+      "Merchant": "PAYPAL *ZetaFlux Labs",
+      "Amount": 935.0,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "2023/09/13",
+      "Merchant": "Southwest Airlines",
+      "Amount": 312.45,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023-04-06",
+      "Merchant": "PAYPAL *Hilton *STORE 001",
+      "Amount": 564.81,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "2023-08-29",
+      "Merchant": "Verizon",
+      "Amount": 442.4,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023-11-18",
+      "Merchant": "ArcadiaWorks",
+      "Amount": 12.39,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "23 Dec 2023",
+      "Merchant": "Home Depot",
+      "Amount": 26.1,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "2023-04-13",
+      "Merchant": "QuantaCore LLC",
+      "Amount": -9.37,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "08-04-2023",
+      "Merchant": "SolaraNine",
+      "Amount": 333.01,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "24 Jul 2023",
+      "Merchant": "ZetaFlux Labs",
+      "Amount": 14.16,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023-08-06",
+      "Merchant": "Uber",
+      "Amount": 1257.23,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023/08/17",
+      "Merchant": "Uber",
+      "Amount": 12.32,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023-01-30",
+      "Merchant": "Walgreens ONLINE",
+      "Amount": 679.21,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "27-11-2023",
+      "Merchant": "Spotify.COM",
+      "Amount": 8.87,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "10/21/2023",
+      "Merchant": "PAYPAL *Hilton",
+      "Amount": 124.05,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "02-03-2023",
+      "Merchant": "PAYPAL *Domino's #123456",
+      "Amount": 361.53,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "08/20/2023",
+      "Merchant": "Delta Airlines.COM",
+      "Amount": 40.35,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "03/22/2023",
+      "Merchant": "CobaltBridge",
+      "Amount": 440.84,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "2023/10/11",
+      "Merchant": "Slack",
+      "Amount": -49.46,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "2023/07/29",
+      "Merchant": "PAYPAL *Comcast.COM",
+      "Amount": 964.88,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023/10/10",
+      "Merchant": "Target",
+      "Amount": 749.12,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "06/05/2023",
+      "Merchant": "NimblyX",
+      "Amount": 10.98,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "2023/11/22",
+      "Merchant": "United Airlines",
+      "Amount": 74.23,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "2023/12/04",
+      "Merchant": "Walmart #123456",
+      "Amount": 669.18,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "2023-11-13",
+      "Merchant": "PAYPAL *Tridelic ONLINE",
+      "Amount": 680.58,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023-08-21",
+      "Merchant": "SQ *SolaraNine",
+      "Amount": 1365.26,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "26 Jun 2023",
+      "Merchant": "Safeway #123456",
+      "Amount": 142.99,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "2023-03-14",
+      "Merchant": "SolaraNine",
+      "Amount": 318.9,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "23-10-2023",
+      "Merchant": "Staples",
+      "Amount": 2745.7,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023/07/21",
+      "Merchant": "NeoPeak",
+      "Amount": 67.2,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "11 Dec 2023",
+      "Merchant": "OrionEdge Systems ONLINE",
+      "Amount": 370.14,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "24 Jan 2023",
+      "Merchant": "Salesforce",
+      "Amount": 868.97,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023/11/16",
+      "Merchant": "Lyft.COM",
+      "Amount": 428.85,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "03/15/2023",
+      "Merchant": "Salesforce",
+      "Amount": 131.24,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "09/21/2023",
+      "Merchant": "TST* Adobe",
+      "Amount": 361.71,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "2023/09/18",
+      "Merchant": "TST* CobaltBridge",
+      "Amount": 69.14,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023-06-07",
+      "Merchant": "Walmart ONLINE",
+      "Amount": 657.96,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "09/03/2023",
+      "Merchant": "Domino's",
+      "Amount": 542.6,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "12/20/2023",
+      "Merchant": "TST* Southwest Airlines *STORE 001",
+      "Amount": 339.52,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "09/23/2023",
+      "Merchant": "Chipotle",
+      "Amount": 967.2,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "07-10-2023",
+      "Merchant": "NeoPeak",
+      "Amount": 23.46,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "05/28/2023",
+      "Merchant": "Lyft ONLINE",
+      "Amount": 51.53,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023/12/13",
+      "Merchant": "Home Depot",
+      "Amount": 843.89,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2024-01-01",
+      "Merchant": "KiteWave",
+      "Amount": -1117.43,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "2023/11/12",
+      "Merchant": "ArcadiaWorks ONLINE",
+      "Amount": 460.95,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023-08-30",
+      "Merchant": "Pizza Hut #123456",
+      "Amount": 8.79,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "28-05-2023",
+      "Merchant": "Comcast.COM",
+      "Amount": 375.86,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "19 Jan 2023",
+      "Merchant": "Dropbox *STORE 001",
+      "Amount": 23.16,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023/10/06",
+      "Merchant": "Enterprise Rent-A-Car *STORE 001",
+      "Amount": 120.66,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "23-08-2023",
+      "Merchant": "NimblyX",
+      "Amount": 49.72,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "24 Nov 2023",
+      "Merchant": "Costco",
+      "Amount": 1134.94,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "14 May 2023",
+      "Merchant": "Dropbox #123456",
+      "Amount": 340.59,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "07/04/2023",
+      "Merchant": "Budget",
+      "Amount": 925.23,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023-06-09",
+      "Merchant": "Bank of America",
+      "Amount": 490.59,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "2023/08/01",
+      "Merchant": "PAYPAL *United Airlines",
+      "Amount": 386.35,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023/08/17",
+      "Merchant": "OrionEdge Systems",
+      "Amount": 657.05,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "2023/06/17",
+      "Merchant": "TST* Hilton",
+      "Amount": 46.49,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023/03/09",
+      "Merchant": "Delta Airlines",
+      "Amount": 428.21,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "01/02/2023",
+      "Merchant": "Amazon",
+      "Amount": 71.75,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023-08-30",
+      "Merchant": "Home Depot",
+      "Amount": 11.29,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "15 Jul 2023",
+      "Merchant": "Zoom",
+      "Amount": 848.93,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "09/28/2023",
+      "Merchant": "Pizza Hut ONLINE",
+      "Amount": 11.74,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "04/28/2023",
+      "Merchant": "ZetaFlux Labs",
+      "Amount": 917.5,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "01/09/2023",
+      "Merchant": "TST* Budget",
+      "Amount": 10.92,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "25 Jul 2023",
+      "Merchant": "TST* Airbnb",
+      "Amount": 2118.28,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "06/14/2023",
+      "Merchant": "SQ *Amazon ONLINE",
+      "Amount": 608.26,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "25-01-2023",
+      "Merchant": "SQ *SolaraNine #123456",
+      "Amount": 785.2,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "08/31/2023",
+      "Merchant": "CobaltBridge",
+      "Amount": 64.76,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "09/29/2023",
+      "Merchant": "Netflix",
+      "Amount": 423.93,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023-04-08",
+      "Merchant": "Delta Airlines.COM",
+      "Amount": 2355.24,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "2023/12/10",
+      "Merchant": "Airbnb",
+      "Amount": 49.66,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "02 Mar 2023",
+      "Merchant": "Costco",
+      "Amount": 51.47,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "29-11-2023",
+      "Merchant": "Delta Airlines ONLINE",
+      "Amount": 1168.65,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "06/13/2023",
+      "Merchant": "American Express",
+      "Amount": 1430.49,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "24 Oct 2023",
+      "Merchant": "Adobe #123456",
+      "Amount": 9.27,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "22-06-2023",
+      "Merchant": "TST* Costco",
+      "Amount": 365.08,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "09/08/2023",
+      "Merchant": "NeoPeak",
+      "Amount": 116.2,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "11/19/2023",
+      "Merchant": "Apple",
+      "Amount": 1064.89,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "05 Sep 2023",
+      "Merchant": "SQ *Google",
+      "Amount": 615.32,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "24 Dec 2023",
+      "Merchant": "Comcast ONLINE",
+      "Amount": -497.69,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "10-02-2023",
+      "Merchant": "Salesforce ONLINE",
+      "Amount": 2343.01,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023-01-17",
+      "Merchant": "Southwest Airlines *STORE 001",
+      "Amount": 855.16,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "11-08-2023",
+      "Merchant": "Comcast",
+      "Amount": 816.17,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "17-12-2023",
+      "Merchant": "TST* ZetaFlux Labs",
+      "Amount": 334.92,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "09-02-2023",
+      "Merchant": "PAYPAL *Target",
+      "Amount": 1370.26,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "2023-03-13",
+      "Merchant": "Hilton",
+      "Amount": 413.35,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "2023-06-17",
+      "Merchant": "PAYPAL *CVS Pharmacy",
+      "Amount": 1292.7,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "05 Dec 2023",
+      "Merchant": "NeoPeak",
+      "Amount": 240.63,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "11/21/2023",
+      "Merchant": "ArcadiaWorks",
+      "Amount": 12.09,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "06 Apr 2023",
+      "Merchant": "SQ *Salesforce",
+      "Amount": 1163.66,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "16 Jun 2023",
+      "Merchant": "American Express ONLINE",
+      "Amount": 382.18,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023/10/20",
+      "Merchant": "Staples",
+      "Amount": 488.25,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "03 Jun 2023",
+      "Merchant": "SQ *Spotify #123456",
+      "Amount": 11.69,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023-06-05",
+      "Merchant": "Southwest Airlines",
+      "Amount": 536.93,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023/11/30",
+      "Merchant": "Chipotle",
+      "Amount": 341.79,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "30 May 2023",
+      "Merchant": "Airbnb ONLINE",
+      "Amount": 27.06,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "10/07/2023",
+      "Merchant": "Budget",
+      "Amount": 14.67,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "29 Jul 2023",
+      "Merchant": "NeoPeak ONLINE",
+      "Amount": 2591.73,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "03 Nov 2023",
+      "Merchant": "PAYPAL *Southwest Airlines",
+      "Amount": 1203.87,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023-11-01",
+      "Merchant": "Safeway",
+      "Amount": 136.8,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023-02-24",
+      "Merchant": "TST* CobaltBridge.COM",
+      "Amount": 1186.85,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "20 Jul 2023",
+      "Merchant": "American Express",
+      "Amount": 925.87,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "28-06-2023",
+      "Merchant": "Microsoft *STORE 001",
+      "Amount": 14.28,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "2023-06-13",
+      "Merchant": "Delta Airlines",
+      "Amount": 12.75,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "2023/05/05",
+      "Merchant": "SQ *Slack",
+      "Amount": 812.32,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "06 Apr 2023",
+      "Merchant": "Costco",
+      "Amount": 49.56,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "16-04-2023",
+      "Merchant": "Chipotle",
+      "Amount": 237.46,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "24-11-2023",
+      "Merchant": "SQ *AT&T *STORE 001",
+      "Amount": 70.69,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023/06/02",
+      "Merchant": "SQ *Marriott",
+      "Amount": 532.85,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "11/02/2023",
+      "Merchant": "SQ *Target ONLINE",
+      "Amount": 808.01,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "27 Mar 2023",
+      "Merchant": "Chase Bank",
+      "Amount": 841.53,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "03/11/2023",
+      "Merchant": "Target",
+      "Amount": -2346.39,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "09/08/2023",
+      "Merchant": "SolaraNine",
+      "Amount": 350.52,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023/09/11",
+      "Merchant": "SQ *United Airlines ONLINE",
+      "Amount": 25.75,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023/08/14",
+      "Merchant": "Budget",
+      "Amount": 130.63,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "19-08-2023",
+      "Merchant": "QuantaCore LLC",
+      "Amount": 42.74,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "29-10-2023",
+      "Merchant": "QuantaCore LLC",
+      "Amount": 1366.96,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023/05/24",
+      "Merchant": "Zoom",
+      "Amount": 1084.76,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "02/18/2023",
+      "Merchant": "SQ *Enterprise Rent-A-Car",
+      "Amount": 498.73,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "07 May 2023",
+      "Merchant": "ArcadiaWorks #123456",
+      "Amount": 40.67,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "17 Feb 2023",
+      "Merchant": "SQ *Starbucks",
+      "Amount": 13.51,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "17 Feb 2023",
+      "Merchant": "Best Buy",
+      "Amount": 502.7,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "26-05-2023",
+      "Merchant": "SolaraNine",
+      "Amount": 2238.21,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "2023-08-24",
+      "Merchant": "Chase Bank",
+      "Amount": 1080.65,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "29-11-2023",
+      "Merchant": "NimblyX.COM",
+      "Amount": 52.27,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "22-07-2023",
+      "Merchant": "SQ *ArcadiaWorks ONLINE",
+      "Amount": 835.52,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "15 Dec 2023",
+      "Merchant": "Dropbox.COM",
+      "Amount": 11.56,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "28 Apr 2023",
+      "Merchant": "Costco",
+      "Amount": 259.95,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "03/10/2023",
+      "Merchant": "SQ *Salesforce",
+      "Amount": 22.91,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023/07/30",
+      "Merchant": "Google ONLINE",
+      "Amount": 827.49,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "08-08-2023",
+      "Merchant": "QuantaCore LLC *STORE 001",
+      "Amount": 631.67,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "2023-12-20",
+      "Merchant": "TST* Domino's",
+      "Amount": 934.66,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "03 May 2023",
+      "Merchant": "Airbnb",
+      "Amount": 70.2,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "19 Oct 2023",
+      "Merchant": "Chase Bank *STORE 001",
+      "Amount": 145.79,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "08-01-2023",
+      "Merchant": "Uber",
+      "Amount": 1089.87,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "01 Aug 2023",
+      "Merchant": "Amazon",
+      "Amount": 69.84,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023/03/21",
+      "Merchant": "AT&T *STORE 001",
+      "Amount": 58.76,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "2023-05-03",
+      "Merchant": "Starbucks",
+      "Amount": 648.24,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023-03-31",
+      "Merchant": "TST* CVS Pharmacy",
+      "Amount": 70.6,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "07/10/2023",
+      "Merchant": "SQ *Google",
+      "Amount": 1370.94,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "2023-10-23",
+      "Merchant": "Slack.COM",
+      "Amount": 67.73,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023-12-12",
+      "Merchant": "TST* Best Buy #123456",
+      "Amount": 72.76,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023/01/19",
+      "Merchant": "PAYPAL *Google.COM",
+      "Amount": 124.47,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023/03/03",
+      "Merchant": "Southwest Airlines",
+      "Amount": 73.83,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "09-06-2023",
+      "Merchant": "Verizon",
+      "Amount": 14.46,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "30 Oct 2023",
+      "Merchant": "Google ONLINE",
+      "Amount": 938.76,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023-11-22",
+      "Merchant": "AT&T *STORE 001",
+      "Amount": 210.56,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "02 May 2023",
+      "Merchant": "Pizza Hut",
+      "Amount": 59.26,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "10 Jul 2023",
+      "Merchant": "NimblyX #123456",
+      "Amount": 2464.52,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "30-05-2023",
+      "Merchant": "SQ *American Express *STORE 001",
+      "Amount": 257.62,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "04/14/2023",
+      "Merchant": "KiteWave",
+      "Amount": 127.17,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "17 Apr 2023",
+      "Merchant": "Spotify",
+      "Amount": 13.13,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "06/17/2023",
+      "Merchant": "TST* Slack",
+      "Amount": -958.91,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "27 Jul 2023",
+      "Merchant": "Home Depot ONLINE",
+      "Amount": 73.71,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "03/08/2023",
+      "Merchant": "Salesforce *STORE 001",
+      "Amount": 10.98,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "12 Apr 2023",
+      "Merchant": "Starbucks ONLINE",
+      "Amount": 2137.62,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "15 Jul 2023",
+      "Merchant": "SQ *Costco.COM",
+      "Amount": 2614.96,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "28-11-2023",
+      "Merchant": "SQ *Uber",
+      "Amount": 10.33,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "09/27/2023",
+      "Merchant": "Comcast.COM",
+      "Amount": 23.17,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "18-07-2023",
+      "Merchant": "CobaltBridge",
+      "Amount": 144.97,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "04/30/2023",
+      "Merchant": "SQ *Airbnb.COM",
+      "Amount": 416.71,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "07/01/2023",
+      "Merchant": "TST* Southwest Airlines #123456",
+      "Amount": 652.32,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "2023/10/18",
+      "Merchant": "Target",
+      "Amount": 507.27,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "2023-01-20",
+      "Merchant": "Lyft",
+      "Amount": 364.16,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023-06-15",
+      "Merchant": "SQ *United Airlines #123456",
+      "Amount": 1111.43,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "27 Dec 2023",
+      "Merchant": "Netflix",
+      "Amount": 2350.69,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "29-11-2023",
+      "Merchant": "PAYPAL *Target",
+      "Amount": 267.16,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "31 Mar 2023",
+      "Merchant": "Comcast",
+      "Amount": 1196.31,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "01/17/2023",
+      "Merchant": "TST* Enterprise Rent-A-Car.COM",
+      "Amount": 2813.3,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "27-06-2023",
+      "Merchant": "TST* Tridelic.COM",
+      "Amount": 22.55,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "05/16/2023",
+      "Merchant": "Dropbox",
+      "Amount": 1010.46,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "27 Mar 2023",
+      "Merchant": "PAYPAL *Home Depot",
+      "Amount": 9.65,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "12/18/2023",
+      "Merchant": "CobaltBridge.COM",
+      "Amount": 1386.52,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "2023-03-24",
+      "Merchant": "SQ *Adobe *STORE 001",
+      "Amount": 12.37,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "08/11/2023",
+      "Merchant": "Chipotle",
+      "Amount": 278.26,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "16-05-2023",
+      "Merchant": "Delta Airlines",
+      "Amount": 464.33,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "2023-08-07",
+      "Merchant": "Amazon",
+      "Amount": 322.25,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "2023-08-31",
+      "Merchant": "Tridelic #123456",
+      "Amount": 24.73,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "09 Jul 2023",
+      "Merchant": "NeoPeak",
+      "Amount": 13.54,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "2023-12-08",
+      "Merchant": "SQ *Adobe ONLINE",
+      "Amount": 513.19,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "25 Sep 2023",
+      "Merchant": "AT&T",
+      "Amount": 46.23,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023/10/20",
+      "Merchant": "Southwest Airlines *STORE 001",
+      "Amount": 444.63,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "10 Feb 2023",
+      "Merchant": "PAYPAL *Walgreens",
+      "Amount": -1134.77,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "16-06-2023",
+      "Merchant": "NimblyX *STORE 001",
+      "Amount": 12.55,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "03/18/2023",
+      "Merchant": "ZetaFlux Labs",
+      "Amount": 472.12,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "30-07-2023",
+      "Merchant": "Tridelic",
+      "Amount": 2476.19,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "22 Dec 2023",
+      "Merchant": "Hilton ONLINE",
+      "Amount": 219.4,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "05-06-2023",
+      "Merchant": "Costco.COM",
+      "Amount": -75.26,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "18 May 2023",
+      "Merchant": "QuantaCore LLC ONLINE",
+      "Amount": 889.98,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023/01/29",
+      "Merchant": "Delta Airlines",
+      "Amount": 387.62,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "04/09/2023",
+      "Merchant": "American Express",
+      "Amount": -484.87,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023-07-23",
+      "Merchant": "SQ *Bank of America",
+      "Amount": 64.59,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023-05-13",
+      "Merchant": "Chase Bank.COM",
+      "Amount": 600.0,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "12/13/2023",
+      "Merchant": "TST* Amazon",
+      "Amount": 50.37,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "25-04-2023",
+      "Merchant": "TST* American Express #123456",
+      "Amount": 672.18,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "2023/12/13",
+      "Merchant": "SQ *Domino's",
+      "Amount": 332.86,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023/11/01",
+      "Merchant": "Google",
+      "Amount": 2699.44,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "14-05-2023",
+      "Merchant": "Salesforce",
+      "Amount": 70.09,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "06/13/2023",
+      "Merchant": "Southwest Airlines",
+      "Amount": 1366.26,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "10/20/2023",
+      "Merchant": "SQ *Enterprise Rent-A-Car",
+      "Amount": 779.21,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "17-09-2023",
+      "Merchant": "United Airlines",
+      "Amount": 403.48,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "04-04-2023",
+      "Merchant": "PAYPAL *SolaraNine",
+      "Amount": 839.87,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "27-10-2023",
+      "Merchant": "United Airlines",
+      "Amount": 1395.07,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023-09-14",
+      "Merchant": "TST* NeoPeak",
+      "Amount": 514.89,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "08/23/2023",
+      "Merchant": "PAYPAL *Safeway #123456",
+      "Amount": 125.49,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "2023-01-30",
+      "Merchant": "NimblyX",
+      "Amount": 854.04,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "26 Jul 2023",
+      "Merchant": "Spotify *STORE 001",
+      "Amount": 24.57,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "09/29/2023",
+      "Merchant": "Adobe",
+      "Amount": 11.16,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "29-10-2023",
+      "Merchant": "Starbucks ONLINE",
+      "Amount": 59.76,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "12/18/2023",
+      "Merchant": "SQ *Adobe",
+      "Amount": 447.92,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "03/09/2023",
+      "Merchant": "NeoPeak.COM",
+      "Amount": 9.18,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023/10/01",
+      "Merchant": "TST* Spotify",
+      "Amount": 9.62,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "16 Aug 2023",
+      "Merchant": "Amazon",
+      "Amount": 8.64,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "24-09-2023",
+      "Merchant": "Wells Fargo *STORE 001",
+      "Amount": 65.65,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "2023/04/12",
+      "Merchant": "Salesforce",
+      "Amount": 59.46,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "09/12/2023",
+      "Merchant": "SolaraNine",
+      "Amount": -230.57,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023/02/16",
+      "Merchant": "PAYPAL *Google",
+      "Amount": 2504.5,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023-08-26",
+      "Merchant": "Salesforce",
+      "Amount": 412.34,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023-02-18",
+      "Merchant": "ZetaFlux Labs",
+      "Amount": 703.37,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "10-07-2023",
+      "Merchant": "NimblyX",
+      "Amount": 549.83,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "11/29/2023",
+      "Merchant": "Whole Foods.COM",
+      "Amount": 1000.68,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "19 Oct 2023",
+      "Merchant": "Amazon",
+      "Amount": 12.66,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "05 Sep 2023",
+      "Merchant": "Home Depot",
+      "Amount": 2617.05,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023/10/23",
+      "Merchant": "SQ *NeoPeak",
+      "Amount": 10.6,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "08 May 2023",
+      "Merchant": "CobaltBridge",
+      "Amount": 519.15,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "01/06/2023",
+      "Merchant": "Domino's",
+      "Amount": 486.53,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023/04/25",
+      "Merchant": "SQ *NimblyX",
+      "Amount": 147.19,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023-06-11",
+      "Merchant": "SQ *Southwest Airlines",
+      "Amount": 315.17,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "13-11-2023",
+      "Merchant": "SQ *Microsoft *STORE 001",
+      "Amount": 2149.31,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023/06/19",
+      "Merchant": "Bank of America",
+      "Amount": 10.94,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023/05/30",
+      "Merchant": "Best Buy #123456",
+      "Amount": 9.51,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "24-02-2023",
+      "Merchant": "Adobe",
+      "Amount": 2609.39,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023/11/21",
+      "Merchant": "PAYPAL *Whole Foods",
+      "Amount": -13.99,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023-09-29",
+      "Merchant": "NeoPeak",
+      "Amount": 387.61,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023-03-07",
+      "Merchant": "NeoPeak",
+      "Amount": 25.12,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "12/21/2023",
+      "Merchant": "Airbnb",
+      "Amount": 239.66,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "20-09-2023",
+      "Merchant": "Costco",
+      "Amount": 21.17,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "12/30/2023",
+      "Merchant": "Comcast ONLINE",
+      "Amount": 710.65,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "01-10-2023",
+      "Merchant": "Home Depot",
+      "Amount": 792.22,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "27-05-2023",
+      "Merchant": "SQ *SolaraNine *STORE 001",
+      "Amount": 42.32,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "10/15/2023",
+      "Merchant": "TST* ArcadiaWorks.COM",
+      "Amount": 13.44,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "17-12-2023",
+      "Merchant": "Enterprise Rent-A-Car.COM",
+      "Amount": 239.5,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023/10/29",
+      "Merchant": "SQ *Hertz",
+      "Amount": 790.99,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023-09-21",
+      "Merchant": "PAYPAL *OrionEdge Systems",
+      "Amount": 11.77,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023-03-21",
+      "Merchant": "Budget ONLINE",
+      "Amount": 9.48,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "09-10-2023",
+      "Merchant": "TST* Tridelic",
+      "Amount": 700.78,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023/08/01",
+      "Merchant": "CobaltBridge",
+      "Amount": 378.93,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023/11/13",
+      "Merchant": "United Airlines",
+      "Amount": 123.61,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "21-01-2023",
+      "Merchant": "SQ *ZetaFlux Labs",
+      "Amount": 770.66,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023/07/11",
+      "Merchant": "QuantaCore LLC",
+      "Amount": 57.66,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023/10/03",
+      "Merchant": "Enterprise Rent-A-Car *STORE 001",
+      "Amount": 11.69,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023/04/16",
+      "Merchant": "Delta Airlines",
+      "Amount": 2586.27,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "01/28/2023",
+      "Merchant": "Apple.COM",
+      "Amount": 859.72,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "10-08-2023",
+      "Merchant": "Hilton",
+      "Amount": 237.4,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023-01-24",
+      "Merchant": "Slack",
+      "Amount": 513.48,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "15 Jul 2023",
+      "Merchant": "TST* QuantaCore LLC",
+      "Amount": 12.14,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "11/21/2023",
+      "Merchant": "TST* AT&T",
+      "Amount": 1381.05,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "2023-01-22",
+      "Merchant": "Domino's",
+      "Amount": 484.27,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023/11/27",
+      "Merchant": "Dropbox",
+      "Amount": 863.02,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "2023/01/28",
+      "Merchant": "United Airlines *STORE 001",
+      "Amount": 24.97,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "07/02/2023",
+      "Merchant": "PAYPAL *Apple #123456",
+      "Amount": 927.32,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023/12/22",
+      "Merchant": "PAYPAL *Chipotle",
+      "Amount": 341.1,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "24 Apr 2023",
+      "Merchant": "Best Buy",
+      "Amount": 20.22,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "06 Jun 2023",
+      "Merchant": "NimblyX",
+      "Amount": 355.61,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023-11-17",
+      "Merchant": "SQ *Airbnb",
+      "Amount": 26.54,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023/01/19",
+      "Merchant": "SolaraNine",
+      "Amount": 574.08,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "29-10-2023",
+      "Merchant": "AT&T",
+      "Amount": 124.84,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "11/11/2023",
+      "Merchant": "SQ *American Express",
+      "Amount": 686.86,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "05-09-2023",
+      "Merchant": "Uber",
+      "Amount": 2793.79,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "04 Jul 2023",
+      "Merchant": "SQ *Chase Bank",
+      "Amount": 10.5,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "21-05-2023",
+      "Merchant": "TST* ZetaFlux Labs",
+      "Amount": 1032.67,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "2023/04/25",
+      "Merchant": "Staples",
+      "Amount": 2139.71,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "08/14/2023",
+      "Merchant": "Home Depot",
+      "Amount": 503.43,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "28 Apr 2023",
+      "Merchant": "PAYPAL *Domino's ONLINE",
+      "Amount": 629.42,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "01/12/2023",
+      "Merchant": "Wells Fargo",
+      "Amount": 530.85,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023/04/03",
+      "Merchant": "TST* Marriott",
+      "Amount": 528.3,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "02/13/2023",
+      "Merchant": "Hilton",
+      "Amount": 949.36,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023/04/04",
+      "Merchant": "Wells Fargo.COM",
+      "Amount": 527.56,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "2023-02-25",
+      "Merchant": "Costco",
+      "Amount": 11.94,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023/11/11",
+      "Merchant": "American Express",
+      "Amount": 519.34,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "01 Jan 2023",
+      "Merchant": "SolaraNine.COM",
+      "Amount": 662.59,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023/06/29",
+      "Merchant": "Adobe",
+      "Amount": 1243.3,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "05/12/2023",
+      "Merchant": "Hertz *STORE 001",
+      "Amount": 69.23,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "11 Jun 2023",
+      "Merchant": "Google *STORE 001",
+      "Amount": 257.04,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "15 Dec 2023",
+      "Merchant": "CVS Pharmacy.COM",
+      "Amount": 567.08,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "23-10-2023",
+      "Merchant": "Comcast",
+      "Amount": 433.21,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "18 Sep 2023",
+      "Merchant": "PAYPAL *Pizza Hut",
+      "Amount": 1027.46,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "02/16/2023",
+      "Merchant": "Tridelic",
+      "Amount": 22.96,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023/07/25",
+      "Merchant": "SQ *KiteWave *STORE 001",
+      "Amount": 508.96,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "23-09-2023",
+      "Merchant": "PAYPAL *Airbnb",
+      "Amount": 306.83,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023-05-03",
+      "Merchant": "Airbnb",
+      "Amount": -532.31,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "2023-01-08",
+      "Merchant": "Budget",
+      "Amount": 238.68,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "10 Apr 2023",
+      "Merchant": "Comcast",
+      "Amount": 2285.73,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "20-09-2023",
+      "Merchant": "TST* Hertz *STORE 001",
+      "Amount": 408.46,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "15 Dec 2023",
+      "Merchant": "Staples",
+      "Amount": 1189.87,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "11 Jun 2023",
+      "Merchant": "TST* Hertz",
+      "Amount": 47.91,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "2023-06-25",
+      "Merchant": "Google ONLINE",
+      "Amount": 12.6,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "04-05-2023",
+      "Merchant": "TST* Home Depot #123456",
+      "Amount": 385.2,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "13 Dec 2023",
+      "Merchant": "Southwest Airlines",
+      "Amount": 1102.51,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "22-10-2023",
+      "Merchant": "SolaraNine",
+      "Amount": 133.67,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023/09/02",
+      "Merchant": "PAYPAL *American Express",
+      "Amount": 20.57,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "24-08-2023",
+      "Merchant": "Whole Foods",
+      "Amount": 411.03,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "05/15/2023",
+      "Merchant": "Delta Airlines ONLINE",
+      "Amount": 655.04,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "06 Jul 2023",
+      "Merchant": "Chipotle.COM",
+      "Amount": 44.4,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "2023/05/01",
+      "Merchant": "TST* Hilton",
+      "Amount": 2155.9,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023/11/19",
+      "Merchant": "TST* OrionEdge Systems *STORE 001",
+      "Amount": 23.19,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "11 May 2023",
+      "Merchant": "TST* ArcadiaWorks *STORE 001",
+      "Amount": 813.98,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "04-03-2023",
+      "Merchant": "SQ *Costco",
+      "Amount": -1159.14,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023-08-17",
+      "Merchant": "Domino's ONLINE",
+      "Amount": 122.23,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023/11/20",
+      "Merchant": "Bank of America #123456",
+      "Amount": 814.04,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "27 Nov 2023",
+      "Merchant": "SQ *QuantaCore LLC ONLINE",
+      "Amount": 698.59,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "01/12/2023",
+      "Merchant": "CobaltBridge",
+      "Amount": 350.34,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "2023/07/23",
+      "Merchant": "SQ *Dropbox *STORE 001",
+      "Amount": -364.85,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "26 May 2023",
+      "Merchant": "TST* Chipotle",
+      "Amount": 231.6,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "04-10-2023",
+      "Merchant": "TST* Spotify",
+      "Amount": 143.1,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023/09/26",
+      "Merchant": "TST* AT&T",
+      "Amount": 942.33,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "21-03-2023",
+      "Merchant": "NeoPeak",
+      "Amount": 338.89,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "02-09-2023",
+      "Merchant": "Zoom",
+      "Amount": 10.55,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "15 Oct 2023",
+      "Merchant": "ArcadiaWorks",
+      "Amount": 418.83,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023/09/22",
+      "Merchant": "Domino's",
+      "Amount": 58.76,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "26 Feb 2023",
+      "Merchant": "AT&T",
+      "Amount": 2132.82,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023-04-06",
+      "Merchant": "Chipotle",
+      "Amount": 20.54,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "09 Jun 2023",
+      "Merchant": "Walgreens #123456",
+      "Amount": 9.97,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "2023/02/06",
+      "Merchant": "Adobe",
+      "Amount": 20.59,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "17 Jul 2023",
+      "Merchant": "Hertz",
+      "Amount": 14.84,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "19-07-2023",
+      "Merchant": "TST* Adobe",
+      "Amount": 457.01,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "12-04-2023",
+      "Merchant": "Adobe",
+      "Amount": 12.03,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023-10-27",
+      "Merchant": "OrionEdge Systems.COM",
+      "Amount": 110.23,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023-07-10",
+      "Merchant": "ZetaFlux Labs",
+      "Amount": 898.71,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "11/27/2023",
+      "Merchant": "Dropbox",
+      "Amount": 1296.92,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "08/13/2023",
+      "Merchant": "United Airlines",
+      "Amount": 802.63,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "05 Oct 2023",
+      "Merchant": "Home Depot *STORE 001",
+      "Amount": 381.91,
+      "Notes": "Equipment purchase"
+    },
+    {
+      "Date": "10/11/2023",
+      "Merchant": "AT&T",
+      "Amount": 74.67,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "07/14/2023",
+      "Merchant": "SQ *Walgreens",
+      "Amount": 305.75,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023/04/08",
+      "Merchant": "Best Buy *STORE 001",
+      "Amount": 849.68,
+      "Notes": "Hardware services"
+    },
+    {
+      "Date": "2023-12-04",
+      "Merchant": "NimblyX",
+      "Amount": 705.45,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "18 Jul 2023",
+      "Merchant": "PAYPAL *NimblyX.COM",
+      "Amount": 40.02,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "10 Feb 2023",
+      "Merchant": "United Airlines #123456",
+      "Amount": 743.32,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "2023-01-21",
+      "Merchant": "Safeway",
+      "Amount": 10.96,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "12/03/2023",
+      "Merchant": "Delta Airlines #123456",
+      "Amount": 420.35,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "02/23/2023",
+      "Merchant": "Comcast ONLINE",
+      "Amount": 736.01,
+      "Notes": "Team lunch"
+    },
+    {
+      "Date": "16-06-2023",
+      "Merchant": "American Express.COM",
+      "Amount": 144.58,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "09-10-2023",
+      "Merchant": "KiteWave",
+      "Amount": 46.36,
+      "Notes": "Office supplies"
+    },
+    {
+      "Date": "2023-06-04",
+      "Merchant": "NeoPeak *STORE 001",
+      "Amount": 69.18,
+      "Notes": "Business expense"
+    },
+    {
+      "Date": "10/20/2023",
+      "Merchant": "OrionEdge Systems ONLINE",
+      "Amount": 436.8,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "2023-06-03",
+      "Merchant": "SQ *Home Depot",
+      "Amount": 546.56,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023/12/20",
+      "Merchant": "Delta Airlines",
+      "Amount": 1243.45,
+      "Notes": "Client meeting"
+    },
+    {
+      "Date": "28 Jun 2023",
+      "Merchant": "TST* Walmart",
+      "Amount": 1083.47,
+      "Notes": "Annual platform fee"
+    },
+    {
+      "Date": "2023/06/06",
+      "Merchant": "QuantaCore LLC *STORE 001",
+      "Amount": 807.26,
+      "Notes": "Monthly subscription"
+    },
+    {
+      "Date": "21 Jul 2023",
+      "Merchant": "TST* Hilton",
+      "Amount": 20.55,
+      "Notes": "Client meeting"
+    }
+  ]
+}

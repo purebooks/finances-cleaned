@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Test</title>
+</head>
+<body>
+    <h1>Debug Test</h1>
+    <button onclick="testAPI()">Test API</button>
+    <div id="result"></div>
+
+    <script>
+        async function testAPI() {
+            const testData = {
+                "data": {
+                    "merchant": ["Starbucks", "Walmart"],
+                    "amount": [4.50, 125.75],
+                    "description": ["Coffee", "Groceries"]
+                },
+                "config": {
+                    "enable_ai": true,
+                    "ai_vendor_enabled": true,
+                    "ai_category_enabled": true,
+                    "enable_transaction_intelligence": true,
+                    "enable_source_tracking": true,
+                    "ai_confidence_threshold": 0.7
+                }
+            };
+
+            try {
+                console.log('Sending request:', testData);
+                
+                const response = await fetch('https://ai-financial-cleaner-v5-pksi3xslca-uc.a.run.app/process', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(testData)
+                });
+
+                const data = await response.json();
+                console.log('Response received:', data);
+                
+                document.getElementById('result').innerHTML = `
+                    <h2>API Response:</h2>
+                    <p><strong>Status:</strong> ${data.status}</p>
+                    <p><strong>Processing Time:</strong> ${data.processing_time}</p>
+                    <p><strong>Cleaned Data Count:</strong> ${data.cleaned_data ? data.cleaned_data.length : 0}</p>
+                    <p><strong>Summary Report Keys:</strong> ${Object.keys(data.summary_report || {}).join(', ')}</p>
+                    <p><strong>Processing Summary:</strong> ${JSON.stringify(data.summary_report?.processing_summary || {})}</p>
+                    <h3>First Cleaned Record:</h3>
+                    <pre>${JSON.stringify(data.cleaned_data?.[0] || 'None', null, 2)}</pre>
+                `;
+                
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('result').innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html> 

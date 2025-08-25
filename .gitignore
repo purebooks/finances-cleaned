@@ -112,6 +112,7 @@ pids
 # Temporary folders
 tmp/
 temp/
+production_cleaner_temp/
 
 # API keys and secrets
 *.key

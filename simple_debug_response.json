@@ -1,0 +1,108 @@
+{
+  "cleaned_data": [
+    {
+      "Amount": 5.75,
+      "Date": "2023-01-01",
+      "Merchant": "Starbucks",
+      "Notes": "Coffee",
+      "category": "Meals & Entertainment",
+      "category_confidence": 0.9,
+      "category_source": "rule_based",
+      "standardized_vendor": "Starbucks",
+      "vendor_confidence": 0.95,
+      "vendor_source": "rule_based"
+    },
+    {
+      "Amount": 45.2,
+      "Date": "2023-01-02",
+      "Merchant": "Shell",
+      "Notes": "Gas",
+      "category": "Other",
+      "category_confidence": 0.865,
+      "category_source": "llm",
+      "standardized_vendor": "Unknown Vendor",
+      "vendor_confidence": 0.8,
+      "vendor_source": "llm"
+    },
+    {
+      "Amount": 25.99,
+      "Date": "2023-01-03",
+      "Merchant": "Amazon",
+      "Notes": "Books",
+      "category": "Office Supplies & Equipment",
+      "category_confidence": 0.9,
+      "category_source": "rule_based",
+      "standardized_vendor": "Amazon",
+      "vendor_confidence": 0.95,
+      "vendor_source": "rule_based"
+    },
+    {
+      "Amount": 15.99,
+      "Date": "2023-01-04",
+      "Merchant": "Netflix",
+      "Notes": "Subscription",
+      "category": "Meals & Entertainment",
+      "category_confidence": 0.9,
+      "category_source": "rule_based",
+      "standardized_vendor": "Netflix",
+      "vendor_confidence": 0.95,
+      "vendor_source": "rule_based"
+    },
+    {
+      "Amount": 12.5,
+      "Date": "2023-01-05",
+      "Merchant": "Uber",
+      "Notes": "Ride",
+      "category": "Travel & Transportation",
+      "category_confidence": 0.9,
+      "category_source": "rule_based",
+      "standardized_vendor": "Uber",
+      "vendor_confidence": 0.95,
+      "vendor_source": "rule_based"
+    }
+  ],
+  "insights": {
+    "ai_cost": 0.0,
+    "ai_requests": 0,
+    "processing_time": 0.00927281379699707,
+    "rows_processed": 5,
+    "vendor_transformations": []
+  },
+  "processing_time": 0.00927281379699707,
+  "request_id": "req-c9a779a6",
+  "summary_report": {
+    "cache_performance": {
+      "cache_size": 2,
+      "category_hit_rate": 0.0,
+      "total_category_requests": 1,
+      "total_vendor_requests": 1,
+      "vendor_hit_rate": 0.0
+    },
+    "cost_analysis": {
+      "category_classification_cost": 0.01,
+      "total_cost": 0.02,
+      "transaction_intelligence_cost": 0.0,
+      "vendor_standardization_cost": 0.01
+    },
+    "performance_metrics": {
+      "category_classification_time": 4.220008850097656e-05,
+      "total_time": 0.00010728836059570312,
+      "transaction_intelligence_time": 0.0,
+      "vendor_standardization_time": 6.508827209472656e-05
+    },
+    "processing_summary": {
+      "cache_hit_rate": 0.0,
+      "category_classifications": 5,
+      "llm_calls": 2,
+      "total_transactions": 5,
+      "transaction_intelligence": 5,
+      "vendor_standardizations": 5
+    },
+    "quality_metrics": {
+      "average_category_confidence": 0.893,
+      "average_vendor_confidence": 0.9200000000000002,
+      "category_classifications": 5,
+      "vendor_standardizations": 5
+    }
+  }
+}

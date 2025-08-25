@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Interface Test</title>
+    <style>
+        .data-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .data-table th, .data-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        .data-table th { background-color: #f2f2f2; }
+        .source-badge { padding: 2px 6px; border-radius: 3px; font-size: 0.8em; margin-left: 5px; }
+        .source-rule { background-color: #e3f2fd; color: #1976d2; }
+        .source-cache { background-color: #f3e5f5; color: #7b1fa2; }
+        .source-llm { background-color: #e8f5e8; color: #388e3c; }
+        .confidence-bar { width: 100px; height: 8px; background-color: #f0f0f0; border-radius: 4px; margin-top: 2px; }
+        .confidence-fill { height: 100%; background-color: #4caf50; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>Simple Interface Test</h1>
+    <button onclick="testDisplay()">Test Display</button>
+    <div id="result"></div>
+
+    <script>
+        function testDisplay() {
+            // Simulate the API response
+            const mockData = {
+                status: 'success',
+                processing_time: 3.5,
+                cleaned_data: [
+                    {
+                        "Amount ($)": 162.6,
+                        "Category": "Other",
+                        "Date": "07/18/2025",
+                        "Txn ID": "90.0",
+                        "Vendor Name": "Spotify",
+                        "category": "Entertainment",
+                        "category_confidence": 0.9,
+                        "category_source": "rule_based",
+                        "memo": "Annual Plan",
+                        "standardized_vendor": "Spotify",
+                        "vendor_confidence": 0.95,
+                        "vendor_source": "rule_based"
+                    },
+                    {
+                        "Amount ($)": 407.02,
+                        "Category": "Other",
+                        "Date": "06/27/2025",
+                        "Txn ID": "76.0",
+                        "Vendor Name": "DHL",
+                        "category": "Transportation",
+                        "category_confidence": 0.85,
+                        "category_source": "llm",
+                        "memo": "Team Plan",
+                        "standardized_vendor": "DHL",
+                        "vendor_confidence": 0.9,
+                        "vendor_source": "rule_based"
+                    }
+                ],
+                summary_report: {
+                    processing_summary: {
+                        total_transactions: 2,
+                        vendor_standardizations: 2,
+                        category_classifications: 2,
+                        llm_calls: 3,
+                        cache_hit_rate: 0.0
+                    },
+                    cost_analysis: {
+                        total_cost: 0.06
+                    }
+                }
+            };
+
+            console.log('Testing display with:', mockData);
+            displayResults(mockData);
+        }
+
+        function displayResults(data) {
+            console.log('Displaying results:', data);
+            
+            // Safely access summary data
+            const summary = data.summary_report?.processing_summary || {};
+            const costAnalysis = data.summary_report?.cost_analysis || {};
+            
+            let html = `
+                <h2>Processing Results</h2>
+                <p><strong>Status:</strong> ${data.status}</p>
+                <p><strong>Processing Time:</strong> ${data.processing_time}s</p>
+                <p><strong>Total Transactions:</strong> ${summary.total_transactions || 0}</p>
+                <p><strong>Vendor Standardizations:</strong> ${summary.vendor_standardizations || 0}</p>
+                <p><strong>Category Classifications:</strong> ${summary.category_classifications || 0}</p>
+                <p><strong>LLM Calls:</strong> ${summary.llm_calls || 0}</p>
+                <p><strong>Cache Hit Rate:</strong> ${((summary.cache_hit_rate || 0) * 100).toFixed(1)}%</p>
+                <p><strong>Total Cost:</strong> $${(costAnalysis.total_cost || 0).toFixed(3)}</p>
+            `;
+
+            // Display cleaned data table
+            if (data.cleaned_data && data.cleaned_data.length > 0) {
+                html += '<h3>Cleaned Data</h3>';
+                html += displayDataTable(data.cleaned_data);
+            } else {
+                html += '<p>No cleaned data available.</p>';
+            }
+
+            document.getElementById('result').innerHTML = html;
+        }
+
+        function displayDataTable(data) {
+            console.log('Displaying data table:', data);
+            if (!data || data.length === 0) {
+                return '<p>No data to display.</p>';
+            }
+
+            const headers = Object.keys(data[0]);
+            let tableHTML = '<table class="data-table"><thead><tr>';
+            
+            headers.forEach(header => {
+                tableHTML += `<th>${header}</th>`;
+            });
+            tableHTML += '</tr></thead><tbody>';
+
+            data.forEach(row => {
+                tableHTML += '<tr>';
+                headers.forEach(header => {
+                    let value = row[header];
+                    
+                    // Add source badges for tracking columns
+                    if (header.includes('source') && value) {
+                        const badgeClass = value === 'rule_based' ? 'source-rule' : 
+                                         value === 'cache' ? 'source-cache' : 'source-llm';
+                        value += `<span class="source-badge ${badgeClass}">${value}</span>`;
+                    }
+                    
+                    // Add confidence bars for confidence columns
+                    if (header.includes('confidence') && typeof value === 'number') {
+                        const confidencePercent = (value * 100).toFixed(1);
+                        value += `<div class="confidence-bar"><div class="confidence-fill" style="width: ${confidencePercent}%"></div></div>`;
+                    }
+                    
+                    tableHTML += `<td>${value}</td>`;
+                });
+                tableHTML += '</tr>';
+            });
+
+            tableHTML += '</tbody></table>';
+            return tableHTML;
+        }
+    </script>
+</body>
+</html> 

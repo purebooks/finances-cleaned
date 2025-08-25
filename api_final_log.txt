@@ -1,0 +1,16 @@
+🔥 Server found with PID: 7015. Stopping it now...
+🛑 Server stopped.
+⚙️ Activating virtual environment from /Users/noahmizhen/finances-cleaned/.venv/bin/activate...
+🚀 Starting new server with the latest code...
+2025-07-31 17:02:08,461 - __main__ - INFO - API starting on port 8080
+ * Serving Flask app 'app_v5'
+ * Debug mode: off
+2025-07-31 17:02:08,479 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.90.1.109:8080
+2025-07-31 17:02:08,479 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-07-31 17:02:40,847 - werkzeug - INFO - 127.0.0.1 - - [31/Jul/2025 17:02:40] "[33mGET / HTTP/1.1[0m" 404 -
+2025-07-31 17:02:46,330 - werkzeug - INFO - 127.0.0.1 - - [31/Jul/2025 17:02:46] "[33mGET / HTTP/1.1[0m" 404 -
+2025-07-31 17:02:47,092 - werkzeug - INFO - 127.0.0.1 - - [31/Jul/2025 17:02:47] "[33mGET / HTTP/1.1[0m" 404 -
+./restart_server.sh: line 33:  8528 Terminated: 15          python3 app_v5.py

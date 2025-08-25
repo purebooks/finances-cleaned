@@ -7,7 +7,7 @@ import hashlib
 import time
 import asyncio
 from datetime import datetime
-from typing import Dict, Any, Optional, List, Tuple
+from typing import Dict, Any, Optional, List, Tuple, Union
 from contextlib import contextmanager
 from dataclasses import dataclass
 from enum import Enum
@@ -168,10 +168,10 @@ class AIEnhancedProductionCleanerV5:
     - Enhanced DataFrame with source attribution
     """
     
-    def __init__(self, df: pd.DataFrame, config: Optional[Dict[str, Any]] = None, 
+    def __init__(self, df: Optional[pd.DataFrame] = None, config: Optional[Dict[str, Any]] = None, 
                  llm_client: Optional[LLMClient] = None, user_intent: Optional[str] = None):
         self.cleaner_version = "v5.0"
-        self.df = df.copy()
+        self.df = (df.copy() if df is not None else pd.DataFrame())
         self.user_intent = user_intent
         
         # Validate and set configuration (now supports intent-based configs)
@@ -184,6 +184,12 @@ class AIEnhancedProductionCleanerV5:
         self.cache = IntelligentCache()
         self.tracker = LLMTracker()
         self.processing_history = []
+        self._claude_enhancement_applied = False
+        self.preserve_schema = bool(self.config.get('preserve_schema', False))
+        # Per-request LLM budget tracking
+        self.llm_cost_cap = float(self.config.get('llm_cost_cap_per_request', 0.05))
+        self.llm_cost_spent = 0.0
+        self.llm_estimated_cost_per_row = float(self.config.get('llm_estimated_cost_per_row', 0.005))
         
         # Initialize advanced LLM processor with our enhanced vendor rules
         try:
@@ -204,13 +210,35 @@ class AIEnhancedProductionCleanerV5:
             'ai_cost': 0.0,
             'cache_hits': 0,
             'processing_time': 0.0,
-            'rows_processed': len(df),
+            'rows_processed': len(self.df),
             'vendor_standardizations': 0,
             'category_classifications': 0,
             'transaction_intelligence': 0
         }
         
-        logger.info(f"AI-Enhanced Production Cleaner {self.cleaner_version} initialized with {len(df)} rows")
+        logger.info(f"AI-Enhanced Production Cleaner {self.cleaner_version} initialized with {len(self.df)} rows")
+
+    def _clean_vendor_for_processing(self, vendor_text: Any) -> str:
+        """Strip processor prefixes/suffixes and corporate suffixes for better matching."""
+        try:
+            s = '' if vendor_text is None else str(vendor_text)
+        except Exception:
+            s = ''
+        if not s:
+            return ''
+        prev = None
+        while prev != s:
+            prev = s
+            # leading processors and AUTO PAY
+            s = re.sub(r'^(AUTO\s*PAY\s+)', '', s, flags=re.IGNORECASE).strip()
+            s = re.sub(r'^(PAYPAL\s*\*|SQ\s*\*|TST\s*\*)', '', s, flags=re.IGNORECASE).strip()
+            # trailing artifacts
+            s = re.sub(r'(\s*\*STORE\s*\d+\s*$)', '', s, flags=re.IGNORECASE).strip()
+            s = re.sub(r'(\s*#\d+\s*$)', '', s, flags=re.IGNORECASE).strip()
+            s = re.sub(r'(\s*\.COM\s*$)', '', s, flags=re.IGNORECASE).strip()
+            s = re.sub(r'(\s*ONLINE\s*$)', '', s, flags=re.IGNORECASE).strip()
+            s = re.sub(r'\b(inc|llc|corp|co|ltd)\.?\s*$', '', s, flags=re.IGNORECASE).strip()
+        return ' '.join(s.split())
 
     def _validate_and_set_config(self, user_config: Dict[str, Any], user_intent: Optional[str] = None) -> Dict[str, Any]:
         """Enhanced configuration system with intent-based templates"""
@@ -226,8 +254,29 @@ class AIEnhancedProductionCleanerV5:
             'ai_vendor_enabled': True,
             'ai_category_enabled': True,
             'ai_analysis_enabled': False,
-            'enable_transaction_intelligence': True,
-            'enable_source_tracking': True
+            'enable_transaction_intelligence': False,
+            'enable_parallel_processing': True,
+            'max_workers': 8,
+            'enable_source_tracking': True,
+            # Hybrid LLM routing defaults
+            'llm_trigger_amount': 0.0,
+            'llm_parallel_conf_threshold': 0.9,
+            'llm_route_unknown': True,
+            'llm_max_enhancements': 180,
+            'llm_batch_size': 10,
+            'llm_cost_cap_per_request': 1.5,
+            'llm_estimated_cost_per_row': 0.01,
+            # Targeting controls
+            'aggressive_vendor_backfill': True,
+            'llm_always_reprocess_categories': ['Other', 'General Merchandise', 'General Services'],
+            # Guarantee some LLM coverage when desired
+            'llm_minimum_fraction': 0.0,
+            'llm_minimum_count': 0,
+            # Accuracy-first mode and SLOs
+            'accuracy_first': True,
+            'quality_slo_proper_min': 0.97,   # tuned for optimized cost/quality
+            'quality_slo_none_max': 0.0,      # no None allowed
+            'emergency_llm_cap': 0.0          # no emergency spend in optimized mode
         }
         
         # Try to load intent-based configuration
@@ -242,6 +291,27 @@ class AIEnhancedProductionCleanerV5:
                 # Store the full intent config for advanced features
                 self.intent_config = intent_config
                 
+                # Ensure explicit user flags are preserved (e.g., force_llm_for_testing) and LLM routing knobs
+                if 'force_llm_for_testing' in user_config:
+                    converted_config['force_llm_for_testing'] = bool(user_config['force_llm_for_testing'])
+                if 'enable_parallel_processing' in user_config:
+                    converted_config['enable_parallel_processing'] = bool(user_config['enable_parallel_processing'])
+                # Preserve other runtime controls from user_config
+                passthrough_keys = [
+                    'max_workers',
+                    'enable_transaction_intelligence',
+                    'llm_trigger_amount',
+                    'llm_parallel_conf_threshold',
+                    'llm_route_unknown',
+                    'llm_max_enhancements',
+                    'llm_batch_size',
+                    'llm_cost_cap_per_request',
+                    'llm_estimated_cost_per_row'
+                ]
+                for k in passthrough_keys:
+                    if k in user_config:
+                        converted_config[k] = user_config[k]
+
                 logger.info(f"Successfully loaded intent configuration: {intent_config.get('intent', 'unknown')}")
                 return converted_config
                 
@@ -281,6 +351,18 @@ class AIEnhancedProductionCleanerV5:
         config['enable_ai'] = True  # Always enable AI for intent-based processing
         config['ai_vendor_enabled'] = True
         config['ai_category_enabled'] = True
+
+        # Map Claude enhancement knobs when present in templates
+        claude_settings = ai_settings.get('claude_enhancement', {}) if isinstance(ai_settings, dict) else {}
+        if isinstance(claude_settings, dict):
+            if 'reprocess_confidence_threshold' in claude_settings:
+                config['llm_parallel_conf_threshold'] = float(claude_settings['reprocess_confidence_threshold'])
+            if 'always_reprocess_categories' in claude_settings:
+                config['llm_always_reprocess_categories'] = list(claude_settings['always_reprocess_categories'])
+            if 'enable_aggressive_vendor_backfill' in claude_settings:
+                config['aggressive_vendor_backfill'] = bool(claude_settings['enable_aggressive_vendor_backfill'])
+            if 'llm_cost_cap_per_request' in claude_settings:
+                config['llm_cost_cap_per_request'] = float(claude_settings['llm_cost_cap_per_request'])
         
         # Map analysis features
         analysis_features = intent_config.get('analysis_features', {})
@@ -479,8 +561,25 @@ class AIEnhancedProductionCleanerV5:
             elapsed = time.time() - start_time
             logger.info(f"{operation_name} completed in {elapsed:.2f} seconds")
 
-    def process_data(self) -> Tuple[pd.DataFrame, Dict[str, Any]]:
-        """Main processing pipeline with advanced LLM flow and intent-based processing"""
+    def process_data(self, data: Optional[Union[pd.DataFrame, List[Dict[str, Any]]]] = None,
+                     runtime_config: Optional[Dict[str, Any]] = None) -> Union[Tuple[pd.DataFrame, Dict[str, Any]], Dict[str, Any]]:
+        """Main processing pipeline with advanced LLM flow and intent-based processing.
+        Compatibility: when called with data/config arguments, returns a dict with
+        'cleaned_data' (DataFrame) and 'summary_report' including 'llm_tracker'.
+        Without arguments, returns (enhanced_df, output_dict) for backward compatibility.
+        """
+        # Optional runtime overrides
+        if data is not None:
+            try:
+                self.df = pd.DataFrame(data) if not isinstance(data, pd.DataFrame) else data.copy()
+            except Exception:
+                self.df = pd.DataFrame()
+        if runtime_config:
+            try:
+                # Merge runtime config into existing config (shallow)
+                self.config.update(runtime_config)
+            except Exception:
+                pass
         with self.timer("Total advanced LLM processing"):
             # Step 0: Apply intent-specific data filtering and preparation
             processed_df = self._apply_intent_specific_processing(self.df)
@@ -501,6 +600,29 @@ class AIEnhancedProductionCleanerV5:
             # Step 5: POST-PROCESSING CLAUDE ENHANCEMENT (Phase 1)
             enhanced_df = self._post_process_with_claude(enhanced_df)
             
+            # If called with arguments, return a compatibility dict expected by some tests
+            if data is not None or runtime_config is not None:
+                # Ensure 'llm_tracker' presence in summary_report
+                summary = dict(output.get('summary_report', {}))
+                if 'llm_tracker' not in summary:
+                    # Compose minimal tracker from available metrics
+                    total_cost = 0.0
+                    try:
+                        # Prefer combined cost if present
+                        if isinstance(summary.get('cost_analysis'), dict):
+                            total_cost = float(summary['cost_analysis'].get('total_cost', 0.0))
+                    except Exception:
+                        total_cost = 0.0
+                    summary['llm_tracker'] = {
+                        'total_calls': int(self.tracker.performance_tracker.get('total_llm_calls', 0)),
+                        'total_cost': float(total_cost)
+                    }
+                    output['summary_report'] = summary
+                return {
+                    'cleaned_data': enhanced_df,
+                    'summary_report': output['summary_report']
+                }
+            # Default tuple return
             return enhanced_df, output
 
     def _post_process_with_claude(self, df: pd.DataFrame) -> pd.DataFrame:
@@ -508,15 +630,45 @@ class AIEnhancedProductionCleanerV5:
         Phase 1: Post-processing with Claude for Other categories and low confidence cases.
         This strategic enhancement targets the remaining edge cases for 99%+ accuracy.
         """
+        # Respect non-destructive mode: do not add/alter columns beyond in-place cleaning
+        if getattr(self, 'preserve_schema', False):
+            logger.info("Skipping Claude enhancement in preserve_schema mode")
+            return df
+        if getattr(self, '_claude_enhancement_applied', False):
+            logger.info("Skipping Claude enhancement (already applied)")
+            return df
         if self.llm_client.use_mock:
             logger.info("Skipping Claude post-processing in mock mode")
             return df
             
+        # Respect per-request LLM budget
+        if self.llm_cost_cap <= 0:
+            logger.info("Skipping Claude enhancement due to zero LLM budget cap")
+            return df
+
         logger.info("Starting Claude post-processing enhancement...")
         start_time = time.time()
         
         # STEP 1: Identify rows that need Claude enhancement
         needs_enhancement = self._identify_enhancement_targets(df)
+        # Prioritize rows already labeled Other/None, then low-confidence, then unknown/processor vendors, then high amount
+        def priority_index(idx: int) -> int:
+            row = df.iloc[idx]
+            cat = str(row.get('category', '') or '').strip().lower()
+            cat_conf = float(row.get('category_confidence', 0.0) or 0.0)
+            vendor = str(row.get('standardized_vendor', '') or '').strip()
+            is_proc = bool(re.match(r'^(PAYPAL\s*\*|SQ\s*\*|TST\s*\*)', vendor, flags=re.IGNORECASE))
+            p = 0
+            if (not cat) or cat == 'none' or cat == 'other':
+                p -= 100
+            if cat_conf < float(self.config.get('llm_parallel_conf_threshold', 0.9)):
+                p -= 50
+            if is_proc:
+                p -= 25
+            if abs(float(row.get('amount', 0) or 0)) >= float(self.config.get('llm_trigger_amount', 0.0)):
+                p -= 10
+            return p
+        needs_enhancement = sorted(needs_enhancement, key=priority_index)
         
         if len(needs_enhancement) == 0:
             logger.info("No rows need Claude enhancement - all classifications are high confidence")
@@ -524,8 +676,19 @@ class AIEnhancedProductionCleanerV5:
         
         logger.info(f"Found {len(needs_enhancement)} rows for Claude enhancement")
         
-        # STEP 2: Batch process with Claude for efficiency
-        enhanced_rows = self._enhance_with_claude_batch(needs_enhancement, df)
+        # STEP 2: Batch process with Claude for efficiency (cap to avoid long timeouts)
+        max_items = int(self.config.get('llm_max_enhancements', 25))
+        # Ensure a minimum coverage if requested (fraction or count)
+        min_frac = float(self.config.get('llm_minimum_fraction', 0.0))
+        min_count = int(self.config.get('llm_minimum_count', 0))
+        guarantee = max(int(len(df) * min_frac), min_count)
+        if guarantee > 0 and len(needs_enhancement) < guarantee:
+            # Add additional indices to meet minimum, prioritizing high amounts
+            candidates = list(set(range(len(df))) - set(needs_enhancement))
+            candidates.sort(key=lambda i: abs(float(df.at[i, 'amount'] if 'amount' in df.columns else df.at[i, 'Amount'] if 'Amount' in df.columns else 0)), reverse=True)
+            needs_enhancement += candidates[:max(0, guarantee - len(needs_enhancement))]
+        target_indices = needs_enhancement[:max_items]
+        enhanced_rows = self._enhance_with_claude_batch(target_indices, df)
         
         # STEP 3: Update dataframe with enhanced results
         df = self._apply_claude_enhancements(df, enhanced_rows)
@@ -533,44 +696,137 @@ class AIEnhancedProductionCleanerV5:
         processing_time = time.time() - start_time
         logger.info(f"Claude post-processing completed in {processing_time:.2f}s, enhanced {len(enhanced_rows)} rows")
         
+        self._claude_enhancement_applied = True
+
+        # STEP 4: Accuracy-first SLO check and emergency expansion if needed
+        if bool(self.config.get('accuracy_first', False)):
+            try:
+                proper = 0
+                other = 0
+                none = 0
+                for _, row in df.iterrows():
+                    cat = str(row.get('category', '') or '').strip()
+                    if not cat or cat == 'None':
+                        none += 1
+                    elif cat == 'Other':
+                        other += 1
+                    else:
+                        proper += 1
+                total = max(1, len(df))
+                proper_rate = proper / total
+                none_rate = none / total
+                slo_proper = float(self.config.get('quality_slo_proper_min', 0.98))
+                slo_none = float(self.config.get('quality_slo_none_max', 0.01))
+
+                if (proper_rate < slo_proper or none_rate > slo_none):
+                    extra = float(self.config.get('emergency_llm_cap', 0.30))
+                    if extra > 0:
+                        logger.info(f"Accuracy-first SLO not met (proper={proper_rate:.3f}, none={none_rate:.3f}). Applying emergency extra budget ${extra:.2f}.")
+                        self.llm_cost_cap += extra
+                        # Recompute remaining candidates (focus on Other/None/low-confidence)
+                        needs_enhancement = []
+                        conf_threshold = float(self.config.get('llm_parallel_conf_threshold', 0.9))
+                        for idx, row in df.iterrows():
+                            cat = str(row.get('category', '') or '').strip()
+                            cat_conf = float(row.get('category_confidence', 0.0) or 0.0)
+                            if (not cat or cat == 'None' or cat == 'Other' or cat_conf < conf_threshold):
+                                needs_enhancement.append(idx)
+                        # Run another batched pass under new budget
+                        extra_rows = self._enhance_with_claude_batch(needs_enhancement, df)
+                        df = self._apply_claude_enhancements(df, extra_rows)
+            except Exception as e:
+                logger.warning(f"Accuracy-first SLO evaluation failed: {e}")
+
         return df
+
+    def _remaining_llm_budget(self) -> float:
+        return max(0.0, self.llm_cost_cap - self.llm_cost_spent)
+
+    def _can_spend_llm(self, rows: int = 1) -> bool:
+        estimated = self.llm_estimated_cost_per_row * max(1, rows)
+        return self._remaining_llm_budget() >= estimated
+
+    @contextmanager
+    def _temporary_mock_mode(self, enable_mock: bool):
+        prev = getattr(self.llm_client, 'use_mock', False)
+        try:
+            setattr(self.llm_client, 'use_mock', enable_mock)
+            yield
+        finally:
+            setattr(self.llm_client, 'use_mock', prev)
 
     def _identify_enhancement_targets(self, df: pd.DataFrame) -> List[int]:
         """
-        CONSERVATIVE: Identify rows that need Claude enhancement - only high-value transactions
-        This dramatically reduces costs while maintaining accuracy on important transactions
+        Hybrid targeting for post-processing with Claude (real LLM):
+        - High-value transactions above llm_trigger_amount
+        - Low-confidence classifications below llm_parallel_conf_threshold
+        - Category is empty/None/Other
+        - Optional: route unknown vendors via vendor confidence threshold when available
         """
         targets = []
-        
+        trigger_amount = float(self.config.get('llm_trigger_amount', 300.0))
+        conf_threshold = float(self.config.get('llm_parallel_conf_threshold', 0.9))
+        route_unknown = bool(self.config.get('llm_route_unknown', True))
+        always_cats = [str(c).strip().lower() for c in self.config.get('llm_always_reprocess_categories', ['Other'])]
+        aggressive_backfill = bool(self.config.get('aggressive_vendor_backfill', False))
+
         for idx, row in df.iterrows():
-            category = row.get('category', '')
-            confidence = row.get('category_confidence', 1.0)
-            amount = abs(float(row.get('amount', 0))) if pd.notna(row.get('amount')) else 0
-            vendor = row.get('standardized_vendor', '')
-            
-            # CONSERVATIVE TARGET: Only high-value transactions (>$1000) get Claude enhancement
-            if amount > 1000:
+            raw_cat = row.get('category', '')
+            category = str(raw_cat) if raw_cat is not None else ''
+            category = category.strip()
+            cat_conf = float(row.get('category_confidence', 1.0) or 1.0)
+            amount = abs(float(row.get('amount', 0) or 0)) if pd.notna(row.get('amount')) else 0.0
+            raw_vendor = row.get('standardized_vendor', '')
+            vendor = str(raw_vendor) if raw_vendor is not None else ''
+            vendor = vendor.strip()
+            ven_conf = float(row.get('vendor_confidence', 1.0) or 1.0)
+
+            # 1) High-value
+            if amount >= trigger_amount:
                 targets.append(idx)
-                logger.info(f"High-value transaction selected for Claude: ${amount} - {vendor}")
                 continue
-                
-            # OPTIONAL: Critical "Other" categories only if truly unknown AND significant amount
-            if category == 'Other' and amount > 500:
+
+            # 2) Always-reprocess categories regardless of confidence
+            if category.lower() in always_cats:
                 targets.append(idx)
-                logger.info(f"Unknown high-value transaction selected for Claude: ${amount} - {vendor}")
                 continue
-        
-        logger.info(f"Conservative Claude targeting: {len(targets)} out of {len(df)} transactions selected")
+
+            # 3) Low-confidence classification
+            if cat_conf < conf_threshold:
+                targets.append(idx)
+                continue
+
+            # 4) Missing/Other category (fallback general check)
+            if category in ('', 'None', 'Other'):
+                targets.append(idx)
+                continue
+
+            # 5) Unknown/processor vendor routing (use vendor confidence and aggressive backfill)
+            is_processor = bool(re.match(r'^(PAYPAL\s*\*|SQ\s*\*|TST\s*\*)', vendor, flags=re.IGNORECASE))
+            is_unknown_vendor = vendor.strip() == '' or vendor.strip().lower() in {'unknown vendor', 'unknown', 'other'}
+            if route_unknown and (ven_conf < conf_threshold or (aggressive_backfill and (is_unknown_vendor or is_processor))):
+                targets.append(idx)
+                continue
+
+        logger.info(f"Hybrid Claude targeting: {len(targets)} out of {len(df)} transactions selected")
         return targets
 
     def _enhance_with_claude_batch(self, target_indices: List[int], df: pd.DataFrame) -> Dict[int, Dict[str, Any]]:
-        """Use Claude to enhance target rows with explanations and better classifications"""
+        """Use Claude to enhance target rows (no explanations, cost-capped, batched)"""
         enhanced_rows = {}
         
-        # Process in batches of 5 for optimal Claude performance
-        batch_size = 5
+        # Process in batches per config
+        batch_size = int(self.config.get('llm_batch_size', 5))
+        cost_cap = float(self.config.get('llm_cost_cap_per_request', 0.05))
+        est_cost_per_row = float(self.config.get('llm_estimated_cost_per_row', 0.005))
+        spent_estimate = self.llm_cost_spent
         for i in range(0, len(target_indices), batch_size):
             batch_indices = target_indices[i:i + batch_size]
+            # Respect cost cap (rough estimate)
+            projected = spent_estimate + est_cost_per_row * len(batch_indices)
+            if projected > cost_cap:
+                logger.info(f"Stopping Claude batches due to cost cap: projected ${projected:.3f} > ${cost_cap:.2f}")
+                break
             batch_rows = []
             
             # Prepare batch for Claude
@@ -585,25 +841,41 @@ class AIEnhancedProductionCleanerV5:
                 })
             
             # Make Claude call for this batch
+            # Make real call only if we have budget
+            if not self._can_spend_llm(len(batch_rows)):
+                logger.info("Skipping batch due to insufficient LLM budget")
+                break
             batch_results = self._call_claude_for_batch(batch_rows)
             
             # Store results
             for result in batch_results:
                 enhanced_rows[result['index']] = result
+            spent_estimate += est_cost_per_row * len(batch_results)
+            self.llm_cost_spent = spent_estimate
         
         return enhanced_rows
 
     def _call_claude_for_batch(self, batch_rows: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Make a single Claude call to enhance a batch of rows"""
         try:
+            call_start = time.time()
             # Build the prompt for Claude
             prompt = self._build_claude_enhancement_prompt(batch_rows)
             
             # Make the LLM call
             response_text = self.llm_client._make_llm_call(prompt)
+            llm_time = time.time() - call_start
             
             # Parse the response
             enhanced_results = self._parse_claude_response(response_text, batch_rows)
+
+            # Track estimated cost and calls
+            est_cost_per_row = float(self.config.get('llm_estimated_cost_per_row', 0.005))
+            est_cost = est_cost_per_row * len(batch_rows)
+            self.tracker.track_llm_call('category_classification', est_cost, llm_time, True)
+            # Count rows touched by LLM in ai_requests; cost added to stats for quick insights
+            self.stats['ai_requests'] += len(batch_rows)
+            self.stats['ai_cost'] += est_cost
             
             return enhanced_results
             
@@ -619,7 +891,7 @@ class AIEnhancedProductionCleanerV5:
             } for row in batch_rows]
 
     def _build_claude_enhancement_prompt(self, batch_rows: List[Dict[str, Any]]) -> str:
-        """Build an intelligent prompt for Claude to enhance classifications"""
+        """Build a concise prompt for Claude (no explanations requested)"""
         
         # Create the merchant list
         merchants_list = []
@@ -628,45 +900,20 @@ class AIEnhancedProductionCleanerV5:
                 f"{i+1}. {row['merchant']} (current: {row['current_category']}, amount: ${row['amount']:.2f}, confidence: {row['confidence']:.2f})"
             )
         
-        prompt = f"""You are an expert financial analyst helping improve transaction categorization. 
+        prompt = f"""You are a business expense classifier.
 
-MERCHANTS NEEDING ENHANCEMENT:
+MERCHANTS:
 {chr(10).join(merchants_list)}
 
-Your task: For each merchant, provide the BEST category and a clear explanation.
+Categories: Software & Technology, Meals & Entertainment, Travel & Transportation, Office Supplies & Equipment, Professional Services, Banking & Finance, Utilities & Rent, Marketing & Advertising, Employee Benefits, Insurance & Legal, Other.
 
-AVAILABLE CATEGORIES:
-- Software & Technology
-- Meals & Entertainment  
-- Travel & Transportation
-- Office Supplies & Equipment
-- Professional Services
-- Banking & Finance
-- Utilities & Rent
-- Marketing & Advertising
-- Employee Benefits
-- Insurance & Legal
-- Other (only if truly unknown)
-
-SPECIAL CONTEXT:
-- Safeway/Kroger are grocery stores → typically "Office Supplies & Equipment" for businesses (office snacks/supplies)
-- High amounts (>$1000) need clear justification
-- Low confidence cases need confident re-classification
-
-Return JSON array format:
+Return ONLY a JSON array of objects without explanations:
 [
-  {{
-    "merchant": "exact_merchant_name",
-    "category": "best_category",
-    "explanation": "Clear reason why this category fits",
-    "confidence": 0.95
-  }},
+  {{"merchant":"exact_merchant_name","category":"best_category","confidence":0.95}},
   ...
 ]
 
-Focus on accuracy and useful explanations that accountants would appreciate.
-
-JSON response:"""
+JSON:"""
         
         return prompt
 
@@ -683,7 +930,7 @@ JSON response:"""
             else:
                 claude_results = json.loads(response_text)
             
-            # Map results back to our indices
+            # Map results back to our indices (no explanations expected)
             enhanced_results = []
             for i, row in enumerate(batch_rows):
                 if i < len(claude_results):
@@ -691,7 +938,7 @@ JSON response:"""
                     enhanced_results.append({
                         'index': row['index'],
                         'enhanced_category': claude_result.get('category', row['current_category']),
-                        'explanation': claude_result.get('explanation', 'AI-enhanced classification'),
+                        'explanation': 'AI-enhanced classification',
                         'confidence': claude_result.get('confidence', 0.9),
                         'enhanced': True
                     })
@@ -724,19 +971,43 @@ JSON response:"""
         
         for idx, enhancement in enhanced_rows.items():
             if enhancement['enhanced']:
-                # Update the category
-                df.at[idx, 'category'] = enhancement['enhanced_category']
+                # Update the category (apply gold mapping if enabled)
+                try:
+                    from gold_mapping import apply_gold_category_mapping
+                    # Prefer standardized_vendor if present for mapping
+                    vendor_for_map = None
+                    try:
+                        vendor_for_map = df.at[idx, 'standardized_vendor'] if 'standardized_vendor' in df.columns else None
+                    except Exception:
+                        vendor_for_map = None
+                    if not vendor_for_map:
+                        try:
+                            vendor_for_map = df.at[idx, 'Merchant'] if 'Merchant' in df.columns else ''
+                        except Exception:
+                            vendor_for_map = ''
+                    mapped_cat = apply_gold_category_mapping(vendor_for_map, enhancement['enhanced_category'])
+                except Exception:
+                    mapped_cat = enhancement['enhanced_category']
+                df.at[idx, 'category'] = mapped_cat
                 df.at[idx, 'category_confidence'] = enhancement['confidence']
                 df.at[idx, 'category_source'] = 'claude_enhanced'
                 
-                # Add explanation if the column exists or create it
-                if 'category_explanation' not in df.columns:
-                    df['category_explanation'] = ''
-                df.at[idx, 'category_explanation'] = enhancement['explanation']
+                # Drop explanations entirely in new mode (keep compatibility column empty if present)
+                if 'category_explanation' in df.columns:
+                    df.at[idx, 'category_explanation'] = ''
                 
                 enhanced_count += 1
                 
-                original_merchant = df.at[idx, 'standardized_vendor'] or df.at[idx, 'Merchant']
+                # Safely retrieve original merchant for logging (columns may vary)
+                try:
+                    original_merchant = df.at[idx, 'standardized_vendor'] if 'standardized_vendor' in df.columns else None
+                except Exception:
+                    original_merchant = None
+                if not original_merchant:
+                    try:
+                        original_merchant = df.at[idx, 'Merchant'] if 'Merchant' in df.columns else ''
+                    except Exception:
+                        original_merchant = ''
                 logger.info(f"Claude enhanced: {original_merchant} → {enhancement['enhanced_category']} | {enhancement['explanation']}")
         
         logger.info(f"Successfully enhanced {enhanced_count} rows with Claude")
@@ -781,13 +1052,16 @@ JSON response:"""
         logger.info("Starting intelligent row processing")
         
         # Determine if we should use parallel processing
-        # TEMPORARILY DISABLE PARALLEL PROCESSING TO DEBUG CATEGORY ISSUE
-        use_parallel = len(df) > 1000 and self.config.get('enable_parallel_processing', True)
+        # Honor config flag directly (parallelism is beneficial even for ~100 rows with batching)
+        use_parallel = self.config.get('enable_parallel_processing', True)
         max_workers = self.config.get('max_workers', min(4, len(df) // 5))
         
         if use_parallel:
             logger.info(f"Using parallel processing with {max_workers} workers for {len(df)} rows")
-            return self._process_rows_parallel(df, max_workers)
+            enhanced_df, processing_results = self._process_rows_parallel(df, max_workers)
+            # After parallel pass, optionally enhance with Claude per hybrid rules
+            enhanced_df = self._post_process_with_claude(enhanced_df)
+            return enhanced_df, processing_results
         else:
             logger.info("Using sequential processing")
             return self._process_rows_sequential(df)
@@ -820,7 +1094,11 @@ JSON response:"""
                 
                 if vendor and vendor.strip():
                     vendor_result = self._process_vendor_standardization(vendor, row)
-                    enhanced_df.at[idx, 'standardized_vendor'] = vendor_result.value
+                    if self.preserve_schema:
+                        # Write standardized value back to the original vendor column only
+                        enhanced_df.at[idx, vendor_col] = vendor_result.value
+                    else:
+                        enhanced_df.at[idx, 'standardized_vendor'] = vendor_result.value
                     if self.config['enable_source_tracking']:
                         enhanced_df.at[idx, 'vendor_source'] = vendor_result.source.value
                         enhanced_df.at[idx, 'vendor_confidence'] = vendor_result.confidence
@@ -837,7 +1115,7 @@ JSON response:"""
             # Process category classification
             if vendor_col and amount_col and self.config['ai_category_enabled']:
                 # Use standardized vendor name for better category matching
-                standardized_vendor = enhanced_df.at[idx, 'standardized_vendor'] if 'standardized_vendor' in enhanced_df.columns else str(row.get(vendor_col, ''))
+                standardized_vendor = enhanced_df.at[idx, 'standardized_vendor'] if 'standardized_vendor' in enhanced_df.columns else str(enhanced_df.get(vendor_col, row.get(vendor_col, '')))
                 # ROBUST AMOUNT PARSING (fixes None category bug)
                 amount_val = row.get(amount_col, 0)
                 if amount_val == "" or amount_val is None or pd.isna(amount_val):
@@ -868,10 +1146,22 @@ JSON response:"""
 
                 if sanitized_vendor:  # REMOVE amount > 0 restriction - classify all vendors
                     category_result = self._process_category_classification(sanitized_vendor, abs(amount), row)
-                    enhanced_df.at[idx, 'category'] = category_result.value
+                    # Only set category if a category-like column exists when preserving schema
+                    if self.preserve_schema:
+                        existing_cat_col = next((c for c in enhanced_df.columns if str(c).lower() in ['category','type','classification','group']), None)
+                        if existing_cat_col:
+                            enhanced_df.at[idx, existing_cat_col] = category_result.value
+                    else:
+                        try:
+                            from gold_mapping import apply_gold_category_mapping
+                            mapped_category = apply_gold_category_mapping(sanitized_vendor, category_result.value)
+                        except Exception:
+                            mapped_category = category_result.value
+                        enhanced_df.at[idx, 'category'] = mapped_category
                     if self.config['enable_source_tracking']:
-                        enhanced_df.at[idx, 'category_source'] = category_result.source.value
-                        enhanced_df.at[idx, 'category_confidence'] = category_result.confidence
+                        if not self.preserve_schema:
+                            enhanced_df.at[idx, 'category_source'] = category_result.source.value
+                            enhanced_df.at[idx, 'category_confidence'] = category_result.confidence
                     row_result['category_classification'] = {
                         'value': category_result.value,
                         'source': category_result.source.value,
@@ -883,7 +1173,7 @@ JSON response:"""
                     self.stats['category_classifications'] += 1
             
             # Process transaction intelligence (separate from CSV)
-            if self.config['enable_transaction_intelligence']:
+            if self.config['enable_transaction_intelligence'] and not self.preserve_schema:
                 intelligence = self._process_transaction_intelligence(row)
                 row_result['transaction_intelligence'] = intelligence
                 self.stats['transaction_intelligence'] += 1
@@ -940,13 +1230,24 @@ JSON response:"""
         for chunk_idx, result in chunk_results:
             chunk_enhanced = result['enhanced_chunk']
             chunk_processing = result['processing_results']
-            
-            # Update the main dataframe with chunk results
-            for idx in chunk_enhanced.index:
-                for col in chunk_enhanced.columns:
-                    if col in enhanced_df.columns:
+
+            # Ensure new columns from chunk are present in the master df
+            for col in chunk_enhanced.columns:
+                if col not in enhanced_df.columns:
+                    try:
+                        enhanced_df[col] = pd.NA
+                    except Exception:
+                        enhanced_df[col] = None
+
+            # Bulk-assign chunk columns back to the master df (preserves new cols like 'standardized_vendor', 'category')
+            try:
+                enhanced_df.loc[chunk_enhanced.index, chunk_enhanced.columns] = chunk_enhanced.values
+            except Exception:
+                # Fallback to cell-wise assignment
+                for idx in chunk_enhanced.index:
+                    for col in chunk_enhanced.columns:
                         enhanced_df.at[idx, col] = chunk_enhanced.at[idx, col]
-            
+
             # Add chunk processing results
             all_processing_results.extend(chunk_processing)
         
@@ -1000,9 +1301,14 @@ JSON response:"""
                     if i < len(batch_results):
                         result = batch_results[i]
                         
-                        # Update enhanced chunk
+                        # Update enhanced chunk with gold mapping
                         enhanced_chunk.at[idx, 'standardized_vendor'] = result['standardized_vendor']
-                        enhanced_chunk.at[idx, 'category'] = result['category']
+                        try:
+                            from gold_mapping import apply_gold_category_mapping
+                            mapped_batch_category = apply_gold_category_mapping(result['standardized_vendor'], result['category'])
+                        except Exception:
+                            mapped_batch_category = result['category']
+                        enhanced_chunk.at[idx, 'category'] = mapped_batch_category
                         
                         if self.config['enable_source_tracking']:
                             enhanced_chunk.at[idx, 'vendor_source'] = result['processing_source']
@@ -1086,21 +1392,22 @@ JSON response:"""
                     }
                     self.stats['vendor_standardizations'] += 1
             
-            # Process category classification
+            # Process category classification (always classify when vendor text is available; no amount>0 gate)
             if vendor_col and amount_col and self.config['ai_category_enabled']:
-                # Use standardized vendor name for better category matching
-                standardized_vendor = enhanced_chunk.at[idx, 'standardized_vendor'] if 'standardized_vendor' in enhanced_chunk.columns else str(row.get(vendor_col, ''))
+                # Use standardized vendor name if available; otherwise original vendor text
+                standardized_vendor = enhanced_chunk.at[idx, 'standardized_vendor'] if 'standardized_vendor' in enhanced_chunk.columns else None
+                vendor_text = standardized_vendor if (standardized_vendor and str(standardized_vendor).strip()) else str(row.get(vendor_col, ''))
                 # Handle empty or invalid amount values
-            amount_val = row.get(amount_col, 0)
-            if amount_val == "" or amount_val is None:
-                amount = 0.0
-            else:
-                try:
-                    amount = float(amount_val)
-                except (ValueError, TypeError):
+                amount_val = row.get(amount_col, 0)
+                if amount_val == "" or amount_val is None:
                     amount = 0.0
-                if standardized_vendor and amount > 0:
-                    category_result = self._process_category_classification(standardized_vendor, amount, row)
+                else:
+                    try:
+                        amount = float(amount_val)
+                    except (ValueError, TypeError):
+                        amount = 0.0
+                if vendor_text:
+                    category_result = self._process_category_classification(vendor_text, abs(amount), row)
                     enhanced_chunk.at[idx, 'category'] = category_result.value
                     if self.config['enable_source_tracking']:
                         enhanced_chunk.at[idx, 'category_source'] = category_result.source.value
@@ -1148,8 +1455,9 @@ JSON response:"""
         if self.advanced_processor:
             return self.advanced_processor.process_vendor_standardization(vendor, row)
 
-        # Step 2: Rule-based
-        rule_result = self._apply_vendor_rules(vendor)
+        # Step 2: Rule-based (pre-clean for robust matching)
+        cleaned_vendor = self._clean_vendor_for_processing(vendor)
+        rule_result = self._apply_vendor_rules(cleaned_vendor or vendor)
         if rule_result['matched']:
             # Check for ambiguous/generic/low-confidence
             if (
@@ -1178,7 +1486,7 @@ JSON response:"""
         if self.config.get('force_llm_for_testing', False):
             cache_result = None
         else:
-            cache_result = self.cache.get_vendor_cache(vendor)
+            cache_result = self.cache.get_vendor_cache(cleaned_vendor or vendor)
         if cache_result:
             if (
                 cache_result['standardized'].strip().lower() in generic_vendors or
@@ -1203,7 +1511,7 @@ JSON response:"""
                 )
 
         # Step 4: LLM fallback for missing/generic vendor
-        if vendor.strip().lower() in generic_vendors:
+        if (cleaned_vendor or vendor).strip().lower() in generic_vendors:
             suggestions = self.llm_client.suggest_vendors_from_description(description, amount)
             main_vendor = suggestions[0] if suggestions else vendor
             return ProcessingResult(
@@ -1218,7 +1526,7 @@ JSON response:"""
         try:
             llm_start_time = time.time()
             batch_result = self.llm_client.process_transaction_batch([
-                {'merchant': vendor, 'amount': amount, 'description': description}
+                {'merchant': cleaned_vendor or vendor, 'amount': amount, 'description': description}
             ])
             llm_result = batch_result[0]['standardized_vendor']
             llm_time = time.time() - llm_start_time
@@ -1258,7 +1566,8 @@ JSON response:"""
             return self.advanced_processor.process_category_classification(vendor, amount, row)
         
         # Fallback to basic rule-based classification
-        rule_result = self._apply_category_rules(vendor, amount)
+        cleaned_vendor = self._clean_vendor_for_processing(vendor)
+        rule_result = self._apply_category_rules(cleaned_vendor or vendor, amount)
         if rule_result['matched']:
             return ProcessingResult(
                 value=rule_result['category'],
@@ -1269,7 +1578,7 @@ JSON response:"""
             )
         
         # Step 2: Cache lookup
-        cache_result = self.cache.get_category_cache(vendor, amount)
+        cache_result = self.cache.get_category_cache(cleaned_vendor or vendor, amount)
         if cache_result:
             return ProcessingResult(
                 value=cache_result['category'],
@@ -1283,8 +1592,18 @@ JSON response:"""
         try:
             llm_start_time = time.time()
             # --- CORRECTED FUNCTION CALL ---
+            # Build rich description context from available fields
+            desc_fields = []
+            for key in ['Description', 'description', 'Notes', 'memo', 'Memo', 'Description/Memo']:
+                try:
+                    val = row.get(key, '') if isinstance(row, dict) or hasattr(row, 'get') else ''
+                except Exception:
+                    val = ''
+                if val:
+                    desc_fields.append(str(val))
+            description_text = ' | '.join([d for d in desc_fields if d])[:500]
             batch_result = self.llm_client.process_transaction_batch([
-                {'merchant': vendor, 'amount': amount, 'description': ''}
+                {'merchant': cleaned_vendor or vendor, 'amount': amount, 'description': description_text}
             ])
             llm_result = {
                 'category': batch_result[0]['category'],
@@ -1293,7 +1612,7 @@ JSON response:"""
             llm_time = time.time() - llm_start_time
             
             # Cache the result
-            self.cache.set_category_cache(vendor, amount, {
+            self.cache.set_category_cache(cleaned_vendor or vendor, amount, {
                 'category': llm_result['category'],
                 'confidence': llm_result['confidence'],
                 'explanation': f"AI-classified category"
@@ -1342,19 +1661,44 @@ JSON response:"""
         """Generate comprehensive output with enhanced data, summary, and audit logs"""
         
         # Summary Report
+        # Combine metrics from basic tracker and advanced processor (if present)
+        adv_tracker = getattr(self.advanced_processor, 'tracker', None)
+
+        # LLM calls
+        basic_llm_calls = self.tracker.performance_tracker.get('total_llm_calls', 0) if hasattr(self, 'tracker') else 0
+        adv_llm_calls = adv_tracker.performance_tracker.get('total_llm_calls', 0) if adv_tracker else 0
+        combined_llm_calls = self.stats['ai_requests'] + basic_llm_calls + adv_llm_calls
+
+        # Cost analysis (sum per key where available)
+        combined_cost = dict(self.tracker.cost_tracker)
+        if adv_tracker:
+            for key, value in adv_tracker.cost_tracker.items():
+                combined_cost[key] = combined_cost.get(key, 0.0) + value
+
+        # Performance metrics (sum times)
+        combined_perf = dict(self.tracker.time_tracker)
+        if adv_tracker:
+            for key, value in adv_tracker.time_tracker.items():
+                combined_perf[key] = combined_perf.get(key, 0.0) + value
+
         summary_report = {
             'processing_summary': {
                 'total_transactions': len(df),
                 'vendor_standardizations': self.stats['vendor_standardizations'],
                 'category_classifications': self.stats['category_classifications'],
                 'transaction_intelligence': self.stats['transaction_intelligence'],
-                'llm_calls': self.stats['ai_requests'],
+                'llm_calls': combined_llm_calls,
                 'cache_hit_rate': self.cache.get_cache_stats()['vendor_hit_rate']
             },
-            'cost_analysis': self.tracker.cost_tracker,
-            'performance_metrics': self.tracker.time_tracker,
+            'cost_analysis': combined_cost,
+            'performance_metrics': combined_perf,
             'cache_performance': self.cache.get_cache_stats(),
             'quality_metrics': self._calculate_quality_metrics(processing_results)
+        }
+        # Back-compat tracker summary for external tests
+        summary_report['llm_tracker'] = {
+            'total_calls': combined_llm_calls,
+            'total_cost': combined_cost.get('total_cost', 0.0)
         }
         
         # Audit Logs
@@ -1377,8 +1721,8 @@ JSON response:"""
 
     # Helper methods for column detection
     def _find_vendor_columns(self, df: pd.DataFrame) -> List[str]:
-        """Find vendor-related columns"""
-        vendor_keywords = ['merchant', 'vendor', 'store', 'business', 'company']
+        """Find vendor-related columns (prioritize standardized/clean fields)."""
+        vendor_keywords = ['standardized_vendor', 'clean vendor', 'clean_vendor', 'merchant', 'vendor', 'store', 'business', 'company', 'payee', 'name']
         try:
             return [col for col in df.columns if any(keyword in str(col).lower() for keyword in vendor_keywords)]
         except Exception as e:
@@ -1519,92 +1863,16 @@ JSON response:"""
         return {'matched': False}
     
     def _apply_category_rules(self, vendor: str, amount: float) -> Dict[str, Any]:
-        """Apply rule-based category classification with amount-based hints"""
-        # Handle case where vendor might be NaN or not a string
-        if vendor is None or pd.isna(vendor) or not isinstance(vendor, str):
+        """Delegate to shared category rules with optional custom overrides."""
+        try:
+            from category_rules import apply_category_rules
+        except Exception:
             return {'matched': False}
-        
-        vendor_lower = vendor.lower()
-        
-        # Debug logging to see what vendors we're getting
-        logger.debug(f"Category rules processing vendor: '{vendor}' (${amount})")
-        
-        # Amount-based category hints (applied first for better accuracy)
-        if amount <= 15:  # Small amounts often indicate meals/coffee
-            if any(keyword in vendor_lower for keyword in ['coffee', 'cafe', 'starbucks', 'sbux', 'dunkin']):
-                return {
-                    'matched': True,
-                    'category': 'Meals & Entertainment',
-                    'confidence': 0.9,
-                    'explanation': f"Small amount (${amount}) + coffee vendor = Meals & Entertainment"
-                }
-        
-        if 5 <= amount <= 50:  # Meal range
-            if any(keyword in vendor_lower for keyword in ['restaurant', 'food', 'pizza', 'burger', 'mcd']):
-                return {
-                    'matched': True,
-                    'category': 'Meals & Entertainment',
-                    'confidence': 0.85,
-                    'explanation': f"Meal amount range (${amount}) + food vendor = Meals & Entertainment"
-                }
-        
-        if amount >= 500:  # Large amounts often indicate business services
-            if any(keyword in vendor_lower for keyword in ['consulting', 'services', 'professional']):
-                return {
-                    'matched': True,
-                    'category': 'Professional Services',
-                    'confidence': 0.8,
-                    'explanation': f"Large amount (${amount}) + service vendor = Professional Services"
-                }
-        
-        # Enhanced vendor-specific rules with proper categories
-        category_rules = [
-            # Software & Technology
-            ('google', 'Software & Technology'),
-            ('microsoft', 'Software & Technology'),
-            ('adobe', 'Software & Technology'),
-            ('github', 'Software & Technology'),
-            ('digitalocean', 'Software & Technology'),
-            ('aws', 'Software & Technology'),
-            
-            # Marketing & Advertising  
-            ('meta', 'Marketing & Advertising'),
-            ('facebook', 'Marketing & Advertising'),
-            ('google ads', 'Marketing & Advertising'),
-            
-            # Meals & Entertainment
-            ('netflix', 'Meals & Entertainment'),
-            ('spotify', 'Meals & Entertainment'),
-            ('starbucks', 'Meals & Entertainment'),
-            ('mcdonalds', 'Meals & Entertainment'),
-            
-            # Travel & Transportation
-            ('uber', 'Travel & Transportation'),
-            ('lyft', 'Travel & Transportation'),
-            ('delta', 'Travel & Transportation'),
-            ('united', 'Travel & Transportation'),
-            
-            # Banking & Finance
-            ('stripe', 'Banking & Finance'),
-            ('paypal', 'Banking & Finance'),
-            ('square', 'Banking & Finance'),
-            ('chase', 'Banking & Finance'),
-            
-            # Office Supplies & Equipment (context-dependent)
-            ('amazon', 'Office Supplies & Equipment'),
-            ('staples', 'Office Supplies & Equipment')
-        ]
-        
-        for pattern, category in category_rules:
-            if pattern in vendor_lower:
-                return {
-                    'matched': True,
-                    'category': category,
-                    'confidence': 0.9,
-                    'explanation': f"Rule-based category: {pattern} → {category}"
-                }
-        
-        return {'matched': False}
+        try:
+            custom = self._get_intent_category_rules()
+        except Exception:
+            custom = {}
+        return apply_category_rules(vendor, amount, custom)
 
     # Transaction intelligence methods
     def _generate_transaction_tags(self, row: pd.Series) -> List[str]:
@@ -1745,14 +2013,24 @@ JSON response:"""
     
     # Legacy column finding methods for compatibility
     def _find_vendor_column(self, df: pd.DataFrame) -> Optional[str]:
-        """Find the best column to use as vendor"""
-        vendor_keywords = ['merchant', 'vendor', 'store', 'business']
-        
+        """Find the best column to use as vendor, prefer standardized/clean vendor fields."""
+        # Exact-priority candidates
+        priority_exact = ['standardized_vendor', 'clean vendor', 'clean_vendor']
+        for cand in priority_exact:
+            for col in df.columns:
+                if str(col).lower() == cand:
+                    logger.info(f"Selected vendor column (priority): {col}")
+                    return col
+
+        # Fallback to common vendor-like columns by substring
+        vendor_keywords = ['merchant', 'vendor', 'store', 'business', 'company', 'payee', 'name']
         for col in df.columns:
-            col_lower = col.lower()
+            col_lower = str(col).lower()
             if any(keyword in col_lower for keyword in vendor_keywords):
+                logger.info(f"Selected vendor column (fallback): {col}")
                 return col
         
+        logger.info("No vendor column detected")
         return None
     
     def _find_amount_column(self, df: pd.DataFrame) -> Optional[str]:
