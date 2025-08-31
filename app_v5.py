@@ -46,7 +46,8 @@ APP_CONFIG = {
     'port': int(os.getenv('PORT', 8080)),
     'debug': os.getenv('FLASK_ENV') == 'development',
     'max_file_size_mb': 50,
-    'version': '5.0.0'
+    'version': '5.0.0',
+    'default_cleaning_mode': os.getenv('DEFAULT_CLEANING_MODE', 'minimal').lower(),
 }
 
 # --- Normalization helpers ---
@@ -650,7 +651,8 @@ def get_config():
         'enable_ai': APP_CONFIG['enable_ai'],
         'has_api_key': bool(APP_CONFIG['anthropic_api_key']),
         'max_file_size_mb': APP_CONFIG['max_file_size_mb'],
-        'version': APP_CONFIG['version']
+        'version': APP_CONFIG['version'],
+        'default_cleaning_mode': APP_CONFIG['default_cleaning_mode']
     })
 
 @app.route('/demo', methods=['POST'])
@@ -665,7 +667,8 @@ def demo_endpoint():
         # Normalize input and run Safe Mode cleaner (non-destructive)
         detector = FlexibleColumnDetector()
         df = detector.normalize_to_dataframe(demo_data)
-        cleaner = CommonCleaner()
+        # Respect default non-opinionated mode unless overridden
+        cleaner = CommonCleaner(config={'cleaning_mode': APP_CONFIG['default_cleaning_mode'], 'preserve_schema': True})
         cleaned_df, summary = cleaner.clean(df)
 
         processing_time = time.time() - start_time
@@ -772,6 +775,8 @@ def upload_file():
             ):
                 if k in cfg:
                     cleaner_cfg[k] = cfg[k]
+        if 'cleaning_mode' not in cleaner_cfg:
+            cleaner_cfg['cleaning_mode'] = APP_CONFIG['default_cleaning_mode']
         cleaner = CommonCleaner(config=cleaner_cfg)
         cleaned_df, summary = cleaner.clean(df)
 
@@ -825,6 +830,8 @@ def export_cleaned():
         ):
             if k in payload:
                 cleaner_cfg[k] = payload[k]
+        if 'cleaning_mode' not in cleaner_cfg:
+            cleaner_cfg['cleaning_mode'] = APP_CONFIG['default_cleaning_mode']
         cleaner = CommonCleaner(config=cleaner_cfg)
         cleaned_df, _ = cleaner.clean(df)
 
@@ -900,7 +907,7 @@ def process_data():
         # Always use CommonCleaner when preserving schema; ignore AI flags for core cleaning
         # ---------------------------------------------
         if preserve_schema:
-            cleaner = CommonCleaner()
+            cleaner = CommonCleaner(config={'cleaning_mode': APP_CONFIG['default_cleaning_mode'], 'preserve_schema': True})
             cleaned_df, summary = cleaner.clean(df)
 
             llm_block = {}
