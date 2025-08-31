@@ -26,6 +26,7 @@ except ImportError:
     from llm_client import LLMClient
 from production_cleaner_ai_v5 import AIEnhancedProductionCleanerV5
 from common_cleaner import CommonCleaner
+from cleaning_config import build_cleaner_config
 from llm_assistant import LLMAssistant
 from flexible_column_detector import FlexibleColumnDetector
 from tenacity import retry, stop_after_attempt, wait_exponential
@@ -107,7 +108,7 @@ def vendor_title_case(value: str) -> str:
         if low in brand_single:
             return brand_single[low]
         if low == 'mcdonalds':
-            return "McDonald’s"
+            return "McDonald's"
     else:
         joined = []
         for t in cased:
@@ -115,7 +116,7 @@ def vendor_title_case(value: str) -> str:
             if low in brand_single:
                 joined.append(brand_single[low])
             elif low == 'mcdonalds':
-                joined.append("McDonald’s")
+                joined.append("McDonald's")
             else:
                 joined.append(t)
         result = ' '.join(joined)
@@ -668,7 +669,7 @@ def demo_endpoint():
         detector = FlexibleColumnDetector()
         df = detector.normalize_to_dataframe(demo_data)
         # Respect default non-opinionated mode unless overridden
-        cleaner = CommonCleaner(config={'cleaning_mode': APP_CONFIG['default_cleaning_mode'], 'preserve_schema': True})
+        cleaner = CommonCleaner(config=build_cleaner_config(APP_CONFIG, None))
         cleaned_df, summary = cleaner.clean(df)
 
         processing_time = time.time() - start_time
@@ -762,22 +763,7 @@ def upload_file():
 
         # Non-destructive cleaning
         # Allow callers to control strictness via cleaning_mode
-        cleaner_cfg = {'preserve_schema': True}
-        if isinstance(cfg, dict):
-            for k in (
-                'cleaning_mode',
-                'enable_date_normalization',
-                'enable_number_normalization',
-                'enable_text_whitespace_trim',
-                'enable_text_title_case',
-                'enable_deduplication',
-                'enable_math_recompute',
-            ):
-                if k in cfg:
-                    cleaner_cfg[k] = cfg[k]
-        if 'cleaning_mode' not in cleaner_cfg:
-            cleaner_cfg['cleaning_mode'] = APP_CONFIG['default_cleaning_mode']
-        cleaner = CommonCleaner(config=cleaner_cfg)
+        cleaner = CommonCleaner(config=build_cleaner_config(APP_CONFIG, cfg))
         cleaned_df, summary = cleaner.clean(df)
 
         # Return JSON with same columns and order
@@ -818,21 +804,7 @@ def export_cleaned():
         out_fmt = str(payload.get('format', 'csv')).lower()
         detector = FlexibleColumnDetector()
         df = detector.normalize_to_dataframe(data)
-        cleaner_cfg = {'preserve_schema': True}
-        for k in (
-            'cleaning_mode',
-            'enable_date_normalization',
-            'enable_number_normalization',
-            'enable_text_whitespace_trim',
-            'enable_text_title_case',
-            'enable_deduplication',
-            'enable_math_recompute',
-        ):
-            if k in payload:
-                cleaner_cfg[k] = payload[k]
-        if 'cleaning_mode' not in cleaner_cfg:
-            cleaner_cfg['cleaning_mode'] = APP_CONFIG['default_cleaning_mode']
-        cleaner = CommonCleaner(config=cleaner_cfg)
+        cleaner = CommonCleaner(config=build_cleaner_config(APP_CONFIG, payload))
         cleaned_df, _ = cleaner.clean(df)
 
         buf = io.BytesIO()
@@ -907,7 +879,7 @@ def process_data():
         # Always use CommonCleaner when preserving schema; ignore AI flags for core cleaning
         # ---------------------------------------------
         if preserve_schema:
-            cleaner = CommonCleaner(config={'cleaning_mode': APP_CONFIG['default_cleaning_mode'], 'preserve_schema': True})
+            cleaner = CommonCleaner(config=build_cleaner_config(APP_CONFIG, config_override))
             cleaned_df, summary = cleaner.clean(df)
 
             llm_block = {}
