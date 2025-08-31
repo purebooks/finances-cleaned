@@ -758,7 +758,21 @@ def upload_file():
             df = detector.normalize_to_dataframe(df)
 
         # Non-destructive cleaning
-        cleaner = CommonCleaner(config={'preserve_schema': True})
+        # Allow callers to control strictness via cleaning_mode
+        cleaner_cfg = {'preserve_schema': True}
+        if isinstance(cfg, dict):
+            for k in (
+                'cleaning_mode',
+                'enable_date_normalization',
+                'enable_number_normalization',
+                'enable_text_whitespace_trim',
+                'enable_text_title_case',
+                'enable_deduplication',
+                'enable_math_recompute',
+            ):
+                if k in cfg:
+                    cleaner_cfg[k] = cfg[k]
+        cleaner = CommonCleaner(config=cleaner_cfg)
         cleaned_df, summary = cleaner.clean(df)
 
         # Return JSON with same columns and order
@@ -799,7 +813,19 @@ def export_cleaned():
         out_fmt = str(payload.get('format', 'csv')).lower()
         detector = FlexibleColumnDetector()
         df = detector.normalize_to_dataframe(data)
-        cleaner = CommonCleaner(config={'preserve_schema': True})
+        cleaner_cfg = {'preserve_schema': True}
+        for k in (
+            'cleaning_mode',
+            'enable_date_normalization',
+            'enable_number_normalization',
+            'enable_text_whitespace_trim',
+            'enable_text_title_case',
+            'enable_deduplication',
+            'enable_math_recompute',
+        ):
+            if k in payload:
+                cleaner_cfg[k] = payload[k]
+        cleaner = CommonCleaner(config=cleaner_cfg)
         cleaned_df, _ = cleaner.clean(df)
 
         buf = io.BytesIO()
