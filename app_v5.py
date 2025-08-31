@@ -15,21 +15,20 @@ from typing import Dict, Any, Optional, Tuple
 import pandas as pd
 import numpy as np
 from flask import Flask, request, jsonify, send_file, make_response
-from flask_cors import CORS
 import json
 import re
 import io
 
 try:
-    from llm_client_v2 import LLMClient
-except ImportError:
-    from llm_client import LLMClient
+	from ai.llm_client import LLMClient
+except Exception:
+	from llm_client import LLMClient
 from production_cleaner_ai_v5 import AIEnhancedProductionCleanerV5
 from common_cleaner import CommonCleaner
-from cleaning_config import build_cleaner_config
 from llm_assistant import LLMAssistant
 from flexible_column_detector import FlexibleColumnDetector
 from tenacity import retry, stop_after_attempt, wait_exponential
+from ai.overlook import apply_ai_overlook
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -37,7 +36,6 @@ logger = logging.getLogger(__name__)
 
 # --- App Setup ---
 app = Flask(__name__)
-CORS(app)
 
 # --- Configuration ---
 APP_CONFIG = {
@@ -267,114 +265,6 @@ def _gpt5_batch_enrich(memos: list, provider_cfg: dict) -> list:
     except Exception as unexpected:
         logger.warning(f"Unexpected memo enrichment error: {unexpected}")
     return [''] * len(memos)
-
-# --- AI Overlook (fill-only blanks: vendor and memo/notes) ---
-def apply_ai_overlook(df: pd.DataFrame, cfg: dict) -> None:
-    """Fill blanks only in vendor and memo-like fields. In-place, preserve schema.
-    Respects enable_ai and ai_overlook flags. Uses LLMClient (vendor) and optional
-    _gpt5_batch_enrich (memos). Does nothing when keys are missing or disabled.
-    """
-    try:
-        if not bool(cfg.get('enable_ai', False)):
-            return
-        if not bool(cfg.get('ai_overlook', cfg.get('ai_overlook_enabled', False))):
-            return
-
-        # Normalize true blanks
-        try:
-            string_nulls = {"nan", "n/a", "none", "null", "unknown"}
-            text_cols_candidates = [
-                'standardized_vendor', 'Merchant', 'Posted By', 'Vendor/Customer', 'vendor', 'merchant', 'Clean Vendor',
-                'Description', 'Notes', 'Memo', 'description', 'notes', 'memo', 'Description/Memo',
-                'Category', 'category'
-            ]
-            present_cols = [c for c in text_cols_candidates if c in df.columns]
-            for c in present_cols:
-                try:
-                    df[c] = df[c].apply(lambda v: '' if (v is None or (isinstance(v, float) and pd.isna(v)) or (str(v).strip().lower() in string_nulls)) else str(v))
-                except Exception:
-                    pass
-        except Exception:
-            pass
-
-        # Resolve vendor for blanks only
-        try:
-            vendor_candidates = ['standardized_vendor', 'Merchant', 'Posted By', 'Vendor/Customer', 'vendor', 'merchant', 'Clean Vendor']
-            desc_candidates = ['Description/Memo', 'Description', 'Notes', 'Memo', 'description', 'notes', 'memo']
-            vendor_col = next((c for c in vendor_candidates if c in df.columns), None)
-            desc_col = next((c for c in desc_candidates if c in df.columns), None)
-            if vendor_col:
-                client = get_llm_client()
-                for idx in df.index:
-                    try:
-                        cur_vendor = str(df.at[idx, vendor_col] or '').strip()
-                    except Exception:
-                        cur_vendor = ''
-                    if not cur_vendor:
-                        try:
-                            desc_val = str(df.at[idx, desc_col] or '') if desc_col else ''
-                        except Exception:
-                            desc_val = ''
-                        try:
-                            resolved = client.resolve_vendor(cur_vendor, description=desc_val)
-                            resolved = post_clean_vendor(resolved)
-                            if resolved and resolved.lower() not in ("", "unknown", "unknown vendor"):
-                                df.at[idx, vendor_col] = resolved
-                        except Exception:
-                            pass
-        except Exception:
-            pass
-
-        # Enrich memo/notes for blanks only (best-effort, OpenAI optional)
-        try:
-            memo_cols = [c for c in ['Description/Memo', 'Description', 'Notes', 'Memo', 'description', 'notes', 'memo'] if c in df.columns]
-            if memo_cols:
-                target_memo_col = memo_cols[0]
-                rows = []
-                indices = []
-                for idx in df.index:
-                    try:
-                        cur_memo = str(df.at[idx, target_memo_col] or '').strip()
-                    except Exception:
-                        cur_memo = ''
-                    if _memo_needs_enrichment(cur_memo):
-                        try:
-                            vend = ''
-                            amount = 0.0
-                            cat = ''
-                            # Pull vendor/amount/category if present
-                            for vc in ['standardized_vendor','Merchant','Posted By','Vendor/Customer','vendor','merchant','Clean Vendor']:
-                                if vc in df.columns:
-                                    vend = str(df.at[idx, vc] or '')
-                                    break
-                            for ac in ['Amount','amount','total','price','cost']:
-                                if ac in df.columns:
-                                    try:
-                                        amount = float(str(df.at[idx, ac]).replace(',', '').replace('$','')) if str(df.at[idx, ac]).strip() else 0.0
-                                    except Exception:
-                                        amount = 0.0
-                                    break
-                            for cc in ['Category','category']:
-                                if cc in df.columns:
-                                    cat = str(df.at[idx, cc] or '')
-                                    break
-                            rows.append({'vendor': vend, 'amount': amount, 'category': cat, 'notes': ''})
-                            indices.append(idx)
-                        except Exception:
-                            pass
-                if rows:
-                    memos = _gpt5_batch_enrich(rows, cfg)
-                    for i, idx in enumerate(indices):
-                        try:
-                            suggestion = str(memos[i] or '').strip()
-                        except Exception:
-                            suggestion = ''
-                        if suggestion:
-                            df.at[idx, target_memo_col] = suggestion[:64]
-        except Exception:
-            pass
-    except Exception:
-        logger.warning("AI overlook encountered an unexpected error; continuing without changes.")
 
 # --- Global State ---
 llm_client = None
