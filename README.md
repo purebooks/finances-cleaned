@@ -49,12 +49,13 @@ pip install -r requirements.txt
 
 # Set environment variables
 export ANTHROPIC_API_KEY="your-api-key-here"
+export DEFAULT_CLEANING_MODE="minimal"  # minimal | standard
 
 # Run tests
 python test_smart_ai_demo.py
 
 # Start the API server
-python app.py
+python app_v5.py
 ```
 
 ### **2. API Usage**
@@ -146,6 +147,36 @@ Process financial data with AI enhancement.
 }
 ```
 
+### **POST /upload**
+Upload CSV/XLSX content, clean non-destructively, preserve original headers/order, return JSON.
+
+Request (multipart form-data):
+```bash
+curl -X POST http://localhost:8080/upload \
+  -F "file=@/path/to/transactions.csv" \
+  -F 'config={"cleaning_mode":"minimal"}'
+```
+
+Response: same shape as cleaned_data in /process, plus summary and insights.
+
+Notes:
+- Use `config` JSON to override toggles per request (see Cleaning Toggles section).
+- You can send raw bytes with `?format=csv|xlsx` instead of multipart form-data.
+
+### **POST /export**
+Accepts JSON data, cleans non-destructively, returns a downloadable CSV/XLSX.
+
+Request:
+```bash
+curl -X POST http://localhost:8080/export \
+  -H "Content-Type: application/json" \
+  -d '{
+    "data": {"merchant":["PAYPAL*DIGITALOCEAN"],"amount":[50.0],"description":["Hosting"]},
+    "format": "csv",
+    "cleaning_mode": "minimal"
+  }' -o cleaned.csv
+```
+
 ### **GET /health**
 Health check endpoint for monitoring.
 
@@ -182,6 +213,7 @@ LOG_LEVEL=INFO
 MAX_FILE_SIZE=10MB
 ENABLE_AI=true
 AI_CONFIDENCE_THRESHOLD=0.7
+DEFAULT_CLEANING_MODE=minimal   # minimal | standard
 ```
 
 ### **Config Options**
@@ -197,6 +229,39 @@ config = {
     'duplicate_threshold': 0.85,          # Duplicate detection sensitivity
     'outlier_z_threshold': 3.0,           # Outlier detection threshold
 }
+```
+
+### **Cleaning Modes & Toggles (Schema-Preserving)**
+- The system is source-agnostic and preserves your original columns and order.
+- Default behavior is non-opinionated via `DEFAULT_CLEANING_MODE=minimal`.
+
+Modes:
+- minimal: trims whitespace only; does NOT normalize numbers, dates, title-case text, deduplicate, or recompute math.
+- standard: trims whitespace, normalizes numbers and dates, applies light vendor/title casing, optional dedup/math where unambiguous.
+
+Per-request toggles (can be passed in `config` for `/upload`, `/export`, `/process`):
+- cleaning_mode: "minimal" | "standard"
+- enable_date_normalization: true|false
+- enable_number_normalization: true|false
+- enable_text_whitespace_trim: true|false
+- enable_text_title_case: true|false
+- enable_deduplication: true|false
+- enable_math_recompute: true|false
+
+Examples:
+```bash
+# Minimal (default) via env only
+curl -X POST http://localhost:8080/upload -F "file=@file.csv"
+
+# Override per-request: enable number + date normalization only
+curl -X POST http://localhost:8080/upload \
+  -F "file=@file.csv" \
+  -F 'config={"enable_number_normalization":true,"enable_date_normalization":true}'
+
+# Standard mode explicitly
+curl -X POST http://localhost:8080/upload \
+  -F "file=@file.csv" \
+  -F 'config={"cleaning_mode":"standard"}'
 ```
 
 ## 🔧 **Development**
@@ -251,6 +316,7 @@ docker build -t ai-financial-cleaner .
 # Run locally
 docker run -p 8080:8080 \
   -e ANTHROPIC_API_KEY="your-key" \
+  -e DEFAULT_CLEANING_MODE="minimal" \
   ai-financial-cleaner
 
 # Push to registry
@@ -266,6 +332,7 @@ export FLASK_ENV="production"
 export LOG_LEVEL="INFO"
 export MAX_FILE_SIZE="50MB"
 export REDIS_URL="redis://your-redis-instance"  # Optional caching
+export DEFAULT_CLEANING_MODE="minimal"          # minimal | standard
 ```
 
 ## 💰 **Cost Analysis**

@@ -14,20 +14,21 @@ from typing import Dict, Any, Optional, Tuple
 
 import pandas as pd
 import numpy as np
-from flask import Flask, request, jsonify
-from flask_cors import CORS
+from flask import Flask, request, jsonify, send_file, make_response
 import json
 import re
+import io
 
 try:
-    from llm_client_v2 import LLMClient
-except ImportError:
-    from llm_client import LLMClient
+	from ai.llm_client import LLMClient
+except Exception:
+	from llm_client import LLMClient
 from production_cleaner_ai_v5 import AIEnhancedProductionCleanerV5
 from common_cleaner import CommonCleaner
 from llm_assistant import LLMAssistant
 from flexible_column_detector import FlexibleColumnDetector
 from tenacity import retry, stop_after_attempt, wait_exponential
+from api.routes import register_routes
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -35,7 +36,6 @@ logger = logging.getLogger(__name__)
 
 # --- App Setup ---
 app = Flask(__name__)
-CORS(app)
 
 # --- Configuration ---
 APP_CONFIG = {
@@ -45,7 +45,8 @@ APP_CONFIG = {
     'port': int(os.getenv('PORT', 8080)),
     'debug': os.getenv('FLASK_ENV') == 'development',
     'max_file_size_mb': 50,
-    'version': '5.0.0'
+    'version': '5.0.0',
+    'default_cleaning_mode': os.getenv('DEFAULT_CLEANING_MODE', 'minimal').lower(),
 }
 
 # --- Normalization helpers ---
@@ -105,7 +106,7 @@ def vendor_title_case(value: str) -> str:
         if low in brand_single:
             return brand_single[low]
         if low == 'mcdonalds':
-            return "McDonald’s"
+            return "McDonald's"
     else:
         joined = []
         for t in cased:
@@ -113,7 +114,7 @@ def vendor_title_case(value: str) -> str:
             if low in brand_single:
                 joined.append(brand_single[low])
             elif low == 'mcdonalds':
-                joined.append("McDonald’s")
+                joined.append("McDonald's")
             else:
                 joined.append(t)
         result = ' '.join(joined)
@@ -649,7 +650,8 @@ def get_config():
         'enable_ai': APP_CONFIG['enable_ai'],
         'has_api_key': bool(APP_CONFIG['anthropic_api_key']),
         'max_file_size_mb': APP_CONFIG['max_file_size_mb'],
-        'version': APP_CONFIG['version']
+        'version': APP_CONFIG['version'],
+        'default_cleaning_mode': APP_CONFIG['default_cleaning_mode']
     })
 
 @app.route('/demo', methods=['POST'])
@@ -664,7 +666,8 @@ def demo_endpoint():
         # Normalize input and run Safe Mode cleaner (non-destructive)
         detector = FlexibleColumnDetector()
         df = detector.normalize_to_dataframe(demo_data)
-        cleaner = CommonCleaner()
+        # Respect default non-opinionated mode unless overridden
+        cleaner = CommonCleaner(config=build_cleaner_config(APP_CONFIG, None))
         cleaned_df, summary = cleaner.clean(df)
 
         processing_time = time.time() - start_time
@@ -702,6 +705,8 @@ def get_stats():
         'ai_enabled': APP_CONFIG['enable_ai'],
         'has_api_key': bool(APP_CONFIG['anthropic_api_key'])
     })
+
+register_routes(app, APP_CONFIG, get_llm_client)
 
 @app.route('/process', methods=['POST'])
 def process_data():
@@ -756,8 +761,14 @@ def process_data():
         # Always use CommonCleaner when preserving schema; ignore AI flags for core cleaning
         # ---------------------------------------------
         if preserve_schema:
-            cleaner = CommonCleaner()
+            cleaner = CommonCleaner(config=build_cleaner_config(APP_CONFIG, config_override))
             cleaned_df, summary = cleaner.clean(df)
+
+            # Optional AI overlook in preserve-schema flow
+            try:
+                apply_ai_overlook(cleaned_df, config_override or {})
+            except Exception:
+                pass
 
             llm_block = {}
             if bool(config_override.get('enable_ai', False)):

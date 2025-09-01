@@ -187,6 +187,21 @@ class CommonCleaner:
         self.preserve_schema = True
         self.enable_ai = False
         self.enable_parallel_processing = False
+        # Fine-grained normalization toggles
+        self.cleaning_mode = str(cfg.get("cleaning_mode", "standard")).lower()
+        self.enable_date_normalization = bool(cfg.get("enable_date_normalization", True))
+        self.enable_number_normalization = bool(cfg.get("enable_number_normalization", True))
+        self.enable_text_whitespace_trim = bool(cfg.get("enable_text_whitespace_trim", True))
+        self.enable_text_title_case = bool(cfg.get("enable_text_title_case", True))
+        self.enable_deduplication = bool(cfg.get("enable_deduplication", True))
+        self.enable_math_recompute = bool(cfg.get("enable_math_recompute", True))
+        if self.cleaning_mode == "minimal":
+            # Minimal mode: only trim whitespace; avoid opinionated transforms
+            self.enable_date_normalization = False
+            self.enable_number_normalization = False
+            self.enable_text_title_case = False
+            self.enable_deduplication = False
+            self.enable_math_recompute = False
         # Trackers
         self.values_normalized: Dict[str, int] = {}
         self.fields_filled: Dict[str, int] = {}
@@ -233,6 +248,8 @@ class CommonCleaner:
     # Core handlers
     # -------------------------
     def _normalize_dates_inplace(self, df: pd.DataFrame) -> None:
+        if not self.enable_date_normalization:
+            return
         for col in df.columns:
             col_low = str(col).lower()
             # Dates/timestamps → YYYY-MM-DD (avoid converting columns explicitly named 'Time')
@@ -248,6 +265,8 @@ class CommonCleaner:
 
         # Content-based detection: normalize columns that look like dates even without date-like headers
         for col in df.columns:
+            if not self.enable_date_normalization:
+                break
             try:
                 series = df[col]
                 if not pd.api.types.is_object_dtype(series):
@@ -269,6 +288,8 @@ class CommonCleaner:
                 continue
 
     def _normalize_numbers_inplace(self, df: pd.DataFrame) -> None:
+        if not self.enable_number_normalization:
+            return
         for col in df.columns:
             col_low = str(col).lower()
             if any(k in col_low for k in ["amount", "total", "price", "cost", "debit", "credit", "tax", "shipping", "subtotal", "qty", "quantity", "unit price", "unitprice"]):
@@ -306,17 +327,24 @@ class CommonCleaner:
                 continue
 
     def _clean_text_inplace(self, df: pd.DataFrame) -> None:
+        if not self.enable_text_whitespace_trim and not self.enable_text_title_case:
+            return
         for col in df.columns:
             if pd.api.types.is_object_dtype(df[col]):
                 before = df[col].copy()
-                df[col] = df[col].map(_clean_text)
+                new_series = df[col]
+                if self.enable_text_whitespace_trim:
+                    new_series = new_series.map(_clean_text)
                 # Title-case for probable name/vendor/customer/payee columns
                 col_low = str(col).lower()
-                if any(k in col_low for k in ["merchant", "vendor", "customer", "name", "payee", "company", "store"]):
-                    df[col] = df[col].map(lambda v: _title_like_name(col, v))
+                if self.enable_text_title_case and any(k in col_low for k in ["merchant", "vendor", "customer", "name", "payee", "company", "store"]):
+                    new_series = new_series.map(lambda v: _title_like_name(col, v))
+                df[col] = new_series
                 self._bump_normalized(col, before, df[col])
 
     def _deduplicate_inplace(self, df: pd.DataFrame) -> None:
+        if not self.enable_deduplication:
+            return
         # Prefer explicit transaction id fields (expanded synonyms)
         id_aliases = {
             "transaction id", "transaction_id", "id", "txn id", "txnid",
@@ -347,6 +375,8 @@ class CommonCleaner:
     # Type-specific (safe, in-place)
     # -------------------------
     def _process_sales_inplace(self, df: pd.DataFrame) -> None:
+        if not self.enable_math_recompute:
+            return
         lower_map = {str(c).lower(): c for c in df.columns}
         qty = lower_map.get("qty") or lower_map.get("quantity")
         unit_price = lower_map.get("unit price") or lower_map.get("unitprice")
@@ -413,7 +443,7 @@ class CommonCleaner:
     def _process_expense_inplace(self, df: pd.DataFrame) -> None:
         # Normalize Amount if present
         amt_col = next((c for c in df.columns if str(c).lower() == "amount"), None)
-        if amt_col:
+        if amt_col and self.enable_number_normalization:
             before = df[amt_col].copy()
             df[amt_col] = df[amt_col].map(_to_numeric)
             self._bump_normalized(amt_col, before, df[amt_col])
@@ -421,12 +451,21 @@ class CommonCleaner:
         for col in df.columns:
             col_low = str(col).lower()
             if any(k in col_low for k in ["merchant", "vendor", "payee", "name", "company", "store"]):
+                if not self.enable_text_whitespace_trim and not self.enable_text_title_case:
+                    continue
                 before = df[col].copy()
-                df[col] = df[col].map(_clean_text).map(lambda v: _title_like_name(col, v))
+                series = df[col]
+                if self.enable_text_whitespace_trim:
+                    series = series.map(_clean_text)
+                if self.enable_text_title_case:
+                    series = series.map(lambda v: _title_like_name(col, v))
+                df[col] = series
                 self._bump_normalized(col, before, df[col])
         # Category normalization (no AI): trim only
         for col in df.columns:
             if str(col).lower() == "category" and pd.api.types.is_object_dtype(df[col]):
+                if not self.enable_text_whitespace_trim:
+                    continue
                 before = df[col].copy()
                 df[col] = df[col].map(_clean_text)
                 self._bump_normalized(col, before, df[col])
@@ -435,7 +474,7 @@ class CommonCleaner:
         # Clean numeric debit/credit; do not add columns
         for key in ["debit", "credit"]:
             col = next((c for c in df.columns if str(c).lower() == key), None)
-            if col:
+            if col and self.enable_number_normalization:
                 before = df[col].copy()
                 df[col] = df[col].map(_to_numeric)
                 self._bump_normalized(col, before, df[col])
